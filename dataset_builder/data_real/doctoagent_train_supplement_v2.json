@@ -1,0 +1,2885 @@
+[
+  {
+    "text": "Vous avez un véto dispo aujourd'hui sans rendez-vous ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "tarifs consultation lapin nain svp",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        20,
+        25,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "vous acceptez les nouveaux clients sans être recommandé ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "c'est combien pour poser un cathéter chez un chat hospitalisé ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        45,
+        49,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Bonjour, est-ce qu'on peut payer avec Paylib ou faut-il une carte bancaire ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "les consultations de nuit sont facturées combien en plus ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "vous avez des vétérinaires spécialisés en orthopédie animale ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "quel âge minimum pour faire vacciner un lapin pour la première fois ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        40,
+        45,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "les chats en FIV peuvent-ils vivre avec des chats sains chez vous comme en pension ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        44,
+        49,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "vous faites les dépistages de la dysplasie de hanche pour les labrador ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "Bonjour est-ce possible d'avoir un certificat de bonne santé pour un voyage au Maroc avec mon chien ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        94,
+        99,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "pour les furets, le vaccin maladie de Carré est-il remboursé par les mutuelles animales ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        9,
+        14,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "combien coûte l'implant contraceptif Suprelorin pour un furet mâle ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        56,
+        61,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "mon chien american staff est une race classée, vous avez des vétérinaires habitués à ces races ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "vous faites les arthroscopies ou il faut aller dans un centre spécialisé ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "rdv possible lundi matin pour un contrôle de routine sur un beagle ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "la téléconsultation est disponible pour les suivis post-opératoires ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "combien de temps après une castration le chien peut-il reprendre les activités physiques ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        41,
+        46,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "vous prenez les chèques vacances animaux Sodexo ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "est-ce qu'un chat castré a besoin d'un vaccin différent d'un chat entier ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        13,
+        17,
+        "ANIMAL"
+      ],
+      [
+        61,
+        65,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "je voudrais savoir si vous avez une liste d'attente ou si je peux venir direct ce matin",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "faut-il jeûner le chien avant un bilan sanguin de routine ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        18,
+        23,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Bonjour, mon chat a peur du transport, vous avez un protocole pour les chats stressés ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        13,
+        17,
+        "ANIMAL"
+      ],
+      [
+        71,
+        76,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "les petits animaux comme les chinchillas, vous les traitez régulièrement ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        29,
+        39,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "vous avez un interne disponible le week-end pour les urgences ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "Pour un chien de 13 ans avec insuffisance rénale chronique, vous faites du suivi long terme ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        8,
+        13,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "c'est quoi la fréquence recommandée pour l'antiparasitaire chez un chien qui va souvent en forêt ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        67,
+        72,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "vous avez un service d'hospitalisation pour les chats en isolement (FIV) ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        48,
+        53,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "nous avons 3 chiens, pouvez-vous me faire un récapitulatif des vaccins à faire avant l'été ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        13,
+        19,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "le certificat de non contre-indication pour la reproduction, vous le faites pour les chats de race ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        85,
+        90,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "do you have Saturday morning appointments available?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "is microchipping included in the puppy package or is it extra?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "do you do house calls for large animals like horses?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "what is the cancellation policy if I need to reschedule my appointment?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "my dog has extreme vet anxiety, do you offer pre-visit sedation protocols?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "Vous faites la laparoscopie pour les stérilisations ou seulement la chirurgie classique ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "un chat stérilisé a-t-il besoin d'une alimentation différente après l'opération ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        7,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "vous faites les examens de pré-adoption pour les chiots importés de l'étranger ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        49,
+        55,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "je cherche un véto qui peut venir à domicile pour l'euthanasie de mon vieux chien, c'est possible ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        76,
+        81,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "pour la pose d'une puce électronique, faut-il un rendez-vous ou c'est en accès direct ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "le Feliway est-il disponible en vente directe chez vous ou uniquement sur ordonnance ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "est-ce que les cliniques vétérinaires remboursent si le traitement n'a pas fonctionné ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "pour un chien qui a peur des voitures, conseillez-vous un médoc avant le trajet ou autre chose ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        8,
+        13,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Vous avez un echographiste disponible cette semaine pour une chatte gestante ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        61,
+        67,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "c koi la différence entre un véto généraliste et un véto spécialiste ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "est ce que vous faites des plans de paiement en 3 fois pour les grosses interventions ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "c'est quoi exactement la leucose féline et comment s'en protéger ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "Bonjour, j'ai trouvé un chat errant blessé, vous le prenez en charge même sans être son propriétaire ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        24,
+        28,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "vous faites des chirurgies orthopédiques complexes comme les LCA chez les chiens ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        74,
+        80,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "peut on adopter un animal de compagnie directement par votre clinique ou vous avez un refuge partenaire ?",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "Coupure profonde du coussinet de mon berger suisse, saigne encore après 10 min de pression",
+    "intent": 1,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        0,
+        7,
+        "SYMPTOM"
+      ],
+      [
+        20,
+        29,
+        "BODY_PART"
+      ],
+      [
+        52,
+        58,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "filaments rouges dans les selles de mon golden depuis ce matin, il a l'air en forme sinon",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        47,
+        62,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "chaton british shorthair 5 mois, diarrhée depuis 3 semaines malgré 2 traitements différents",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        0,
+        6,
+        "ANIMAL"
+      ],
+      [
+        33,
+        41,
+        "SYMPTOM"
+      ],
+      [
+        42,
+        59,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "mon border collie de 9 mois saute partout mais depuis hier il refuse de monter les escaliers",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        47,
+        58,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "ma chatte himalayenne tousse depuis son retour du chenil, toux sèche répétée",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ],
+      [
+        22,
+        28,
+        "SYMPTOM"
+      ],
+      [
+        58,
+        68,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "mon vieux berger allemand de 11 ans a du mal à se lever le matin, les deux pattes arrière glissent",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        75,
+        89,
+        "BODY_PART"
+      ],
+      [
+        90,
+        98,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Ma siamoise de 4 ans boit anormalement beaucoup depuis 10 jours et urine partout",
+    "intent": 1,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        48,
+        63,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chien labrador refuse sa gamelle ce matin, lui qui mange toujours très vite d'habitude",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        19,
+        36,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "mon persan se frotte les yeux constamment, sécrétions marron foncé quotidiennes",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        25,
+        29,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "ma chienne cocker a vomi 5 fois depuis hier soir dont une fois de la bile verte",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        10,
+        "ANIMAL"
+      ],
+      [
+        32,
+        43,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "Mon rat rex a une bosse rouge et dure sur le flanc gauche, est-ce une tumeur mammaire ?",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        4,
+        7,
+        "ANIMAL"
+      ],
+      [
+        18,
+        23,
+        "SYMPTOM"
+      ],
+      [
+        45,
+        50,
+        "BODY_PART"
+      ],
+      [
+        70,
+        76,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "depuis que mon chat mange la nouvelle croquette, il a des gaz et un ventre très bruyant",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [
+      [
+        15,
+        19,
+        "ANIMAL"
+      ],
+      [
+        68,
+        74,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "Mon bulldog anglais dort excessivement depuis 4 jours et mange moins, pas de fièvre",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        20,
+        38,
+        "SYMPTOM"
+      ],
+      [
+        39,
+        53,
+        "DUREE"
+      ],
+      [
+        77,
+        83,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Ma lapine angora perd ses poils par touffes depuis le début de l'été, mue ou alopécie ?",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ],
+      [
+        26,
+        31,
+        "BODY_PART"
+      ],
+      [
+        77,
+        85,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "mon rottweiler de 6 ans se lèche la patte avant droite jusqu'à l'avoir rouge et irritée",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        36,
+        47,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "Mon cheval appaloosa a une grosseur chaude au niveau du boulet droit depuis la course",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        4,
+        10,
+        "ANIMAL"
+      ],
+      [
+        27,
+        35,
+        "SYMPTOM"
+      ],
+      [
+        56,
+        62,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "ma chatte maine coon fait ses besoins à côté de la litière depuis qu'on a changé le type de litière",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon caniche a les yeux rouges et larmoyants après la baignade en mer, ça l'inquiète",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [
+      [
+        18,
+        22,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "Mon husky de 3 ans mange de l'herbe puis vomit presque tous les jours depuis 2 semaines",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [
+      [
+        41,
+        46,
+        "SYMPTOM"
+      ],
+      [
+        70,
+        87,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "ma chatte british de 7 ans a pris 2kg en 4 mois sans changer son alimentation",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon lapin rex bouge la tête de façon anormale depuis ce matin, tête penchée à gauche",
+    "intent": 1,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        23,
+        27,
+        "BODY_PART"
+      ],
+      [
+        46,
+        61,
+        "DUREE"
+      ],
+      [
+        63,
+        67,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "mon spitz nain tousse avec un bruit de couinement et semble s'étouffer parfois",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        15,
+        21,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chat tigré de 5 ans a eu une crise ressemblant à une épilepsie hier soir, 1ère fois",
+    "intent": 1,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        4,
+        8,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "ma teckel saucisse de 8 ans traîne sa patte arrière gauche depuis ce matin, pas tombée",
+    "intent": 1,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        28,
+        34,
+        "SYMPTOM"
+      ],
+      [
+        38,
+        51,
+        "BODY_PART"
+      ],
+      [
+        59,
+        74,
+        "DUREE"
+      ],
+      [
+        80,
+        85,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Mon ara bleu et or plume ses propres plumes depuis 1 mois, plumes manquantes sur la poitrine",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        4,
+        7,
+        "ANIMAL"
+      ],
+      [
+        19,
+        24,
+        "BODY_PART"
+      ],
+      [
+        37,
+        43,
+        "BODY_PART"
+      ],
+      [
+        44,
+        57,
+        "DUREE"
+      ],
+      [
+        59,
+        65,
+        "BODY_PART"
+      ],
+      [
+        84,
+        92,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "mon dalmatien de 2 ans se gratte les oreilles et secoue la tête en permanence depuis hier",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        23,
+        32,
+        "SYMPTOM"
+      ],
+      [
+        37,
+        45,
+        "BODY_PART"
+      ],
+      [
+        59,
+        63,
+        "BODY_PART"
+      ],
+      [
+        78,
+        89,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "ma chatte de 13 ans mange beaucoup plus qu'avant mais perd du poids régulièrement",
+    "intent": 1,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ],
+      [
+        54,
+        67,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Mon setter irlandais a une plaie entre les orteils qui ne guérit pas depuis 2 mois malgré les soins",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        27,
+        32,
+        "SYMPTOM"
+      ],
+      [
+        69,
+        82,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "ma cocker spaniel de 5 ans a un écoulement vulvaire verdâtre depuis une semaine",
+    "intent": 1,
+    "urgency": "HIGH",
+    "entities": []
+  },
+  {
+    "text": "Mon chien Jack Russell de 4 ans tremble après ses repas depuis une semaine, sucre ?",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        32,
+        39,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "my dachshund is dragging his back legs since this morning, had a back issue before",
+    "intent": 1,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        16,
+        38,
+        "SYMPTOM"
+      ],
+      [
+        39,
+        57,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "my 6-year-old cat has been vomiting yellow bile every morning before breakfast for 2 weeks",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        27,
+        35,
+        "SYMPTOM"
+      ],
+      [
+        79,
+        90,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "my budgie has been sitting puffed up at the bottom of the cage for 2 days, not eating",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        63,
+        73,
+        "DUREE"
+      ],
+      [
+        75,
+        85,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "my rabbit is grinding her teeth loudly and pressing her belly to the ground",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        13,
+        31,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "my senior golden retriever has started drinking water excessively, about 3x the normal amount",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": []
+  },
+  {
+    "text": "Mon chien akita inu de 7 ans a les gencives qui saignent à chaque repas depuis 3 jours",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        35,
+        43,
+        "BODY_PART"
+      ],
+      [
+        48,
+        54,
+        "SYMPTOM"
+      ],
+      [
+        72,
+        86,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "ma chatte abyssine de 2 ans a les pupilles asymétriques depuis ce matin, normal ?",
+    "intent": 1,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ],
+      [
+        34,
+        42,
+        "BODY_PART"
+      ],
+      [
+        56,
+        71,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "Mon cochon d'inde fait des crises de 30 secondes où il reste figé, déjà la 3ème cette semaine",
+    "intent": 1,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        4,
+        17,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon doberman de 4 ans a le ventre qui fait des bruits forts et ne veut pas manger depuis ce midi",
+    "intent": 1,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        27,
+        33,
+        "BODY_PART"
+      ],
+      [
+        82,
+        96,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "ma chienne golden de 9 ans a une mamelle qui semble gonflée et dure depuis 2 semaines",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        10,
+        "ANIMAL"
+      ],
+      [
+        33,
+        40,
+        "BODY_PART"
+      ],
+      [
+        52,
+        57,
+        "SYMPTOM"
+      ],
+      [
+        68,
+        85,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "Mon cheval demi-sang fait une toux sèche au début de l'effort depuis 3 semaines",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        4,
+        10,
+        "ANIMAL"
+      ],
+      [
+        30,
+        40,
+        "SYMPTOM"
+      ],
+      [
+        62,
+        79,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chat de gouttière refuse de sortir et reste dans son panier depuis 2 jours, pas son habitude",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        4,
+        8,
+        "ANIMAL"
+      ],
+      [
+        64,
+        78,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "Ma lapine a accouché il y a 4 jours et ses bébés semblent ne pas grossir, problème de lait ?",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ],
+      [
+        21,
+        35,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "Mon shiba inu de 6 ans a perdu 3kg en 2 mois, appétit normal mais perte de masse musculaire",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        75,
+        80,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Mon furet de 4 ans s'effondre sur ses pattes arrière puis se relève normalement, hypoglycémie ?",
+    "intent": 1,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        38,
+        52,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "Ma perruche ondulée a un kyste visible sur l'aile gauche depuis 1 semaine",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        11,
+        "ANIMAL"
+      ],
+      [
+        25,
+        30,
+        "SYMPTOM"
+      ],
+      [
+        45,
+        49,
+        "BODY_PART"
+      ],
+      [
+        57,
+        73,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "Mon fox terrier de 10 ans a la tête qui tourne vers la droite en permanence depuis hier matin",
+    "intent": 1,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        31,
+        35,
+        "BODY_PART"
+      ],
+      [
+        76,
+        87,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chat européen de 8 ans urine en petites quantités très fréquentes depuis hier soir, chat mâle",
+    "intent": 1,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        4,
+        8,
+        "ANIMAL"
+      ],
+      [
+        70,
+        81,
+        "DUREE"
+      ],
+      [
+        88,
+        92,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon weimaraner de 3 ans a les pattes qui tremblent légèrement après chaque promenade intense",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        30,
+        36,
+        "BODY_PART"
+      ],
+      [
+        41,
+        48,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "ma chatte de 16 ans a commencé à crier la nuit sans raison apparente depuis 10 jours",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ],
+      [
+        69,
+        84,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "MON CHIEN A AVALE DE LA MORT AUX RATS CE MATIN TOUT LE SACHET",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "urgence mon chat est tombé du 5ème étage il y a 10 minutes, bouge les pattes mais saigne",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        12,
+        16,
+        "ANIMAL"
+      ],
+      [
+        21,
+        26,
+        "SYMPTOM"
+      ],
+      [
+        41,
+        58,
+        "DUREE"
+      ],
+      [
+        70,
+        76,
+        "BODY_PART"
+      ],
+      [
+        82,
+        88,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "ma chienne golden vient d'avaler les comprimés d'aspirine de ma mère, environ 8 comprimés",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        3,
+        10,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon labrador de 6 ans fait une dilatation torsion gastrique, ventre énorme et tentatives de vomissements",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        61,
+        67,
+        "BODY_PART"
+      ],
+      [
+        92,
+        104,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "SOS : mon berger australien a convulsé 3 fois en 2 heures, crise de 5-7 minutes chaque fois",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        30,
+        37,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Mon cheval a marché sur du barbelé, plaie profonde au niveau du sabot droit, saigne beaucoup",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        10,
+        "ANIMAL"
+      ],
+      [
+        36,
+        41,
+        "SYMPTOM"
+      ],
+      [
+        64,
+        69,
+        "BODY_PART"
+      ],
+      [
+        77,
+        83,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "chat avalé aiguille à coudre ya 20 min, il essaie de vomir, aide",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        0,
+        4,
+        "ANIMAL"
+      ],
+      [
+        29,
+        38,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "mon chiot teckel de 4 mois a reçu un coup de pied accidentel, il crie et ne bouge plus les pattes",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        45,
+        49,
+        "BODY_PART"
+      ],
+      [
+        91,
+        97,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "AIDE ma lapine paralysée pattes arrière ce matin sans raison, elle était bien hier soir",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        8,
+        14,
+        "ANIMAL"
+      ],
+      [
+        15,
+        23,
+        "SYMPTOM"
+      ],
+      [
+        25,
+        39,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "Mon bichon frisé a avalé une pila bouton, il y a 30 minutes",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        42,
+        59,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "ma chatte a mangé des feuilles de poinsettia de la décoration, c'est toxique non ?!",
+    "intent": 2,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chien a reçu un coup de chaleur en voiture, halète et ne répond plus normalement",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        48,
+        54,
+        "SYMPTOM"
+      ],
+      [
+        58,
+        72,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "urgence chien golden 5 ans tombé d'une falaise lors d'une rando, conscient mais une patte à l'envers",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        8,
+        13,
+        "ANIMAL"
+      ],
+      [
+        27,
+        32,
+        "SYMPTOM"
+      ],
+      [
+        84,
+        89,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chat mâle n'a pas uriné de la journée et crie quand il va aux toilettes",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        8,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "ma perruche s'est coincée dans un ventilateur, aile déchirée et saigne abondamment",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        3,
+        11,
+        "ANIMAL"
+      ],
+      [
+        47,
+        51,
+        "BODY_PART"
+      ],
+      [
+        64,
+        70,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Mon schnauzer de 2 ans a mangé du chocolat noir fondu environ 200g, il fait 7kg",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        34,
+        38,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "ma chatte sort de la salle de bain, elle a du détartrant WC dans la gueule, elle bave",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ],
+      [
+        68,
+        74,
+        "BODY_PART"
+      ],
+      [
+        81,
+        85,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Mon lapin nain de 1 an tombe sur le côté et tourne sur lui-même, c'est soudain depuis 30 minutes",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        23,
+        28,
+        "SYMPTOM"
+      ],
+      [
+        44,
+        63,
+        "SYMPTOM"
+      ],
+      [
+        79,
+        96,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "Chien mordu au cou par un autre chien de grande taille, plaie profonde et large",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        0,
+        5,
+        "ANIMAL"
+      ],
+      [
+        15,
+        18,
+        "BODY_PART"
+      ],
+      [
+        32,
+        37,
+        "ANIMAL"
+      ],
+      [
+        56,
+        61,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "mon chat a été enfermé dans le coffre de la voiture pendant 2h par accident, il halète fortement",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        8,
+        "ANIMAL"
+      ],
+      [
+        80,
+        86,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Mon Yorkshire a avalé un bonbon haribo sugarfree (xylitol), il y a 10 minutes",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        60,
+        77,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "ma jument a glissé dans le van et est coincée sur le côté, impossible de la relever",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon furet fait des crises hypoglycémiques répétées, 4e crise aujourd'hui, plus de sucre qui marche",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Chien a mangé du cannabis trouvé dans la rue, il est complètement désorienté et ne tient plus debout",
+    "intent": 2,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        0,
+        5,
+        "ANIMAL"
+      ],
+      [
+        80,
+        100,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "mon chat a avalé un crochet de pêche avec l'hameçon, il y a 1 heure",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        8,
+        "ANIMAL"
+      ],
+      [
+        53,
+        67,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "ma chienne boxer vient de faire un accouchement difficile, un chiot est sorti sans respirer",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        3,
+        10,
+        "ANIMAL"
+      ],
+      [
+        62,
+        67,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chien s'est fait mordre par une vipère aspic lors d'une balade, patte qui gonfle à vue d'oeil",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        68,
+        73,
+        "BODY_PART"
+      ],
+      [
+        78,
+        84,
+        "SYMPTOM"
+      ],
+      [
+        93,
+        97,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chat est entré en contact avec de la colle époxy liquide et s'est léché la patte",
+    "intent": 2,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        4,
+        8,
+        "ANIMAL"
+      ],
+      [
+        79,
+        84,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "HELP mon oiseau est tombé de son perchoir et reste au sol depuis 30 minutes, yeux fermés",
+    "intent": 2,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        9,
+        15,
+        "ANIMAL"
+      ],
+      [
+        20,
+        25,
+        "SYMPTOM"
+      ],
+      [
+        58,
+        75,
+        "DUREE"
+      ],
+      [
+        77,
+        81,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "mon cobaye ne respire presque plus, narines qui battent vite, allongé sur le flanc",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        10,
+        "ANIMAL"
+      ],
+      [
+        36,
+        43,
+        "BODY_PART"
+      ],
+      [
+        77,
+        82,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "my cat swallowed a rubber band and is now gagging repeatedly without vomiting",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        69,
+        77,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "HELP my dog was hit by a car, he's conscious but his leg looks badly broken and he's bleeding",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        85,
+        93,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "my rabbit is having full body seizures, this is the second one in an hour",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        30,
+        37,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "my cat ate a whole lily, stem and all, about 45 minutes ago",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": []
+  },
+  {
+    "text": "my dog collapsed during a run, gums are pale, barely responsive",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        7,
+        16,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chien a avalé une boule de Noël en verre entière devant moi",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "ma chatte a été attaquée par un rapace dans le jardin, déchirures profondes sur le dos",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ],
+      [
+        83,
+        86,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "Mon rat a saigné par le nez et les yeux simultanément, ça m'a duré 10 minutes",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        7,
+        "ANIMAL"
+      ],
+      [
+        10,
+        15,
+        "SYMPTOM"
+      ],
+      [
+        24,
+        27,
+        "BODY_PART"
+      ],
+      [
+        35,
+        39,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "mon chien a reçu un coup de pied de cheval lors d'une balade à la ferme, il boite plus que marche",
+    "intent": 2,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        28,
+        32,
+        "BODY_PART"
+      ],
+      [
+        36,
+        42,
+        "ANIMAL"
+      ],
+      [
+        76,
+        81,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "urgence ! chat mâle non castré bloqué urinaire depuis hier soir, crie, ventre gonflé",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        10,
+        14,
+        "ANIMAL"
+      ],
+      [
+        47,
+        58,
+        "DUREE"
+      ],
+      [
+        71,
+        77,
+        "BODY_PART"
+      ],
+      [
+        78,
+        83,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chiot de 8 semaines convulse depuis 3 minutes, c'est la 1ère fois",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        24,
+        32,
+        "SYMPTOM"
+      ],
+      [
+        33,
+        49,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chien a ingéré des graines de ricin tombées de la plante du salon",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        40,
+        45,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "ma chatte a léché de la peinture murale fraîche, elle bave depuis 5 minutes",
+    "intent": 2,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ],
+      [
+        54,
+        58,
+        "SYMPTOM"
+      ],
+      [
+        59,
+        75,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chien s'est électrocuté en mordant le câble d'enceinte, il a lâché, semble KO",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Ma chienne grande taille halète, essaie de vomir sans succès et son ventre gonfle à vue d'oeil",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        3,
+        10,
+        "ANIMAL"
+      ],
+      [
+        25,
+        31,
+        "SYMPTOM"
+      ],
+      [
+        68,
+        74,
+        "BODY_PART"
+      ],
+      [
+        75,
+        81,
+        "SYMPTOM"
+      ],
+      [
+        90,
+        94,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "Mon cheval a pris un coup de pied d'un congénère sur le front, il titube et tombe par moments",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        10,
+        "ANIMAL"
+      ],
+      [
+        29,
+        33,
+        "BODY_PART"
+      ],
+      [
+        66,
+        72,
+        "SYMPTOM"
+      ],
+      [
+        76,
+        81,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "mon hamster est immobile dans son nid depuis 4h, froid au toucher, respire encore faiblement",
+    "intent": 2,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        4,
+        11,
+        "ANIMAL"
+      ],
+      [
+        38,
+        47,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chien a avalé une roue complète de jouet Lego de taille medium",
+    "intent": 2,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "ma chatte a eu un AVC ce matin, tourne en cercle, ne reconnait plus l'environnement",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ],
+      [
+        32,
+        48,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chat a reçu du liquide de frein sur les pattes et s'est léché frénétiquement",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        8,
+        "ANIMAL"
+      ],
+      [
+        44,
+        50,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "Petite update Filou : il mange et boit tout seul depuis 3 jours, vraiment remis !",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        49,
+        63,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "ma chienne golden a retrouvé son appétit depuis que vous avez changé le traitement jeudi",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        10,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Bonjour, suite à l'opération du LCA de lundi, mon chien pose la patte depuis ce matin",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        50,
+        55,
+        "ANIMAL"
+      ],
+      [
+        64,
+        69,
+        "BODY_PART"
+      ],
+      [
+        70,
+        85,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "la biopsie est revenue négative pour le cancer, on respire enfin, merci à vous",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "Mon beagle a arrêté de se gratter depuis qu'il est sous le nouveau shampoing médicamenteux",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        23,
+        32,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "bonne nouvelle : la cystite de mon chat mâle est résolue, plus de sang dans les urines",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        20,
+        27,
+        "SYMPTOM"
+      ],
+      [
+        35,
+        39,
+        "ANIMAL"
+      ],
+      [
+        66,
+        86,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Mon persan mange sa pâtée complète depuis 4 jours, le stimulant d'appétit a bien fonctionné",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        35,
+        49,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "ma lapine gambade normalement depuis vendredi, la fracture de la patte est consolidée",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ],
+      [
+        65,
+        70,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "Merci énormément pour samedi soir, mon chien s'en est sorti malgré l'empoisonnement",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        39,
+        44,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon cheval trotte sans signe de boiterie depuis 8 jours, le traitement a été efficace",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        10,
+        "ANIMAL"
+      ],
+      [
+        32,
+        37,
+        "SYMPTOM"
+      ],
+      [
+        41,
+        55,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "Mon setter s'est remis de son opération de la vésicule biliaire, il mange normalement",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "la tête penchée de mon lapin s'est complètement corrigée avec la Panacur, quelle chance !",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        7,
+        "BODY_PART"
+      ],
+      [
+        23,
+        28,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chat hyperthyroïdien est à nouveau stabilisé après l'ajustement de la dose de Felimazole",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        8,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Ma chatte n'a plus de cystite depuis qu'on a mis les fontaines à eau, merci pour le conseil",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ],
+      [
+        22,
+        29,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "mon doberman mange et joue normalement depuis 5 jours, la dilatation gastrique est loin derrière",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        39,
+        53,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "bilan positif pour Nala : glycémie stable, poids correct, on continue le même traitement",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "Mon furet opéré de l'insulinome il y a 3 semaines court partout, on ne l'arrête plus",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        32,
+        49,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "tellement soulagée ! les résultats sanguins de mon chat de 14 ans sont tous dans les normes",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        51,
+        55,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chien border collie reprend l'agility depuis lundi, le genou opéré tient parfaitement",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        27,
+        31,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "ma jument mange son foin habituellement depuis que l'abcès du sabot a été drainé",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ],
+      [
+        53,
+        58,
+        "SYMPTOM"
+      ],
+      [
+        62,
+        67,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "he's completely back to his old self, eating, playing, jumping — thank you!",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "the dental surgery worked perfectly, he's eating his kibble without dropping it now",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "my rabbit has started eating again after gut stasis treatment, so relieved",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "she recovered from the pyometra operation in record time, eating day 2 post-op",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "my dog's ear infection is completely gone, no more head shaking or scratching",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        67,
+        77,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Mon caniche a fini son traitement antibiotique, plus de symptômes respiratoires du tout",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "Mon rat a retrouvé l'usage de ses pattes arrière après la cortisone, on est épatés",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        7,
+        "ANIMAL"
+      ],
+      [
+        34,
+        48,
+        "BODY_PART"
+      ]
+    ]
+  },
+  {
+    "text": "Contrôle 6 semaines post-opération : la rotule de Max est parfaite selon la radio de contrôle",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "la dermatite de mon cocker est très améliorée, les plaques rouges ont disparues avec le régime hypoallergénique",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "Mon yorkshire a retrouvé son énergie habituelle après la correction de son luxation de rotule",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "mon chat opéré de l'hyperthyroïdie par irathérapie est en pleine forme, merci pour le suivi",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        8,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "bonne nouvelle pour Bruno : le lymphome est en rémission complète après 6 séances de chimio",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "Ma chatte de 18 ans est stable depuis l'ajustement de son traitement rénal, mange bien",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chiot berger australien a très bien supporté sa première castration, déjà actif le soir même",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon lapin a enfin arrêté de tourner en cercle, le traitement contre l'encéphalitozoon a fonctionné",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chat ne pleure plus la nuit depuis les Feliway, comportement complètement stabilisé",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        8,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "la plaie abdominale de ma chatte a parfaitement cicatrisé, histologie propre selon le véto",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        8,
+        "SYMPTOM"
+      ],
+      [
+        26,
+        32,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chien epileptique n'a pas refait de crise depuis 3 semaines avec le Phénobarbital ajusté",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        46,
+        63,
+        "DUREE"
+      ]
+    ]
+  },
+  {
+    "text": "Mon husky mange et boit normalement depuis la fin de son traitement contre la leishmaniose",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "petite news : mon furet a terminé sa chimiothérapie et est en rémission, on est soulagés",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        18,
+        23,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Bilan de suivi pour Coco : prise de poids de 400g en 3 semaines, on est sur la bonne voie",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "ma perruche chante à nouveau tous les matins depuis le traitement antifongique, ouf !",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        11,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon ara a retrouvé son plumage habituel après 2 mois de traitement contre le plumage compulsif",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        7,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon cheval a été recontrôlé par le maréchal-ferrant, tout est normal, l'abcès n'a pas récidivé",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        10,
+        "ANIMAL"
+      ],
+      [
+        72,
+        77,
+        "SYMPTOM"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chat n'a plus de calculs rénaux à l'écho de contrôle, le régime alimentaire a fonctionné",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        8,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Ma chienne a retrouvé son comportement habituel après la pose du cathéter urinaire, merci",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        10,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon hamster court à nouveau dans sa roue depuis mardi, la pneumonie est derrière lui",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        11,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Merci pour tout ! Bella a survécu à l'empoisonnement au métaldéhyde, elle est à nouveau active",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  },
+  {
+    "text": "Ma chatte de 6 ans ne fait plus de fausses couches depuis le traitement hormonal, elle est gestante normalement",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "Mon chien akita est complètement guéri de sa dermatomyosite après 4 mois de traitement immunosuppresseur",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ]
+    ]
+  },
+  {
+    "text": "mise à jour positive pour Titan : l'opération de la hanche a réussi, il trottine déjà",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": []
+  }
+]

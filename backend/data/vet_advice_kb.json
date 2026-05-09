@@ -1,0 +1,1264 @@
+{
+  "scenarios": [
+    {
+      "id": "vomiting_occasional",
+      "title_fr": "Vomissement occasionnel",
+      "title_en": "Occasional vomiting",
+      "trigger_symptoms": ["vomiting"],
+      "trigger_keywords": ["vomit", "throw up", "vomir", "يتقيأ"],
+      "exclusion_keywords": ["blood", "sang", "دم"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "LOW",
+      "advice": "Un vomissement occasionnel est souvent bénin chez les animaux. Il peut être lié à une indigestion, des poils ingérés (chez le chat) ou un changement alimentaire récent.",
+      "home_care": [
+        "Mettez votre animal à jeun pendant 12 heures",
+        "Donnez de l'eau en petites quantités",
+        "Reprenez l'alimentation avec un repas léger (riz + poulet bouilli)",
+        "Évitez les friandises et restes de table"
+      ],
+      "watch_for": [
+        "Vomissements répétés (plus de 3 fois en 24h)",
+        "Présence de sang dans le vomi",
+        "Léthargie ou faiblesse",
+        "Refus de boire",
+        "Diarrhée associée"
+      ],
+      "when_to_consult": "Si les vomissements persistent au-delà de 24 heures, ou si vous observez du sang, ou si l'animal devient faible.",
+      "preparation_for_vet": [
+        "Noter l'heure et la fréquence des vomissements",
+        "Décrire la couleur et la consistance",
+        "Faire une photo si possible",
+        "Lister ce que l'animal a mangé récemment"
+      ],
+      "source": "WSAVA Pet Care Guidelines"
+    },
+    {
+      "id": "vomiting_blood",
+      "title_fr": "Vomissement avec sang",
+      "title_en": "Vomiting blood",
+      "trigger_symptoms": ["vomiting", "blood"],
+      "trigger_keywords": ["vomit blood", "blood in vomit", "vomir sang", "يتقيأ دم"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "CRITICAL",
+      "advice": "Cette situation nécessite une consultation vétérinaire URGENTE. La présence de sang dans le vomi peut indiquer plusieurs problèmes graves nécessitant un examen professionnel immédiat.",
+      "home_care": [
+        "Ne donnez RIEN à manger ou boire",
+        "Gardez votre animal au calme",
+        "Préparez le transport vers la clinique vétérinaire"
+      ],
+      "watch_for": [
+        "Aggravation rapide",
+        "Faiblesse extrême",
+        "Gencives pâles ou bleues",
+        "Perte de conscience"
+      ],
+      "when_to_consult": "IMMÉDIATEMENT - Allez aux urgences vétérinaires sans attendre.",
+      "preparation_for_vet": [
+        "Notez l'heure de début",
+        "Photographiez le vomi si possible",
+        "Listez les médicaments ou aliments récents",
+        "Mentionnez tout traumatisme récent"
+      ],
+      "source": "Veterinary Emergency Manual"
+    },
+    {
+      "id": "diarrhea_simple",
+      "title_fr": "Diarrhée simple",
+      "title_en": "Simple diarrhea",
+      "trigger_symptoms": ["diarrhea"],
+      "trigger_keywords": ["diarrhea", "loose stool", "diarrhée", "إسهال"],
+      "exclusion_keywords": ["blood", "sang", "دم"],
+      "species": ["dog", "cat", "rabbit", "hamster"],
+      "urgency": "LOW",
+      "advice": "Une diarrhée légère sans autres symptômes est souvent due à un changement alimentaire, du stress ou une indigestion. La plupart des cas se résolvent en 24-48 heures avec quelques mesures simples.",
+      "home_care": [
+        "Donnez un régime alimentaire fade (riz + poulet bouilli) pendant 1-2 jours",
+        "Assurez un accès à l'eau fraîche en permanence",
+        "Évitez les friandises temporairement",
+        "Reprise progressive de l'alimentation normale après amélioration"
+      ],
+      "watch_for": [
+        "Présence de sang dans les selles",
+        "Diarrhée persistant plus de 48h",
+        "Vomissements associés",
+        "Léthargie ou perte d'appétit",
+        "Signes de déshydratation (gencives sèches, perte d'élasticité de la peau)"
+      ],
+      "when_to_consult": "Si la diarrhée persiste plus de 48 heures, contient du sang, ou si l'animal présente d'autres symptômes inquiétants.",
+      "preparation_for_vet": [
+        "Noter la fréquence et la consistance",
+        "Photographier si possible",
+        "Lister les changements alimentaires récents",
+        "Apporter un échantillon si demandé"
+      ],
+      "source": "WSAVA Pet Care Guidelines"
+    },
+    {
+      "id": "not_eating_short",
+      "title_fr": "Refus alimentaire court",
+      "title_en": "Short-term loss of appetite",
+      "trigger_symptoms": ["not eating", "loss of appetite"],
+      "trigger_keywords": ["not eating", "no appetite", "ne mange plus", "لا يأكل"],
+      "species": ["dog", "rabbit"],
+      "urgency": "MODERATE",
+      "advice": "Un animal qui ne mange pas pendant moins de 24 heures peut être en raison du stress, de la chaleur, ou d'un inconfort temporaire. Cependant, surveillez attentivement.",
+      "home_care": [
+        "Vérifiez l'environnement (stress, bruit, changements)",
+        "Proposez de la nourriture à température ambiante",
+        "Essayez ses aliments préférés",
+        "Maintenez l'accès à l'eau fraîche"
+      ],
+      "watch_for": [
+        "Refus alimentaire au-delà de 24h",
+        "Léthargie associée",
+        "Perte de poids visible",
+        "Vomissements ou diarrhée",
+        "Comportement inhabituel"
+      ],
+      "when_to_consult": "Si l'animal ne mange pas pendant plus de 24 heures, ou présente d'autres symptômes.",
+      "preparation_for_vet": [
+        "Noter la durée précise du refus",
+        "Décrire les changements récents",
+        "Lister les médicaments en cours"
+      ],
+      "source": "Veterinary Internal Medicine"
+    },
+    {
+      "id": "cat_not_eating",
+      "title_fr": "Chat qui ne mange pas",
+      "title_en": "Cat not eating",
+      "trigger_symptoms": ["not eating"],
+      "trigger_keywords": ["cat not eating", "chat ne mange pas", "قطة لا تأكل"],
+      "species": ["cat"],
+      "urgency": "HIGH",
+      "advice": "Chez le chat, le refus alimentaire est PARTICULIÈREMENT préoccupant. Un chat qui ne mange pas pendant plus de 48 heures peut développer une lipidose hépatique, une condition grave qui peut être fatale.",
+      "home_care": [
+        "Proposez immédiatement ses aliments préférés",
+        "Réchauffez légèrement la nourriture pour libérer les arômes",
+        "Essayez du thon en boîte (pour stimuler l'appétit)",
+        "Vérifiez l'environnement (stress, autres animaux)"
+      ],
+      "watch_for": [
+        "Refus alimentaire au-delà de 24h",
+        "Gencives jaunâtres",
+        "Léthargie",
+        "Perte de poids rapide",
+        "Vomissements"
+      ],
+      "when_to_consult": "Si votre chat ne mange pas pendant plus de 24-48 heures, consultez SANS ATTENDRE. C'est une urgence chez le chat.",
+      "preparation_for_vet": [
+        "Noter la date du dernier repas",
+        "Photographier les gencives",
+        "Peser le chat",
+        "Lister les changements récents"
+      ],
+      "source": "AAFP Feline Guidelines"
+    },
+    {
+      "id": "rabbit_not_eating",
+      "title_fr": "Lapin qui ne mange pas",
+      "title_en": "Rabbit not eating",
+      "trigger_symptoms": ["not eating"],
+      "trigger_keywords": ["rabbit not eating", "lapin ne mange pas", "أرنب لا يأكل"],
+      "species": ["rabbit", "guinea pig"],
+      "urgency": "CRITICAL",
+      "advice": "URGENCE : Un lapin qui ne mange pas est une situation critique. Le système digestif du lapin doit fonctionner en permanence. L'arrêt de l'alimentation peut causer une stase digestive, fatale en 24-48 heures.",
+      "home_care": [
+        "Proposez du foin frais immédiatement",
+        "Donnez ses légumes verts préférés",
+        "Massez doucement le ventre",
+        "Encouragez le mouvement"
+      ],
+      "watch_for": [
+        "Absence de crottes",
+        "Position courbée (signe de douleur)",
+        "Grincement de dents",
+        "Léthargie totale"
+      ],
+      "when_to_consult": "IMMÉDIATEMENT - Allez chez un vétérinaire spécialisé NAC dès que possible.",
+      "preparation_for_vet": [
+        "Noter la dernière consommation",
+        "Décrire les selles récentes",
+        "Apporter le foin et alimentation habituels"
+      ],
+      "source": "House Rabbit Society"
+    },
+    {
+      "id": "drinking_more",
+      "title_fr": "Augmentation de la consommation d'eau",
+      "title_en": "Increased water consumption",
+      "trigger_symptoms": ["drinking more", "increased thirst"],
+      "trigger_keywords": ["drinking more", "more water", "boit beaucoup", "يشرب كثيرا"],
+      "species": ["dog", "cat"],
+      "urgency": "MODERATE",
+      "advice": "Boire plus que d'habitude peut être normal en cas de chaleur ou d'exercice. Cependant, une augmentation persistante peut indiquer plusieurs problèmes nécessitant un bilan vétérinaire.",
+      "home_care": [
+        "Mesurer la quantité d'eau bue par jour pendant 1 semaine",
+        "Vérifier la température ambiante",
+        "Surveiller la quantité d'urine",
+        "Maintenir un bol d'eau toujours plein"
+      ],
+      "watch_for": [
+        "Augmentation persistante au-delà de 1-2 semaines",
+        "Augmentation de l'urination",
+        "Perte de poids malgré bon appétit",
+        "Léthargie",
+        "Changement d'appétit"
+      ],
+      "when_to_consult": "Si la consommation accrue persiste plus de 2 semaines, ou si vous observez d'autres signes (perte de poids, augmentation de l'urination), un bilan rénal et endocrinien est recommandé.",
+      "preparation_for_vet": [
+        "Mesurer la quantité d'eau bue par jour",
+        "Peser l'animal",
+        "Noter les changements urinaires",
+        "Lister tout traitement en cours"
+      ],
+      "source": "International Renal Interest Society"
+    },
+    {
+      "id": "scratching_itching",
+      "title_fr": "Démangeaisons",
+      "title_en": "Itching and scratching",
+      "trigger_symptoms": ["scratching", "itching"],
+      "trigger_keywords": ["scratching", "itching", "gratte", "يحك"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "LOW",
+      "advice": "Les démangeaisons sont souvent dues à des allergies (alimentaires ou environnementales), des parasites (puces, gale) ou de la peau sèche. La plupart des cas se gèrent à domicile.",
+      "home_care": [
+        "Inspecter le pelage à la recherche de puces",
+        "Donner un bain avec un shampoing doux pour animaux",
+        "Vérifier le régime alimentaire (changement récent ?)",
+        "Couper les ongles pour éviter les blessures"
+      ],
+      "watch_for": [
+        "Plaies ouvertes par grattage",
+        "Perte de poils localisée",
+        "Rougeurs importantes",
+        "Présence de parasites visibles",
+        "Persistance au-delà de 1-2 semaines"
+      ],
+      "when_to_consult": "Si les démangeaisons persistent plus de 2 semaines, causent des plaies, ou si vous voyez des parasites résistants aux traitements basiques.",
+      "preparation_for_vet": [
+        "Photographier les zones touchées",
+        "Lister les traitements antiparasitaires utilisés",
+        "Noter les changements alimentaires",
+        "Décrire l'évolution dans le temps"
+      ],
+      "source": "ACVD Dermatology Guidelines"
+    },
+    {
+      "id": "limping_minor",
+      "title_fr": "Boiterie légère",
+      "title_en": "Minor limping",
+      "trigger_symptoms": ["limping"],
+      "trigger_keywords": ["limping", "favoring leg", "boite", "يعرج"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "MODERATE",
+      "advice": "Une boiterie légère peut résulter d'une entorse, d'un objet coincé dans la patte, ou de fatigue. Le repos est souvent suffisant pour les cas mineurs.",
+      "home_care": [
+        "Examiner la patte pour détecter épines, blessures",
+        "Limiter l'exercice pendant 2-3 jours",
+        "Compresses froides si gonflement",
+        "Surveiller l'évolution"
+      ],
+      "watch_for": [
+        "Refus de poser la patte au sol",
+        "Gonflement important",
+        "Plaie visible",
+        "Boiterie persistant plus de 48h",
+        "Cri de douleur au toucher"
+      ],
+      "when_to_consult": "Si la boiterie persiste plus de 48 heures, si l'animal ne pose plus la patte, ou si vous suspectez une fracture.",
+      "preparation_for_vet": [
+        "Filmer la démarche",
+        "Identifier la patte concernée",
+        "Décrire l'événement déclencheur",
+        "Noter l'évolution"
+      ],
+      "source": "ACVS Surgical Guidelines"
+    },
+    {
+      "id": "seizure_emergency",
+      "title_fr": "Convulsion",
+      "title_en": "Seizure",
+      "trigger_symptoms": ["seizure", "convulsion"],
+      "trigger_keywords": ["seizure", "convulsion", "convulse", "يتشنج"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "CRITICAL",
+      "advice": "URGENCE VITALE : Une convulsion nécessite une intervention vétérinaire immédiate. NE METTEZ PAS vos mains dans la gueule de l'animal pendant la crise.",
+      "home_care": [
+        "Protégez l'animal des objets blessants",
+        "Chronométrez la durée de la crise",
+        "Ne le retenez pas pendant la crise",
+        "Filmez si possible pour le vétérinaire",
+        "Préparez le transport"
+      ],
+      "watch_for": [
+        "Crises répétées",
+        "Crise durant plus de 5 minutes",
+        "Difficulté respiratoire pendant la crise",
+        "Perte de conscience prolongée"
+      ],
+      "when_to_consult": "IMMÉDIATEMENT - Toute première convulsion ou crise durant plus de 5 minutes est une urgence vitale.",
+      "preparation_for_vet": [
+        "Filmer si possible",
+        "Noter la durée exacte",
+        "Décrire les mouvements",
+        "Lister les médicaments et toxines possibles"
+      ],
+      "source": "Merck Veterinary Manual"
+    },
+    {
+      "id": "poisoning_emergency",
+      "title_fr": "Empoisonnement suspecté",
+      "title_en": "Suspected poisoning",
+      "trigger_symptoms": ["poisoning", "ate poison"],
+      "trigger_keywords": ["poison", "rat poison", "chocolate", "empoisonné", "سم"],
+      "species": ["dog", "cat", "bird", "rabbit", "hamster"],
+      "urgency": "CRITICAL",
+      "advice": "URGENCE ABSOLUE : Si vous suspectez un empoisonnement, agissez immédiatement. NE FAITES PAS vomir l'animal sans avis vétérinaire (certains poisons sont plus dangereux en remontant).",
+      "home_care": [
+        "Identifier le toxique si possible",
+        "Garder l'emballage du produit",
+        "NE PAS faire vomir sans avis vétérinaire",
+        "NE PAS donner de lait ou d'eau salée",
+        "Préparer le transport immédiat"
+      ],
+      "watch_for": [
+        "Salivation excessive",
+        "Vomissements",
+        "Convulsions",
+        "Perte de conscience",
+        "Difficultés respiratoires",
+        "Tremblements"
+      ],
+      "when_to_consult": "IMMÉDIATEMENT - Allez aux urgences vétérinaires SANS attendre les symptômes.",
+      "preparation_for_vet": [
+        "Apporter l'emballage du toxique",
+        "Estimer la quantité ingérée",
+        "Noter l'heure d'ingestion",
+        "Lister les symptômes observés"
+      ],
+      "source": "ASPCA Animal Poison Control"
+    },
+    {
+      "id": "lethargy_general",
+      "title_fr": "Léthargie générale",
+      "title_en": "General lethargy",
+      "trigger_symptoms": ["lethargy", "weak"],
+      "trigger_keywords": ["lethargic", "weak", "léthargique", "خامل"],
+      "species": ["dog", "cat", "rabbit", "bird"],
+      "urgency": "MODERATE",
+      "advice": "La léthargie peut avoir plusieurs causes : fatigue normale après l'exercice, chaleur, stress, ou un problème de santé sous-jacent. Une évaluation est nécessaire si elle persiste.",
+      "home_care": [
+        "Fournir un environnement calme et frais",
+        "Surveiller la température corporelle",
+        "Maintenir l'accès à l'eau",
+        "Observer le comportement alimentaire"
+      ],
+      "watch_for": [
+        "Léthargie persistant plus de 24h",
+        "Refus alimentaire associé",
+        "Difficultés respiratoires",
+        "Vomissements ou diarrhée",
+        "Gencives pâles ou jaunes"
+      ],
+      "when_to_consult": "Si la léthargie persiste plus de 24-48 heures, ou si elle est accompagnée d'autres symptômes.",
+      "preparation_for_vet": [
+        "Décrire le niveau d'activité habituel",
+        "Noter la durée des symptômes",
+        "Lister les changements environnementaux",
+        "Mesurer la température si possible"
+      ],
+      "source": "Merck Veterinary Manual"
+    },
+    {
+      "id": "respiratory_difficulty",
+      "title_fr": "Difficulté respiratoire",
+      "title_en": "Breathing difficulty",
+      "trigger_symptoms": ["difficulty breathing", "rapid breathing"],
+      "trigger_keywords": ["breathing", "respiration", "يتنفس بصعوبة"],
+      "species": ["dog", "cat", "rabbit", "bird"],
+      "urgency": "CRITICAL",
+      "advice": "URGENCE : Toute difficulté respiratoire est une urgence vétérinaire. Ne stressez surtout pas l'animal car cela peut aggraver la situation rapidement.",
+      "home_care": [
+        "Garder l'animal au calme",
+        "Éviter de le manipuler",
+        "Maintenir une température fraîche",
+        "Préparer le transport immédiat"
+      ],
+      "watch_for": [
+        "Gencives bleues ou pâles",
+        "Respiration bouche ouverte",
+        "Position assise allongée (chat)",
+        "Toux fréquente",
+        "Perte de conscience"
+      ],
+      "when_to_consult": "IMMÉDIATEMENT - Allez aux urgences vétérinaires sans tarder.",
+      "preparation_for_vet": [
+        "Noter le rythme respiratoire (compter par minute)",
+        "Photographier les gencives",
+        "Décrire l'événement déclencheur",
+        "Limiter le stress du transport"
+      ],
+      "source": "Veterinary Emergency Critical Care"
+    },
+    {
+      "id": "minor_wound",
+      "title_fr": "Plaie superficielle",
+      "title_en": "Minor wound",
+      "trigger_symptoms": ["wound", "cut"],
+      "trigger_keywords": ["small wound", "scratch", "plaie", "جرح"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "LOW",
+      "advice": "Les petites plaies superficielles peuvent souvent être traitées à domicile. Une bonne hygiène et la prévention du léchage sont essentielles.",
+      "home_care": [
+        "Nettoyer avec du sérum physiologique",
+        "Appliquer une compression légère pour arrêter le saignement",
+        "Désinfecter avec un produit adapté aux animaux",
+        "Empêcher l'animal de lécher (collerette)"
+      ],
+      "watch_for": [
+        "Saignement abondant",
+        "Plaie profonde ou large",
+        "Signes d'infection (pus, rougeur, gonflement)",
+        "Fièvre",
+        "Léthargie"
+      ],
+      "when_to_consult": "Si la plaie est profonde, large, saigne abondamment, ou montre des signes d'infection après 2-3 jours.",
+      "preparation_for_vet": [
+        "Photographier la plaie",
+        "Décrire l'origine si connue",
+        "Noter la date de la dernière vaccination antirabique",
+        "Signaler toute baisse d'état général"
+      ],
+      "source": "Veterinary Emergency Manual"
+    },
+    {
+      "id": "dental_concern",
+      "title_fr": "Problème dentaire suspecté",
+      "title_en": "Dental concern",
+      "trigger_symptoms": ["bad breath", "drooling"],
+      "trigger_keywords": ["bad breath", "halitosis", "mauvaise haleine", "رائحة الفم"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "LOW",
+      "advice": "La mauvaise haleine, le tartre et les difficultés à manger peuvent indiquer un problème dentaire. Un suivi régulier est important pour la santé bucco-dentaire.",
+      "home_care": [
+        "Brossage dentaire régulier (avec dentifrice pour animaux)",
+        "Donner des friandises dentaires adaptées",
+        "Inspecter régulièrement les dents et gencives",
+        "Privilégier la nourriture sèche pour le brossage naturel"
+      ],
+      "watch_for": [
+        "Difficulté à manger",
+        "Salivation excessive",
+        "Saignements gingivaux",
+        "Perte de dents",
+        "Comportement irritable lors du toucher"
+      ],
+      "when_to_consult": "Pour un détartrage annuel ou si vous observez des signes inquiétants.",
+      "preparation_for_vet": [
+        "Photographier la bouche si possible",
+        "Décrire les habitudes alimentaires",
+        "Noter la dernière visite dentaire"
+      ],
+      "source": "AVDC Dental Guidelines"
+    },
+    {
+      "id": "ear_infection",
+      "title_fr": "Otite — infection de l'oreille",
+      "title_en": "Ear infection / Otitis",
+      "trigger_symptoms": ["scratching ear", "head shaking", "ear smell"],
+      "trigger_keywords": ["oreille qui pue", "se gratte l'oreille", "otite", "oreille sale", "تهز رأسها", "أذن"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "MODERATE",
+      "advice": "Une otite est une inflammation douloureuse de l'oreille externe (ou moyenne). Elle est très fréquente chez le chien, surtout les races aux oreilles tombantes. Sans traitement, elle peut progresser vers l'oreille moyenne et interne, causant des troubles neurologiques.",
+      "home_care": [
+        "Nettoyer l'oreille visible avec un nettoyant vétérinaire spécifique (jamais de coton-tige en profondeur)",
+        "Essuyer avec une compresse propre en partant du canal vers l'extérieur",
+        "Empêcher l'animal de se gratter avec une collerette si les lésions s'aggravent",
+        "Sécher soigneusement les oreilles après le bain ou la baignade"
+      ],
+      "watch_for": [
+        "Tête penchée d'un côté (otite moyenne)",
+        "Perte d'équilibre ou nystagmus (otite interne)",
+        "Écoulement noir, marron ou purulent",
+        "Douleur intense au toucher du pavillon",
+        "Mauvaise odeur persistante malgré nettoyage"
+      ],
+      "when_to_consult": "Si les symptômes persistent plus de 3–5 jours après nettoyage, si l'odeur est forte, ou si l'animal penche la tête — consultation vétérinaire indispensable.",
+      "preparation_for_vet": [
+        "Ne pas nettoyer l'oreille dans les 2h précédant la consultation",
+        "Photographier l'écoulement si visible",
+        "Lister les traitements déjà utilisés",
+        "Préciser la durée et l'évolution des symptômes"
+      ],
+      "source": "Veterinary Dermatology Guidelines — ECVD"
+    },
+    {
+      "id": "heatstroke",
+      "title_fr": "Coup de chaleur",
+      "title_en": "Heatstroke / Hyperthermia",
+      "trigger_symptoms": ["panting", "collapse", "high temperature", "overheating"],
+      "trigger_keywords": ["coup de chaleur", "halète", "s'effondre", "chaleur", "voiture chaude", "ضربة شمس", "حرارة"],
+      "species": ["dog", "cat", "rabbit", "hamster", "guinea_pig"],
+      "urgency": "CRITICAL",
+      "advice": "URGENCE VITALE : Le coup de chaleur survient quand la température corporelle dépasse 40–41°C. Il peut être fatal en moins d'une heure. Les races brachycéphales (bouledogue, carlin, persan) et les jeunes animaux sont particulièrement vulnérables. La voiture fermée est la cause n°1.",
+      "home_care": [
+        "Déplacer l'animal IMMÉDIATEMENT dans un endroit frais et ombragé",
+        "Mouiller le corps avec de l'eau TIÈDE (jamais glacée)",
+        "Ventiler activement avec un éventail ou climatisation",
+        "Placer des linges humides sur les coussinets, l'aine et les aisselles",
+        "Proposer de l'eau fraîche à boire si l'animal est conscient et peut avaler",
+        "Appeler le vétérinaire PENDANT le refroidissement, ne pas attendre"
+      ],
+      "watch_for": [
+        "Muqueuses rouge vif puis bleutées ou grises",
+        "Convulsions",
+        "Perte de conscience",
+        "Vomissements ou diarrhée avec sang",
+        "Température rectale > 40.5°C"
+      ],
+      "when_to_consult": "IMMÉDIATEMENT — Le coup de chaleur est une urgence absolue même après refroidissement apparent. Des complications différées peuvent survenir dans les 24–72h.",
+      "preparation_for_vet": [
+        "Mesurer la température rectale si possible",
+        "Noter l'heure d'exposition et la durée",
+        "Décrire l'environnement (voiture, plein soleil, température extérieure)",
+        "Continuer le refroidissement pendant le transport"
+      ],
+      "source": "VECCS — Veterinary Emergency and Critical Care Society"
+    },
+    {
+      "id": "drug_poisoning",
+      "title_fr": "Intoxication médicamenteuse",
+      "title_en": "Drug / Medication poisoning",
+      "trigger_symptoms": ["ingested medication", "poisoning", "vomiting after medication"],
+      "trigger_keywords": ["médicament", "paracétamol", "ibuprofène", "aspirine", "comprimé avalé", "دواء", "تسمم"],
+      "species": ["dog", "cat", "rabbit", "bird", "hamster"],
+      "urgency": "CRITICAL",
+      "advice": "URGENCE ABSOLUE : De nombreux médicaments humains sont extrêmement toxiques pour les animaux, même à faible dose. Le paracétamol est fatal pour le chat à partir d'un seul comprimé. N'attendez JAMAIS l'apparition de symptômes.",
+      "home_care": [
+        "Identifier le médicament, la dose et l'heure d'ingestion estimée",
+        "Conserver l'emballage ou noter le nom exact du médicament",
+        "NE PAS faire vomir sans instruction vétérinaire explicite",
+        "NE PAS donner de lait, eau salée ou autre antidote domestique",
+        "Garder l'animal au calme et au chaud"
+      ],
+      "watch_for": [
+        "Vomissements",
+        "Tremblements ou convulsions",
+        "Difficultés respiratoires",
+        "Gencives pâles, jaunes ou bleutées",
+        "Perte de conscience",
+        "Salivation excessive"
+      ],
+      "when_to_consult": "IMMÉDIATEMENT — Sans attendre les symptômes. Chaque minute compte. Certains médicaments (paracétamol, rodenticides) ont une fenêtre thérapeutique très étroite.",
+      "preparation_for_vet": [
+        "Apporter l'emballage complet du médicament",
+        "Estimer la quantité ingérée et l'heure",
+        "Peser l'animal si possible (le traitement est basé sur le poids)",
+        "Lister tous les médicaments que l'animal prend déjà"
+      ],
+      "source": "ASPCA Animal Poison Control Center"
+    },
+    {
+      "id": "urinary_blockage",
+      "title_fr": "Obstruction urinaire — chat mâle",
+      "title_en": "Urinary blockage (cat)",
+      "trigger_symptoms": ["straining to urinate", "no urine", "crying in litter box"],
+      "trigger_keywords": ["n'urine plus", "bloqué", "urinaire", "crie aux toilettes", "position uriner", "لا يتبول", "انسداد"],
+      "species": ["cat"],
+      "urgency": "CRITICAL",
+      "advice": "URGENCE VITALE : L'obstruction urétrale chez le chat mâle est une des urgences vétérinaires les plus fréquentes et les plus graves. Sans intervention dans les 24–48h, elle est fatale par hyperkaliémie et arrêt cardiaque. Les mâles castrés en surpoids avec alimentation sèche exclusive sont les plus touchés.",
+      "home_care": [
+        "Ne rien donner à manger ni à boire",
+        "Ne pas appuyer sur l'abdomen",
+        "Transporter le chat immédiatement chez le vétérinaire",
+        "Garder le chat au calme pendant le transport"
+      ],
+      "watch_for": [
+        "Position de squattage répétée sans produire d'urine",
+        "Cris de douleur dans le bac",
+        "Léchage excessif de la région génitale",
+        "Abdomen tendu et douloureux",
+        "Léthargie progressive",
+        "Vomissements associés"
+      ],
+      "when_to_consult": "IMMÉDIATEMENT — Toute suspicion d'obstruction urinaire chez un chat mâle est une urgence vitale absolue. N'attendez pas le lendemain matin.",
+      "preparation_for_vet": [
+        "Décrire la fréquence des tentatives d'urination",
+        "Préciser la dernière fois que de l'urine a été observée",
+        "Signaler tout changement d'alimentation récent",
+        "Lister les traitements éventuels en cours"
+      ],
+      "source": "AAFP Feline Urological Syndrome Guidelines"
+    },
+    {
+      "id": "cat_asthma",
+      "title_fr": "Asthme félin",
+      "title_en": "Feline asthma",
+      "trigger_symptoms": ["wheezing", "open mouth breathing", "coughing cat"],
+      "trigger_keywords": ["respiration sifflante", "chat tousse", "gueule ouverte", "asthme chat", "صفير التنفس", "ربو القطة"],
+      "species": ["cat"],
+      "urgency": "HIGH",
+      "advice": "L'asthme félin est une inflammation chronique des voies respiratoires inférieures. Les crises peuvent être déclenchées par la litière parfumée, la fumée, les sprays ménagers ou le stress. Une crise sévère (chat respirant gueule ouverte, muqueuses bleutées) est une urgence absolue.",
+      "home_care": [
+        "Passer à une litière sans parfum ni poussière (silice ou granulés non parfumés)",
+        "Éviter tous les sprays, désodorisants et bougies parfumées",
+        "Ne pas fumer en présence du chat",
+        "Garder l'environnement exempt de poussière et d'acariens",
+        "Réduire le stress de l'animal"
+      ],
+      "watch_for": [
+        "Respiration gueule ouverte (URGENCE IMMÉDIATE chez le chat)",
+        "Muqueuses bleutées ou grises",
+        "Crise dyspnéique avec coudes écartés",
+        "Aggravation nocturne ou au réveil",
+        "Toux nocturne chronique"
+      ],
+      "when_to_consult": "Dès la première crise de toux importante ou respiration sifflante pour diagnostic (radiographies thoraciques). En urgence immédiate si respiration gueule ouverte ou muqueuses colorées.",
+      "preparation_for_vet": [
+        "Filmer une crise si possible — aide diagnostique précieuse",
+        "Lister les produits ménagers utilisés à domicile",
+        "Décrire le type de litière",
+        "Préciser l'évolution dans le temps (fréquence des crises)"
+      ],
+      "source": "ACVIM Consensus Statement — Feline Asthma"
+    },
+    {
+      "id": "skin_allergy",
+      "title_fr": "Allergie cutanée généralisée",
+      "title_en": "Generalized skin allergy",
+      "trigger_symptoms": ["itching", "rash", "hives", "skin reaction"],
+      "trigger_keywords": ["allergie", "urticaire", "gratte partout", "rougeurs", "plaques", "حساسية جلدية", "حكة"],
+      "species": ["dog", "cat", "rabbit", "hamster"],
+      "urgency": "MODERATE",
+      "advice": "Les allergies cutanées peuvent être alimentaires, environnementales (atopie) ou liées aux puces (DAPP). Une réaction allergique sévère soudaine (urticaire généralisée, gonflement du visage, difficultés respiratoires) est une urgence immédiate.",
+      "home_care": [
+        "Traitement antiparasitaire rigoureux et à jour (puces = cause n°1)",
+        "Shampoing doux apaisant à l'avoine ou à la chlorhexidine",
+        "Éviter les changements alimentaires brusques",
+        "Si allergie alimentaire suspectée : régime d'élimination strict pendant 8 semaines (protéine unique)",
+        "Éviter les contacts avec les produits chimiques (nettoyants ménagers, engrais)"
+      ],
+      "watch_for": [
+        "Gonflement du visage, des lèvres ou de la gorge (anaphylaxie — URGENCE)",
+        "Difficulté respiratoire soudaine",
+        "Urticaire généralisée avec prostration",
+        "Plaies par grattage profond avec surinfection",
+        "Perte de poils étendue"
+      ],
+      "when_to_consult": "Si les démangeaisons ne s'améliorent pas en 5–7 jours, si des plaies apparaissent, ou si vous suspectez une allergie alimentaire. En urgence si gonflement du visage ou difficultés respiratoires.",
+      "preparation_for_vet": [
+        "Photographier les zones atteintes",
+        "Lister l'alimentation complète des 3 derniers mois",
+        "Préciser les traitements antiparasitaires utilisés et leur fréquence",
+        "Décrire l'environnement (intérieur/extérieur, plantes, produits ménagers)"
+      ],
+      "source": "ACVD — American College of Veterinary Dermatology"
+    },
+    {
+      "id": "eye_infection",
+      "title_fr": "Infection oculaire — conjonctivite",
+      "title_en": "Eye infection / Conjunctivitis",
+      "trigger_symptoms": ["red eye", "eye discharge", "squinting"],
+      "trigger_keywords": ["oeil rouge", "écoulement yeux", "cligne des yeux", "conjonctivite", "عين حمراء", "إفرازات عين"],
+      "species": ["dog", "cat", "rabbit", "guinea_pig"],
+      "urgency": "MODERATE",
+      "advice": "La conjonctivite peut être infectieuse (bactérie, virus, herpèsvirus félin), allergique ou traumatique. Un ulcère cornéen (douleur vive, œil gardé fermé) est une urgence car il peut évoluer vers la perforation oculaire.",
+      "home_care": [
+        "Nettoyer délicatement avec des compresses stériles imbibées de sérum physiologique",
+        "Nettoyer du coin interne vers le coin externe en un seul geste",
+        "Utiliser une compresse par passage (pas de réutilisation)",
+        "Empêcher l'animal de se frotter l'œil (collerette si nécessaire)",
+        "Ne jamais utiliser de gouttes ophtalmiques humaines"
+      ],
+      "watch_for": [
+        "Œil gardé totalement fermé (douleur — ulcère possible)",
+        "Modification de la couleur ou de la transparence de la cornée",
+        "Écoulement jaune ou vert épais (infection bactérienne)",
+        "Gonflement marqué des paupières",
+        "Troisième paupière (membrane nictitante) proéminente"
+      ],
+      "when_to_consult": "Dans les 24–48h si l'œil est gardé fermé ou si l'écoulement est purulent. En urgence si la cornée semble opaque ou si l'animal frappe son œil contre les surfaces.",
+      "preparation_for_vet": [
+        "Photographier l'œil avant nettoyage",
+        "Décrire la couleur et la consistance de l'écoulement",
+        "Préciser depuis quand et si les deux yeux sont touchés",
+        "Mentionner tout traumatisme récent"
+      ],
+      "source": "ECVO — European College of Veterinary Ophthalmology"
+    },
+    {
+      "id": "trauma_fracture",
+      "title_fr": "Traumatisme — fracture suspectée",
+      "title_en": "Trauma / Suspected fracture",
+      "trigger_symptoms": ["fracture", "hit by car", "fall", "limping severely"],
+      "trigger_keywords": ["accident voiture", "chute", "fracture", "os cassé", "membre cassé", "كسر", "حادث"],
+      "species": ["dog", "cat", "rabbit", "bird", "hamster"],
+      "urgency": "HIGH",
+      "advice": "Un traumatisme important (accident de voiture, chute de hauteur) peut causer des lésions internes invisibles en plus des fractures visibles. Un animal peut sembler stable puis se décompenser rapidement. Ne présumez jamais qu'un animal 'va bien' après un impact violent.",
+      "home_care": [
+        "Immobiliser l'animal sur une surface rigide et plate (planche, carton épais)",
+        "Ne pas tenter de replacer l'os ou réduire la fracture",
+        "Couvrir toute plaie ouverte avec une compresse stérile humide sans comprimer",
+        "Ne rien donner à manger ou boire (anesthésie probable)",
+        "Transporter avec le minimum de mouvements possible",
+        "Maintenir l'animal au chaud pendant le transport"
+      ],
+      "watch_for": [
+        "Détresse respiratoire (pneumothorax possible après impact thoracique)",
+        "Gencives pâles ou blanches (hémorragie interne)",
+        "Abdomen douloureux et rigide",
+        "Paralysie ou perte de sensibilité d'un membre",
+        "Dégradation de l'état général même sans lésion visible"
+      ],
+      "when_to_consult": "IMMÉDIATEMENT après tout traumatisme significatif — même si l'animal semble aller bien. Les hémorragies internes et le pneumothorax peuvent être mortels et ne sont pas visibles sans imagerie.",
+      "preparation_for_vet": [
+        "Décrire précisément le mécanisme du traumatisme",
+        "Estimer la hauteur de chute ou la vitesse du véhicule",
+        "Photographier les lésions visibles",
+        "Chronométrer tout changement de l'état de conscience"
+      ],
+      "source": "VECCS — Trauma and Emergency Guidelines"
+    },
+    {
+      "id": "dehydration",
+      "title_fr": "Déshydratation",
+      "title_en": "Dehydration",
+      "trigger_symptoms": ["dehydration", "sunken eyes", "dry gums", "lethargy"],
+      "trigger_keywords": ["déshydraté", "yeux enfoncés", "gencives sèches", "ne boit pas", "جفاف", "لا يشرب"],
+      "species": ["dog", "cat", "rabbit", "bird", "hamster", "guinea_pig"],
+      "urgency": "MODERATE",
+      "advice": "La déshydratation est une conséquence fréquente des vomissements, diarrhées, fièvres ou refus de boire. Elle peut être évaluée à domicile par le test du pli cutané. Une déshydratation > 8% est une urgence vétérinaire nécessitant une réhydratation intraveineuse.",
+      "home_care": [
+        "Test du pli cutané : pincer la peau du cou — si le pli reste plus de 2 secondes, déshydratation significative",
+        "Proposer de l'eau fraîche en très petites quantités toutes les 10 minutes",
+        "Solution de réhydratation orale vétérinaire si disponible",
+        "Bouillon de poulet non salé et non assaisonné pour inciter à boire",
+        "Jamais de solutions sucrées pour humains (Gatorade, etc.)"
+      ],
+      "watch_for": [
+        "Pli cutané persistant plus de 3–4 secondes (déshydratation sévère)",
+        "Gencives collantes et très sèches",
+        "Yeux enfoncés dans les orbites",
+        "Pouls rapide et filant",
+        "Extrémités froides — signe de choc hypovolémique"
+      ],
+      "when_to_consult": "Si l'animal ne boit pas, vomit l'eau ingérée, ou si le pli cutané est persistant — consultation urgente pour perfusion intraveineuse. En urgence si léthargie extrême ou extrémités froides.",
+      "preparation_for_vet": [
+        "Évaluer et décrire le pli cutané",
+        "Estimer la quantité d'eau bue dans les dernières 24h",
+        "Décrire les vomissements ou diarrhées associés",
+        "Mesurer la température si possible"
+      ],
+      "source": "Merck Veterinary Manual — Fluid Therapy"
+    },
+    {
+      "id": "bloat_torsion",
+      "title_fr": "Dilatation-torsion gastrique (estomac retourné)",
+      "title_en": "Gastric dilatation-volvulus (GDV) / Bloat",
+      "trigger_symptoms": ["bloated abdomen", "retching", "restlessness", "collapse"],
+      "trigger_keywords": ["ventre gonflé", "tente de vomir", "estomac retourné", "dogue", "grand chien", "انتفاخ المعدة", "التواء المعدة"],
+      "species": ["dog"],
+      "urgency": "CRITICAL",
+      "advice": "URGENCE VITALE ABSOLUE : La dilatation-torsion gastrique (DTG) est l'une des urgences chirurgicales les plus graves en médecine vétérinaire canine. Sans intervention chirurgicale dans les 2–6 heures, le pronostic vital est engagé. Elle touche principalement les grandes races à thorax profond (dogue allemand, bouvier bernois, labrador, berger allemand, setter irlandais).",
+      "home_care": [
+        "NE RIEN donner à manger ou boire",
+        "Ne pas tenter de faire roter l'animal",
+        "Ne pas appuyer sur l'abdomen",
+        "Transport IMMÉDIAT en urgence vétérinaire — chaque minute compte",
+        "Garder l'animal allongé et au calme pendant le transport",
+        "Appeler la clinique en amont pour signaler l'urgence"
+      ],
+      "watch_for": [
+        "Abdomen distendu, dur et douloureux",
+        "Tentatives répétées de vomir sans résultat (rétchissement improductif)",
+        "Hypersalivation",
+        "Agitation intense puis prostration",
+        "Gencives pâles ou bleutées",
+        "Collapsus"
+      ],
+      "when_to_consult": "IMMÉDIATEMENT — La DTG est mortelle sans chirurgie d'urgence. N'attendez pas pour voir si ça passe. Appelez la clinique vétérinaire d'urgence avant de partir pour qu'ils se préparent.",
+      "preparation_for_vet": [
+        "Préciser l'heure du dernier repas et la quantité",
+        "Décrire l'exercice post-prandial éventuel",
+        "Préciser la race et le poids de l'animal",
+        "Signaler si un épisode similaire a déjà eu lieu"
+      ],
+      "source": "Merck Veterinary Manual — Gastric Dilatation-Volvulus"
+    },
+    {
+      "id": "blood_in_stool",
+      "title_fr": "Sang dans les selles",
+      "title_en": "Blood in stool / Rectal bleeding",
+      "trigger_symptoms": ["blood in stool", "rectal bleeding"],
+      "trigger_keywords": ["sang selles", "selles rouges", "hématochézie", "méléna", "دم في البراز"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "HIGH",
+      "advice": "La présence de sang dans les selles peut indiquer une irritation légère du côlon (hématochézie : sang rouge vif) ou un saignement digestif haut (méléna : selles noires goudronneuses). Le méléna est toujours une urgence. L'hématochézie modérée nécessite une consultation rapide.",
+      "home_care": [
+        "Ne rien donner à manger pendant 6–8h (repos digestif)",
+        "Proposer de l'eau fraîche en petites quantités",
+        "Observer la couleur : rouge vif (bas) ou noir goudron (haut — urgence)",
+        "Conserver un échantillon de selles si possible pour le vétérinaire",
+        "Eviter tout anti-inflammatoire ou médicament humain"
+      ],
+      "watch_for": [
+        "Selles noires et collantes (méléna) → saignement digestif haut — urgence",
+        "Faiblesse, pâleur des gencives → perte de sang significative",
+        "Sang abondant ou vomissements associés",
+        "Abdomen douloureux ou ballonné",
+        "Diarrhée liquide sanglante chez un chiot non vacciné (parvovirose)"
+      ],
+      "when_to_consult": "Immédiatement si méléna ou si l'animal est faible. Sous 24h pour tout sang dans les selles sans amélioration.",
+      "preparation_for_vet": [
+        "Apporter un échantillon de selles fraîches",
+        "Décrire la couleur et la consistance précisément",
+        "Lister les médicaments récents (AINS, corticoïdes)",
+        "Mentionner tout changement alimentaire ou accès à des ordures"
+      ],
+      "source": "WSAVA Gastrointestinal Guidelines"
+    },
+    {
+      "id": "abscess_cat",
+      "title_fr": "Abcès cutané (chat, chien)",
+      "title_en": "Skin abscess",
+      "trigger_symptoms": ["skin abscess", "swelling", "wound"],
+      "trigger_keywords": ["abcès", "bosse chaude", "plaie infectée", "gonflement douloureux", "خراج"],
+      "species": ["cat", "dog", "rabbit"],
+      "urgency": "MODERATE",
+      "advice": "Les abcès sont fréquents chez les chats qui se battent (griffes et morsures). Une bosse chaude, douloureuse, qui grossit rapidement est suspecte. L'abcès peut se percer spontanément (pus jaune-vert). Sans traitement antibiotique, l'infection peut se propager.",
+      "home_care": [
+        "Ne pas percer ni comprimer l'abcès vous-même — risque de bactériémie",
+        "Nettoyer doucement la zone avec une solution saline stérile si ouvert",
+        "Empêcher l'animal de lécher la plaie (collerette si nécessaire)",
+        "Garder la zone propre et sèche",
+        "Ne pas appliquer de produits humains (alcool, Bétadine pur) sans dilution"
+      ],
+      "watch_for": [
+        "Fièvre > 39.5°C — infection généralisée",
+        "Abcès qui s'étend rapidement ou change de couleur",
+        "Pus avec odeur très fétide (germes anaérobies)",
+        "Léthargie et refus de manger — signe d'infection systémique",
+        "Abcès près d'un œil, de l'oreille ou de la bouche — risque de complications graves"
+      ],
+      "when_to_consult": "Sous 24–48h pour drainage vétérinaire et antibiotiques. Immédiatement si fièvre élevée ou abcès près d'organes sensibles.",
+      "preparation_for_vet": [
+        "Décrire la taille, la localisation et l'évolution",
+        "Mentionner tout contact récent avec d'autres animaux (bagarre)",
+        "Préciser si l'animal est vacciné contre la rage (morsure d'animal inconnu)",
+        "Photographier la lésion"
+      ],
+      "source": "AAFP Feline Health Guidelines"
+    },
+    {
+      "id": "kennel_cough",
+      "title_fr": "Toux du chenil (tracheobronchite infectieuse)",
+      "title_en": "Kennel cough / Infectious tracheobronchitis",
+      "trigger_symptoms": ["cough", "dry cough", "honking cough"],
+      "trigger_keywords": ["toux sèche", "toux du chenil", "bordetella", "toux après pension", "سعال الكنيل"],
+      "species": ["dog"],
+      "urgency": "LOW",
+      "advice": "La toux du chenil est une infection respiratoire hautement contagieuse entre chiens. Elle se manifeste par une toux sèche, 'aboyante', parfois suivie d'un raclement de gorge. Elle survient souvent après un séjour en pension, un toilettage ou un parc. Elle est rarement grave chez un chien adulte bien vacciné.",
+      "home_care": [
+        "Repos complet — pas d'exercice, pas de contact avec d'autres chiens",
+        "Humidifier l'air ambiant (bain de vapeur 5 min 2x/jour peut aider)",
+        "Utiliser un harnais plutôt qu'un collier pour éviter la pression sur la trachée",
+        "Alimentation normale si l'appétit est conservé",
+        "Isoler de tout autre chien ou animal pendant 2–3 semaines"
+      ],
+      "watch_for": [
+        "Fièvre > 39.5°C",
+        "Difficultés respiratoires ou respiration rapide au repos",
+        "Toux productive avec mucus coloré (verdâtre ou jaunâtre)",
+        "Refus de manger ou léthargie marquée",
+        "Symptômes chez un chiot ou un animal immunodéprimé (risque de pneumonie)"
+      ],
+      "when_to_consult": "Si les symptômes durent plus de 5–7 jours, ou si fièvre, dyspnée ou léthargie. Toujours consulter si chiot de moins de 6 mois.",
+      "preparation_for_vet": [
+        "Préciser le lieu de contamination probable (pension, parc, toiletteur)",
+        "Décrire la caractéristique de la toux (sèche, humide, fréquence)",
+        "Vérifier le statut vaccinal (Bordetella inclus ?)",
+        "Lister tous les contacts avec d'autres chiens dans les 10 jours"
+      ],
+      "source": "WSAVA Vaccination Guidelines — Bordetella"
+    },
+    {
+      "id": "parvovirus_suspicion",
+      "title_fr": "Suspicion de parvovirose canine",
+      "title_en": "Canine parvovirus suspicion",
+      "trigger_symptoms": ["vomiting", "bloody diarrhea", "lethargy"],
+      "trigger_keywords": ["parvo", "parvovirose", "chiot diarrhée sang", "parvovirus", "باروفيروس"],
+      "species": ["dog"],
+      "urgency": "CRITICAL",
+      "advice": "URGENCE VITALE chez le chiot non vacciné. La parvovirose est une infection virale foudroyante caractérisée par des vomissements, diarrhée profuse souvent sanglante, léthargie extrême et déshydratation rapide. Sans hospitalisation et soins intensifs, le taux de mortalité dépasse 80%.",
+      "home_care": [
+        "NE PAS attendre — transport immédiat chez le vétérinaire",
+        "Ne rien donner à manger ou boire pendant le transport",
+        "Garder le chiot au chaud (il se refroidit vite)",
+        "Désinfecter scrupuleusement tous les accessoires et zones souillées (eau de Javel à 1/30)",
+        "Isoler de tout autre chien immédiatement"
+      ],
+      "watch_for": [
+        "Diarrhée liquide abondante avec odeur caractéristique",
+        "Vomissements répétés et incoercibles",
+        "Gencives pâles ou blanchâtres",
+        "Effondrement et prostration totale",
+        "Hypothermie (corps froid au toucher)"
+      ],
+      "when_to_consult": "IMMÉDIATEMENT — Ne pas attendre. Appeler la clinique en amont pour signaler un chiot suspect de parvovirose.",
+      "preparation_for_vet": [
+        "Préciser l'âge et le statut vaccinal du chiot",
+        "Décrire les selles (couleur, odeur, consistance)",
+        "Mentionner tout contact avec d'autres chiens ou zones souillées",
+        "Indiquer depuis combien de temps les symptômes ont débuté"
+      ],
+      "source": "WSAVA Vaccination Guidelines — Canine Parvovirus"
+    },
+    {
+      "id": "pancreatitis",
+      "title_fr": "Pancréatite aiguë suspectée",
+      "title_en": "Acute pancreatitis",
+      "trigger_symptoms": ["vomiting", "abdominal pain", "lethargy"],
+      "trigger_keywords": ["pancréatite", "vomit après repas gras", "douleur abdomen", "chien gras festin", "التهاب البنكرياس"],
+      "species": ["dog", "cat"],
+      "urgency": "HIGH",
+      "advice": "La pancréatite survient souvent après l'ingestion d'un repas très gras (restes de table, charcuterie). Elle provoque des douleurs abdominales intenses, des vomissements et un refus total de manger. Le chien prend souvent une position caractéristique 'en prière' (postérieur surélevé). C'est une urgence médicale.",
+      "home_care": [
+        "Diète stricte immédiate — ne rien donner à manger ni à boire",
+        "Repos total dans un endroit calme",
+        "Ne pas administrer d'anti-douleurs humains (ibuprofène, paracétamol = TOXIQUE)",
+        "Garder l'animal au chaud",
+        "Transport urgent chez le vétérinaire pour confirmation et perfusion"
+      ],
+      "watch_for": [
+        "Position 'en prière' : tête basse, postérieur levé",
+        "Abdomen rigide et très douloureux à la palpation",
+        "Jaunisse (yeux jaunes, peau jaune) — atteinte hépatique",
+        "Fièvre élevée > 40°C",
+        "Choc : gencives pâles, pouls filant, effondrement"
+      ],
+      "when_to_consult": "Dans les 2–4h — Ne pas attendre. La pancréatite sévère peut être fatale sans hospitalisation et traitement IV.",
+      "preparation_for_vet": [
+        "Décrire le repas des 24–48h précédents",
+        "Préciser si accès à des aliments gras, ordures ou table",
+        "Décrire la posture et la douleur observable",
+        "Mentionner si épisodes similaires déjà survenus"
+      ],
+      "source": "WSAVA Pancreatitis Guidelines"
+    },
+    {
+      "id": "skin_tumor",
+      "title_fr": "Masse ou bosse cutanée",
+      "title_en": "Skin lump / Cutaneous mass",
+      "trigger_symptoms": ["skin mass", "lump", "nodule"],
+      "trigger_keywords": ["bosse", "masse cutanée", "grosseur", "nodule", "tumeur peau", "ورم جلدي"],
+      "species": ["dog", "cat", "rabbit", "ferret"],
+      "urgency": "MODERATE",
+      "advice": "Toute nouvelle bosse ou grosseur sur la peau d'un animal mérite une évaluation vétérinaire. La majorité des masses cutanées chez le chien sont bénignes (lipomes, kystes sébacés, papillomes), mais certaines peuvent être malignes. Une cytologie à l'aiguille fine permet souvent de typer la masse rapidement.",
+      "home_care": [
+        "Observer et mesurer la masse (diamètre, hauteur)",
+        "Photographier et dater chaque observation pour suivre l'évolution",
+        "Ne pas comprimer, percer ni tenter d'exciser la masse",
+        "Surveiller la croissance : une masse qui double de taille en < 30 jours est préoccupante",
+        "Empêcher l'animal de lécher ou de gratter la zone"
+      ],
+      "watch_for": [
+        "Croissance rapide (doublement en moins de 4 semaines)",
+        "Surface ulcérée, saignante ou suintante",
+        "Masse attachée aux tissus profonds (non mobile)",
+        "Anomalie de l'état général associée (perte de poids, léthargie)",
+        "Ganglions lymphatiques voisins gonflés"
+      ],
+      "when_to_consult": "Sous 2–4 semaines pour toute nouvelle masse. Immédiatement si saignement, croissance rapide ou altération de l'état général.",
+      "preparation_for_vet": [
+        "Décrire la localisation précise, la taille et la texture (molle, dure, mobile)",
+        "Indiquer depuis quand la masse est apparue",
+        "Préciser si elle a changé de taille ou d'aspect",
+        "Mentionner l'âge de l'animal et ses antécédents"
+      ],
+      "source": "ACVS — Soft Tissue Surgery Guidelines"
+    },
+    {
+      "id": "vestibular_syndrome",
+      "title_fr": "Syndrome vestibulaire (vertiges chez l'animal)",
+      "title_en": "Vestibular syndrome",
+      "trigger_symptoms": ["head tilt", "loss of balance", "nystagmus"],
+      "trigger_keywords": ["torticolis", "tête penchée", "nystagmus", "perd équilibre", "tourne en rond", "vestibulaire", "دوخة حيوان"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "MODERATE",
+      "advice": "Le syndrome vestibulaire se manifeste par une tête inclinée d'un côté, une perte d'équilibre, des mouvements des yeux incontrôlés (nystagmus) et parfois des roulades. Il peut être périphérique (otite interne, idiopathique — bénin) ou central (tumeur, AVC — plus grave). Chez le chien âgé, la forme idiopathique se résout souvent seule en 2–3 semaines.",
+      "home_care": [
+        "Sécuriser l'environnement : retirer les escaliers, éviter les hauteurs",
+        "Aider l'animal à boire et manger si difficultés",
+        "Parler doucement pour le rassurer — il est désorienté",
+        "Limiter la stimulation lumineuse et sonore",
+        "Ne pas tenter de corriger la tête penchée manuellement"
+      ],
+      "watch_for": [
+        "Aggravation rapide en quelques heures (forme centrale possible)",
+        "Difficultés à avaler (paralysie du nerf crânien)",
+        "Cécité soudaine associée",
+        "Convulsions",
+        "Absence totale d'amélioration après 72h"
+      ],
+      "when_to_consult": "Sous 24h pour examen neurologique. En urgence si les symptômes s'aggravent rapidement ou si convulsions associées.",
+      "preparation_for_vet": [
+        "Filmer les mouvements oculaires (nystagmus) — aide au diagnostic",
+        "Décrire le début (brutal ou progressif)",
+        "Préciser l'âge et les antécédents (otites, médicaments récents)",
+        "Mentionner si l'animal a reçu des médicaments ototoxiques"
+      ],
+      "source": "ACVIM — Veterinary Neurology Guidelines"
+    },
+    {
+      "id": "anal_glands",
+      "title_fr": "Problème de glandes anales",
+      "title_en": "Anal gland problems",
+      "trigger_symptoms": ["anal itching", "scooting", "licking rear"],
+      "trigger_keywords": ["glandes anales", "se frotte les fesses", "lèche derrière", "odeur poisson", "anal glands", "غدد شرجية"],
+      "species": ["dog", "cat"],
+      "urgency": "LOW",
+      "advice": "Les glandes anales (sacs paraanaux) peuvent se boucher, se surinfectér ou s'abcéder. Le signe classique est l'animal qui se frotte le derrière par terre, se lèche excessivement la région anale, ou présente une odeur de 'poisson'. La vidange manuelle par un vétérinaire ou un toiletteur qualifié résout généralement le problème.",
+      "home_care": [
+        "Ne pas tenter de vider les glandes anales vous-même sans formation",
+        "Alimentation riche en fibres pour favoriser une expression naturelle lors des selles",
+        "Ajouter un supplément de fibres (psyllium) si constipation associée",
+        "Nettoyage doux de la région anale avec une compresse humide tiède",
+        "Empêcher l'animal de se frotter sur les surfaces dures (irritation)"
+      ],
+      "watch_for": [
+        "Bosse rouge douloureuse de chaque côté de l'anus → abcès para-anal",
+        "Saignement ou pus autour de l'anus",
+        "Douleur intense à la défécation",
+        "Fièvre et léthargie associées (infection généralisée)",
+        "Sac anal fisturisé ou ouvert"
+      ],
+      "when_to_consult": "Sous 48–72h pour vidange professionnelle. Immédiatement si abcès, saignement ou douleur intense.",
+      "preparation_for_vet": [
+        "Décrire la fréquence du comportement de frottement",
+        "Préciser si odeur inhabituelle perçue",
+        "Mentionner la consistance des selles récentes",
+        "Indiquer si déjà traité pour glandes anales et à quelle fréquence"
+      ],
+      "source": "WSAVA Companion Animal Guidelines"
+    },
+    {
+      "id": "tick_removal",
+      "title_fr": "Tique sur l'animal",
+      "title_en": "Tick on pet",
+      "trigger_symptoms": ["tick", "parasite"],
+      "trigger_keywords": ["tique", "tick", "parasite peau", "bosse noire peau", "قراد"],
+      "species": ["dog", "cat", "rabbit", "ferret"],
+      "urgency": "LOW",
+      "advice": "Les tiques peuvent transmettre plusieurs maladies graves (Piroplasmose/Babésiose, Maladie de Lyme, Anaplasmose, Ehrlichiose). Il est important de retirer la tique correctement et rapidement — moins de 24h d'attachement réduit significativement le risque de transmission.",
+      "home_care": [
+        "Utiliser un tire-tique (disponible en pharmacie/magasin vétérinaire) — ne pas utiliser ses doigts",
+        "Saisir la tique au plus près de la peau sans écraser le corps",
+        "Tourner doucement en sens anti-horaire (ou tirer verticalement selon l'outil)",
+        "Ne PAS appliquer d'éther, alcool, huile, vaseline ou cigarette — risque de régurgitation des agents pathogènes",
+        "Désinfecter la zone avec un antiseptique doux après retrait",
+        "Conserver la tique dans un flacon pour analyse si possible"
+      ],
+      "watch_for": [
+        "Fièvre dans les 2–21 jours après la morsure",
+        "Faiblesse soudaine ou effondrement (piroplasmose — urgence)",
+        "Gencives pâles ou ictère (jaunisse) → piroplasmose",
+        "Douleurs articulaires, boiterie",
+        "Rougeur en cible autour du site de morsure (maladie de Lyme)"
+      ],
+      "when_to_consult": "En urgence si signes de piroplasmose (fièvre, faiblesse, gencives pâles) dans les 3 semaines suivant la morsure. Consultation sous 48–72h pour prophylaxie si zone endémique.",
+      "preparation_for_vet": [
+        "Conserver la tique extraite si possible",
+        "Préciser la zone géographique (zone endémique tiques ?)",
+        "Indiquer le temps d'attachement estimé",
+        "Préciser le traitement antiparasitaire externe en cours"
+      ],
+      "source": "ESCCAP European Guidelines — Ectoparasites"
+    },
+    {
+      "id": "excessive_panting",
+      "title_fr": "Halètement excessif",
+      "title_en": "Excessive panting",
+      "trigger_symptoms": ["panting", "breathlessness", "distress"],
+      "trigger_keywords": ["halètement", "souffle fort", "respiration rapide au repos", "langue pendue", "يلهث"],
+      "species": ["dog", "cat"],
+      "urgency": "MODERATE",
+      "advice": "Un halètement est normal après l'exercice ou par temps chaud. Il devient préoccupant s'il survient au repos, est intense et persistant, ou s'accompagne d'autres signes. Il peut indiquer: douleur, coup de chaleur, anxiété, anémie, syndrome brachycéphale, maladie cardiaque ou respiratoire.",
+      "home_care": [
+        "Amener l'animal dans un endroit frais et aéré",
+        "Proposer de l'eau fraîche",
+        "Éviter tout effort physique",
+        "Observer d'autres signes associés (couleur des gencives, posture)",
+        "Vérifier la température rectale si possible (normale : 38–39.2°C)"
+      ],
+      "watch_for": [
+        "Gencives bleues, violacées ou blanches → urgence respiratoire ou circulatoire",
+        "Halètement au repos par temps frais → pathologie sous-jacente",
+        "Température rectale > 40°C → coup de chaleur",
+        "Animal brachycéphale en détresse (bulldog, carlin) → syndrome obstructif",
+        "Distension abdominale + halètement → torsion gastrique (urgence)"
+      ],
+      "when_to_consult": "Immédiatement si gencives bleutées, effondrement ou fièvre élevée. Sous 24h si halètement persistant au repos sans cause évidente.",
+      "preparation_for_vet": [
+        "Décrire le contexte d'apparition (chaleur, exercice, stress, repas)",
+        "Préciser la couleur des gencives observée",
+        "Indiquer la température ambiante et la race",
+        "Filmer l'épisode si possible"
+      ],
+      "source": "ACVECC — Respiratory Emergency Guidelines"
+    },
+    {
+      "id": "sneezing_rhinitis",
+      "title_fr": "Éternuements et rhinite",
+      "title_en": "Sneezing and rhinitis",
+      "trigger_symptoms": ["sneezing", "runny nose", "nasal discharge"],
+      "trigger_keywords": ["éternuements", "nez qui coule", "rhinite", "écoulement nasal", "عطاس"],
+      "species": ["dog", "cat", "rabbit", "guinea_pig"],
+      "urgency": "LOW",
+      "advice": "Des éternuements occasionnels peuvent avoir des causes bénignes (poussières, parfums, corps étranger). Un écoulement nasal bilatéral clair est souvent viral (rhinite infectieuse). Un écoulement unilatéral épais, sanguinolent ou malodorant nécessite une consultation urgente (corps étranger nasal, tumeur, infection dentaire).",
+      "home_care": [
+        "Éviter les parfums, sprays, litières parfumées et fumée de cigarette",
+        "Humidifier l'air avec un humidificateur d'air",
+        "Nettoyer délicatement les narines avec une compresse humide tiède",
+        "Proposer de la nourriture chaude (arômes plus forts pour animal congestionné)",
+        "Isoler si infection virale suspectée (rhinotracheite féline contagieuse)"
+      ],
+      "watch_for": [
+        "Écoulement unilatéral épais, coloré ou sanguinolent → corps étranger ou tumeur",
+        "Éternuements inversés persistants (chez le chien) → irritation naso-pharyngée",
+        "Difficultés respiratoires associées",
+        "Refus de manger lié à l'anosmie",
+        "Adénopathie (ganglions gonflés) au niveau de la tête"
+      ],
+      "when_to_consult": "Sous 48–72h si écoulement persistant ou coloré. Immédiatement si unilatéral, sanguinolent ou accompagné de détresse respiratoire.",
+      "preparation_for_vet": [
+        "Décrire la couleur et la consistance de l'écoulement",
+        "Préciser si unilatéral ou bilatéral",
+        "Mentionner les produits récemment utilisés (spray, nettoyant, parfum)",
+        "Indiquer le statut vaccinal (rhinotrachéite incluse pour le chat)"
+      ],
+      "source": "AAFP Upper Respiratory Infection Guidelines"
+    },
+    {
+      "id": "jaundice_ictere",
+      "title_fr": "Jaunisse (ictère)",
+      "title_en": "Jaundice / Icterus",
+      "trigger_symptoms": ["jaundice", "yellow eyes", "yellow skin"],
+      "trigger_keywords": ["jaunisse", "ictère", "yeux jaunes", "peau jaune", "gencives jaunes", "يرقان"],
+      "species": ["dog", "cat", "rabbit", "ferret"],
+      "urgency": "HIGH",
+      "advice": "La jaunisse est le jaunissement visible des muqueuses (gencives, blanc des yeux) dû à une accumulation de bilirubine. Elle peut indiquer une maladie hépatique, une anémie hémolytique, une obstruction biliaire ou une infection. C'est toujours un signe sérieux nécessitant une consultation rapide.",
+      "home_care": [
+        "Ne pas donner de médicaments ou suppléments sans avis vétérinaire",
+        "Alimentation légère et digestible si l'animal mange encore",
+        "Assurer un accès permanent à l'eau fraîche",
+        "Éviter tout stress supplémentaire",
+        "Chercher d'autres médicaments récemment administrés (paracétamol chez le chat = urgence)"
+      ],
+      "watch_for": [
+        "Progression rapide du jaunissement en quelques heures",
+        "Gencives très pâles + jaunisse → anémie hémolytique (urgence)",
+        "Vomissements associés, perte d'appétit totale",
+        "Selles très claires (argileuses) → obstruction biliaire",
+        "Urines très foncées (brun-rouge) → pigments biliaires dans les urines"
+      ],
+      "when_to_consult": "Sous 12–24h pour toute jaunisse observée. Immédiatement si gencives pâles, effondrement ou progression rapide.",
+      "preparation_for_vet": [
+        "Photographier les gencives et le blanc des yeux",
+        "Lister tous les médicaments administrés (paracétamol, AINS, plantes)",
+        "Décrire la couleur des urines et des selles",
+        "Préciser tout accès possible à des toxiques (plantes, raisin, chocolat, xylitol)"
+      ],
+      "source": "Merck Veterinary Manual — Hepatic Disease"
+    },
+    {
+      "id": "conjunctivitis",
+      "title_fr": "Conjonctivite et larmoiement excessif",
+      "title_en": "Conjunctivitis / Excessive tearing",
+      "trigger_symptoms": ["eye discharge", "red eye", "swollen eye"],
+      "trigger_keywords": ["conjonctivite", "oeil qui pleure", "yeux rouges collés", "larmoiement", "écoulement oculaire", "التهاب الملتحمة"],
+      "species": ["dog", "cat", "rabbit", "guinea_pig", "bird"],
+      "urgency": "LOW",
+      "advice": "La conjonctivite est une inflammation de la conjonctive (membrane translucide de l'œil). Chez le chat, elle est souvent liée à la rhinotrachéite herpétique ou au calicivirus. Chez le chien, des causes allergiques, infectieuses ou mécaniques sont fréquentes. L'unilatéralité et la douleur suggèrent un corps étranger ou un ulcère cornéen — urgence.",
+      "home_care": [
+        "Nettoyer les sécrétions avec une compresse stérile imbibée de sérum physiologique — de l'angle interne vers l'externe",
+        "Utiliser une compresse propre différente pour chaque œil",
+        "Ne pas utiliser de collyre humain sans prescription vétérinaire",
+        "Empêcher le frottement (collerette si nécessaire)",
+        "Isoler le chat si conjonctivite infectieuse suspectée"
+      ],
+      "watch_for": [
+        "Unilatéralité + douleur + palpébrospasome → corps étranger ou ulcère cornéen",
+        "Opacité cornéenne (œil trouble ou blanc) — urgence ophtalmologique",
+        "Protusion de la 3ème paupière (membrane nictitante visible)",
+        "Écoulement purulent épais vert ou jaune → infection bactérienne secondaire",
+        "Refus d'ouvrir l'œil (photophobie intense)"
+      ],
+      "when_to_consult": "Sous 24–48h si écoulement persistant. Immédiatement si douleur, opacité cornéenne ou refus d'ouvrir l'œil.",
+      "preparation_for_vet": [
+        "Décrire la couleur et la consistance de l'écoulement",
+        "Préciser si unilatéral ou bilatéral et depuis quand",
+        "Mentionner tout contact récent avec d'autres animaux",
+        "Indiquer le statut vaccinal du chat (rhinotracheite incluse)"
+      ],
+      "source": "ACVO Ophthalmic Guidelines"
+    },
+    {
+      "id": "urinary_infection",
+      "title_fr": "Infection urinaire (cystite)",
+      "title_en": "Urinary tract infection (UTI)",
+      "trigger_symptoms": ["frequent urination", "straining", "blood in urine"],
+      "trigger_keywords": ["cystite", "infection urinaire", "urine souvent", "sang urines", "UTI", "التهاب المثانة"],
+      "species": ["dog", "cat"],
+      "urgency": "MODERATE",
+      "advice": "La cystite bactérienne est fréquente chez la chienne. Chez le chat mâle, des signes urinaires peuvent indiquer une obstruction urétrale — URGENCE VITALE. Une cystite non compliquée se traite par antibiotiques adaptés à la culture bactérienne. Ne pas donner d'antibiotiques humains sans avis vétérinaire.",
+      "home_care": [
+        "Encourager la consommation d'eau (ajouter de l'eau dans les croquettes, fontaine à eau)",
+        "Sorties plus fréquentes pour le chien",
+        "Ne pas restreindre l'accès à l'eau ni à la litière",
+        "Alimentation humide peut aider à diluer l'urine",
+        "Ne donner aucun médicament humain sans prescription"
+      ],
+      "watch_for": [
+        "Chat mâle qui pousse sans uriner → obstruction urétrale — URGENCE VITALE",
+        "Sang abondant dans les urines ou urines entièrement rouges",
+        "Fièvre élevée → pyélonéphrite (infection rénale)",
+        "Prostration et vomissements associés → atteinte rénale ou obstruction",
+        "Léchage excessif des parties génitales avec sang"
+      ],
+      "when_to_consult": "Sous 24–48h pour cystite simple chez la chienne. IMMÉDIATEMENT pour tout chat mâle présentant des signes urinaires — risque d'obstruction fatale.",
+      "preparation_for_vet": [
+        "Recueillir un échantillon d'urine fraîche (10–15 mL en milieu de jet) en flacon propre",
+        "Décrire la couleur et l'odeur de l'urine",
+        "Préciser la fréquence et le volume des mictions",
+        "Mentionner tout traitement récent (antibiotiques, corticoïdes)"
+      ],
+      "source": "ISCAID — International Society Companion Animal Infectious Diseases"
+    }
+  ],
+  "metadata": {
+    "version": "4.0",
+    "type": "advice_scenarios",
+    "purpose": "DoctoAgent provides ADVICE only, not medical diagnosis. All cases are routed to a veterinarian when needed.",
+    "total_scenarios": 40,
+    "languages": ["fr", "en", "ar"],
+    "species_covered": ["dog", "cat", "rabbit", "bird", "hamster", "guinea pig", "parrot", "ferret", "turtle"],
+    "urgency_levels": ["LOW", "MODERATE", "HIGH", "CRITICAL"],
+    "disclaimer": "Ces conseils ne remplacent pas un diagnostic vétérinaire. En cas de doute, consultez toujours un professionnel.",
+    "sources": [
+      "WSAVA Pet Care Guidelines",
+      "ASPCA Animal Poison Control",
+      "Merck Veterinary Manual",
+      "AAFP Cat Friendly Practice",
+      "ACVD Dermatology Guidelines",
+      "House Rabbit Society",
+      "Veterinary Emergency Critical Care",
+      "ESCCAP European Guidelines",
+      "ACVIM Neurology Guidelines",
+      "ACVO Ophthalmic Guidelines",
+      "ISCAID Infectious Disease Guidelines"
+    ],
+    "last_updated": "2026-05-05"
+  }
+}

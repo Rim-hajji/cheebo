@@ -1,0 +1,2875 @@
+[
+  {
+    "text": "My birds is showing the following symptoms: Fever, Sour Throat, Mortality, Muscle aches, Abnormalities.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        44,
+        49,
+        "SYMPTOM"
+      ],
+      [
+        56,
+        62,
+        "BODY_PART"
+      ],
+      [
+        75,
+        81,
+        "BODY_PART"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "the opportunity to teach students is exciting regardless of whether theyre veterinary graduate or undergraduate students he said i want to teach them to consider new ideas in a molecular way of thinking in livestock production",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My pet: in addition to studying for his masters degree and gaining experience with exotic animals wherever and whenever possible warren stays busy working as a large animal caretaker at the texas a&m large animal hospital (lah) and running sprints as a member of texas a&ms track and field team",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My pet: Poisoning by Petroleum Products in Cats: Do not induce vomiting with this type of poisoning, as the substance may do more harm coming back through the esophagus than it did going down. Or, your cat could breath some of the toxin into its lungs, causing aspiration pneumonia.",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        63,
+        71,
+        "SYMPTOM"
+      ],
+      [
+        142,
+        146,
+        "BODY_PART"
+      ],
+      [
+        202,
+        205,
+        "ANIMAL"
+      ]
+    ],
+    "source": "petmd",
+    "language": "en"
+  },
+  {
+    "text": "My 4 year old Yorkshire Terrier dog is showing: Lethargy, Vomiting, Loss of Appetite, Fever, vomiting, coughing, labored breathing, skin lesions, eye discharge, loss of appetite. Duration: 3 days. Condition: Canine Heartworm Disease.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        32,
+        35,
+        "ANIMAL"
+      ],
+      [
+        48,
+        56,
+        "SYMPTOM"
+      ],
+      [
+        58,
+        66,
+        "SYMPTOM"
+      ],
+      [
+        68,
+        84,
+        "SYMPTOM"
+      ],
+      [
+        86,
+        91,
+        "SYMPTOM"
+      ],
+      [
+        93,
+        101,
+        "SYMPTOM"
+      ],
+      [
+        103,
+        111,
+        "SYMPTOM"
+      ],
+      [
+        113,
+        130,
+        "SYMPTOM"
+      ],
+      [
+        132,
+        144,
+        "SYMPTOM"
+      ],
+      [
+        146,
+        159,
+        "SYMPTOM"
+      ],
+      [
+        161,
+        177,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "My 8 year old Shetland Pony horse is showing: Lameness, Loss of Appetite, Swollen Legs, Fever, vomiting, coughing, lameness, skin lesions, loss of appetite. Duration: 5 days. Condition: Equine Herpesvirus.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        23,
+        27,
+        "ANIMAL"
+      ],
+      [
+        28,
+        33,
+        "ANIMAL"
+      ],
+      [
+        56,
+        72,
+        "SYMPTOM"
+      ],
+      [
+        74,
+        81,
+        "SYMPTOM"
+      ],
+      [
+        88,
+        93,
+        "SYMPTOM"
+      ],
+      [
+        95,
+        103,
+        "SYMPTOM"
+      ],
+      [
+        105,
+        113,
+        "SYMPTOM"
+      ],
+      [
+        125,
+        137,
+        "SYMPTOM"
+      ],
+      [
+        139,
+        155,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "My cat stopped using the litter box, maybe it's hard to get into.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "a complex genetic disorder tsc is characterized by tumor growth in the brain heart kidney skin and lungs affected individuals may also present with seizures the disorder is caused by a mutation in either the tsc1 or tsc2 protein resulting in loss of function of the protein Please help.",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        77,
+        82,
+        "BODY_PART"
+      ],
+      [
+        83,
+        89,
+        "BODY_PART"
+      ],
+      [
+        90,
+        94,
+        "BODY_PART"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "Characteristic gait abnormality and muscle atrophy consistent with infraspinatus contracture.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        36,
+        42,
+        "BODY_PART"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "im fortunate that my research and my hobby have converged hamer said ive loved raising birds for most of my life and being a bird watcher being out in naturestudying wild populations and trying to keep them healthyhas helped fuel a lot of the research questions that im asking",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        125,
+        129,
+        "ANIMAL"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My pet: we now have a formal resource for studying the bird and identifying new or perhaps even more specific reasons for its serious decline this resource gives us a way to look at new population and management strategies but also a means to conduct very detailed molecular studies focusing on ecotoxicology reproduction and physiology",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        55,
+        59,
+        "ANIMAL"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "gabriel said there are lessons to be learned from the covid-19 pandemic experience",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "Zinc Phosphide Poisoning in Cats: Your veterinarian will perform a thorough physical exam on your cat, taking into account the background history of symptoms and possible incidents that might have precipitated this condition. You will need to give a thorough history of your cat’s health and recent activities. A complete blood profile will be conducted, including a chemical blood profile and a urinalysis. Please help.",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        98,
+        101,
+        "ANIMAL"
+      ],
+      [
+        275,
+        278,
+        "ANIMAL"
+      ]
+    ],
+    "source": "petmd",
+    "language": "en"
+  },
+  {
+    "text": "interdepartmental collaboration is also a priority for the ophthalmology service scott said another collaboration that we have is with the zoological medicine service its interesting-they see so many different exotic species that really havent had their eyes described particularly well be looking at quail and studying their ocular parameters Is this serious?",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "the expansion of the partnership is a natural fit with important significance according to dr wesley bissett vet director",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "wtamu serves a region that is home to a significant percentage of the food livestock industry for example approximately 30 percent of the nations beef cattle are fed or finished in the region with 25 million beef cattle in the area at any given time in addition the region is home to other types of food animal production including dairy cattle and swine",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My pet: in the past several stocks of herring have collapsed due to overfishing",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        51,
+        60,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "Paraspinal hyperesthesia noted in T13-L2 region. Rule out Type I IVDD. Is this serious?",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "Lizard Venom Poisoning in Dogs: The dog must be taken to a veterinarian if you suspect it has been bitten by one of these lizards. The veterinarian will then prescribe treatment and medications. Pay close attention to the wound and report any changes. Most importantly, if you live in an area where these lizards are likely to roam, place your dog behind a fence capable of keeping the lizards out.",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        0,
+        6,
+        "ANIMAL"
+      ],
+      [
+        36,
+        39,
+        "ANIMAL"
+      ],
+      [
+        222,
+        227,
+        "SYMPTOM"
+      ],
+      [
+        344,
+        347,
+        "ANIMAL"
+      ]
+    ],
+    "source": "petmd",
+    "language": "en"
+  },
+  {
+    "text": "Dog strains to defecate, only producing small amounts of liquid. Please help.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        0,
+        3,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "My sheep is showing the following symptoms: Groosly enlarged, Skin may thicken, Convulsion, Edematous, Pains.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        3,
+        8,
+        "ANIMAL"
+      ],
+      [
+        62,
+        66,
+        "BODY_PART"
+      ],
+      [
+        80,
+        90,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "testing and validating issue chips is a very important step in translating basic science and engineering into understanding human disease and developing new therapies said himmelfarb a clinician and researcher at uws kidney research institute",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        217,
+        223,
+        "BODY_PART"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My cattle is showing the following symptoms: Animal gets uneasy, Difficulty in breathing, Difficult in respiration, Excessive production, Stamping And pedding of hind eye.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        167,
+        170,
+        "BODY_PART"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "Ferret has lost significant weight recently.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        0,
+        6,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "kids like my daughters get to explore and define their potential on the inside of them at events like this he said it awakens some of them and inspires them in their education and future careers",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "just that i cared and worked hard for the benefit of others the cvm texas a&m and texas",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My pet: My 7 year old Clydesdale horse is showing: Lameness, Swollen Legs, Loss of Appetite, Fever, diarrhea, coughing, labored breathing, skin lesions, eye discharge, loss of appetite. Duration: 6 days. Condition: Equine Herpesvirus.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        33,
+        38,
+        "ANIMAL"
+      ],
+      [
+        61,
+        68,
+        "SYMPTOM"
+      ],
+      [
+        75,
+        91,
+        "SYMPTOM"
+      ],
+      [
+        93,
+        98,
+        "SYMPTOM"
+      ],
+      [
+        100,
+        108,
+        "SYMPTOM"
+      ],
+      [
+        110,
+        118,
+        "SYMPTOM"
+      ],
+      [
+        120,
+        137,
+        "SYMPTOM"
+      ],
+      [
+        139,
+        151,
+        "SYMPTOM"
+      ],
+      [
+        153,
+        166,
+        "SYMPTOM"
+      ],
+      [
+        168,
+        184,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "students were able to gain experience by putting into practice the knowledge and skills they are acquiring within all of texas a&ms medical disciplines while nursing and medical students assisted actors with broken bones or flesh wounds 30 veterinary students reacted to three vet-med scenarios written by michelle kurkowski and laura hurst third-year veterinary students and co-presidents of the student one health association",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "Radiographs show significant joint effusion in bilateral stifles.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        29,
+        34,
+        "BODY_PART"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "Positive Ortolani sign confirms hip laxity in juvenile patient.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        32,
+        35,
+        "BODY_PART"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "angelman syndrome (as) is a devastating rare neurogenetic disorder that affects approximately 1 in 15 000 live births per year; the disorder is triggered by a loss of function of the maternal ube3a gene in the brain causing developmental delay absent speech movement or balance disorder and seizures",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "Nasogastric tube placed for nutritional support.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "pneumonia caused by r equi is insidious meaning it progresses gradually and is well established by the time symptoms appear so many farms screen foals using chest ultrasound examinations to find foals that are developing pneumonia before they show clinical signs of disease",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        157,
+        162,
+        "BODY_PART"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My pet: because there is no cure for chagas disease only treatments to manage the symptoms hamer emphasizes that studying the parasite in bugs and wildlife can provide key data to protect the health of humans and dogs and public outreach is a key component",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My 4 year old Holstein cow is showing: Appetite Loss, Diarrhea, Lethargy, Decreased Milk Yield, diarrhea, loss of appetite. Duration: 7 days. Condition: Johne's Disease.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        23,
+        26,
+        "ANIMAL"
+      ],
+      [
+        54,
+        62,
+        "SYMPTOM"
+      ],
+      [
+        64,
+        72,
+        "SYMPTOM"
+      ],
+      [
+        96,
+        104,
+        "SYMPTOM"
+      ],
+      [
+        106,
+        122,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "Ferret is weak in the hind limbs.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        0,
+        6,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "coleman is particularly interested in organic chemistry and is participating in the aggie research scholars program for undergraduate students his research is focused on cancer",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My 4 year old Labrador dog is showing: Vomiting, Loss of Appetite, Lethargy, Fever, vomiting, coughing, nasal discharge, loss of appetite. Duration: 5 days. Condition: Canine Parvovirus. What should I do?",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        14,
+        22,
+        "ANIMAL"
+      ],
+      [
+        23,
+        26,
+        "ANIMAL"
+      ],
+      [
+        39,
+        47,
+        "SYMPTOM"
+      ],
+      [
+        49,
+        65,
+        "SYMPTOM"
+      ],
+      [
+        67,
+        75,
+        "SYMPTOM"
+      ],
+      [
+        77,
+        82,
+        "SYMPTOM"
+      ],
+      [
+        84,
+        92,
+        "SYMPTOM"
+      ],
+      [
+        94,
+        102,
+        "SYMPTOM"
+      ],
+      [
+        104,
+        119,
+        "SYMPTOM"
+      ],
+      [
+        121,
+        137,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "Recommend weight loss program; current BCS 7/9. Target BCS 5/9.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        10,
+        21,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "My 9 year old Maine Coon cat is showing: Lethargy, Appetite Loss, Weight Loss, Dehydration, vomiting, diarrhea, skin lesions, nasal discharge, loss of appetite. Duration: 8 days. Condition: Feline Renal Disease.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        14,
+        24,
+        "ANIMAL"
+      ],
+      [
+        25,
+        28,
+        "ANIMAL"
+      ],
+      [
+        41,
+        49,
+        "SYMPTOM"
+      ],
+      [
+        66,
+        77,
+        "SYMPTOM"
+      ],
+      [
+        79,
+        90,
+        "SYMPTOM"
+      ],
+      [
+        92,
+        100,
+        "SYMPTOM"
+      ],
+      [
+        102,
+        110,
+        "SYMPTOM"
+      ],
+      [
+        112,
+        124,
+        "SYMPTOM"
+      ],
+      [
+        126,
+        141,
+        "SYMPTOM"
+      ],
+      [
+        143,
+        159,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "Initiate multimodal pain management: NSAID (e.g., firocoxib) + gabapentin.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "his family was super dedicated hindmarsh said they came to visit him twice a day like clockwork for 13 days they were very involved the whole time that was very helpful because he had a very good support system that kept cheering for him and helped him keep going through all of this",
+    "intent": 2,
+    "urgency": "LOW",
+    "entities": [
+      [
+        96,
+        107,
+        "DUREE"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My pet: these findings suggest that the ah receptor could be a target for the development of drugs to inhibit glioblastoma the texas a&m team is now studying the use of the ah receptor as a target for inhibiting glioblastoma and identifying compounds that bind to the ah receptor to provide additional protection to the brain",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "the common barnyard chicken could provide some very un-common clues for fighting off diseases and might even offer new ways to attack cancer according to a team of international researchers that includes a texas a&m university professor",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My buffaloes is showing the following symptoms: SkinAllergy, Reduce growth, Wound, Head ache, Dizziness.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        76,
+        81,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "Lizard Venom Poisoning in Dogs: In terms of lizards, the Gila Monster and the Mexican Beaded Lizard are the only ones to be seriously concerned about. These lizards live almost exclusively in the American Southwest and Mexico.",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        0,
+        6,
+        "ANIMAL"
+      ],
+      [
+        93,
+        99,
+        "ANIMAL"
+      ]
+    ],
+    "source": "petmd",
+    "language": "en"
+  },
+  {
+    "text": "after treating the lab for minor injuries the dog was scanned for a microchip vet members then discovered that her name was maggie and she belonged to the mccomb family by this time jonathan was being treated for injuries in a nearby hospital and the search was ongoing for the rest of his family and friends through the efforts of vet maggie was returned to the mccombs",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        46,
+        49,
+        "ANIMAL"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "the bayer institute for healthcare communication is a world leader in healthcare communications and training in both human and veterinary medicine bayer has the best training and development programs in this area of any institution available to us gage says we appreciate bayers support of our veterinary executive leadership program and we look forward to taking full advantage of this exciting opportunity",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My 2 year old Russian Blue cat is showing: Nasal Discharge, Loss of Appetite, Coughing, Fever, vomiting, diarrhea, coughing, lameness, skin lesions, eye discharge, loss of appetite. Duration: 3 days. Condition: Feline Asthma.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        27,
+        30,
+        "ANIMAL"
+      ],
+      [
+        43,
+        58,
+        "SYMPTOM"
+      ],
+      [
+        60,
+        76,
+        "SYMPTOM"
+      ],
+      [
+        78,
+        86,
+        "SYMPTOM"
+      ],
+      [
+        88,
+        93,
+        "SYMPTOM"
+      ],
+      [
+        95,
+        103,
+        "SYMPTOM"
+      ],
+      [
+        105,
+        113,
+        "SYMPTOM"
+      ],
+      [
+        115,
+        123,
+        "SYMPTOM"
+      ],
+      [
+        135,
+        147,
+        "SYMPTOM"
+      ],
+      [
+        149,
+        162,
+        "SYMPTOM"
+      ],
+      [
+        164,
+        180,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "in studying a whole new microcosm the potential for discovery seems endless theres a lot of work to be done in the future suchodolski said there are so many other components that we never even thought about a few of those possibilities include leveraging the microbiome during treatment illnesses caused by microbial imbalance such as those using antibiotics could be treated by transplanting healthy microbiota into the gi tract of the patient to jump start the guts health",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "in this study published in the journal scientific reports researchers from texas a&m and the university of georgia investigated the use of gam as an alternative to a macrolide antibiotic plus rifampin (mar) an antibiotic combination that is the standard treatment for r equi foal pneumonia",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My dog has muscle atrophy.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ],
+      [
+        11,
+        17,
+        "BODY_PART"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "after his discharge in 1964 guilloud was offered the opportunity to be the first veterinarian at the yerkes regional primate research center of emory university because of his groundbreaking research and skills in laboratory animal medicine while there he diagnosed and treated the first cases of polio in nonhuman primates and recommended the use of oral polio vaccine at zoos and in the wild a landmark moment in primate medicine that continues today",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [
+      [
+        10,
+        19,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My 3 year old Holstein cow is showing: Coughing, Loss of Appetite, Lethargy, Fever, vomiting, diarrhea, coughing, lameness, skin lesions, eye discharge, loss of appetite. Duration: 6 days. Condition: Bovine Mastitis.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        23,
+        26,
+        "ANIMAL"
+      ],
+      [
+        39,
+        47,
+        "SYMPTOM"
+      ],
+      [
+        49,
+        65,
+        "SYMPTOM"
+      ],
+      [
+        67,
+        75,
+        "SYMPTOM"
+      ],
+      [
+        77,
+        82,
+        "SYMPTOM"
+      ],
+      [
+        84,
+        92,
+        "SYMPTOM"
+      ],
+      [
+        94,
+        102,
+        "SYMPTOM"
+      ],
+      [
+        104,
+        112,
+        "SYMPTOM"
+      ],
+      [
+        124,
+        136,
+        "SYMPTOM"
+      ],
+      [
+        138,
+        151,
+        "SYMPTOM"
+      ],
+      [
+        153,
+        169,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "My goat is showing the following symptoms: Fever, Dark colored bloody, Incoordination, Difficulty in breathing, Terminal convulsion.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        3,
+        7,
+        "ANIMAL"
+      ],
+      [
+        43,
+        48,
+        "SYMPTOM"
+      ],
+      [
+        121,
+        131,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "My dog sometimes skips for a step or two on his back leg while trotting.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ],
+      [
+        48,
+        52,
+        "BODY_PART"
+      ],
+      [
+        53,
+        56,
+        "BODY_PART"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "Guinea pig has vitamin C deficiency (scurvy) causing joint pain.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        0,
+        10,
+        "ANIMAL"
+      ],
+      [
+        53,
+        58,
+        "BODY_PART"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "doctors used to do whole lung irradiation on children before chemotherapy existed for tumors that arise from the bone; they quit because of the long-term damage the radiation would cause to the lungs in these children and then chemotherapy became the best treatment she said but our dogs are often geriatric theyre not going to have the long-term side effects that happen many years later theyre still dying of this disease so we are investigating how well whole lung irradiation along with chemother",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        25,
+        29,
+        "BODY_PART"
+      ],
+      [
+        113,
+        117,
+        "BODY_PART"
+      ],
+      [
+        463,
+        467,
+        "BODY_PART"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My pet: My dog is showing the following symptoms: Swollen lymph nodes, Difficulty walking, Back Pain, Lethargy, Vaginal Discharge.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        11,
+        14,
+        "ANIMAL"
+      ],
+      [
+        50,
+        57,
+        "SYMPTOM"
+      ],
+      [
+        91,
+        95,
+        "BODY_PART"
+      ],
+      [
+        102,
+        110,
+        "SYMPTOM"
+      ],
+      [
+        120,
+        129,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "My pet: My 2 year old Mini Rex rabbit is showing: Diarrhea, Loss of Appetite, Dehydration, Weight Loss, vomiting, coughing, lameness, eye discharge. Duration: 3 days. Condition: Enteritis.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        31,
+        37,
+        "ANIMAL"
+      ],
+      [
+        50,
+        58,
+        "SYMPTOM"
+      ],
+      [
+        60,
+        76,
+        "SYMPTOM"
+      ],
+      [
+        78,
+        89,
+        "SYMPTOM"
+      ],
+      [
+        91,
+        102,
+        "SYMPTOM"
+      ],
+      [
+        104,
+        112,
+        "SYMPTOM"
+      ],
+      [
+        114,
+        122,
+        "SYMPTOM"
+      ],
+      [
+        134,
+        147,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "an international team of researchers led by dr leif andersson a professor at the texas a&m college of veterinary medicine & biomedical sciences (cvmbs) has found changes in gene expression patterns across the brain between wild and domestic rabbits which likely contributed to the evolution of tameness during domestication",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "Initiate course of Adequan (PSGAG) injections.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "My donkey is showing the following symptoms: Bleeding from other parts of the body, confusion, Nasal discharge, loss of alertness, dizziness and fainting.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        45,
+        53,
+        "SYMPTOM"
+      ],
+      [
+        95,
+        110,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "My dog has trouble balancing.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "My pet: Schedule follow-up appointment to monitor progress.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "we are hoping that in the near future we can use this with a tsc patient zarei said",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My dog slipped on the floor and has been limping since.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ],
+      [
+        41,
+        48,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "adams a member of the cvmbs department of veterinary pathobiology (vtpb) has a long and distinguished career studying zoonotic organisms host-pathogen interactions and molecular pathogenesis of infectious disease according to the acvm Please help.",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "fierce enjoys her job which has made her realize just how much she enjoys working with people the experience has even shaped her thoughts about the future i think im probably going to do general practice for a bit but after that who knows ive been recently thinking about getting to work with students because ive enjoyed being in this sort of role she mused",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "each distinguished achievement award honoree will receive a framed certificate from the afs along with a $4 000 monetary award in a ceremony scheduled for monday april 25 at 1:30 pm in rudder theater the awards begun in 1955 recognize outstanding members of texas a&ms faculty and staff for their commitment performance and positive impact on aggie students texas citizens and the world around them",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My dog's poop is covered in slimy mucus.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "we never dealt with the entire hiv virus here (at texas a&m) but the cattle received immunizations containing a protein designed to mimic a surface protein on hiv said criscitiello who coordinated the a&m efforts with scripps managed the animal work and analyzed the antibody immunogenetics",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "as veterinarians we share a common bond and i will work this coming year to strengthen this bond by welcoming everyones input by opening my mind to varied perspectives by offering guidance when i can and by helping build unity to mend those fractures explained kornegay i will work tirelessly over the next year to welcome everyone to the table while i am so proud of what we have accomplished particularly when it comes to the great work our staff is doing to enhance diversity in the profession you What should I do?",
+    "intent": 2,
+    "urgency": "HIGH",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "some countries are well on their way to achieve the required vaccination coverage while some countries are lagging behind and will surely need substantial assistance from the international community ndeffo said",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "puschett and his team also said they think elevated mbg levels could be a problem in other illnesses such as brain disorders",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My pet: sarah expressed an interest in studying cardiac effects of muscular dystrophy said dr joe kornegay schneiders faculty mentor through these studies shell be building on experiences from both practice and the pathology residency were excited by the commitment that has been made to dr schneider and know that shell make us all proud",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My pet: Consider referral to internal medicine specialist for complex cases.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "Dog is licking obsessively at a spot between his shoulder blades.",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        0,
+        3,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "My duck is showing the following symptoms: Fever, Difficulty breathing, Thrist and urination, Weight loss, Enlarged lymph nodes or Swelling.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        43,
+        48,
+        "SYMPTOM"
+      ],
+      [
+        50,
+        70,
+        "SYMPTOM"
+      ],
+      [
+        94,
+        105,
+        "SYMPTOM"
+      ],
+      [
+        131,
+        139,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "My pet: My sheep is showing the following symptoms: Tenderness, Foot Hot, Facial Paralysis, Weight loss, Pains.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        11,
+        16,
+        "ANIMAL"
+      ],
+      [
+        81,
+        90,
+        "SYMPTOM"
+      ],
+      [
+        92,
+        103,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "My buffaloes is showing the following symptoms: Emaciation, Difficulty in breathing, Vomiting, Weakness, Diarrhea.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        85,
+        93,
+        "SYMPTOM"
+      ],
+      [
+        105,
+        113,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "Our 4 year old Chihuahua dog is showing: Lethargy, Vomiting, Loss of Appetite, Fever, vomiting, coughing, labored breathing, lameness, skin lesions, loss of appetite. Duration: 3 days. Condition: Canine Parvovirus.",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        15,
+        24,
+        "ANIMAL"
+      ],
+      [
+        25,
+        28,
+        "ANIMAL"
+      ],
+      [
+        41,
+        49,
+        "SYMPTOM"
+      ],
+      [
+        51,
+        59,
+        "SYMPTOM"
+      ],
+      [
+        61,
+        77,
+        "SYMPTOM"
+      ],
+      [
+        79,
+        84,
+        "SYMPTOM"
+      ],
+      [
+        86,
+        94,
+        "SYMPTOM"
+      ],
+      [
+        96,
+        104,
+        "SYMPTOM"
+      ],
+      [
+        106,
+        123,
+        "SYMPTOM"
+      ],
+      [
+        135,
+        147,
+        "SYMPTOM"
+      ],
+      [
+        149,
+        165,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "Tapeworm segments (Dipylidium caninum) observed on perineum; associated with flea infestation.",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "Abnormal Passage Between Artery and Vein in Cats: You will need to give a thorough history of your cat’s health, including the onset and nature of the symptoms, to the veterinarian. He or she will then perform a complete physical examination as well as a biochemistry profile, urinalysis, complete blood count, and electrolyte panel to help identify complications associated with an arteriovenous fistula. Biochemical abnormalities, for example, may suggest liver, kidney or other organ dysfunction.",
+    "intent": 2,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        99,
+        102,
+        "ANIMAL"
+      ],
+      [
+        458,
+        463,
+        "BODY_PART"
+      ],
+      [
+        465,
+        471,
+        "BODY_PART"
+      ]
+    ],
+    "source": "petmd",
+    "language": "en"
+  },
+  {
+    "text": "when injured animals are brought to the zoological medicine service they are evaluated to see if they can be helped in order to effectively care for the animals the experts at the college determine the extent of the injuries the likelihood of recovery and return to the wild and the ability of the animal to be placed in an educational facility if they cannot be returned to the wild animals that can be returned to their habitat are medically treated and then are rehabilitated by a licensed wildlif",
+    "intent": 2,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "as an undergraduate studying agriculture at the university of missouri varner continued to compete in rodeos but one day in the student union an informational booth on veterinary medicine caught his eye",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        199,
+        202,
+        "BODY_PART"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My 4 year old Sphynx cat is showing: Vomiting, Diarrhea, Loss of Appetite, Lethargy, vomiting, diarrhea, labored breathing, lameness, loss of appetite. Duration: 5 days. Condition: Feline Infectious Peritonitis.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        21,
+        24,
+        "ANIMAL"
+      ],
+      [
+        37,
+        45,
+        "SYMPTOM"
+      ],
+      [
+        47,
+        55,
+        "SYMPTOM"
+      ],
+      [
+        57,
+        73,
+        "SYMPTOM"
+      ],
+      [
+        75,
+        83,
+        "SYMPTOM"
+      ],
+      [
+        85,
+        93,
+        "SYMPTOM"
+      ],
+      [
+        95,
+        103,
+        "SYMPTOM"
+      ],
+      [
+        105,
+        122,
+        "SYMPTOM"
+      ],
+      [
+        134,
+        150,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "My 5 year old Rottweiler dog is showing: Lethargy, Vomiting, Loss of Appetite, Coughing, vomiting, coughing, lameness, skin lesions, loss of appetite. Duration: 4 days. Condition: Canine Parvovirus. Is this serious?",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        25,
+        28,
+        "ANIMAL"
+      ],
+      [
+        41,
+        49,
+        "SYMPTOM"
+      ],
+      [
+        51,
+        59,
+        "SYMPTOM"
+      ],
+      [
+        61,
+        77,
+        "SYMPTOM"
+      ],
+      [
+        79,
+        87,
+        "SYMPTOM"
+      ],
+      [
+        89,
+        97,
+        "SYMPTOM"
+      ],
+      [
+        99,
+        107,
+        "SYMPTOM"
+      ],
+      [
+        119,
+        131,
+        "SYMPTOM"
+      ],
+      [
+        133,
+        149,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "she spent her summer partnered with roo an online relief work platform for veterinarians helping them reach out to students and improve their familiarity with the concept of relief work (when veterinarians provide services to clinics on an as-needed basis)",
+    "intent": 2,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "lunde-youngs overall goal for her work that will be supported by the f31 grant is to lay a foundation for developing potential therapeutic or pharmacological intervention studies that can manipulate improve or ameliorate some of the effects of alcohol exposure on development she added",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "Our 8 year old Shih Tzu dog is showing: Lethargy, Vomiting, Diarrhea, Loss of Appetite, diarrhea, coughing, eye discharge, loss of appetite. Duration: 5 days. Condition: Canine Hepatitis.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        24,
+        27,
+        "ANIMAL"
+      ],
+      [
+        40,
+        48,
+        "SYMPTOM"
+      ],
+      [
+        50,
+        58,
+        "SYMPTOM"
+      ],
+      [
+        60,
+        68,
+        "SYMPTOM"
+      ],
+      [
+        70,
+        86,
+        "SYMPTOM"
+      ],
+      [
+        88,
+        96,
+        "SYMPTOM"
+      ],
+      [
+        98,
+        106,
+        "SYMPTOM"
+      ],
+      [
+        108,
+        121,
+        "SYMPTOM"
+      ],
+      [
+        123,
+        139,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "Lactic Acid Build-Up in Dogs: Lactic acid is a chemical produced by the muscles during normal physical activity, and which is elevated during exercise in order to fuel the body and maintain energy. In a normal functioning body, the liver and kidneys maintain the balance between lactic acid production and its removal from the body. When the body is not functioning at normal capacity and lactic acid is not being adequately removed, a condition called lactic acidosis can occur.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        232,
+        237,
+        "BODY_PART"
+      ]
+    ],
+    "source": "petmd",
+    "language": "en"
+  },
+  {
+    "text": "My 2 year old Dutch rabbit is showing: Sneezing, Nasal Discharge, Loss of Appetite, Fever, vomiting, coughing, lameness, eye discharge, loss of appetite. Duration: 4 days. Condition: Rabbit Viral Hemorrhagic Disease.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        20,
+        26,
+        "ANIMAL"
+      ],
+      [
+        39,
+        47,
+        "SYMPTOM"
+      ],
+      [
+        49,
+        64,
+        "SYMPTOM"
+      ],
+      [
+        66,
+        82,
+        "SYMPTOM"
+      ],
+      [
+        84,
+        89,
+        "SYMPTOM"
+      ],
+      [
+        91,
+        99,
+        "SYMPTOM"
+      ],
+      [
+        101,
+        109,
+        "SYMPTOM"
+      ],
+      [
+        121,
+        134,
+        "SYMPTOM"
+      ],
+      [
+        136,
+        152,
+        "SYMPTOM"
+      ],
+      [
+        183,
+        189,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "Guinea pig has swollen, painful feet.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        0,
+        10,
+        "ANIMAL"
+      ],
+      [
+        15,
+        22,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "how can we promote resilience as instructors we must focus on helping students learn to recenter or ‘bounce back in response to the rigors of veterinary life said dr laura peycke more importantly however we can be realistic about what level of commitment is sustainable in their careers in veterinary medicine as it relates to their professional and personal lives",
+    "intent": 2,
+    "urgency": "LOW",
+    "entities": [
+      [
+        108,
+        112,
+        "BODY_PART"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "abbott agreed that it would be extremely helpful for students to use the models outside of the official class or laboratory sessions i know in small animal [anatomy] they get a box of bones they can carry around with them but they dont have that capability in large animal because the bones are too big she said they have to actually do their studying from the specimens that are in the laboratory again i think having good models they can take home will allow them a lot more flexibility for accessi Please help.",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My sheep is showing the following symptoms: Bloody Diarhhea, Depression, Dullness, Death, Weakness.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        3,
+        8,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "another of the tough parts of being in vet school at the same time is how we prioritized studying zach said my mentality is i do my schoolwork first and then do everything else household-wise whereas victoria is completely the opposite; she cannot focus if the house is a mess",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "Fecal score recorded (using standardized chart).",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "My pig is showing the following symptoms: Fever, Diarrhea, Muscus, Weight loss, Death.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ],
+      [
+        42,
+        47,
+        "SYMPTOM"
+      ],
+      [
+        49,
+        57,
+        "SYMPTOM"
+      ],
+      [
+        67,
+        78,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "growing up i spent a lot of time working our cattle with my dad as well as for other producers throughout the area dozier said",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "dr russell is a graduate who has dedicated his life to education and research he received his bachelors degree in animal science from the university of missouri as well as his doctor of veterinary medicine degree his research focus in zoonotic diseases played an important role in the development and epidemiologic evaluation of the oral vaccination that helped control coyote and grey fox rabies in texas he has both researched and taught the subjects of public health toxicology and zoonotic diseas What should I do?",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My horse is showing the following symptoms: sweating, muscular spasms, thirst, Weight loss, difficulty moving and eating.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        3,
+        8,
+        "ANIMAL"
+      ],
+      [
+        79,
+        90,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "by providing this fundamental knowledge the dog aging project has the potential to help support a new field in veterinary medicine-geriatrics",
+    "intent": 2,
+    "urgency": "LOW",
+    "entities": [
+      [
+        44,
+        47,
+        "ANIMAL"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My deer is showing the following symptoms: Gas, Diarrhea, Abdominal discomfort, Vomiting, Nausea.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        48,
+        56,
+        "SYMPTOM"
+      ],
+      [
+        80,
+        88,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "imagine learning about a rare or complex surgery as if youre right there at the operating table tayce said we could create virtual environments to supplement student learning we are only scratching the surface of possibilities",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        187,
+        197,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "muneokas interest in mammals led him to conduct independent research-this time away from his mentor in 1986 he joined tulane universitys department of cell and molecular biology where he continued to study limb regeneration and wound healing he has been studying this problem ever since",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        228,
+        233,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "What signs would a veterinarian look for when diagnosing distemper in dogs? Signs include fever, coughing, nasal discharge, lethargy, and loss of appetite. A veterinarian may also look for signs such as seizures or paralysis.",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        90,
+        95,
+        "SYMPTOM"
+      ],
+      [
+        97,
+        105,
+        "SYMPTOM"
+      ],
+      [
+        107,
+        122,
+        "SYMPTOM"
+      ],
+      [
+        124,
+        132,
+        "SYMPTOM"
+      ],
+      [
+        138,
+        154,
+        "SYMPTOM"
+      ],
+      [
+        215,
+        224,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "vetHealthAssessment",
+    "language": "en"
+  },
+  {
+    "text": "ive always had a severe learning disability and academics were always extremely challenging for me he said but during my time at texas a&m i had professors and counselors who really helped me get through it who helped me academically every time i went to a professor and said ‘im struggling with this can you help me out they would work with me",
+    "intent": 2,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My dog ate chicken bones and is now lethargic and straining.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ],
+      [
+        36,
+        45,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "My buffaloes is showing the following symptoms: Diarrhea with muscus, Tensemus, Nose Bleeds, Flatulence, Pains.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        48,
+        56,
+        "SYMPTOM"
+      ],
+      [
+        80,
+        84,
+        "BODY_PART"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "My 2 year old Dexter cow is showing: Coughing, Loss of Appetite, Lethargy, Fever, vomiting, diarrhea, coughing, lameness, eye discharge, loss of appetite. Duration: 5 days. Condition: Bovine Tuberculosis.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        21,
+        24,
+        "ANIMAL"
+      ],
+      [
+        37,
+        45,
+        "SYMPTOM"
+      ],
+      [
+        47,
+        63,
+        "SYMPTOM"
+      ],
+      [
+        65,
+        73,
+        "SYMPTOM"
+      ],
+      [
+        75,
+        80,
+        "SYMPTOM"
+      ],
+      [
+        82,
+        90,
+        "SYMPTOM"
+      ],
+      [
+        92,
+        100,
+        "SYMPTOM"
+      ],
+      [
+        102,
+        110,
+        "SYMPTOM"
+      ],
+      [
+        122,
+        135,
+        "SYMPTOM"
+      ],
+      [
+        137,
+        153,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "Treat otodectes infestation with topical selamectin (Revolution) or moxidectin/imidacloprid (Advantage Multi). Clean ears prior.",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "My pet: My 4 year old Labrador dog is showing: Vomiting, Loss of Appetite, Lethargy, Fever, vomiting, coughing, nasal discharge, loss of appetite. Duration: 5 days. Condition: Canine Parvovirus.",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        22,
+        30,
+        "ANIMAL"
+      ],
+      [
+        31,
+        34,
+        "ANIMAL"
+      ],
+      [
+        47,
+        55,
+        "SYMPTOM"
+      ],
+      [
+        57,
+        73,
+        "SYMPTOM"
+      ],
+      [
+        75,
+        83,
+        "SYMPTOM"
+      ],
+      [
+        85,
+        90,
+        "SYMPTOM"
+      ],
+      [
+        92,
+        100,
+        "SYMPTOM"
+      ],
+      [
+        102,
+        110,
+        "SYMPTOM"
+      ],
+      [
+        112,
+        127,
+        "SYMPTOM"
+      ],
+      [
+        129,
+        145,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "My pet: think of a blast injury where a soldier is left with a stump suva said no one until this paper came out was even thinking about a requirement from mechanical influences you had people see that a denervated animal doesnt regenerate and theyre thinking its because the nerve was cut but nobody was studying the mechanical load aspect",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "even worse there is currently no treatment",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My 7 year old Rottweiler dog is showing: Vomiting, Diarrhea, Loss of Appetite, Dehydration, diarrhea, labored breathing, eye discharge, loss of appetite. Duration: 3 days. Condition: Parvovirus.",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        25,
+        28,
+        "ANIMAL"
+      ],
+      [
+        41,
+        49,
+        "SYMPTOM"
+      ],
+      [
+        51,
+        59,
+        "SYMPTOM"
+      ],
+      [
+        61,
+        77,
+        "SYMPTOM"
+      ],
+      [
+        79,
+        90,
+        "SYMPTOM"
+      ],
+      [
+        92,
+        100,
+        "SYMPTOM"
+      ],
+      [
+        102,
+        119,
+        "SYMPTOM"
+      ],
+      [
+        121,
+        134,
+        "SYMPTOM"
+      ],
+      [
+        136,
+        152,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "these new initiatives expand upon the colleges strong student and college organizations that are dedicated to supporting a welcoming learning environment these include the graduate student association which provides consistent multicultural programming; voice (veterinarians as one inclusive community for empowerment) a student-run organization that addresses socio-cultural awareness among veterinary students faculty and staff; and broad spectrum (pride) which works to connect support and empower",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "college station tx-in a new study published in plos genetics an international team of researchers report that two independent mutations are required to explain the development of the sex-linked barring pattern in chickens both mutations affect the function of cdkn2a a tumor suppressor gene associated with melanoma in humans",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "the amstutz-williams award honors the long and distinguished service of the late dr harold e amstutz the aabps secretary-treasurer and executive vice president until 1993 and dr eric i williams the editor of the bovine practitioner and proceedings book from 1969 to 1998 the award has only been given to 11 individuals since it was established in 1986",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My buffaloes is showing the following symptoms: Pale comb, Lame, Death, Swolling of joint, Eye closed.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        84,
+        89,
+        "BODY_PART"
+      ],
+      [
+        91,
+        94,
+        "BODY_PART"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "Poisoning by Petroleum Products in Cats: Your veterinarian will give your cat activated charcoal to decontaminate and neutralize the toxin. If your cat ingested the petroleum products recently, a stomach lavage (wash) will also be performed. Causing the cat to vomit is usually not wise under these circumstances, as the cat may contract aspiration pneumonia, a potential and very serious side effect of vomiting. What should I do?",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        74,
+        77,
+        "ANIMAL"
+      ],
+      [
+        148,
+        151,
+        "ANIMAL"
+      ],
+      [
+        196,
+        203,
+        "BODY_PART"
+      ],
+      [
+        254,
+        257,
+        "ANIMAL"
+      ],
+      [
+        261,
+        266,
+        "SYMPTOM"
+      ],
+      [
+        321,
+        324,
+        "ANIMAL"
+      ],
+      [
+        404,
+        412,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "petmd",
+    "language": "en"
+  },
+  {
+    "text": "Protein-losing enteropathy (PLE) suspected; differentials include lymphangiectasia, IBD, lymphoma. Further workup needed.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "anytime we have any penetrating wounds into a body cavity we flush it out so an infection doesnt brew then we went into his chest he was very critical under anesthesia and we almost lost him a few times torkildsen said we were able to partially tie off his lung to try and stop the leaking but he was not doing well enough for us to completely stop it",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        124,
+        129,
+        "BODY_PART"
+      ],
+      [
+        257,
+        261,
+        "BODY_PART"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "better understanding the health effects of the presence and timing of spaying and neutering your dogs is of particular interest to the veterinary community said dr kate creevy dap chief veterinary officer and cvmbs associate professor of veterinary internal medicine following puppies through the process of spaying or neutering or through reproductive activity will tell us a lot about how these events influence healthy aging",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "Poisoning by Petroleum Products in Cats: Putting petroleum products like gasoline or kerosene on a cat’s skin, or near its mouth, will poison it. Some animals are exposed to these products through exposure to accidental spills, and sometimes people will put gasoline, or other solvents, on a cat to remove something that has gotten onto its skin or hair, such as paint and other sticky substances.",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        99,
+        102,
+        "ANIMAL"
+      ],
+      [
+        105,
+        109,
+        "BODY_PART"
+      ],
+      [
+        123,
+        128,
+        "BODY_PART"
+      ],
+      [
+        292,
+        295,
+        "ANIMAL"
+      ],
+      [
+        341,
+        345,
+        "BODY_PART"
+      ]
+    ],
+    "source": "petmd",
+    "language": "en"
+  },
+  {
+    "text": "My sheep is showing the following symptoms: Fever, Swelling, loss of appetite, Anorexia, Weight Loss.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        3,
+        8,
+        "ANIMAL"
+      ],
+      [
+        44,
+        49,
+        "SYMPTOM"
+      ],
+      [
+        51,
+        59,
+        "SYMPTOM"
+      ],
+      [
+        61,
+        77,
+        "SYMPTOM"
+      ],
+      [
+        89,
+        100,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "hinrichs thought that the piezo icsi method may have been rupturing the sperm acrosome before injection of the sperm into the oocyte if this was true then piezo icsi mimicked the natural fertilization process more closely than did conventional icsi potentially allowing the piezo embryos to develop faster",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "story by callie rainosek & dr megan palsa",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "Polymyositis suspected; check CK levels, consider muscle biopsy.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        50,
+        56,
+        "BODY_PART"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "My goat is showing the following symptoms: Abortion , Mummification, Stillbirth, Weak kids, Pain.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        3,
+        7,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "a strategy that emphasizes the prevention of r equi pneumonia is especially significant considering that the bacterium is ubiquitous in the environment",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My horse is showing the following symptoms: Sudden death, Trouble walking, Paralysis, Depression, Convulsion. Please help.",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        3,
+        8,
+        "ANIMAL"
+      ],
+      [
+        75,
+        84,
+        "SYMPTOM"
+      ],
+      [
+        98,
+        108,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "Portosystemic shunt considered in young animal with poor growth and GI signs.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "My donkey is showing the following symptoms: sweating, dry or tacky gums, reduced appetite, lying down, dull ness.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "unlike amphibians and reptiles mammals have poor regenerative capabilities and in response to an amputation or traumatic injury scar tissue normally forms at the site of the wound",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        174,
+        179,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "mollys room was named for griffeys cherished dog a 5-pound poodle who stole her heart from the beginning",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        45,
+        48,
+        "ANIMAL"
+      ],
+      [
+        59,
+        65,
+        "ANIMAL"
+      ],
+      [
+        80,
+        85,
+        "BODY_PART"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "although i am a clinical professor of pathology with primary diagnostic and teaching responsibilities i continue to be involved in orthopedic research (eg healing of defects in articular cartilage and in tendons facilitated by stem cells) said pool",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "i think imaging is quite a large topic it has its fingers in practically every aspect in medicine said deveau of the breadth of the centers abilities",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "Salmonella ruled out via fecal culture.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "womacks research isnt restricted to cattle; he has worked extensively with mice as well as chickens he has spent time in korea studying chickens with the same goalfinding genes that confer disease resistance recently he studied a gene in rats that allows the rats to be resistant to rift valley fever a disease that has taken a toll in africa and affects cattle sheep and goats we found a rat model for it and identified that gene womack said we occasionally work with dogs cats pigs and horses too",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        295,
+        300,
+        "SYMPTOM"
+      ],
+      [
+        362,
+        367,
+        "ANIMAL"
+      ],
+      [
+        389,
+        392,
+        "ANIMAL"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "My 3 year old Bengal cat is showing: Nasal Discharge, Coughing, Loss of Appetite, Fever, vomiting, coughing, labored breathing, skin lesions, eye discharge, loss of appetite. Duration: 5 days. Condition: Feline Calicivirus.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        21,
+        24,
+        "ANIMAL"
+      ],
+      [
+        37,
+        52,
+        "SYMPTOM"
+      ],
+      [
+        54,
+        62,
+        "SYMPTOM"
+      ],
+      [
+        64,
+        80,
+        "SYMPTOM"
+      ],
+      [
+        82,
+        87,
+        "SYMPTOM"
+      ],
+      [
+        89,
+        97,
+        "SYMPTOM"
+      ],
+      [
+        99,
+        107,
+        "SYMPTOM"
+      ],
+      [
+        109,
+        126,
+        "SYMPTOM"
+      ],
+      [
+        128,
+        140,
+        "SYMPTOM"
+      ],
+      [
+        142,
+        155,
+        "SYMPTOM"
+      ],
+      [
+        157,
+        173,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "My duck is showing the following symptoms: Fever, Seizures, Hydrophobia, Jaw is dropped, Shyness or aggression.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        43,
+        48,
+        "SYMPTOM"
+      ],
+      [
+        73,
+        76,
+        "BODY_PART"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "in 2007 after a 15-year discovery process lees and his team patented a genetic test to identify carriers of hn in english cocker spaniels their efforts and research lead to the eradication of this inherited kidney disease through selective breeding in english cocker spaniels",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        207,
+        213,
+        "BODY_PART"
+      ]
+    ],
+    "source": "vet_med_hf",
+    "language": "en"
+  },
+  {
+    "text": "Rectal palpation reveals firm mass; biopsy recommended.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "My dog's elbow/hock seems to stick out at an odd angle.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "My 3 year old English Lop rabbit is showing: Sneezing, Nasal Discharge, Loss of Appetite, Fever, vomiting, coughing, labored breathing, lameness, skin lesions, loss of appetite. Duration: 4 days. Condition: Myxomatosis.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        26,
+        32,
+        "ANIMAL"
+      ],
+      [
+        45,
+        53,
+        "SYMPTOM"
+      ],
+      [
+        55,
+        70,
+        "SYMPTOM"
+      ],
+      [
+        72,
+        88,
+        "SYMPTOM"
+      ],
+      [
+        90,
+        95,
+        "SYMPTOM"
+      ],
+      [
+        97,
+        105,
+        "SYMPTOM"
+      ],
+      [
+        107,
+        115,
+        "SYMPTOM"
+      ],
+      [
+        117,
+        134,
+        "SYMPTOM"
+      ],
+      [
+        146,
+        158,
+        "SYMPTOM"
+      ],
+      [
+        160,
+        176,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  }
+]

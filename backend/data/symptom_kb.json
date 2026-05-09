@@ -1,0 +1,460 @@
+{
+  "vomissement": {
+    "causes_possibles": ["Indigestion", "Changement d'alimentation", "Parasites intestinaux", "Ingestion de corps étranger", "Insuffisance rénale"],
+    "red_flags": ["Vomissements répétés (> 3 fois en 24h)", "Présence de sang (hématémèse)", "Léthargie sévère"],
+    "conseils_maison": ["Mettre à la diète stricte pendant 12-24h.", "Laisser de petites quantités d'eau fraîche.", "Reprendre avec une nourriture fade."],
+    "evolution_attendue": {
+      "24h": "Si les vomissements s'arrêtent, l'animal devrait retrouver son énergie.",
+      "48h": "Risque de déshydratation si l'animal ne garde pas l'eau.",
+      "1_semaine": "Risque de perte de poids et d'affaiblissement global (état cachectique)."
+    }
+  },
+  "diarrhée": {
+    "causes_possibles": ["Mauvaise digestion", "Transition alimentaire rapide", "Stress", "Parasites (Giardiose)"],
+    "red_flags": ["Sang rouge vif dans les selles", "Selles noires/goudronneuses", "Déshydratation"],
+    "conseils_maison": ["Alimentation hautement digestible.", "Hydratation constante.", "Éviter les friandises et le lait."],
+    "evolution_attendue": {
+      "48h": "Déshydratation possible si les selles restent liquides.",
+      "1_semaine": "Carences nutritionnelles et irritation chronique du colon si non traité.",
+      "2_semaines": "Anémie possible en cas de présence de sang occulte prolongée."
+    }
+  },
+  "toux": {
+    "causes_possibles": ["Irritation trachée", "Allergie", "Toux du chenil", "Problème cardiaque"],
+    "red_flags": ["Difficulté à respirer", "Muqueuses bleutées", "Fatigue extrême"],
+    "conseils_maison": ["Utiliser un harnais au lieu d'un collier.", "Environnement calme et humide.", "Éviter la fumée de cigarette."]
+  },
+  "convulsion": {
+    "causes_possibles": ["Épilepsie", "Intoxication", "Hypoglycémie", "Tumeur cérébrale"],
+    "red_flags": ["Crise > 5 minutes", "Plusieurs crises par jour", "Perte de connaissance prolongée"],
+    "conseils_maison": ["Éloigner les objets dangereux.", "Baisser luminosité et bruit.", "Ne pas toucher la langue."],
+    "evolution_attendue": {
+      "24h": "Risque d'oedème cérébral si les crises se répètent (Cluster seizures).",
+      "1_semaine": "Dommages neurologiques irréversibles si l'épilepsie n'est pas stabilisée."
+    }
+  },
+  "boiterie": {
+    "causes_possibles": ["Entorse", "Coussinet blessé/épillet", "Arthrose", "Rupture ligaments"],
+    "red_flags": ["Aucun appui possible", "Gonflement chaud", "Gémissement au toucher"],
+    "conseils_maison": ["Repos strict absolu.", "Glace si zone chaude.", "Inspecter les coussinets."]
+  },
+  "apathie": {
+    "causes_possibles": ["Fièvre", "Douleur cachée", "Maladie infectieuse", "Coup de chaleur"],
+    "red_flags": ["Refus de se lever", "Température > 39.5°C", "Gencives blanches/jaunes"],
+    "conseils_maison": ["Vérifier la température.", "Proposer de l'eau ou bouillon dilué.", "Endroit calme et sombre."]
+  },
+  "sang dans les urines": {
+    "causes_possibles": ["Cystite / Infection", "Calculs", "Problème prostatique"],
+    "red_flags": ["Position d'uriner mais rien ne sort (URGENCE ABSOLUE)", "Douleur intense", "Léthargie"],
+    "conseils_maison": ["Accès constant à l'eau.", "Surveiller l'émission d'urine.", "Récupérer échantillon si possible."]
+  },
+  "démangeaison": {
+    "causes_possibles": ["Puces/tiques", "Allergie alimentaire", "Dermatite atopique", "Gale"],
+    "red_flags": ["Gratte jusqu'au sang", "Hot spots suintants", "Perte de poils massive"],
+    "conseils_maison": ["Inspecter la peau (puces).", "Traitement antiparasitaire.", "Éviter les shampoings fréquents."]
+  },
+  "oeil rouge": {
+    "causes_possibles": ["Conjonctivite", "Corps étranger", "Ulcère cornéen", "Allergie"],
+    "red_flags": ["Oeil gardé fermé", "Changement de couleur de la cornée", "Douleur manifeste"],
+    "conseils_maison": ["Ne pas essayer de mettre de gouttes humaines.", "Nettoyer avec du sérum physiologique uniquement.", "Mettre une collerette si l'animal se frotte."]
+  },
+  "écoulement nasal": {
+    "causes_possibles": ["Rhinite", "Allergie", "Corps étranger (épillet)", "Infection dentaire"],
+    "red_flags": ["Écoulement d'un seul côté", "Sang dans l'écoulement", "Difficulté respiratoire"],
+    "conseils_maison": ["Nettoyer délicatement les narines.", "Humidifier l'air.", "Surveiller l'appétit."]
+  },
+  "mauvaise haleine": {
+    "causes_possibles": ["Tartre/Gingivite", "Abcès dentaire", "Insuffisance rénale", "Problème digestif"],
+    "red_flags": ["Gencives saignantes", "Difficulté à mâcher", "Perte de dents"],
+    "conseils_maison": ["Brossage de dents régulier.", "Lamelles à mâcher.", "Alimentation sèche (croquettes)."]
+  },
+  "ventre gonflé": {
+    "causes_possibles": ["Aérophagie", "Parasites (chiot)", "Retournement d'estomac (URGENCE)", "Tumeur/Ascite"],
+    "red_flags": ["Ventre dur et douloureux", "Tentatives de vomir infructueuses", "Salivation excessive"],
+    "conseils_maison": ["Ne rien donner à manger.", "Limiter les mouvements.", "Appeler le vétérinaire immédiatement si dur au toucher."]
+  },
+  "perte de poils": {
+    "causes_possibles": ["Mue saisonnière", "Stress", "Dérèglement hormonal", "Carence alimentaire"],
+    "red_flags": ["Plaques complètement nues", "Peau noire ou croûteuse", "Démangeaisons extrêmes"],
+    "conseils_maison": ["Brossage quotidien.", "Compléments en Oméga 3.", "Vérifier la qualité des croquettes."]
+  },
+  "oreilles qui puent": {
+    "causes_possibles": ["Otite bactérienne", "Gale d'oreille", "Levures (Malassezia)", "Corps étranger"],
+    "red_flags": ["Tête penchée", "Douleur au toucher de l'oreille", "Écoulement noir ou purulent"],
+    "conseils_maison": ["Nettoyer avec un produit vétérinaire adapté.", "Sécher soigneusement après nettoyage.", "Ne pas utiliser de coton-tige."]
+  },
+  "tremblements": {
+    "causes_possibles": ["Douleur", "Fièvre", "Stress/Peur", "Intoxication", "Froid"],
+    "red_flags": ["Tremblements incontrôlables", "Perte d'équilibre", "Associé à de la bave"],
+    "conseils_maison": ["Réchauffer l'animal si besoin.", "Calmer l'animal dans vos bras.", "Observer la durée des tremblements."]
+  },
+  "perte d'appétit": {
+    "causes_possibles": ["Douleur", "Nausée", "Stress", "Dent cariée", "Changement de nourriture"],
+    "red_flags": ["Refus total > 24h (surtout chat - risque lipidose)", "Perte de poids rapide", "Déshydratation"],
+    "conseils_maison": ["Réchauffer légèrement la nourriture.", "Ajouter du bouillon de poule (sans sel).", "Proposer de la pâtée appétente."]
+  },
+  "soif excessive": {
+    "causes_possibles": ["Diabète", "Insuffisance rénale", "Infection utérine (Pyomètre)", "Chaleur"],
+    "red_flags": ["Urines très fréquentes et abondantes", "Vomissements associés", "Gencives sèches"],
+    "conseils_maison": ["Ne jamais restreindre l'eau.", "Mesurer la quantité buue en 24h.", "Noter les changements de comportement."]
+  },
+  "constipation": {
+    "causes_possibles": ["Manque de fibres", "Déshydratation", "Sédentarité", "Corps étranger digestif"],
+    "red_flags": ["Efforts infructueux prolongés", "Douleur abdominale", "Vomissements associés"],
+    "conseils_maison": ["Ajouter un peu de courge bouillie (fibres).", "Encourager l'exercice.", "Augmenter l'hydratation."]
+  },
+  "plaie": {
+    "causes_possibles": ["Bagarre", "Coupure", "Grattage excessif", "Brûlure"],
+    "red_flags": ["Plaie profonde/ouverte", "Pus ou odeur nauséabonde", "Zone très chaude et gonflée"],
+    "conseils_maison": ["Nettoyer avec de la Bétadine diluée ou Vétédine.", "Empêcher de lécher (collerette).", "Couper les poils autour de la zone."]
+  },
+  "agressivité soudaine": {
+    "causes_possibles": ["Douleur intense", "Trouble neurologique", "Stress/Peur extrême", "Rage (très rare)"],
+    "red_flags": ["Changement total de personnalité", "Attaque sans sommation", "Pupilles dilatées"],
+    "conseils_maison": ["Ne pas essayer de punir l'animal.", "L'isoler dans une pièce au calme.", "Éviter tout contact physique brusque."]
+  },
+  "respiration bruyante": {
+    "causes_possibles": ["Sténose des narines (brachycéphales)", "Voile du palais trop long", "Asthme", "Oedème pulmonaire"],
+    "red_flags": ["Langue bleue", "Respiration gueule ouverte", "Épaules écartées pour respirer"],
+    "conseils_maison": ["Garder au frais.", "Éviter tout effort physique.", "Calmer l'animal pour réduire le stress."]
+  },
+  "écoulement oculaire": {
+    "causes_possibles": ["Obstruction canal lacrymal", "Allergie", "Irritation", "Infection"],
+    "red_flags": ["Écoulement jaune ou vert", "Oeil gonflé", "Animal se frotte sans cesse"],
+    "conseils_maison": ["Nettoyer avec des compresses stériles et du sérum phi.", "Toujours partir du coin interne vers l'externe.", "Surveiller si l'oeil devient opaque."]
+  },
+  "se cache": {
+    "causes_possibles": ["Douleur", "Malaise général", "Stress", "Peur du bruit (orage)"],
+    "red_flags": ["Refus de sortir pour manger", "Prostration totale", "Ne réagit plus aux appels"],
+    "conseils_maison": ["Respecter son besoin d'isolement.", "Laisser eau et nourriture à proximité.", "Chercher d'autres symptômes cachés."]
+  },
+  "langue bleue": {
+    "causes_possibles": ["Manque d'oxygène", "Arrêt cardiaque", "Étouffement", "Coup de chaleur"],
+    "red_flags": ["URGENCE VITALE IMMÉDIATE"],
+    "conseils_maison": ["Foncez aux urgences.", "Si étouffement : tenter manœuvre de Heimlich adaptée.", "Si chaleur : refroidir avec linges humides."]
+  },
+  "hot spot": {
+    "causes_possibles": ["Allergie aux puces", "Humidité résiduelle sous le poil", "Léchage compulsif"],
+    "red_flags": ["Zone suintante qui s'étend vite", "Douleur vive", "Fièvre"],
+    "conseils_maison": ["Tondre la zone pour laisser respirer.", "Désinfecter doucement.", "Collerette obligatoire."]
+  },
+  "gencives pâles": {
+    "causes_possibles": ["Anémie", "Hémorragie interne", "État de choc", "Insuffisance cardiaque"],
+    "red_flags": ["Gencives blanches ou grisâtres", "Léthargie extrême", "Respiration rapide"],
+    "conseils_maison": ["Garder l'animal au chaud.", "Limiter les mouvements.", "Urgence vétérinaire."]
+  },
+  "tête penchée": {
+    "causes_possibles": ["Otite profonde", "Syndrome vestibulaire", "AVC", "Tumeur nerveuse"],
+    "red_flags": ["Mouvements saccadés des yeux (nystagmus)", "Perte d'équilibre", "Tourne en rond"],
+    "conseils_maison": ["Éviter les escaliers et chutes.", "Porter l'animal si besoin.", "Environnement sécurisé."]
+  },
+  "boite des 4 pattes": {
+    "causes_possibles": ["Polyarthrite", "Maladie de Lyme (tiques)", "Fièvre importante", "Douleur généralisée"],
+    "red_flags": ["Refus total de marcher", "Articulations gonflées", "Cris lors des manipulations"],
+    "conseils_maison": ["Repos total.", "Aider l'animal pour ses besoins avec une sangle.", "Vérifier la présence de tiques."]
+  },
+  "salivation excessive": {
+    "causes_possibles": ["Nausée", "Corps étranger dans la bouche", "Intoxication", "Stress intense"],
+    "red_flags": ["Bave mousseuse", "Difficulté à déglutir", "Pupilles anormales"],
+    "conseils_maison": ["Vérifier l'absence de chenilles processionnaires.", "Rincer la bouche à l'eau si toxique suspecté.", "Surveiller la conscience."]
+  },
+  "perte de poids": {
+    "causes_possibles": ["Parasites", "Cancer", "Diabète", "Malabsorption digestive"],
+    "red_flags": ["Côtes très saillantes soudainement", "Appétit augmenté mais poids baisse", "Faiblesse"],
+    "conseils_maison": ["Peser l'animal chaque semaine.", "Noter la quantité ingérée.", "Vérifier la consistance des selles."]
+  },
+  "fièvre": {
+    "causes_possibles": ["Infection bactérienne ou virale", "Maladie auto-immune", "Abcès ou infection locale", "Réaction post-vaccinale", "Néoplasie (cancer)"],
+    "red_flags": ["Température > 40°C (hyperthermie sévère)", "Convulsions liées à la fièvre", "Gencives rouges vif ou sèches", "Prostration totale, refus de se lever", "Fièvre persistant plus de 24h malgré soins"],
+    "conseils_maison": ["Prendre la température rectale (normale : 38–39°C chien/chat).", "Placer l'animal dans un endroit frais et aéré.", "Proposer de l'eau fraîche régulièrement.", "Ne jamais donner de paracétamol, ibuprofène ou aspirine — toxiques pour les animaux.", "Appliquer une compresse d'eau tiède (non froide) sur les coussinets si > 40°C."],
+    "evolution_attendue": {
+      "12h": "Une fièvre < 39.5°C peut fluctuer. Surveiller de près.",
+      "24h": "Risque de déshydratation et d'aggravation de l'infection sous-jacente.",
+      "48h": "Défaillance multi-organes possible si fièvre > 40°C non traitée.",
+      "1_semaine": "Sepsis ou choc septique pouvant être fatal si non pris en charge."
+    }
+  },
+  "intoxication": {
+    "causes_possibles": ["Ingestion de rodenticide (mort-aux-rats)", "Ingestion de plantes toxiques (laurier-rose, gui, raisin, oignon, ail)", "Médicaments humains (paracétamol, ibuprofène, antidépresseurs)", "Insecticides ou antiparasitaires surdosés", "Chocolat, xylitol, caféine"],
+    "red_flags": ["Salivation excessive et mousseuse", "Convulsions", "Muqueuses bleutées ou jaunes", "Perte de conscience", "Saignements multiples (rodenticides anti-coagulants)", "Vomissements incoercibles ou sang"],
+    "conseils_maison": ["Identifier la substance ingérée et conserver l'emballage.", "Ne PAS faire vomir sans avis vétérinaire (contre-indiqué pour acides, bases, hydrocarbures).", "Ne PAS donner de lait, eau salée, ou charbon actif sans prescription.", "Appeler immédiatement un vétérinaire ou centre antipoison.", "Garder l'animal au calme et au chaud pendant le transport."],
+    "evolution_attendue": {
+      "1h": "Absorption rapide de la majorité des toxines — intervention précoce cruciale.",
+      "4h": "Symptômes neurologiques ou hémorragiques peuvent apparaître selon le toxique.",
+      "24h": "Insuffisance rénale ou hépatique aiguë selon le type d'intoxication.",
+      "48h": "Pronostic vital engagé si non traité, selon la dose et la substance."
+    }
+  },
+  "difficultés respiratoires": {
+    "causes_possibles": ["Oedème pulmonaire (insuffisance cardiaque)", "Pneumonie ou pleurésie", "Asthme (surtout chat)", "Corps étranger dans les voies aériennes", "Anémie sévère", "Épanchement pleural"],
+    "red_flags": ["Gueule ouverte pour respirer (surtout chat — URGENCE ABSOLUE)", "Muqueuses bleutées ou violacées (cyanose)", "Respiration abdominale avec mouvements exagérés", "Épaules écartées, tête basse (position orthopnéique)", "Agitation extrême ou au contraire prostration"],
+    "conseils_maison": ["Garder l'animal strictement au calme — tout stress aggrave la détresse respiratoire.", "Ne pas manipuler l'animal inutilement.", "Maintenir dans un endroit frais et bien aéré.", "Éviter tout effort physique, ne pas le faire marcher.", "Transport immédiat chez le vétérinaire sans délai — oxygénothérapie possible en urgence."],
+    "evolution_attendue": {
+      "15min": "L'hypoxie peut provoquer des lésions cérébrales irréversibles en quelques minutes.",
+      "1h": "Arrêt cardiorespiratoire possible si cyanose installée.",
+      "4h": "Défaillance multi-organes en l'absence de traitement."
+    }
+  },
+  "coup de chaleur": {
+    "causes_possibles": ["Exposition prolongée au soleil ou à la chaleur", "Confinement dans un véhicule fermé", "Exercice intense par temps chaud", "Races brachycéphales plus vulnérables (bouledogue, carlin, persan)", "Manque d'eau et de ventilation"],
+    "red_flags": ["Température rectale > 40.5°C", "Muqueuses rouge vif puis bleutées", "Convulsions", "Perte de connaissance", "Langue très rouge, halètement intense", "Vomissements et diarrhée hémorragiques"],
+    "conseils_maison": ["Transporter IMMÉDIATEMENT en zone fraîche et ombragée.", "Mouiller le corps avec de l'eau TIÈDE (pas glacée — risque de vasoconstriction).", "Ventiler activement avec un éventail ou climatisation.", "Proposer de l'eau à boire si l'animal est conscient.", "Placer des linges humides sur les coussinets, l'aine, les aisselles.", "Ne jamais immerger dans l'eau froide."],
+    "evolution_attendue": {
+      "30min": "Sans refroidissement, coagulation intravasculaire disséminée (CIVD) possible.",
+      "2h": "Insuffisance rénale aiguë et oedème cérébral probables.",
+      "6h": "Décès possible si température non réduite rapidement."
+    }
+  },
+  "choc": {
+    "causes_possibles": ["Hémorragie interne ou externe massive", "Réaction anaphylactique (allergie sévère)", "Infection généralisée (choc septique)", "Insuffisance cardiaque aiguë", "Traumatisme grave"],
+    "red_flags": ["Gencives pâles, blanches ou grises", "Temps de remplissage capillaire > 2 secondes", "Extrémités froides", "Fréquence cardiaque très rapide ou très lente", "Prostration et perte de connaissance", "Respiration superficielle et rapide"],
+    "conseils_maison": ["Garder l'animal allongé, au chaud, couvert d'une couverture.", "Ne rien donner par voie orale.", "Limiter absolument les mouvements.", "Appuyer fermement sur toute plaie hémorragique visible.", "Transport d'urgence immédiat chez le vétérinaire — pronostic vital engagé."],
+    "evolution_attendue": {
+      "15min": "Défaillance circulatoire progressive — chaque minute compte.",
+      "1h": "Ischémie des organes nobles (reins, cerveau, foie) irréversible.",
+      "4h": "Décès sans réanimation fluide et traitement de la cause."
+    }
+  },
+  "fracture": {
+    "causes_possibles": ["Traumatisme (chute, accident de voiture)", "Morsure d'un autre animal", "Ostéoporose ou fragilité osseuse (surtout chez les oiseaux)", "Tumeur osseuse (fracture pathologique)", "Écrasement accidentel"],
+    "red_flags": ["Déformation visible du membre", "Os visible (fracture ouverte) — URGENCE ABSOLUE", "Impossibilité totale d'appuyer sur le membre", "Gonflement rapide et important", "Cri ou gémissement intense au toucher", "Membre ballant, anesthésié"],
+    "conseils_maison": ["Immobiliser l'animal pour éviter tout mouvement du membre atteint.", "Ne jamais tenter de remettre un os en place soi-même.", "Ne pas poser d'attelle improvisée sans avis vétérinaire (peut aggraver).", "Pour fracture ouverte : recouvrir la plaie d'une compresse stérile humide sans comprimer.", "Transport en boîte ou sur une surface rigide, en limitant les chocs.", "Ne rien donner à manger (anesthésie possible)."],
+    "evolution_attendue": {
+      "6h": "Gonflement et douleur s'installent. Risque de nécrose si vaisseaux comprimés.",
+      "24h": "Début d'infection si fracture ouverte non traitée.",
+      "1_semaine": "Cal osseux vicieux si non réduit chirurgicalement."
+    }
+  },
+  "morsure": {
+    "causes_possibles": ["Bagarre entre chiens ou chats", "Attaque de faune sauvage", "Défense territoriale", "Jeu trop vigoureux entre animaux"],
+    "red_flags": ["Plaie pénétrante profonde (petite ouverture, profonde — typique des morsures de chat)", "Gonflement chaud et rouge progressant rapidement", "Fièvre dans les 12-24h suivant la morsure", "Pus ou odeur nauséabonde", "Animal mordeur inconnu (risque rage)", "Plaie proche de l'œil, du thorax ou de l'abdomen"],
+    "conseils_maison": ["Nettoyer abondamment à l'eau courante puis avec Bétadine diluée (1 pour 10 volumes d'eau).", "Tondre les poils autour de la plaie pour évaluer l'étendue.", "Ne pas suturer soi-même ni forcer la fermeture de la plaie.", "Mettre une collerette pour éviter le léchage.", "Consulter dans les 24h même si la plaie semble mineure — risque d'abcès sous-cutané.", "Vérifier le statut vaccinal antirabique des deux animaux."],
+    "evolution_attendue": {
+      "24h": "Formation d'abcès sous-cutané fréquente si non traitée, surtout chez le chat.",
+      "48h": "Cellulite ou sepsis possible en cas de bactéries virulentes (Pasteurella).",
+      "1_semaine": "Abcès établi nécessitant drainage chirurgical si non diagnostiqué."
+    }
+  },
+  "allergie": {
+    "causes_possibles": ["Allergie alimentaire (protéine de bœuf, blé, poulet)", "Dermatite atopique (pollens, acariens, moisissures)", "Allergie aux puces (DAPP — dermatite allergique à la piqûre de puce)", "Contact avec un produit chimique ou textile", "Réaction médicamenteuse"],
+    "red_flags": ["Oedème du visage, des lèvres ou de la gorge (choc anaphylactique imminent)", "Difficulté respiratoire soudaine après contact ou injection", "Grattage jusqu'au sang avec plaies infectées", "Urticaire généralisée avec prostration", "Vomissements et diarrhée immédiats après repas"],
+    "conseils_maison": ["Identifier et supprimer l'allergène si possible.", "Shampoing doux apaisant à l'avoine pour soulager les démangeaisons.", "Antiparasitaire strictement à jour — la DAPP est la cause n°1 d'allergie cutanée.", "Essai de régime d'élimination (protéine unique jamais donnée auparavant) pendant 8 semaines.", "Consulter si l'état cutané ne s'améliore pas en 1 semaine."],
+    "evolution_attendue": {
+      "24h": "Sans intervention, les lésions cutanées s'aggravent et surinfection possible.",
+      "1_semaine": "Pyodermite secondaire fréquente si grattage persistant.",
+      "1_mois": "Lichénification (épaississement chronique de la peau) si allergie non contrôlée."
+    }
+  },
+  "diabète": {
+    "causes_possibles": ["Diabète sucré de type 2 (insulino-résistance — fréquent chat stérilisé en surpoids)", "Diabète de type 1 (destruction des cellules bêta — plus fréquent chez le chien)", "Pancréatite chronique", "Traitement prolongé aux corticoïdes", "Prédisposition raciale (Samoyède, Husky, Keeshond)"],
+    "red_flags": ["Coma diabétique (prostration, haleine fruitée — acétone)", "Perte de poids rapide malgré appétit augmenté", "Cataracte soudaine (chien)", "Faiblesse des membres postérieurs avec démarche plantigrade (chat)", "Vomissements répétés avec déshydratation"],
+    "conseils_maison": ["Mesurer et noter la quantité d'eau bue par 24h (> 100 ml/kg/j suspect).", "Peser l'animal chaque semaine.", "Ne jamais modifier ou arrêter l'insuline sans avis vétérinaire.", "Nourrir l'animal TOUJOURS avant l'injection d'insuline.", "Avoir du miel ou sirop à portée de main en cas d'hypoglycémie (animal conscient seulement)."],
+    "evolution_attendue": {
+      "24h": "Acidocétose diabétique possible si l'animal ne mange pas et reçoit de l'insuline.",
+      "1_semaine": "Déshydratation chronique et perte musculaire si non traité.",
+      "1_mois": "Neuropathies, cataracte (chien), infections récurrentes si équilibration insuffisante.",
+      "6_mois": "Insuffisance rénale chronique et cécité si diabète non contrôlé."
+    }
+  },
+  "insuffisance rénale": {
+    "causes_possibles": ["Insuffisance rénale chronique (IRC — fréquent chez chat > 7 ans)", "Insuffisance rénale aiguë (IRA — intoxication, infection, déshydratation)", "Pyélonéphrite (infection rénale)", "Lithiase urétrale obstructive", "Amyloïdose rénale"],
+    "red_flags": ["Haleine urémique (odeur d'ammoniac ou de métal)", "Vomissements répétés avec anorexie totale", "Ulcères buccaux ou langue blanchâtre", "Prostration extrême et anémie (gencives blanches)", "Anurie ou oligurie (très peu ou pas d'urine)"],
+    "conseils_maison": ["Accès constant et illimité à l'eau fraîche (ou fontaine).", "Alimentation pauvre en phosphore (prescription vétérinaire recommandée).", "Ne jamais donner d'anti-inflammatoires (AINS) — néphrotoxiques.", "Peser l'animal chaque semaine et noter les variations.", "Consulter immédiatement si l'animal vomit et refuse de boire."],
+    "evolution_attendue": {
+      "24h": "Déshydratation aiguë et crise urémique possible si vomissements importants.",
+      "1_semaine": "Dégradation rapide de la fonction rénale sans prise en charge.",
+      "1_mois": "Stade terminal (IRIS stade 4) avec survie comptée en jours à semaines.",
+      "6_mois": "Progression inévitable mais ralentissable avec diète et traitement adapté."
+    }
+  },
+  "stase digestive": {
+    "causes_possibles": ["Stress aigu ou environnemental (lapin)", "Douleur (dentaire, urinaire, post-opératoire)", "Alimentation pauvre en foin (excès de pellets ou légumes)", "Déshydratation", "Ballonnement par accumulation de gaz"],
+    "red_flags": ["Absence totale de crottes depuis plus de 6 heures (lapin/cochon d'Inde) — URGENCE", "Posture voûtée, refus de bouger", "Grincement de dents (bruxisme)", "Ventre gonflé et dur", "Halètement ou respiration rapide par douleur"],
+    "conseils_maison": ["Proposer du foin frais en abondance — le foin est INDISPENSABLE.", "Encourager les mouvements doux : poser l'animal par terre pour qu'il se déplace.", "Masser délicatement le ventre en cercles dans le sens des aiguilles d'une montre.", "Proposer un peu de feuilles de persil frais ou de coriandre pour stimuler l'appétit.", "Consulter d'urgence si absence de transit > 6h chez le lapin."],
+    "evolution_attendue": {
+      "6h": "Accumulation de gaz et début de déshydratation.",
+      "12h": "Douleur intense, état de choc possible.",
+      "24h": "Pronostic vital engagé — la stase digestive est mortelle en 24-48h sans traitement."
+    }
+  },
+  "gale": {
+    "causes_possibles": ["Sarcoptes scabiei (gale sarcoptique — très contagieuse, zoonotique)", "Demodex canis ou cati (gale démodécique — non contagieuse, immunodépression)", "Cheyletiella (gale du lapin ou chien — pellicules ambulantes)", "Notoedres cati (gale de la tête du chat)"],
+    "red_flags": ["Démangeaisons extrêmes nocturnes (sarcoptique)", "Croûtes épaisses sur les oreilles, coudes, ventre", "Perte de poils généralisée avec peau rouge et épaissie", "Transmission à l'humain (papules prurigineuses — sarcoptique)", "Infection bactérienne secondaire généralisée"],
+    "conseils_maison": ["Isoler l'animal atteint pour limiter la contagion (gale sarcoptique).", "Laver et désinfecter la literie et les zones de contact.", "Traiter TOUS les animaux en contact simultanément.", "Ne pas utiliser de shampoings humains.", "La gale sarcoptique nécessite un traitement vétérinaire obligatoire (sélamectine, isoxazolines).", "Signaler à un médecin si apparition de boutons chez les personnes en contact."],
+    "evolution_attendue": {
+      "1_semaine": "Extension rapide des lésions si non traité.",
+      "2_semaines": "Surinfection bactérienne et sepsis possible.",
+      "1_mois": "Cachexie et mort par épuisement en cas de gale généralisée non prise en charge."
+    }
+  },
+  "paralysie": {
+    "causes_possibles": ["Hernie discale thoraco-lombaire (surtout teckel, pékinois)", "Embolie fibrocartilagineuse", "Tumeur médullaire ou cérébrale", "Tique paralysante (Ixodes)", "Traumatisme vertébral", "Myélopathie dégénérative (berger allemand)"],
+    "red_flags": ["Perte soudaine de l'usage des membres postérieurs", "Perte du contrôle urinaire et fécal (incontinence)", "Douleur rachidienne intense à la palpation", "Progression ascendante de la paralysie", "Perte de la sensibilité profonde (mauvais pronostic)"],
+    "conseils_maison": ["Immobiliser l'animal sur une surface rigide et plate pour le transport.", "Ne pas plier ni tordre la colonne vertébrale lors du transport.", "Surveiller la capacité à uriner (sondage parfois nécessaire).", "Ne rien administrer sans prescription (les corticoïdes peuvent aggraver certaines hernies).", "Consultation neurologique urgente dans les 24h — la fenêtre chirurgicale est critique.", "Surveiller les tiques sur tout le corps."],
+    "evolution_attendue": {
+      "6h": "Risque de compression irréversible de la moelle si hernie aiguë.",
+      "24h": "Perte de sensibilité profonde — pronostic chirurgical fortement compromis.",
+      "1_semaine": "Atrophie musculaire rapide et escarres si animal non mobilisé."
+    }
+  },
+  "déshydratation": {
+    "causes_possibles": ["Vomissements ou diarrhées prolongés", "Fièvre élevée", "Coup de chaleur", "Insuffisance rénale avec polyurie", "Refus de boire (douleur buccale, stress)"],
+    "red_flags": ["Pli cutané persistant (tente de peau > 2 secondes)", "Gencives sèches et collantes", "Yeux enfoncés (énophtalmie)", "Pouls filant et rapide", "Léthargie extrême, extrémités froides"],
+    "conseils_maison": ["Test du pli cutané : pincer la peau du cou — si le pli reste > 2s, déshydratation significative.", "Proposer de l'eau fraîche en petites quantités toutes les 10-15 minutes.", "Solution de réhydratation orale adaptée aux animaux si disponible (Lectade vétérinaire).", "Éviter les boissons sucrées ou isotoniques humaines (Gatorade, etc.).", "Consulter en urgence si l'animal ne boit pas ou vomit l'eau ingérée.", "Ne jamais forcer l'eau par seringue — risque de fausse route."],
+    "evolution_attendue": {
+      "12h": "Déshydratation > 5% : fatigue marquée, urine concentrée.",
+      "24h": "Déshydratation > 8% : risque de choc hypovolémique.",
+      "48h": "Déshydratation > 10-12% : défaillance circulatoire et rénale — pronostic vital engagé."
+    }
+  },
+  "épistaxis": {
+    "causes_possibles": ["Traumatisme nasal", "Corps étranger nasal (épillet)", "Trouble de la coagulation (thrombopénie, intoxication rodenticide)", "Hypertension artérielle", "Tumeur nasale", "Leishmaniose (chien)"],
+    "red_flags": ["Saignement abondant ne s'arrêtant pas après 5 minutes de compression", "Saignement bilatéral simultané", "Présence de sang dans les urines ou les selles (trouble de coagulation)", "Gencives pâles (anémie aiguë)", "Antécédent d'ingestion de rodenticide"],
+    "conseils_maison": ["Garder l'animal calme et la tête légèrement baissée (pour éviter déglutition de sang).", "Comprimer délicatement la narine concernée avec une compresse froide pendant 5 minutes.", "Ne pas introduire de coton ou mouchoir profondément dans la narine.", "Ne pas incliner la tête vers l'arrière.", "Si antécédent d'ingestion de rodenticide : urgence absolue même sans autre symptôme.", "Consulter si le saignement dure plus de 5 minutes ou récidive."],
+    "evolution_attendue": {
+      "1h": "Anémie aiguë si saignement abondant persistant.",
+      "24h": "Hématome nasal ou obstruction si corps étranger.",
+      "1_semaine": "Tumeur ou leishmaniose : symptômes progressifs si non diagnostiquée."
+    }
+  },
+  "jaunisse": {
+    "causes_possibles": ["Hépatite infectieuse (adénovirus, leptospirose)", "Obstruction des voies biliaires (calcul, tumeur)", "Anémie hémolytique (destruction des globules rouges)", "Lipidose hépatique (chat en anorexie)", "Intoxication hépatotoxique (paracétamol, plantes)", "Babésiose (tique)"],
+    "red_flags": ["Ictère scléraux et muqueux intenses (jaune franc)", "Abdomen distendu (ascite hépatique)", "Vomissements répétés + refus total de manger", "Comportement désorienté (encéphalopathie hépatique)", "Urines très foncées (couleur thé fort)", "Hématomes spontanés (déficit coagulation)"],
+    "conseils_maison": ["Placer l'animal dans un endroit calme et chaud.", "Maintenir l'accès à l'eau fraîche.", "Ne jamais donner de médicaments sans avis vétérinaire (le foie est compromis).", "Observer la couleur des urines et des selles.", "Consultation urgente dans les 24h — la jaunisse indique toujours une pathologie sévère."],
+    "evolution_attendue": {
+      "24h": "Aggravation rapide sans traitement — risque de coma hépatique.",
+      "48h": "Insuffisance hépatique aiguë avec troubles de coagulation.",
+      "1_semaine": "Pronostic réservé à sombre si cause non traitée rapidement."
+    }
+  },
+  "abcès": {
+    "causes_possibles": ["Morsure (bactéries anaérobies — Pasteurella, Fusobacterium)", "Corps étranger (épillet migrant sous la peau)", "Infection dentaire (abcès périapical)", "Surinfection d'une plaie cutanée", "Lymphadénite (abcès des ganglions)"],
+    "red_flags": ["Fièvre > 39.5°C associée", "Abcès qui se rompt avec pus abondant et malodorant", "Léthargie et refus de manger (septicémie possible)", "Abcès proche des yeux, du thorax ou de la colonne vertébrale", "Gonflement dur et chaud progressant rapidement"],
+    "conseils_maison": ["Ne jamais percer ou comprimer un abcès soi-même.", "Appliquer une compresse tiède (non chaude) pour favoriser le mûrissement.", "Empêcher l'animal de lécher la zone (collerette).", "Consulter dans les 24h pour drainage vétérinaire et antibiothérapie.", "Si l'abcès se rompt spontanément : nettoyer avec sérum physiologique et consulter quand même."],
+    "evolution_attendue": {
+      "24h": "Progression du gonflement et de la douleur.",
+      "48h": "Rupture spontanée possible ou propagation infectieuse (cellulite).",
+      "1_semaine": "Septicémie si infection non drainée et non traitée."
+    }
+  },
+  "otite": {
+    "causes_possibles": ["Otite externe bactérienne (Staphylococcus, Pseudomonas)", "Otite externe fongique (Malassezia)", "Parasites auriculaires (Otodectes cynotis — gale des oreilles)", "Corps étranger (épillet)", "Allergie atopique prédisposant aux infections récidivantes", "Otite moyenne ou interne (complication d'une otite externe non traitée)"],
+    "red_flags": ["Tête penchée d'un côté (otite moyenne/interne)", "Perte d'équilibre, tourne en rond, nystagmus", "Otite résistante à 2 traitements consécutifs", "Douleur intense à l'ouverture de la bouche", "Écoulement purulent abondant avec odeur forte"],
+    "conseils_maison": ["Nettoyer le pavillon auriculaire visible avec un nettoyant vétérinaire dédié.", "Ne jamais introduire de coton-tige en profondeur dans le canal auditif.", "Sécher soigneusement les oreilles après chaque bain ou baignade.", "Inspecter les oreilles chaque semaine chez les races prédisposées (cocker, basset, labrador).", "Consulter si odeur, douleur ou écoulement persistant au-delà de 3–5 jours."],
+    "evolution_attendue": {
+      "1_semaine": "Extension possible vers l'oreille moyenne sans traitement.",
+      "1_mois": "Otite chronique avec prolifération de la muqueuse auriculaire difficile à traiter.",
+      "6_mois": "Surdité ou troubles vestibulaires définitifs si otite interne non prise en charge."
+    }
+  },
+  "polyurie": {
+    "causes_possibles": ["Diabète sucré (polyurie-polydipsie)", "Insuffisance rénale chronique (incapacité à concentrer les urines)", "Hyperthyroïdie (chat âgé)", "Hypercorticisme (maladie de Cushing — chien)", "Pyomètre (infection utérine de la chienne)", "Diabète insipide (central ou néphrogénique)"],
+    "red_flags": ["Urinations très fréquentes avec grandes quantités", "Soif excessive associée (polydipsie > 100 ml/kg/j)", "Urine très claire ou très foncée", "Pertes vaginales + ventre distendu + polyurie (pyomètre — urgence)", "Perte de poids rapide malgré appétit conservé"],
+    "conseils_maison": ["Mesurer la quantité d'eau bue par 24h (collecter les urines sur 24h si possible).", "Maintenir un bol d'eau toujours plein et propre.", "Ne jamais restreindre l'accès à l'eau.", "Prendre une photo des taches d'urine pour montrer au vétérinaire.", "Consultation sous 48h — la polyurie est souvent le premier signe d'une maladie systémique."],
+    "evolution_attendue": {
+      "1_semaine": "Déshydratation et aggravation de la cause sous-jacente.",
+      "1_mois": "Maladie avancée (diabète, Cushing, IRC) si non diagnostiquée.",
+      "3_mois": "Complications organiques multiples si cause non traitée."
+    }
+  },
+  "dysurie": {
+    "causes_possibles": ["Infection urinaire bactérienne (cystite)", "Calculs urinaires (struvite, oxalate de calcium)", "Obstruction urétrale (chat mâle — URGENCE)", "Cystite idiopathique féline (FLUTD)", "Prostatite (chien mâle non castré)", "Tumeur vésicale"],
+    "red_flags": ["Absence totale d'urine depuis > 12h (obstruction — URGENCE VITALE)", "Sang abondant dans les urines avec douleur", "Abdomen très tendu et douloureux au toucher", "Vomissements + léthargie associés (urémie)", "Cris lors des tentatives d'urination"],
+    "conseils_maison": ["Vérifier si l'animal produit effectivement de l'urine (même en petite quantité).", "Augmenter l'apport en eau (alimentation humide, fontaine).", "Éviter le stress (facteur déclenchant de la cystite idiopathique féline).", "Ne jamais donner d'anti-inflammatoires humains sans avis vétérinaire.", "Consultation dans les 24h pour analyse urinaire et échographie."],
+    "evolution_attendue": {
+      "12h": "Si obstruction : hyperkaliémie et insuffisance rénale aiguë.",
+      "24h": "Rupture vésicale possible si obstruction non levée.",
+      "48h": "Décès par arrêt cardiaque (hyperkaliémie) si obstruction totale non traitée."
+    }
+  },
+  "masse cutanée": {
+    "causes_possibles": ["Lipome (tumeur graisseuse bénigne — très fréquent chez le chien âgé)", "Mastocytome (tumeur à mastocytes — maligne dans 30% des cas)", "Carcinome épidermoïde (chat exposé au soleil)", "Histiocytome bénin (jeune chien — régression spontanée possible)", "Abcès ou kyste sébacé", "Fibrosarcome (surtout post-vaccinale chez le chat)"],
+    "red_flags": ["Croissance rapide en quelques semaines", "Ulcération ou saignement de la masse", "Localisation : entre les omoplates du chat (risque fibrosarcome post-vaccinal)", "Masse adhérente aux tissus profonds (non mobile)", "Ganglions régionaux gonflés", "Modification du comportement (douleur)"],
+    "conseils_maison": ["Mesurer et photographier la masse régulièrement (taille, couleur, forme).", "Ne jamais percer, gratter ou comprimer une masse inconnue.", "Empêcher l'animal de lécher (modification possible de l'aspect).", "Noter la vitesse d'évolution (rapide = consultation urgente).", "Toute nouvelle masse doit être montrée à un vétérinaire sous 1–2 semaines."],
+    "evolution_attendue": {
+      "1_semaine": "Masse maligne : croissance visible. Masse bénigne : stable.",
+      "1_mois": "Métastases ganglionnaires possibles si mastocytome ou sarcomateux.",
+      "6_mois": "Métastases pulmonaires ou abdominales si tumeur maligne non traitée."
+    }
+  },
+  "halètement excessif": {
+    "causes_possibles": ["Douleur (cause la plus sous-estimée)", "Anxiété et stress (orage, feux d'artifice, déménagement)", "Syndrome de Cushing (hypercorticisme — chien)", "Anémie sévère (manque d'oxygène)", "Médicaments (corticoïdes, opioïdes)", "Insuffisance cardiaque débutante"],
+    "red_flags": ["Halètement nocturne sans exercice préalable", "Associé à gencives pâles ou bleutées", "Halètement continu et disproportionné depuis > 1h", "Abdomen distendu associé (Cushing)", "Chien qui se lève et se couche souvent sans trouver de position confortable (douleur)"],
+    "conseils_maison": ["Vérifier la température ambiante et proposer un endroit frais.", "Observer si le halètement survient après repas (possible douleur abdominale).", "Noter les contextes déclenchants (bruit, séparation, chaleur).", "Si anxiété : environnement calme, musique douce, anti-anxiolytiques vétérinaires.", "Consulter si le halètement est nocturne, chronique ou associé à d'autres signes."],
+    "evolution_attendue": {
+      "24h": "Si douleur non traitée : aggravation et refus de manger.",
+      "1_semaine": "Cushing ou insuffisance cardiaque : progression des symptômes associés.",
+      "1_mois": "Prise de poids + amyotrophie si Cushing non diagnostiqué."
+    }
+  },
+  "prurit anal": {
+    "causes_possibles": ["Glandes anales pleines ou impactées (cause n°1)", "Parasites intestinaux (Dipylidium — après ingestion de puce)", "Allergie alimentaire (irritation péri-anale)", "Infection bactérienne ou fongique péri-anale", "Tumeur des glandes anales"],
+    "red_flags": ["Glandes anales abcédées (gonflement rouge et chaud près de l'anus)", "Sang lors de la défécation", "Refus de s'asseoir, position courbée permanente", "Masse visible près de l'anus", "Perte d'urine ou de selles (compression neurologique)"],
+    "conseils_maison": ["Observer si l'animal 'traine' ses fesses par terre (vidage des glandes anales nécessaire).", "Vérifier la consistance des selles : les selles molles ne vident pas les glandes naturellement.", "Antiparasitaire à jour contre les vers et puces.", "Ne pas tenter de vider les glandes anales soi-même sans formation adéquate.", "Consultation dans les 48h pour vidage professionnel ou traitement infectieux."],
+    "evolution_attendue": {
+      "48h": "Glandes impactées → abcès spontané douloureux.",
+      "1_semaine": "Abcès anal ouvert avec plaie et infection locale.",
+      "1_mois": "Fistule péri-anale chronique si abcès récidivants non traités."
+    }
+  },
+  "larmoiement": {
+    "causes_possibles": ["Conjonctivite allergique ou infectieuse", "Obstruction du canal lacrymal", "Entropion (paupière qui roule vers l'intérieur — irritation permanente)", "Corps étranger oculaire (poussière, poil, épillet)", "Herpèsvirus félin (chat — récidives fréquentes)", "Glaucome (pression intraoculaire élevée)"],
+    "red_flags": ["Œil gardé fermé en permanence (douleur — ulcère cornéen possible)", "Cornée opaque, blanche ou colorée en bleu", "Gonflement important du globe oculaire", "Écoulement purulent jaune-vert épais", "Pupilles asymétriques (différentes tailles)"],
+    "conseils_maison": ["Nettoyer les sécrétions avec une compresse stérile imbibée de sérum physiologique.", "Toujours du coin interne vers l'externe, avec une compresse propre par passage.", "Ne jamais utiliser de collyres humains (surtout pas contenant des corticoïdes sans diagnostic).", "Empêcher le frottement avec une collerette si lésion suspectée.", "Consultation dans les 24h si écoulement purulent ou œil gardé fermé."],
+    "evolution_attendue": {
+      "24h": "Ulcère cornéen : aggravation rapide si non traité.",
+      "48h": "Perforation cornéenne possible dans les formes sévères (perte de l'œil).",
+      "1_semaine": "Séquelles cicatricielles permanentes si traitement tardif."
+    }
+  },
+  "ascite": {
+    "causes_possibles": ["Insuffisance cardiaque droite (chylothorax, épanchement)", "Insuffisance hépatique (cirrhose, hypoprotéinémie)", "Péritonite infectieuse féline (PIF) — chat", "Carcinomatose péritonéale (dissémination tumorale)", "Hypoalbuminémie (malnutrition, entéropathie)"],
+    "red_flags": ["Abdomen très distendu et tendu avec gêne respiratoire", "Gencives pâles ou jaunâtres", "Animal incapable de se lever ou de trouver une position confortable", "Prise de poids rapide avec amaigrissement visible des membres", "Chat jeune < 3 ans avec fièvre persistante (PIF — pronostic grave)"],
+    "conseils_maison": ["Ne pas appuyer sur l'abdomen.", "Placer l'animal en position semi-assise pour faciliter la respiration.", "Limiter l'exercice et le stress.", "Maintenir l'hydratation.", "Consultation urgente dans les 24h — l'ascite n'est jamais bénigne."],
+    "evolution_attendue": {
+      "24h": "Gêne respiratoire progressive par compression diaphragmatique.",
+      "1_semaine": "Défaillance multi-organes selon la cause sous-jacente.",
+      "1_mois": "Pronostic dépend entièrement de la cause : cardiaque (contrôlable) vs PIF (fatal)."
+    }
+  },
+  "toux du chenil": {
+    "causes_possibles": ["Bordetella bronchiseptica (bactérie principale)", "Virus parainfluenza canin", "Adénovirus canin type 2", "Infection mixte bactérienne + virale (très commune en collectivité)", "Mycoplasma canis"],
+    "red_flags": ["Toux productive avec expectoration blanche ou verdâtre", "Fièvre > 39.5°C associée", "Léthargie et refus de manger (pneumonie possible)", "Dyspnée ou respiration rapide", "Symptômes chez chiot < 6 mois non vacciné (risque vital)"],
+    "conseils_maison": ["Isoler l'animal des autres chiens (très contagieux).", "Utiliser un harnais au lieu d'un collier (réduit la pression sur la trachée).", "Humidifier l'environnement (vapeur d'eau).", "Éviter les efforts physiques pendant la convalescence.", "Consulter sous 48h si fièvre ou si toux productive — antibiotiques souvent nécessaires."],
+    "evolution_attendue": {
+      "1_semaine": "Guérison spontanée dans 70% des cas légers sans complication.",
+      "2_semaines": "Pneumonie bactérienne secondaire si non traitée chez les animaux à risque.",
+      "1_mois": "Toux chronique résiduelle possible sans complications sévères."
+    }
+  },
+  "parvovirose": {
+    "causes_possibles": ["Parvovirus canin type 2 (CPV-2) — UNIQUEMENT chez le chien", "Transmission fécale-orale directe ou indirecte (virus très résistant dans l'environnement)", "Chiots 6 semaines – 6 mois non vaccinés ou primo-vaccination incomplète", "Races plus sensibles : rottweiler, doberman, labrador"],
+    "red_flags": ["Vomissements répétés + diarrhée hémorragique + léthargie totale chez chiot = URGENCE VITALE", "Gencives pâles ou grises (choc hypovolémique)", "Hypothermie (température < 37°C)", "Toute deterioration rapide chez chiot non vacciné"],
+    "conseils_maison": ["ISOLER IMMÉDIATEMENT de tous les autres chiens.", "Transport immédiat en urgence vétérinaire — mortalité > 90% sans traitement intensif.", "Ne rien donner à manger ou boire.", "Désinfecter les zones de contact avec une solution d'eau de Javel diluée (1:30).", "NE PAS amener au parc canin — le virus survit > 1 an dans l'environnement."],
+    "evolution_attendue": {
+      "12h": "Déshydratation critique et choc potentiel.",
+      "24h": "Sepsis par translocation bactérienne intestinale.",
+      "48h": "Décès sans réanimation hydrique intensive."
+    }
+  },
+  "syndrome vestibulaire": {
+    "causes_possibles": ["Syndrome vestibulaire idiopathique (chien âgé — bénin mais brutal)", "Otite interne (Pseudomonas, Malassezia)", "AVC ou ischémie cérébrale", "Tumeur du tronc cérébral ou de l'oreille interne", "Polyp naso-pharyngé (chat)", "Effet secondaire d'antibiotiques ototoxiques (aminosides)"],
+    "red_flags": ["Nystagmus vertical ou rotatoire (signe neurologique central grave)", "Absence totale de compensation après 72h", "Autres signes neurologiques : cécité, comportement anormal, parésie", "Chute brutale sans reprise de conscience (AVC)"],
+    "conseils_maison": ["Sécuriser l'environnement : escaliers, meubles, piscine (risque de chute et noyade).", "Aider l'animal pour manger et boire si il ne peut se redresser.", "Ne pas corriger brusquement la posture (aggravement possible).", "Garder l'animal dans un espace limité et sécurisé.", "Consultation dans les 24h — le diagnostic différentiel (bénin vs grave) est crucial."],
+    "evolution_attendue": {
+      "72h": "Syndrome idiopathique : amélioration visible de l'équilibre.",
+      "1_semaine": "Légère compensation : animal debout même si tête encore penchée.",
+      "1_mois": "Guérison complète (idiopathique) ou séquelles permanentes (AVC/tumeur)."
+    }
+  },
+  "éternuements": {
+    "causes_possibles": ["Rhinite virale (calicivirus, herpèsvirus félin chez le chat)", "Corps étranger nasal (épillet de graminée)", "Rhinite bactérienne (Pasteurella, Bordetella)", "Rhinite allergique saisonnière", "Polype naso-pharyngé (chat)", "Aspergilllose nasale (chien)", "Tumeur nasale (chien âgé)"],
+    "red_flags": ["Écoulement nasal unilatéral (corps étranger ou tumeur)", "Saignement nasal associé aux éternuements", "Déformation ou asymétrie du museau", "Éternuements persistant > 2 semaines sans amélioration", "Associés à des ulcères buccaux (calicivirus félin sévère)"],
+    "conseils_maison": ["Humidifier légèrement l'environnement (réhydrate les muqueuses).", "Nettoyer délicatement les sécrétions nasales avec compresse tiède.", "Isoler si suspicion virale (herpès, calici — contagieux entre chats).", "Éviter les irritants : fumée, parfums, produits ménagers.", "Consulter si écoulement unilatéral, sang, ou si les éternuements persistent > 5 jours."],
+    "evolution_attendue": {
+      "1_semaine": "Rhinite virale simple : amélioration ou guérison spontanée.",
+      "2_semaines": "Surinfection bactérienne secondaire (sinusite chronique).",
+      "1_mois": "Herpèsvirus félin : portage latent, rechutes à vie sous stress."
+    }
+  }
+}

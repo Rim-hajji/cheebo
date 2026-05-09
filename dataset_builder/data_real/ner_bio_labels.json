@@ -1,0 +1,11 @@
+[
+  "B-ANIMAL",
+  "B-BODY_PART",
+  "B-DUREE",
+  "B-SYMPTOM",
+  "I-ANIMAL",
+  "I-BODY_PART",
+  "I-DUREE",
+  "I-SYMPTOM",
+  "O"
+]

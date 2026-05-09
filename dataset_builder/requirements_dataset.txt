@@ -1,0 +1,28 @@
+# DoctoAgent — Dataset Collection Dependencies
+# pip install -r requirements_dataset.txt
+
+# HuggingFace
+datasets>=2.18.0
+transformers>=4.40.0
+torch>=2.1.0
+
+# Reddit
+praw>=7.7.0
+
+# Web scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=5.1.0
+
+# Data processing
+pandas>=2.1.0
+tqdm>=4.66.0
+
+# Language detection
+langdetect>=1.0.9
+
+# Kaggle API
+kaggle>=1.6.0
+
+# NLP (pour post-annotation spaCy)
+spacy>=3.7.0

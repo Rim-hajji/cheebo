@@ -1,0 +1,37 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Models IA
+models/
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# HuggingFace cache
+.cache/
+huggingface/
+
+# Node
+node_modules/
+
+# Flutter
+build/
+.dart_tool/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Database
+*.db
+
+# Audio/video
+*.mp4
+*.wav

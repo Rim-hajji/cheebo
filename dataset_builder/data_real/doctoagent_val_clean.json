@@ -1,0 +1,3679 @@
+[
+  {
+    "text": "Help what should i name my kittens?",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_kittens_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Dietary modification: increase fiber for constipation/colitis.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        41,
+        53,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "Rabbit has white, crusty deposits in its ears.",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        0,
+        6,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "Pawing at ears/on and off diarrhea.. our vet gets back from vacation tomorrow (Disclaimer: im fully prepared to take her to an emergency vet if necessary, but Id prefer to avoid that if possible in this economy and when i trust our normal vet.) Im looking for advice on how to keep my girl comfortable until we can see our vet tomorrow, the office was on vacation this week and it’s breaking my heart",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        26,
+        34,
+        "SYMPTOM"
+      ],
+      [
+        50,
+        54,
+        "BODY_PART"
+      ],
+      [
+        364,
+        373,
+        "DUREE"
+      ],
+      [
+        395,
+        400,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_cats",
+    "language": "en"
+  },
+  {
+    "text": "I lost my bestest girl today out of nowhere 😭 I woke up to a strange noise to find my cat china seizing on the floor of the kitten pen drooling twitching and wetting herself. I scooped her up and rushed her to the vets. The seizure would not stop it carried on for a good 30 minutes and by the end when we reached the emergency vets she was catatonic, pupils blown the lot. They administered anti sei",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        86,
+        89,
+        "ANIMAL"
+      ],
+      [
+        124,
+        130,
+        "ANIMAL"
+      ],
+      [
+        135,
+        143,
+        "SYMPTOM"
+      ],
+      [
+        224,
+        231,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_cats",
+    "language": "en"
+  },
+  {
+    "text": "Neck swelling on German Shepherd Hi, please let me know if this violates sub rules. Looking for possible causes of a large lump that suddenly appeared on my dog's neck and trying to figure out if I need to go to the emergency vet (I am unfortunately not in an area where there are many). * Signalment (species, age, sex/neuter status, breed, body weight): Female GSD, spayed, almost 5 years old, \\~55",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        0,
+        4,
+        "BODY_PART"
+      ],
+      [
+        157,
+        160,
+        "ANIMAL"
+      ],
+      [
+        163,
+        167,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "Five and a half months old. Do I need to clip? If not, what age do they need to start being clipped?",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_guineapigs_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "This guy is home after emergency surgery for eating 20 hair ties. Most expensive hair ties ever! My boy Gus is 9 months old and a little stinker. He starting vomiting yellow bile on Friday evening and wasn’t eating much at all. I thought maybe he had a tummy bug so I gave him a few days since he was acting otherwise normal. I came home from work at 3 AM Sunday night/ Monday morning and he was shak",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        158,
+        166,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_cats",
+    "language": "en"
+  },
+  {
+    "text": "Please help. My boy Augie is suspected to have IVDD. Possible seizures. TRIGGER WARNING = crying dog Hi yall, my boy Augie is a 5 yo chihuahua/poodle/super mutt mix was acting weird (yelping when jumping off the couch, seemed wobbly when sitting, he would touch something his nose and let out a yelp while pulling away). I left him on my bed in the morning (before we suspected anything off) while i",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        97,
+        100,
+        "ANIMAL"
+      ],
+      [
+        133,
+        142,
+        "ANIMAL"
+      ],
+      [
+        143,
+        149,
+        "ANIMAL"
+      ],
+      [
+        276,
+        280,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_dogadvice",
+    "language": "en"
+  },
+  {
+    "text": "I know lab puppies are insane ... but I've never had one who barked and growled and bit me this way ... if she were an adult I'd call it aggression .... it isn't, it's puppyhood ... but how do I handle this and help her understand how to play appropriately I don't want anyone to think I'm saying she's aggressive because she's not. She is a puppy and she is exploring the world with her mouth and she is playing. And in a perfect world she would have stayed with her litter mates for a few more week",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_puppy101_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "[Help] Has anyone noticed their dog learning to detect seizures or blood pressure drops? I have passed out three times in the last 18 months the last time being 4 weeks ago. My doctors suspect I have blood pressure issues causing drops. My dog Wally has just turned one on the first and I've noticed that he's started waking me up during the night like he needs to go out to pee but then he just gets",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        32,
+        35,
+        "ANIMAL"
+      ],
+      [
+        161,
+        172,
+        "DUREE"
+      ],
+      [
+        240,
+        243,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_dogs",
+    "language": "en"
+  },
+  {
+    "text": "He eats a lot. 2 broccoli stems and half a handful of seeds per day, sometimes more. Seems like a lot for such a small creature. He's also not that active as he never learnt to fly. Should I be worried about weight gain?",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_parrots_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "My dog's movement seems restricted, less range of motion.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "Vacc booster (l4). OR: intermittent cough in the last couple of months; also a bit stiff when getting up. Cx: bright, alert and responsive, slightly overweight, but maintaining body weight; mild head tilt still present intermittently, no nystagmus; no resp effort, chest clear, abdomen comfortable. Cough is likely age related trachea collapse. Possible early stage of OA. Owner started Yumove.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        36,
+        41,
+        "SYMPTOM"
+      ],
+      [
+        149,
+        159,
+        "SYMPTOM"
+      ],
+      [
+        195,
+        204,
+        "SYMPTOM"
+      ],
+      [
+        238,
+        247,
+        "SYMPTOM"
+      ],
+      [
+        265,
+        270,
+        "BODY_PART"
+      ],
+      [
+        278,
+        285,
+        "BODY_PART"
+      ],
+      [
+        299,
+        304,
+        "SYMPTOM"
+      ],
+      [
+        335,
+        343,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "5.5kg large swelling on tail owner just come back from holiday. tail base cat bite abscess - draining, clipped and cleaned 3 puncture wounds noted. heart lungs and abdo palp no abnormality detected. Bright alert and responsive in self is eating.  advise salt water bathing bid if possible recheck 1 week. Next appointment in 1 week. recheck cat bite abscess on tail",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        24,
+        28,
+        "BODY_PART"
+      ],
+      [
+        45,
+        49,
+        "BODY_PART"
+      ],
+      [
+        64,
+        68,
+        "BODY_PART"
+      ],
+      [
+        74,
+        77,
+        "ANIMAL"
+      ],
+      [
+        83,
+        90,
+        "SYMPTOM"
+      ],
+      [
+        148,
+        153,
+        "BODY_PART"
+      ],
+      [
+        341,
+        344,
+        "ANIMAL"
+      ],
+      [
+        350,
+        357,
+        "SYMPTOM"
+      ],
+      [
+        361,
+        365,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "What is he doing here, is it normal? For context, he is 10 months old, and does this to the side of my finger or nail all the time.",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_parrots_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "BOOSTER CHECK. VACCINE GIVEN: 2nd tricat RH. WEIGHT/BODY CONDITION: 3.27kg, some gain. advise cut back. body condition score 6/9. HISTORY: owner no concerns, CLINICAL EXAM: wound healed great. Next appointment in 1 month. weight check. owner will phone to book",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        41,
+        43,
+        "BODY_PART"
+      ],
+      [
+        98,
+        102,
+        "BODY_PART"
+      ],
+      [
+        173,
+        178,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "Booster vaccination L4 & KC. central multiple mammary tumours on left side mid glands. advise ref benign/malignant and options to histo etc or full strips.O will arrange repeat check up in 3 months as due in hospital for hip replacement.  Next appointment in 2 months. check up on breast tumours.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        221,
+        224,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "thinking about asking for money back from my vet for borderline malpractice Update 2: thanks all for a lively discussion. My plan is to contact the principle vet and ask for some consideration on the cost associated with X-rays, and to relay my overall experience. If I get a partial refund, great. If I don't but I'm satisfied that the interaction is reasonable, great. If they are jerks,I take my b",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        32,
+        36,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_dogs",
+    "language": "en"
+  },
+  {
+    "text": "O was worried last night had injured toe - today walking fine, no swelling or pain. Right HL, middle digit mild swelling but happy with flexion/extension, no FB on exam nor wounds etc. Rest of CE wnl. Lovely dog. Mild dental tartar but good gum health. BCS 5/9. UTD flea/worming/vaccs.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        14,
+        24,
+        "DUREE"
+      ],
+      [
+        208,
+        211,
+        "ANIMAL"
+      ],
+      [
+        241,
+        244,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "My dog's joints make clicking or popping sounds.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "My 4 year old Persian cat is showing: Vomiting, Loss of Appetite, Lethargy, Fever, vomiting, coughing, labored breathing, lameness, skin lesions, eye discharge, loss of appetite. Duration: 5 days. Condition: Feline Infectious Peritonitis.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        22,
+        25,
+        "ANIMAL"
+      ],
+      [
+        38,
+        46,
+        "SYMPTOM"
+      ],
+      [
+        48,
+        64,
+        "SYMPTOM"
+      ],
+      [
+        66,
+        74,
+        "SYMPTOM"
+      ],
+      [
+        76,
+        81,
+        "SYMPTOM"
+      ],
+      [
+        83,
+        91,
+        "SYMPTOM"
+      ],
+      [
+        93,
+        101,
+        "SYMPTOM"
+      ],
+      [
+        103,
+        120,
+        "SYMPTOM"
+      ],
+      [
+        132,
+        136,
+        "BODY_PART"
+      ],
+      [
+        146,
+        149,
+        "BODY_PART"
+      ],
+      [
+        150,
+        159,
+        "SYMPTOM"
+      ],
+      [
+        161,
+        177,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "He‘s a part of my self He turned 12 this week. I can still picture him on the day that I met him. His long skinny body, his short crooked legs and unusual ears… he wasn’t a rambunctious 10 months old dog but a bundle of insecurities that I instantly connected with. I was ready to take on the work it would take but wasn’t sure if I could provide him with the stability I saw he would need. He wouldn",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        36,
+        45,
+        "DUREE"
+      ],
+      [
+        200,
+        203,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_dogs",
+    "language": "en"
+  },
+  {
+    "text": "Kitten needs surgery I'm reaching out for help. In our building we have a cat that's been part of our family one way or another from years, one day I seen she was looking unwell and I took her to the vet, she was rushed into emergency surgery unexpectedly, and it was a life-or-death situation. She worsen up and got some fluid in her belly that was causing trouble her breathing. There was no time t",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        0,
+        6,
+        "ANIMAL"
+      ],
+      [
+        74,
+        77,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_catadvice",
+    "language": "en"
+  },
+  {
+    "text": "How can I give Blackberry better dental care? I’m open to brushing his teeth, but how can I train him to let me do that? I don’t think he will like it, and I could use advice on what to do.",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        71,
+        76,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_pets",
+    "language": "en"
+  },
+  {
+    "text": "Intermittent lethargy? Hey everyone, I'm a bit at a loss at this point. My pup pup (6 months old, Belgian Malinois) has been having bouts of lethargy, diarrhea and nausea for several weeks, interspersed with bursts of energy. I can't explain it and neither can the vets apparently. She's had: \\- Various heart tests including an ultrasound and ECG \\- Blood tests \\- Cortisol snap tests \\- Fecal tests",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        13,
+        21,
+        "SYMPTOM"
+      ],
+      [
+        141,
+        149,
+        "SYMPTOM"
+      ],
+      [
+        151,
+        159,
+        "SYMPTOM"
+      ],
+      [
+        171,
+        188,
+        "DUREE"
+      ],
+      [
+        304,
+        309,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_puppy101",
+    "language": "en"
+  },
+  {
+    "text": "6 month health check. All well, owner has no concerns, no vomiting or diarrhoea, coughing or sneezing. HR - 120 very calm. MM - pink <2. Teeth - beautiful, spoke to owner about brushing from now to prevent tartar but she does also have dental chews. Eyes, ears and coat all clear. Spey wound one end of skin tiny bit raised feels like its just the way the skins healed. Muscle layer not affected. See",
+    "intent": 3,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        58,
+        66,
+        "SYMPTOM"
+      ],
+      [
+        70,
+        79,
+        "SYMPTOM"
+      ],
+      [
+        81,
+        89,
+        "SYMPTOM"
+      ],
+      [
+        93,
+        101,
+        "SYMPTOM"
+      ],
+      [
+        137,
+        142,
+        "BODY_PART"
+      ],
+      [
+        286,
+        291,
+        "SYMPTOM"
+      ],
+      [
+        303,
+        307,
+        "BODY_PART"
+      ],
+      [
+        370,
+        376,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "what should I add ? Have had him for a month and a half but just upgraded to a bin cage (already bought a water bottle thingy I just didn’t put it in when I took this)",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_hamsters_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Our puppy is just not quite right, and last night was an emergency vet trip. Posting this here in the hopes that more experienced people might have some answers or suggestion. About 3 months ago we adopted a puppy from a shelter, who was found in an abandoned house. She was extremely malnourished and very tiny (they told us she was a chihuahua, she is now huge so I definitely think she was only a",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        4,
+        9,
+        "ANIMAL"
+      ],
+      [
+        39,
+        49,
+        "DUREE"
+      ],
+      [
+        182,
+        194,
+        "DUREE"
+      ],
+      [
+        208,
+        213,
+        "ANIMAL"
+      ],
+      [
+        336,
+        345,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_puppy101",
+    "language": "en"
+  },
+  {
+    "text": "Can I give my dog Clindamycin? * **Species: dog** * **Age: 8yrs** * **Sex/Neuter status: female, not spayed** * **Breed: St Bernard** * **Body weight: about 150lbs** * **History: she’s been healthy , no medical history that we know of** * **Clinical signs: a urinary** * **or uterine infection is what I was told** * **Duration: the last three days** * **Your general location: Ontario** **We don’t have a vet where I live and the closest vet is about six hours away, we have a single person in t",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_askvet_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Should I take my cat to the vet? Hello everyone, I have a 4-year-old calico cat that I adopted in July. When I first got her, she would scarf down her food. For the past month, she is eating a lot less and doesn't run to the food bowl when it dispenses her food. She threw up today and on the 14th of January, as well as on January 1st. She is acting completely normal and is still playing and is cuddly and everything. She just simply is not eating much and has thrown up a few times this month. My",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [],
+    "source": "reddit_askvet_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Been living at neighbours house, he brings her back when tehre is a problem. Noticed something on her tail which she woujldnt let them touch. Scab found dorsal tail base, pulled off -&gt; abscess with pus. Expressed and cleaned as much as possible, cat not too impressed. Rest of exam ok.  Adv owner to keep cat indoors so can check in 2-3d and can continue to bathe/ give metacam. Owner very doubtfu",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        47,
+        51,
+        "BODY_PART"
+      ],
+      [
+        102,
+        106,
+        "BODY_PART"
+      ],
+      [
+        160,
+        164,
+        "BODY_PART"
+      ],
+      [
+        188,
+        195,
+        "SYMPTOM"
+      ],
+      [
+        249,
+        252,
+        "ANIMAL"
+      ],
+      [
+        308,
+        311,
+        "ANIMAL"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "2nd DHP.  a119e01. bright and alert dude no concerns. ears and eyes fine. mm clear. crt<2s. abdo nothing abnormal detected. heart and lung nothing abnormal detected. can go out in 10 days awoid water untill L4.  next jab 2 weeks",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        124,
+        129,
+        "BODY_PART"
+      ],
+      [
+        134,
+        138,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "Lost my cat to sudden heart failure with no warning I'm still in shock about everything that happened yesterday. It happened so fast. My cat didn't eat that morning, which was very unusual for him. Then I noticed that he was breathing kind of shallow and fast. I was worried he had a respiratory infection, and the breathing issue seemed weird so I called around to find an emergency vet that was ope",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        8,
+        11,
+        "ANIMAL"
+      ],
+      [
+        22,
+        27,
+        "BODY_PART"
+      ],
+      [
+        137,
+        140,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_cats",
+    "language": "en"
+  },
+  {
+    "text": "Found this little guy in my bushes the other day? What do I need to take care of it properly?",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_guineapigs_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Saw Vet again, vet says I need to start ketogenic, low carb, high fibre diet, and join gym to lose weight. Vet is not body positive. How do I get rid of this vet? Asking for a friend.",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_rabbits_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Emergency? Hi all, little bit of background. Axel is a 3yo siamese with asthma who recently finished a prednisolone course and is on fluticasone twice daily for management. He is awful with the inhaler so we’re unsure if he’s been getting that medication at all, we are working on it and have discussed this with his vet and are now going to be continuing prednisolone every other day while he gets u",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        59,
+        66,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "My rescue cat moved in with a broken fang, it seemed ok. Now there’s mass over it. The vet hasn’t seen anything like it before. It’s hard like his gums and pale pink and completely encompasses the left over tooth. How do I know if it’s hurting him?   He’s not losing any weight and the vet said surgery is an option but I don’t want to put him through it if not necessary, looks like it would be extensive to cut that off. No sign of infection",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_askvet_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Simparica and Seizures, help! I've been giving my rescue boston terrier ( he's about 8 years old ) simparica since January of and he didn't had any problems until last month. He had a seizure and walked a little wobbly the day after. After that day he had no issues but I gave him his monthly dose today and I absolutely regret giving him that this is absolutely his last dose I literally have him un",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        163,
+        173,
+        "DUREE"
+      ],
+      [
+        184,
+        191,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_dogadvice",
+    "language": "en"
+  },
+  {
+    "text": "should i be worried about my cat’s behavior towards a toy? hi, i’m a first time pet owner so i apologize for this stupid question. i adopted a cat about a month and a half ago and she’s 2 years old. she’s been biting and scratching me and my family and i think it’s play aggression so i looked into toys to get her. she loves a ribbon wand but there are times when i can’t play with her (work, gets the zoomies when i need to sleep, etc) so i thought this interactive moving toy might be good for her",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_catadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Nighttime Convulsions - 15 year old dog, should I be worried? My sweet Daisy Mae has started having convulsions like this for 2-3 minutes at night. She seems to be asleep and it doesn't wake her up. I'm curious if this is just dreaming, or if I should be concerned?",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_dogadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Help ! Is Gabapentin ok for daily use for our attack cat!? Long story short me and my boyfriend are being forced to decide to 1.) live with our cat that may continue to harm me/us without warning 2.) use gabapentin (a seizure / sedative medication) for the rest of his life or 3.) euthanasia. We have been struggling with this for about 15 days now since the last attack. Our 11 year old cat had atta",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        53,
+        56,
+        "ANIMAL"
+      ],
+      [
+        144,
+        147,
+        "ANIMAL"
+      ],
+      [
+        218,
+        225,
+        "SYMPTOM"
+      ],
+      [
+        388,
+        391,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_catadvice",
+    "language": "en"
+  },
+  {
+    "text": "Feeling his age sl. Bilat mild cataracts + conj'itis. Discuss Sx, decide against. Pin point corneal ulcer L. ??? 2^to dry cornea as midline. May required artificial tears at night? To reassess next wk. Discuss Propentoff. O keen to try for 1 month. Will start next wk, 8149446 eyes settled.",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        122,
+        128,
+        "BODY_PART"
+      ],
+      [
+        236,
+        247,
+        "DUREE"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "My dog might be dying and I don’t know if emergency vet is doing the right thing 7 year old Mini golden doodle, male 22 lbs California Threw up early Monday morning before eating breakfast. Last ate food on sunday night. Bile, brown in color. Weird. Sometimes throws up if he needs to potty. Never brown before. Wouldn’t eat or drink all day. Pooped “normal” earlier in the day. In the evening, start",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "Very worried for my 5 year old cat - what could be causing her weight loss, low appetite, lethargy, fever and low white blood cell count? Update 13/1/17: Blood work and xrays:  Vet now suspects FIP as fluid around lungs and abdomen. Species: Domestic short hair cat Age: 5 Sex/Neuter status: Female desexed Breed: Tabby with ginger smudges Body weight: 3.6kg History: My girl Sydney is a rescue cat.",
+    "intent": 3,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        31,
+        34,
+        "ANIMAL"
+      ],
+      [
+        63,
+        74,
+        "SYMPTOM"
+      ],
+      [
+        90,
+        98,
+        "SYMPTOM"
+      ],
+      [
+        100,
+        105,
+        "SYMPTOM"
+      ],
+      [
+        224,
+        231,
+        "BODY_PART"
+      ],
+      [
+        262,
+        265,
+        "ANIMAL"
+      ],
+      [
+        395,
+        398,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "My cat is missing and I can’t find him anywhere The last place I saw Taco was in my bedroom last night, around this spot. I haven’t seen him since. Any advice to help find him??",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ],
+      [
+        92,
+        102,
+        "DUREE"
+      ]
+    ],
+    "source": "reddit_cats",
+    "language": "en"
+  },
+  {
+    "text": "[Discussion] Reminder about grape toxicity... My dog threw up 35 (35!!!) grapes at the emergency vet at 1:45am this morning. A little after midnight, our 80lbs Akita mix, [Finn]( managed to get ahold of my *closed* container of grapes, take the lid off, and scarf down all but 8 (I guess he got full 🙄) while I was downstairs for a minute putting wood in the stove. As soon as I saw the container on",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        49,
+        52,
+        "ANIMAL"
+      ],
+      [
+        111,
+        123,
+        "DUREE"
+      ]
+    ],
+    "source": "reddit_dogs",
+    "language": "en"
+  },
+  {
+    "text": "How to Prevent fleas with cat you walk outdoors? Hello I'm getting a kitten and would like to take her on walks outside, or take her when we go hiking in the forest. But I'm curious how people navigate the issue with fleas and ticks? I've researched that feeding them anti flea stuff is super bad and can cause death. Would a flea collar be just as effective? Or could I rub some type of oil on her fur that repels fleas but is safe for cats? Also, how often would you wash your cat if you bring",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_catadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "I have to euthanize my cat because I don’t have the funds for her vet bill and I feel guilty My cat is almost 8 years old. On Thursday night I noticed she was breathing a little fast. It went away after a couple of hours. But then Friday night it came back and was worse. I took her to an emergency vet where they told me she was most likely in heart failure. I didn’t have the funds to do all the di",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        23,
+        26,
+        "ANIMAL"
+      ],
+      [
+        96,
+        99,
+        "ANIMAL"
+      ],
+      [
+        252,
+        256,
+        "BODY_PART"
+      ],
+      [
+        345,
+        350,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_catadvice",
+    "language": "en"
+  },
+  {
+    "text": "My cat's mysterious injury: we don't know what it is and what happened and he's still limping after one month. Help? Name: Thor Breed: red maine coon cat Age: 1.5 years old Weight: a little more than 7 kg Sex: neutralized It was a morning of one month ago, he was playing on my bed and also helping my mom in cleaning the house like always. He was great. For 10 minutes maybe we lost sight of him and",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ],
+      [
+        86,
+        93,
+        "SYMPTOM"
+      ],
+      [
+        150,
+        153,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "doing fine, heart murmur still audible. advise recheck in 4-5 weeks. long discussion regarding training, worming etc.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        12,
+        17,
+        "BODY_PART"
+      ],
+      [
+        18,
+        24,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "My cat has two families… should I be worried? I need some advice because this situation feels a little weird My cat basically has two homes. We live in a neighborhood where houses are close, and my cat started visiting my neighbors a lot. Now he spends time with them, eats there sometimes, and even naps in their house. At this point, it’s like he belongs to both families. The funny part is that we all know about it and we’re okay with it. We talk and make sure he’s safe. Still, I sometimes won",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_petadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Can i give him a walnut in shell? Sleepy pic for tax",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_hamsters_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "My dog has seizures when my partner and I have sex. HELP! So… my 9 year old Japanese chin/blue heeler mix (an incredible handsome boi) has had 4 seizures over the last 3 years. All except 1 of the seizures happened either during or right before my partner and I starting getting intimate. He usually lightly convulses for about a minute, loudly cries, and urinates or defecates while laying down. It",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "How do you guys keep track of pet health stuff? I feel like a mess before every vet visit. My dog has a vet appointment tomorrow for this weird raw spot on its paw he's been licking, and trying to prepare is a complete nightmare. i'm scrolling forever through my camera roll trying to find the first picture I took of it, wading through a million blurry squirrel pics and old screenshots. Then I'm di",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        94,
+        97,
+        "ANIMAL"
+      ],
+      [
+        160,
+        163,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_pets",
+    "language": "en"
+  },
+  {
+    "text": "I’ve got a slightly rusty crate I bought for my 6 month year old cavapoo. Should I be concerned of the rust? Or is it safe to use Is it safe for my 6 month year old puppy to use a crate with a slight amount of rust on it?",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_puppy101_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "My cat’s kitten died but she doesn’t realize it, how do I take the body away? My cat gave birth to a kitten a few weeks ago. He was her only kitten and she was very attached to him but didn’t mind me holding him at all. Well, he’s dead. I don’t know how he died, but I can’t leave his body in my house, I have to go bury him. Problem is, she still thinks he’s alive. She’s still cuddling and bathing him while purring. How do I go about this? Do I take the kitten outside while she’s away so she doe",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_catadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "How do I make sure my dog knows that I love her Hello, this is Chloe. As said in the title, I want to make sure my dog knows I love her. She’s not the biggest fan of being pet, but loves giving kisses. I don’t like letting her lick me because it causes bad acne, even when I wash my face, but pushing her away makes me so sad. We love playing fetch and going outside together, but I have a disability and playing fetch is very tiring for me. (She also is a “no take only throw” dog which doesn’t help",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_dogadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "My 5 year old Saanen goat is showing: Vomiting, Fever, Diarrhea, Loss of Appetite, vomiting, labored breathing, lameness, nasal discharge, eye discharge, loss of appetite. Duration: 6 days. Condition: Caprine Pleuropneumonia.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        38,
+        46,
+        "SYMPTOM"
+      ],
+      [
+        48,
+        53,
+        "SYMPTOM"
+      ],
+      [
+        55,
+        63,
+        "SYMPTOM"
+      ],
+      [
+        65,
+        81,
+        "SYMPTOM"
+      ],
+      [
+        83,
+        91,
+        "SYMPTOM"
+      ],
+      [
+        93,
+        110,
+        "SYMPTOM"
+      ],
+      [
+        128,
+        137,
+        "SYMPTOM"
+      ],
+      [
+        139,
+        142,
+        "BODY_PART"
+      ],
+      [
+        143,
+        152,
+        "SYMPTOM"
+      ],
+      [
+        154,
+        170,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "rabbit distribution system got me today Found this little guy at the park (1 month after Easter, not surprising) and taking him to the vet soon to get him checked out. I have 2 buns at home already (keeping this guy quarantined in another room) and would love to keep him but not sure how to go about bonding a trio… any advice??",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_rabbits_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "What should I look for when buying cable protectors here’s a link to the one I picked out is it good?",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_rabbits_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "This is Mika. He's almost 6 years old and was diagnosed with idiopathic epilepsy. He's had such bad seizures in the past week and no medicine could help him so we will have to euthanize him tomorrow. Me and my family are devastated, we will miss him a lot🖤",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [],
+    "source": "reddit_cats",
+    "language": "en"
+  },
+  {
+    "text": "I recently got a hamster a few days ago and she only comes at at like 1AM so I rarely see her, what should I do? The other day she took some food from my hands, but I haven’t seen her since, I hear her at night though. She’s 2 months. I’m a 2nd time owner and I’ve never had problems with this, Does she need more time or is there nothing I can do? I know she’s nocturnal, but why so late? Idk if this is a stupid problem but yeah",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_hamsters_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "My 5 year old Golden Retriever dog is showing: Vomiting, Diarrhea, Loss of Appetite, Lethargy, diarrhea, labored breathing, eye discharge, loss of appetite. Duration: 3 days. Condition: Gastroenteritis.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        21,
+        30,
+        "ANIMAL"
+      ],
+      [
+        31,
+        34,
+        "ANIMAL"
+      ],
+      [
+        47,
+        55,
+        "SYMPTOM"
+      ],
+      [
+        57,
+        65,
+        "SYMPTOM"
+      ],
+      [
+        67,
+        83,
+        "SYMPTOM"
+      ],
+      [
+        85,
+        93,
+        "SYMPTOM"
+      ],
+      [
+        95,
+        103,
+        "SYMPTOM"
+      ],
+      [
+        105,
+        122,
+        "SYMPTOM"
+      ],
+      [
+        124,
+        127,
+        "BODY_PART"
+      ],
+      [
+        128,
+        137,
+        "SYMPTOM"
+      ],
+      [
+        139,
+        155,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "Ferret has diarrhea and seems very weak.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        0,
+        6,
+        "ANIMAL"
+      ],
+      [
+        11,
+        19,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "Cat limping can I give metacam? Hi all, My cat has come in this evening limping on back leg (he was only out for 10mins) and was only in the garden, neighbouring gardens- he has a tracker. He does not appear to be in pain currently, no meowing, still jumping up and down from table and happy to eat. I am unable to assess until he is relaxed. I did try already but he was too alert for me to examine. I have pain relief in the cupboard which was prescribed for him in the past and wondering whethe",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [],
+    "source": "reddit_askvet_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "When to put down a terminal cat My baby has terminal cancer throughout her body. Some of the masses are on her skin and bleed regularly. She’s lost weight each time we’ve gone to the vet over the past two months. I know I will need to euthanize her at some point, I’m not sure when that is, though. On NYE, she had a seizure. I took her to the emergency vet, and they weren’t super concerned. They to",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        28,
+        31,
+        "ANIMAL"
+      ],
+      [
+        111,
+        115,
+        "BODY_PART"
+      ],
+      [
+        317,
+        324,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_cats",
+    "language": "en"
+  },
+  {
+    "text": "My cat (think she's a Russian blue/British blue mix) is having breathing difficulties, loud crackly breathing, snotty nose and watery eyes, also sneezing a lot and sleeping a lot. Is their any thing we can do? She's going to the vets tomorrow so hopefully they can help too. Any short term advice?",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ],
+      [
+        118,
+        122,
+        "BODY_PART"
+      ],
+      [
+        145,
+        153,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_cats",
+    "language": "en"
+  },
+  {
+    "text": "Planning on moving, should I take my cat? Hi! I have had my cat (Mimi) since June of 2024. I got her when I was still living in my college house (where she lived with another cat). Since graduating I have moved home (this June) and of course took her with me. My parents have another cat and a dog + a foster dog. Mimi had traveled home with me for most breaks off school and is an incredibly adaptable easy going cat. She doesn’t care about car rides, plane rides, and gets along with other animals",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_catadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Home Depot Christmas Trees treated with Ethylene Glycol. Copying this from a cat rescue in Canada, it's a respected rescue but I'm not sure of the validity of the information. Still thought a heads up is in order for cat owners. ***URGENT!!! We just received a horrifying call from an adopter whose kitten Licorice died this morning of Ethylene Glycol poisoning after ingesting a Christmas tree needl",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        77,
+        80,
+        "ANIMAL"
+      ],
+      [
+        217,
+        220,
+        "ANIMAL"
+      ],
+      [
+        299,
+        305,
+        "ANIMAL"
+      ],
+      [
+        320,
+        332,
+        "DUREE"
+      ]
+    ],
+    "source": "reddit_cats",
+    "language": "en"
+  },
+  {
+    "text": "Kittens getting neutered in a couple of weeks. These two brothers are getting neutered in two weeks (10 weeks old). They are WILD together - should I separate them while they heal from surgery? I worry they’ll tussle too much. Also, is a donut better than a cone of shame? Thanks in advance!",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_kittens_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Is this normal? Look at his eyes. This is new for us, it’s happening whenever we pulls on a rope/toy.",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_dogadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Took my little old man to the vet after a morning of throwing up and diarrhea. He had a bad reaction to one of the meds they sent us home with. He still hasn't eaten. What should I do? My little old void is 16 years old. At about 4am this morning, he started throwing up out of the blue, as well as dealing with diarrhea. By 6am he had thrown up 3 more times and was using the litter box every 10 min",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        69,
+        77,
+        "SYMPTOM"
+      ],
+      [
+        234,
+        246,
+        "DUREE"
+      ],
+      [
+        312,
+        320,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_cats",
+    "language": "en"
+  },
+  {
+    "text": "Sudden Sharp Bump On Dogs Knee Post TPLO Hey everybody, My dog got TPLO surgery 7 weeks ago and has been healing great. However, this morning when we woke up it seems now her knee has a very “sharp” spot out of nowhere. It feels sort of unnatural but shes not walking any different or showing signs of pain. Is it possible the hardware shifted and caused this and how concerned should we be? Vet isnt",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        59,
+        62,
+        "ANIMAL"
+      ],
+      [
+        80,
+        91,
+        "DUREE"
+      ],
+      [
+        129,
+        141,
+        "DUREE"
+      ]
+    ],
+    "source": "reddit_dogadvice",
+    "language": "en"
+  },
+  {
+    "text": "Any advice ? Hi . This is my first hamster . With me for 7 months now. She is about 1 yr old now . She is a sensitive baby. 2 weeks ago, I moved house and it’s about 15 minutes drive from old to new house. I put her in hamster carry cage with bedding and I hold the cage all the time . When I arrived , found her fainted/shocked. She didn’t move or respond for about 10 minutes. I talked to her , I slowly touched her and i was alr crying . I thought she was gone . Then she slowly open her eyes in d",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_hamsters_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "My hamster has diarrhea and isn't acting like himself.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        10,
+        "ANIMAL"
+      ],
+      [
+        15,
+        23,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "hi so curious on what i should do to get my rabbit to stop humping me CONSTANTLY (aside from neutering). right now the only thing that seems to work is covering up, pants or long sleeves for example. any suggestions? cute lil pic of him.",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_rabbits_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Allergies. Has been worse this summer, really knawing at paws and shaking ears. Since using hibiscub paws much better. Ears tiny amount of discharge, nothing concerning. Advise recicort for ears and preds to interrupt itch cycle, O has hibi at home. See back in 4 weeks for next cytopoint. Insurance - lifelong, please claim back anything for ears, anal glands, skin or feet as all will be related. E",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        66,
+        73,
+        "SYMPTOM"
+      ],
+      [
+        139,
+        148,
+        "SYMPTOM"
+      ],
+      [
+        254,
+        258,
+        "BODY_PART"
+      ],
+      [
+        325,
+        329,
+        "BODY_PART"
+      ],
+      [
+        362,
+        366,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "Should I pair my lil guy with a friend? Looking to make him as happy and fulfilled as bunnily possible. Photo tax attached. ✌🏼 Long-story short: adopted my little boy from a family who couldn’t take on the responsibility of looking after a bunny at this time. I’ve done as much research as I can and continue to learn more everyday. He’s in good hands now, I look after him as best as I can, and shower him with as much love and attention as possible. He’s a year old and we’ve been together for t",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_rabbits_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "can i give more food to my hamster before not feeding him for a week? im going on vacation for a week in a few months, and i was wondering if i could give more food than usual to my hamster before leaving. will he be okay?",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_hamsters_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Any advice? I cannot leave my dog alone for more than two seconds. I have a three month old beagle and she is overly attached to me. She doesn’t want anybody except for me anytime she sees me laying in bed she has to be right up against me cuddling which is cute and all but she whines when she can’t get to me, and anytime she is in a cage when I go to work or when we’re laying down about to go to bed and I leave my room for two seconds to grab something she barks and wines so loud, I can’t leave",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_puppy101_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Is it normal posture for my 10 month old girl ? It’s my first time having a dog and she occasionally likes to sit like that",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_dogadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Our 18-month-old mini goldendoodle has been to the emergency vet 5 times in the past year for eating foreign objects — we're exhausted, broke, and need help We love our dog more than anything, but he is absolutely determined to eat things he shouldn't. In the past 12 months alone, we've made five emergency vet trips for foreign object ingestion, and we're at our wit's end both emotionally and fina",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        169,
+        172,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_puppy101",
+    "language": "en"
+  },
+  {
+    "text": "How long should I take off work when getting my new puppy? Getting a mini dachshund in January!! Was just curious for those of you who work remote, how long did you take off to get your pup adjusted? My schedule is fairly flexible, I work in sales so do have calls to make but not constantly all day. I’m getting her on a Sunday, as that’s her 8 week birthday, if I took off Monday and Tuesday is that enough? Thanks!",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_puppy101_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Kennel cough and lethargy My 2-3 year old rescue boy managed to pick up kennel cough in the dog park. I initially thought that it was a digestive problem as he is prone to those anyway and the coughing resembles gagging if you haven't seen it before. Took him to the wet yesterday morning after he spent all night up but as he wasn't coughing then, just had a mild fever. They just gave us some anti-",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        7,
+        12,
+        "SYMPTOM"
+      ],
+      [
+        17,
+        25,
+        "SYMPTOM"
+      ],
+      [
+        79,
+        84,
+        "SYMPTOM"
+      ],
+      [
+        92,
+        95,
+        "ANIMAL"
+      ],
+      [
+        193,
+        201,
+        "SYMPTOM"
+      ],
+      [
+        334,
+        342,
+        "SYMPTOM"
+      ],
+      [
+        365,
+        370,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_dogadvice",
+    "language": "en"
+  },
+  {
+    "text": "My buffaloes is showing the following symptoms: Diarrhea with muscus, Tensemus, Nose Bleeds, Flatulence, Pains.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        48,
+        56,
+        "SYMPTOM"
+      ],
+      [
+        80,
+        84,
+        "BODY_PART"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "signs of cytisitis with haemturia dysuria & inapproproate urination. Owner two weeks no probpems till yesterday.  Chest/abd all ok Bladder small & painful , evident kidneys normal size & not painful Treat for irritation. advise feliway also.  Due 2nd vaccination 14 Dec '14 (had tricat/felv). due next flea treatment 14 Dec '14. advise HPC.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        34,
+        41,
+        "SYMPTOM"
+      ],
+      [
+        114,
+        119,
+        "BODY_PART"
+      ],
+      [
+        131,
+        138,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "Senior dog on the brink - is it time? Please help My dog is 13 years old, she has a history of mast cell tumours - she had 8 removed over time and a few years ago we decided to stop trying to remove as the constant vet trips and anaesthetic were becoming too stressful and risky for her. She had bladder stones 2 years ago, resulting in a change to her diet (which she was not happy about). Her visio",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        7,
+        10,
+        "ANIMAL"
+      ],
+      [
+        53,
+        56,
+        "ANIMAL"
+      ],
+      [
+        296,
+        303,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_dogadvice",
+    "language": "en"
+  },
+  {
+    "text": "Are there “grooming” things that I need to consider with having Guinea pigs? Besides the obvious nail clipping what else should I be doing when it comes to this kind of stuff? I have 1x boy and 2x females.",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_guineapigs_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "How do I know if getting a second rabbit is the right choice? My rabbit, Benny, is a three year old neutered male. He is very friendly towards humans, but has never met another rabbit. (At least not since I adopted him a year ago.) He free roams our animal room. Sometimes I will see him just laying around and I often wonder if he is lonely. Although he shares the room with his six guinea pig sisters, they have their own space. I would love to adopt a friend for him, but I have no idea if he want",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_rabbits_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "[HELP] Treatment ideas for epilepsy/seizures in dogs My dog recently started getting seizures and has been diagnosed with \"idiopathic epilepsy\" which essentially is a fancy way of the vets saying he gets seizures without being able to determine the cause. This is fairly common in dogs and apparently covers 75% of all epilepsy cases in dogs. I've been to the vet to analyze his blood and so forth to",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        56,
+        59,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_dogs",
+    "language": "en"
+  },
+  {
+    "text": "Perianal pruritus and erythema; anal sacs expressed (moderate amount, normal consistency), check for tapeworms/allergies.",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        9,
+        17,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "My 6 year old Jersey cow is showing: Coughing, Nasal Discharge, Labored Breathing, Fever, diarrhea, labored breathing, nasal discharge, eye discharge, loss of appetite. Duration: 5 days. Condition: Bovine Tuberculosis.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        37,
+        45,
+        "SYMPTOM"
+      ],
+      [
+        53,
+        62,
+        "SYMPTOM"
+      ],
+      [
+        64,
+        81,
+        "SYMPTOM"
+      ],
+      [
+        83,
+        88,
+        "SYMPTOM"
+      ],
+      [
+        90,
+        98,
+        "SYMPTOM"
+      ],
+      [
+        100,
+        117,
+        "SYMPTOM"
+      ],
+      [
+        125,
+        134,
+        "SYMPTOM"
+      ],
+      [
+        136,
+        139,
+        "BODY_PART"
+      ],
+      [
+        140,
+        149,
+        "SYMPTOM"
+      ],
+      [
+        151,
+        167,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "Seizures in my dog I'm desperate for help My dog has had what I think are two full body seizures in the past month. They have all lasted about a minute. His vet has no idea what has been causing them. The thing is... I don't have pet insurance. I feel like the worst dog mom. I have a membership with the vet and my dumb self thought it was like insurance. Turns out it's a care plan. Anyways, would",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        15,
+        18,
+        "ANIMAL"
+      ],
+      [
+        45,
+        48,
+        "ANIMAL"
+      ],
+      [
+        267,
+        270,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_pets",
+    "language": "en"
+  },
+  {
+    "text": "How often should I put my13 wk old puppy in her crate for a nap during the day? I’m generally crating her twice a day for 1.2 hours when I go out, and for around 30min-1hour around 5/6pm when I’m making dinners or when she goes nuts.",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_puppy101_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "haematuria improved but now worse again. in self eating, normal activity and coat good.  exam - 08kg wt loss, BS 3/9, normal skin turgor. reacts caudal abdomen, very small peanut sized tense thckened bladder. expressed cloudy looking urine. dipstik blood. discussed general anaesthetic investigate but owner elected change antibs.  will check sediment.",
+    "intent": 3,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        125,
+        129,
+        "BODY_PART"
+      ],
+      [
+        152,
+        159,
+        "BODY_PART"
+      ],
+      [
+        200,
+        207,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "Puppy has Fatal Diagnosis My beautiful, smart, gentle boy received a diagnosis of stage three kidney disease today. He is only 6 months old. After his first couple of days at doggy daycare, he got a cough. The cough led to vomiting. We assumed it was some sort of kennel cough, even though he is fully vaxed, and brought him to the emergency vet. Thousands of dollars later, with blood work and an ul",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        0,
+        5,
+        "ANIMAL"
+      ],
+      [
+        94,
+        100,
+        "BODY_PART"
+      ],
+      [
+        199,
+        204,
+        "SYMPTOM"
+      ],
+      [
+        210,
+        215,
+        "SYMPTOM"
+      ],
+      [
+        223,
+        231,
+        "SYMPTOM"
+      ],
+      [
+        271,
+        276,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_puppy101",
+    "language": "en"
+  },
+  {
+    "text": "My rabbit is an Outdoor Rabbit but its -40 and we think we should bring it inside. we dont have any Cage for it. Do you think itll Be safe in my One Daughters room free roaming?",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_rabbits_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "What more or what should i take away? Ive been upgrading enrichment and advancing my cage with more stuff such as bedding and bigger sand bath more hides and a weird box i filled hay and hide food in or stick in sprays. The platform is hand made and the small holes are sealed with hot glue and my hamster doesn’t pay attention to that so that should be safe for him not to eat no? He used to show stress and boredom signs but now he is chilling and seems fine with what is going on but what more can",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_hamsters_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "limping and biting right front paw few days, better today and much more comfortable walking. not limping here Charli excited and nervous, ok otherwise. challange to look properly as highly strong and very vocal, small sore and slightly infected patch on edge of 3rd pad (almost towards 4th pad). advise bathing. not able to see fb. recheck in 5-7 days.",
+    "intent": 3,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        0,
+        7,
+        "SYMPTOM"
+      ],
+      [
+        31,
+        34,
+        "BODY_PART"
+      ],
+      [
+        97,
+        104,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "I accidentally closed a heavy door on my 5 month old’s tail. What should I do? I was leaving my apartment to take him out and I didn’t realize he hadn’t cleared the door yet when I let it close. He yelped so loudly immediately out of fear and pain and ran out into the hallway. I brought him inside right away and he started licking his tail and checking it out. He stopped yelping and didn’t really respond when I gently squeezed his tail up and down and moved it gently. I did, though, notice a sm",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_dogadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "How important is preventative deworming in pets? My partner has two dogs. They are very outdoorsy and often drinking lake/pond/river water. Infact One of the stangent ponds my dog drank from, I actually got very sick just walking by with barefeet and had to take an antibiotic. I do believe I had contacted \"beaver fever\" with the symptoms I had. That same dog was throwing up for a while but got ove",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        176,
+        179,
+        "ANIMAL"
+      ],
+      [
+        315,
+        320,
+        "SYMPTOM"
+      ],
+      [
+        357,
+        360,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "He’s only 8.5, is it time? As most who make these post I can’t believe I’m typing this. I’ll keep it brief as I type through the tears. I have a 8.5 year old boxer pit mix who went from acting weird, blinking a lot, having some accidents in the house a week ago to full blown cannot function unless he has help, help to get up, help to walk, and even then he will rarely drink, or eat, or walk even w",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_dogadvice",
+    "language": "en"
+  },
+  {
+    "text": "ok so I know parrotlets have big feelings but..is it normal to be this furious over someone eating ice cream? Do I worry??? he’s okay and is calm now (discarded the ice cream)",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_parrots_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "[RIP] Miles, 5 We had to make the difficult decision to put Miles down today. Late last night he started having difficulty breathing again. The emergency vet pulled 1.5 liters of fluid out of his chest cavity, and testing overnight led the vet to the conclusion that he either had another lung lobe tortion, or complications from his previous surgery causing fluid to fill his chest cavity. There was",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        83,
+        93,
+        "DUREE"
+      ],
+      [
+        112,
+        132,
+        "SYMPTOM"
+      ],
+      [
+        196,
+        201,
+        "BODY_PART"
+      ],
+      [
+        289,
+        293,
+        "BODY_PART"
+      ],
+      [
+        377,
+        382,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_dogs",
+    "language": "en"
+  },
+  {
+    "text": "VACC booster. very temperamental today ** care today. limited exam. HR/RR normal rhythm and rate abdomen soft and tense. skin ears eyes within normal limits. needed towel/ scruff in order to vaccination today as CARE. ducat+felv given",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        97,
+        104,
+        "BODY_PART"
+      ],
+      [
+        121,
+        125,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "My dogs is having seizures help Our family dog is having seizures and he is older we got him in 2017. I don't have money and neither does my parents and he keeps having seizures what can I do to help him have them less until have enough money to get him help. Please and thank you.",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        43,
+        46,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_pets",
+    "language": "en"
+  },
+  {
+    "text": "What should I get my rabbit for his birthday? Hello. Today is my rabbits 4th bday. He is 39 in human years. What should I get for his bday? He is waiting expectantly. He always looks forward to his bday. Any suggestions?",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_rabbits_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Lost my cat Last night my indoor cat slipped out through my front door. I’ve been looking all over for her last night and today, she has seizures and so we don’t have her wear a collar for safety reasons. She’s pretty severely brain damaged and so I don’t know how to help her get back home. Any tips or advice?",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        8,
+        11,
+        "ANIMAL"
+      ],
+      [
+        12,
+        22,
+        "DUREE"
+      ],
+      [
+        33,
+        36,
+        "ANIMAL"
+      ],
+      [
+        107,
+        117,
+        "DUREE"
+      ],
+      [
+        281,
+        285,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_catadvice",
+    "language": "en"
+  },
+  {
+    "text": "owner worried as licks prepuce and getting some mucopurulent discharge, all looks normal so probably normal for <<brand name>> - discuss castration",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        61,
+        70,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "Recheck eye. Owner reports eye looking much better - put some in left eye also as was seeing discharge in that one too. Honi well in self, only rubbing eyes after having drops.  Negligible ocular discharge. Conjunctiva within normal limits. Retinal exam NAD. Clinical exam unremarkable.  Advise continue isathal over weekend so had full course and then stop. Recheck if problems recur.",
+    "intent": 3,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        8,
+        11,
+        "BODY_PART"
+      ],
+      [
+        27,
+        30,
+        "BODY_PART"
+      ],
+      [
+        70,
+        73,
+        "BODY_PART"
+      ],
+      [
+        93,
+        102,
+        "SYMPTOM"
+      ],
+      [
+        196,
+        205,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "Is it normal for guinea pigs to do this?",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_guineapigs_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Poisoning Kitten needs help. Urgent 6 days ago our 6 month old kitten, who was in great shape, vomited foam then bile, then he began to spasm and release drops of water from his anus while writhing in pain. He arrived at the veterinarian with 41 fever, cyanotic mouth and edema in the intestines and colon. Since yesterday a necrosis has reached the anus, the base of the tail and the behind, we thin",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        10,
+        16,
+        "ANIMAL"
+      ],
+      [
+        36,
+        46,
+        "DUREE"
+      ],
+      [
+        63,
+        69,
+        "ANIMAL"
+      ],
+      [
+        246,
+        251,
+        "SYMPTOM"
+      ],
+      [
+        262,
+        267,
+        "BODY_PART"
+      ],
+      [
+        307,
+        322,
+        "DUREE"
+      ],
+      [
+        372,
+        376,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "anaplasmosis + seizures [help / advice please] our dog (poodle, 8.5kg) had an anaplasmosis symptom for a week (loss of appetite), but we only took him to the vet once he started showing another symptom (stumbling + lethargy), then he was prescribed with doxy as he tested positive for both anaplasmosis and ehrlichiosis the same night medications started, the seizures also started. first day it was",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        51,
+        54,
+        "ANIMAL"
+      ],
+      [
+        56,
+        62,
+        "ANIMAL"
+      ],
+      [
+        111,
+        127,
+        "SYMPTOM"
+      ],
+      [
+        215,
+        223,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "My 5 year old Golden Retriever dog is showing: Coughing, Lethargy, Loss of Appetite, Fever, vomiting, coughing, nasal discharge, loss of appetite. Duration: 4 days. Condition: Canine Parvovirus.",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        21,
+        30,
+        "ANIMAL"
+      ],
+      [
+        31,
+        34,
+        "ANIMAL"
+      ],
+      [
+        47,
+        55,
+        "SYMPTOM"
+      ],
+      [
+        57,
+        65,
+        "SYMPTOM"
+      ],
+      [
+        67,
+        83,
+        "SYMPTOM"
+      ],
+      [
+        85,
+        90,
+        "SYMPTOM"
+      ],
+      [
+        92,
+        100,
+        "SYMPTOM"
+      ],
+      [
+        102,
+        110,
+        "SYMPTOM"
+      ],
+      [
+        118,
+        127,
+        "SYMPTOM"
+      ],
+      [
+        129,
+        145,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "What should I be looking out for when buying a puppy? I've found the perfect miniature dachshund pup on gumtree, and I just want to make sure I don't get scammed or played a fool in any way, since it's my first time ever buying a pet What are some things I should be asking the breeder to provide/verify, and some things I should be looking out for like any red flags, etc I just want the smoothest experience for acquiring the little guy and don't want to get scammed",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_puppy101_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "My puppy has floppy ears that don't get much air circulation.",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        8,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "Is this normal/appropriate vet behavior? After our experience with an internal medicine vet for our two year old mini Aussie, I am trying to understand if the way her case was handled was appropriate. Brace yourself for a long story, maybe biased by everything our family has gone through, but trying to be objective as I can. On Tuesday, my parents scheduled an appt with internal medicine Dr. “X” a",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "Need advice: Dog with uveitis + lens luxation + possible iris cyst (vision declining) Hi everyone, I’m looking for guidance or similar experiences. My dog (Milky, 6 years old) has been dealing with serious eye issues for a while. One eye went completely blind earlier. The other eye was diagnosed with uveitis and lens luxation (lens shifted forward), and despite continuous treatment with prescribed",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        13,
+        16,
+        "ANIMAL"
+      ],
+      [
+        151,
+        154,
+        "ANIMAL"
+      ],
+      [
+        206,
+        209,
+        "BODY_PART"
+      ],
+      [
+        234,
+        237,
+        "BODY_PART"
+      ],
+      [
+        279,
+        282,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "Cat health questions Species:cat Age:10 months Sex/Neuter status: female spay Breed: Dsh Body weight: 7.9 History: started sneezing and coughing Friday. Went to vet Monday. Got convenia shot steroid shot and nasal drops. Sounds like a duck when she sneezes. Clinical signs:sneezing. Coughing fever. Lethargy Duration: since Friday Your general location:Dallas Links to test results, X-rays, vet repor",
+    "intent": 3,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        0,
+        3,
+        "ANIMAL"
+      ],
+      [
+        29,
+        32,
+        "ANIMAL"
+      ],
+      [
+        123,
+        131,
+        "SYMPTOM"
+      ],
+      [
+        136,
+        144,
+        "SYMPTOM"
+      ],
+      [
+        235,
+        239,
+        "ANIMAL"
+      ],
+      [
+        273,
+        281,
+        "SYMPTOM"
+      ],
+      [
+        283,
+        291,
+        "SYMPTOM"
+      ],
+      [
+        292,
+        297,
+        "SYMPTOM"
+      ],
+      [
+        299,
+        307,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_cats",
+    "language": "en"
+  },
+  {
+    "text": "My buffaloes is showing the following symptoms: Fever, Loss of appetite, Coughing, Lameness, Swelling of joints.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        48,
+        53,
+        "SYMPTOM"
+      ],
+      [
+        55,
+        71,
+        "SYMPTOM"
+      ],
+      [
+        73,
+        81,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "$8k and no answers A little background - I worked at a specialty and emergency animal hospital, my aunt is a vet, I volunteered in cat rescue for a long time. I’ve seen a lot. I can guess a lot. This is just a hope that maybe someone here can give a suggestion. About 3 weeks ago my 10yo male neutered domestic long haired cat, Hagrid, started reverse sneezing. It was weird but with the weather chan",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        131,
+        134,
+        "ANIMAL"
+      ],
+      [
+        268,
+        279,
+        "DUREE"
+      ],
+      [
+        323,
+        326,
+        "ANIMAL"
+      ],
+      [
+        352,
+        360,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_cats",
+    "language": "en"
+  },
+  {
+    "text": "[Discussion] People make fun of my dog when she poops and that makes me so sad Hey, I just need to talk about something with someone who understands. My 9-year old rescue dog is dying of an auto-immune disease. She’s not in any pain so I’m not having her euthanized because she’s still up and about with a lot of energy. She’s just on borrowed time. I am completely heartbroken about it and I try to",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        35,
+        38,
+        "ANIMAL"
+      ],
+      [
+        171,
+        174,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_dogs",
+    "language": "en"
+  },
+  {
+    "text": "Is this normal puppy behavior? Hi, I've just brought home a 3-month old puppy. He's been home for 2 weeks now. I'm crate and playpen training him but it's not going too well. The crate he understands is for night sleep, which is good. The playpen he will whine at first but sometimes end up settling and napping in there, but sometimes he will just continue to protest. I haven't really left his side yet as if he can't see me, he will whine and panic. Even if I am in the house, he will panic if he",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_puppy101_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Occasional partial seizure when passinf faeces. 1 a month. defecating, urinating, drinking, eating. nothing abnormal detected on heart and lung exam. Tartar marked. gingivitis. body condition score 5/9. large bladder. needs a dental. advise if bloods ok then dental. can have more phenoleptil for 6 months.",
+    "intent": 2,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        19,
+        26,
+        "SYMPTOM"
+      ],
+      [
+        129,
+        134,
+        "BODY_PART"
+      ],
+      [
+        139,
+        143,
+        "BODY_PART"
+      ],
+      [
+        209,
+        216,
+        "BODY_PART"
+      ],
+      [
+        293,
+        305,
+        "DUREE"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "Struggling to Choose a Cat Tower - Any Advice? Does anyone have advice? I’m trying to decide between two scratching towers for my cat and would love some opinions. I’m moving to a new place and downsizing from my current cat tower. It’s about 1.9–2 m tall and has two caves and a hammock. As a kitten, my cat occasionally slept in the cave and hammock, but he’s not very interested in those anymore. These days, he mostly uses the tower to jump up high and observe rather than to lounge or hide. [O",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_catadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "[Update] Digger the Alcoholic Dog: Going Strong! Sorry I stopped updating originally, but my account was accidentally (I hope) suspended for apparently impersonating a moderator in a different sub-reddit (??!)... Any how, this I \\*think\\* was the last update thread, and has links to his full story: [",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        30,
+        33,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_dogs",
+    "language": "en"
+  },
+  {
+    "text": "left eye corneal ulcer about 2 mili diametre and stil POSITIVE to fluoresceine, not squinting, not obvious neovascularisation and no episcleritis, owner report skightly better but wound like to try exocin eye drops in place of cloramphenicol.  advise a week of oral antibiotics and remmend 2 drops 3 times daily in each eye 1 drop. rv 1 week sooner if worse",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        5,
+        8,
+        "BODY_PART"
+      ],
+      [
+        180,
+        185,
+        "SYMPTOM"
+      ],
+      [
+        205,
+        208,
+        "BODY_PART"
+      ],
+      [
+        320,
+        323,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "Cat keeps getting sick but vet can’t find any issues. Next steps? Poster is 26F caring for 6 y/o neutered male cat. We’re from the US. On 3/9 my cat started getting sick. At first it was just early early morning about an hour or two before I would normally wake up and feed him breakfast. Nothing was coming up though, just clear liquid or foam, and he wasn’t acting different besides that so I didn’",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        0,
+        3,
+        "ANIMAL"
+      ],
+      [
+        111,
+        114,
+        "ANIMAL"
+      ],
+      [
+        145,
+        148,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "Any advice on how to shave their bums? 🪒 I’m one person &amp; they don’t like to be held. Otherwise, very sweet. My vet charged me $300+ for a bum shave bc 1 had to be sedated. 😫 Advice appreciated.",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_rabbits_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "My 3 year old Poodle dog is showing: Vomiting, Diarrhea, Lethargy, Fever, diarrhea, labored breathing, lameness, skin lesions, eye discharge, loss of appetite. Duration: 4 days. Condition: Parvovirus.",
+    "intent": 0,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        14,
+        20,
+        "ANIMAL"
+      ],
+      [
+        21,
+        24,
+        "ANIMAL"
+      ],
+      [
+        37,
+        45,
+        "SYMPTOM"
+      ],
+      [
+        47,
+        55,
+        "SYMPTOM"
+      ],
+      [
+        57,
+        65,
+        "SYMPTOM"
+      ],
+      [
+        67,
+        72,
+        "SYMPTOM"
+      ],
+      [
+        74,
+        82,
+        "SYMPTOM"
+      ],
+      [
+        84,
+        101,
+        "SYMPTOM"
+      ],
+      [
+        113,
+        117,
+        "BODY_PART"
+      ],
+      [
+        127,
+        130,
+        "BODY_PART"
+      ],
+      [
+        131,
+        140,
+        "SYMPTOM"
+      ],
+      [
+        142,
+        158,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "Is it normal for a cat to use the litter tray as I’m using the lavatory? I swear he’s actually pretending but always follows me and uses his litter tray, which is in the bathroom, when I use the toilet. Is this normal?",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_catadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "My 3 year old Duroc pig is showing: Coughing, Loss of Appetite, Lethargy, Fever, vomiting, coughing, labored breathing, skin lesions, eye discharge, loss of appetite. Duration: 5 days. Condition: Swine Dysentery.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        36,
+        44,
+        "SYMPTOM"
+      ],
+      [
+        46,
+        62,
+        "SYMPTOM"
+      ],
+      [
+        64,
+        72,
+        "SYMPTOM"
+      ],
+      [
+        74,
+        79,
+        "SYMPTOM"
+      ],
+      [
+        81,
+        89,
+        "SYMPTOM"
+      ],
+      [
+        91,
+        99,
+        "SYMPTOM"
+      ],
+      [
+        101,
+        118,
+        "SYMPTOM"
+      ],
+      [
+        120,
+        124,
+        "BODY_PART"
+      ],
+      [
+        134,
+        137,
+        "BODY_PART"
+      ],
+      [
+        138,
+        147,
+        "SYMPTOM"
+      ],
+      [
+        149,
+        165,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "Conjunctivitis both eyes. On exam fluoro negative, still cherry eye on the L eye, but R eye now is red and inflammed. Besides that nothing abnormal detected on exam. eating and drinking ok no vom or diarr.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        64,
+        67,
+        "BODY_PART"
+      ],
+      [
+        77,
+        80,
+        "BODY_PART"
+      ],
+      [
+        88,
+        91,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "-. Dog is doing well on 100mg BID at home. metacam dose to weight. proprioception is slow bilaterally but presetn. weak hind adn low stride. cont as above and cont swimming. discussed physio and supplementation",
+    "intent": 3,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "Is this normal?? - asking for a friend Is this normal??? Does he need something?? He is a \\~2yo male dog. He is fed, walked, played with, cuddled with. He’s doing this to his female owner. This is my friend’s dog, I know nothing about dogs!! We’re mostly curious!",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_dogadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Should I be worried? So I just got a hamster 4 days ago, his name is lurch. Today when I was laying in bed I noticed he was sleeping alot more than usual, so when I went to check, I noticed his bottom was yellow and his fur looked all dirty. The bottom of his stomach looked slightly swollen, bit I just assumed it was his genitalia.. should I be worried? Also I got him from a pet store.. and I've been told that's not the nest. He is my first hamster and I have cried so much even when he jumps a f",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_hamsters_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Need help - post seizure or stroke Breed: English Bulldog Age: 6 years History: Focal seizures (super spread out and non emergent. Tried seizure meds 3 years ago but got off them because they made him sedated) Clinical Summary: On July 18th around 2 I found my dog seeming disoriented, lethargic, barely able to walk correctly and unable to go upstairs. I took him to the emergency vet within 1.5 hou",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        17,
+        24,
+        "SYMPTOM"
+      ],
+      [
+        50,
+        57,
+        "ANIMAL"
+      ],
+      [
+        137,
+        144,
+        "SYMPTOM"
+      ],
+      [
+        261,
+        264,
+        "ANIMAL"
+      ],
+      [
+        286,
+        295,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "My 30lb got liver damage from 300mg of Doxycycline My dog (a 30lb 11 y/o golden doodle) had Lyme a while ago and was treated once before but was still testing positive (he was asymptomatic) and was prescribed 100mg of doxycycline 3 times a day (twice in the morning and once at night) for 28 days. He was getting sick (throwing up and not eating much) from the medication so the vet told us to stop g",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        12,
+        17,
+        "BODY_PART"
+      ],
+      [
+        54,
+        57,
+        "ANIMAL"
+      ],
+      [
+        285,
+        296,
+        "DUREE"
+      ],
+      [
+        335,
+        345,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "My kitten won’t stop shitting Hello everyone. I adopted a 3 month old kitten 3 months ago and since then he’s been diarrheaing upto 25 times a day. I’ve been to the vets and had countless tests done and everything comes back clear. I have tried HA diet, gastrointestinal diet, fish only diet etc. I’m at a loss and feel really frustrated as he can’t control himself. He’s gaining weight and is full o",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        9,
+        "ANIMAL"
+      ],
+      [
+        70,
+        76,
+        "ANIMAL"
+      ],
+      [
+        77,
+        89,
+        "DUREE"
+      ],
+      [
+        220,
+        224,
+        "BODY_PART"
+      ],
+      [
+        277,
+        281,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_catadvice",
+    "language": "en"
+  },
+  {
+    "text": "My tiger is showing the following symptoms: Fever, Succumb, Sluggish, Anorexia, Pains.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        44,
+        49,
+        "SYMPTOM"
+      ],
+      [
+        70,
+        78,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "my puppy tested positive for parvo about 4 days ago…. my boyfriend and i adopted a puppy from a local county shelter, just under a week later she tested positive for parvo. five days in to having her she didn’t have much of an appetite and then spit up some clear liquid, definitely not ideal. the next morning, she had diarrhea. immediately, we took her to the emergency vet and she tested positive",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        3,
+        8,
+        "ANIMAL"
+      ],
+      [
+        41,
+        51,
+        "DUREE"
+      ],
+      [
+        83,
+        88,
+        "ANIMAL"
+      ],
+      [
+        320,
+        328,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_puppy101",
+    "language": "en"
+  },
+  {
+    "text": "My 7 year old Quarter Horse horse is showing: Lameness, Swollen Legs, Loss of Appetite, Fever, diarrhea, labored breathing, lameness, skin lesions, eye discharge, loss of appetite. Duration: 6 days. Condition: Equine Infectious Anemia.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        22,
+        27,
+        "ANIMAL"
+      ],
+      [
+        28,
+        33,
+        "ANIMAL"
+      ],
+      [
+        56,
+        63,
+        "SYMPTOM"
+      ],
+      [
+        70,
+        86,
+        "SYMPTOM"
+      ],
+      [
+        88,
+        93,
+        "SYMPTOM"
+      ],
+      [
+        95,
+        103,
+        "SYMPTOM"
+      ],
+      [
+        105,
+        122,
+        "SYMPTOM"
+      ],
+      [
+        134,
+        138,
+        "BODY_PART"
+      ],
+      [
+        148,
+        151,
+        "BODY_PART"
+      ],
+      [
+        152,
+        161,
+        "SYMPTOM"
+      ],
+      [
+        163,
+        179,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_disease",
+    "language": "en"
+  },
+  {
+    "text": "Is it safe for me to leave my cat for two weeks after this emergency visit to the vet? * cat * \\~15 yrs * Spayed * domestic short hair * \\~9-10 lbs? * Fish allergy but otherwise pretty healthy. Diagnosed with potential early CKD a few years ago, but creatine and SDMA levels have been on the upper end of normal (9-12 ug/dL) for years. Most recent test was July 2024, showing SDMA 9 ug/dL. Urinalysis also showed crystals, but they didn't send the sample off for days * Frequently urinating small amo",
+    "intent": 1,
+    "urgency": "CRITICAL",
+    "entities": [],
+    "source": "reddit_askvet_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "My dog has developed skin tags, especially on his chest and legs.",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ],
+      [
+        21,
+        25,
+        "BODY_PART"
+      ],
+      [
+        50,
+        55,
+        "BODY_PART"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "How do I know if his nails are too long? This is my guinea pig teddy, I’m trimming close to the quick but they still look too long to me! Does this look okay? His brothers nails are less thick and look short but his look very long to me.",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_guineapigs_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Emergency vet sent my dog home after bloody diarrhea with little concern. What should I do? I’m looking for some feedback or more answers here. Yesterday in the early afternoon my mini dachshund began having diarrhea intermittently, and around 10PM he vomited what seemed to be most of his stomach contents. We went to the emergency vet and got x-rays. We opted to not get blood work, as he had perfe",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        22,
+        25,
+        "ANIMAL"
+      ],
+      [
+        44,
+        52,
+        "SYMPTOM"
+      ],
+      [
+        208,
+        216,
+        "SYMPTOM"
+      ],
+      [
+        290,
+        297,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "Need a feeder for one old, skinny cat so younger fat cat stops stealing. Also, feed older cat dry food: y/n? I have a 17-year-old cat who lost a lot of weight until we could get a handle on her UTIs. We have a fat, younger cat who seems to have stolen all of older cat's weight. They get 1/3 of a cup of wet food 2x a day. Fat cat gets prescription UTI wet food and old cat gets friskies (split with another cat). Fat cat, oc, eats as much of the others' wet food as he can if they even look up from",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_catadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Recheck infected A/Gs. Hx: well in herself, EDDU all ok, taken tablets well. Exam: nothing abnormal detected otherwise, both A/Gs tiny amount of discharge and normal again now so sign off",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        145,
+        154,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "My goat is showing the following symptoms: Fever, Malaise, Weakness, Weight loss, Pain.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        43,
+        48,
+        "SYMPTOM"
+      ],
+      [
+        59,
+        67,
+        "SYMPTOM"
+      ],
+      [
+        69,
+        80,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "What is this behavior and should I be allowing it? Zoro (gray, australian shepherd/mix)6yr M, Trafalgar (black cattledog/lab)1yr M. Both fixed. They mainly do this when I sit down on the couch. Sometimes it's for 10 minutes and sometimes they could go on for an hour. There's also a lot of tiny nibbling on each other's cheeks and ear licking. Eventually they get bored and just fall asleep on each other. But this all happens when I sit on the couch. I don't necessarily mind it and have them go pl",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_dogadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "CAT ATE GARLIC BREAD, DO I NEED TO TAKE HIM TO THE VET TOMORROW? Not technically my cat, but I take care of him because he’s my cousin’s and i live with the cat but she doesn’t, if that matters. My cousin is not available to be contacted Cat is male, neutered, relatively young (a few years old, idk exact age, like 3 or something), 13 or 14 pounds (idk exact, wasn’t at the vet last time, he’s just slightly overweight but vet said there was nothing to be concerned about and no changes needed to",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_askvet_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Did my dog have a seizure? [Help] I was sitting on the couch petting my dog, he was curled up next to me. I pet under his chin like he likes, and he looked up at me upside down, like he always does. I looked at his face and realized his eyes looked weird. I got off the couch and in front of him to get a good look at his eyes and they didn’t look right. Much of his third eyelids were showing and mo",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        7,
+        10,
+        "ANIMAL"
+      ],
+      [
+        18,
+        25,
+        "SYMPTOM"
+      ],
+      [
+        72,
+        75,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_dogs",
+    "language": "en"
+  },
+  {
+    "text": "My dog has patellar luxation (kneecap slips).",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        3,
+        6,
+        "ANIMAL"
+      ]
+    ],
+    "source": "kaggle_pet_symptoms",
+    "language": "en"
+  },
+  {
+    "text": "Blockage in cat **I made multiple post about this but I’m just trying to reach and hear as many people as I can that have knowledge and experience to this situation.** New Year’s Day my 9 year old orange male cat was crying in distress could not go to the bathroom and did not want to be near anyone so I took him to an emergency vet. We were told he was blocked and needed a de blocking procedure. I",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        12,
+        15,
+        "ANIMAL"
+      ],
+      [
+        209,
+        212,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_catadvice",
+    "language": "en"
+  },
+  {
+    "text": "Seizure. Help. I have a beautiful 14 year old lab-Pit Bull mix. She is old and doesn’t listen to anyone. But she’s my baby. I’ve had her most of my life. My parents texted me and said she had a seizure. She seized for about 2 minutes. I rushed home and don’t really know what to do. It’s almost like she can see shadows. She was already losing her sight. But things certainly seem worse now. I cannot",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        0,
+        7,
+        "SYMPTOM"
+      ],
+      [
+        194,
+        201,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_dogadvice",
+    "language": "en"
+  },
+  {
+    "text": "Reexamination. Improvement. Drops for another 2 days as owner noticed some watery discharge today. EDUF all fine.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        82,
+        91,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "Should I take my cat to the vet?? So for the last couple of years my female cat of maybe 10 years just stopped using the litter box and pees outside my door (on the pee towel). This is gonna sound crazy but the only logical explanation is that she would pee for attention bc she loves him; the cat pressed against him all the time and would be all over him and he’s a dumbass and would ignore her instead of petting her and stuff and push her away, so my guess is that she would pee out of anger to b",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_petadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "I feel like an awful piggy owner There was a post earlier today I believe talking about this snack for pigs containing fruit, seeds and honey and learning they are not safe for them.And I just realized I’ve fed so many of them to my pig throughout a time period of over 3 years. What should I do? My pig is almost 6 years old and my family cannot afford a vet, plus our nearest one is over an hour away. I’m still in school and cannot drive and my parents work 10 hours a day. She is still active an",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_guineapigs_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Cat not eating after getting home from emergency vet for urinary blockage A couple weeks ago my cat (7y neutered male) went to the emergency vet for a urinary blockage. He was there for 4 days on an IV and catheter and was sent home with 3 meds clavacillin, prazosin, and gabapentin. His creatinine and BUN and liver levels were still slightly elevated when he was released and the emergency vet told",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        0,
+        3,
+        "ANIMAL"
+      ],
+      [
+        4,
+        14,
+        "SYMPTOM"
+      ],
+      [
+        96,
+        99,
+        "ANIMAL"
+      ],
+      [
+        182,
+        192,
+        "DUREE"
+      ],
+      [
+        311,
+        316,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "How often should I have the sitter come by? I always take my baby with me but he's always a mess, doesn't tolerate the car well and I really think he prefers to stay home. I want to start hiring a sitter to drop in when I need to leave so he doesn't have to have his routine/environment changed so much. This time I'll be gone Friday afternoon to Sunday afternoon. His typical routine is wet food in the morning when I first get up and grazing on kibble the rest of the day. I was thinking",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_catadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "My cat bites me so hard it’s impossible to ignore, any advice? Hi, so i’ve had a problem with my cat biting me since he was a kitten. I have never played with him with my hands, nor have I rewarded this behavior with anything but a reaction from me when he bites so hard I can’t physically stand it. I have read that you should try ignoring it or pushing into his mouth, but he will bite until he literally feels my muscles shifting. He does this when he is bored or sometimes when he feels like I ha",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_catadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "weight = 9.3KG RH Lameness. RH lamenss seen for this in Animall Guardian Clinic, owner reports that over the passed month RH limb and been 'bad' lame and painful; on RH limb. OA reported on x rays done 07-Aug-11. on exam stifle is painful, and joint thickened. delayed proprioception in RH limb. suspect CCL rupture, started nsaids and rest.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        15,
+        17,
+        "BODY_PART"
+      ],
+      [
+        28,
+        30,
+        "BODY_PART"
+      ],
+      [
+        122,
+        124,
+        "BODY_PART"
+      ],
+      [
+        145,
+        149,
+        "SYMPTOM"
+      ],
+      [
+        166,
+        168,
+        "BODY_PART"
+      ],
+      [
+        244,
+        249,
+        "BODY_PART"
+      ],
+      [
+        287,
+        289,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "How to know the time has come? My 5 1/2 year old spayed standard poodle has had a decline the last 2 months since a Lyme diagnosis. We battled through liver toxicity, joint issues/inflammation, numerous test/ultrasounds, and now we are having seizures. I am less than 4 weeks away from giving birth and with her recent episodes I’m not sure she will have the quality of life she deserves, let alone w",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        65,
+        71,
+        "ANIMAL"
+      ],
+      [
+        151,
+        156,
+        "BODY_PART"
+      ],
+      [
+        167,
+        172,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_pets",
+    "language": "en"
+  },
+  {
+    "text": "Anyone know how often I should groom? I have a Norwegian forest cat and she’s normally fine for a week or two without grooming but apparently I should be doing it every day or two? Any help would be greatly appreciated, thanks!",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_catadvice_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "My fox is showing the following symptoms: Thick Crusting, Itchiness, Hair loss, Watery eye, Pain.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        69,
+        78,
+        "SYMPTOM"
+      ],
+      [
+        87,
+        90,
+        "BODY_PART"
+      ]
+    ],
+    "source": "kaggle_animal_condition",
+    "language": "en"
+  },
+  {
+    "text": "Cat not eating or drinking-- emergency vet on Sunday or wait til Monday? Hi all, My cat had some biopsies on Wednesday to diagnose skin issues. She has a weak immune system and she gets regular vet care. After our cat came home from the vet she ate and drank for two days (Wednesday and Thursday), but I haven't seen her drink or eat since Thursday night (she might have drank on Friday, but I can't",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        0,
+        3,
+        "ANIMAL"
+      ],
+      [
+        4,
+        14,
+        "SYMPTOM"
+      ],
+      [
+        84,
+        87,
+        "ANIMAL"
+      ],
+      [
+        131,
+        135,
+        "BODY_PART"
+      ],
+      [
+        214,
+        217,
+        "ANIMAL"
+      ]
+    ],
+    "source": "reddit_askvet",
+    "language": "en"
+  },
+  {
+    "text": "Parvo puppy just admitted - please send prayers I just admitted my puppy Minnie to the emergency vet. I picked her up last week on Thursday and immediately I knew that Minnie and I would get along well. She’s so full of energy and yet calm when she needs to be. Saturday rolls around and she starts vomiting and having very liquid poops. I’m concerned and I nearly take her to the ER, but I decided t",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        6,
+        11,
+        "ANIMAL"
+      ],
+      [
+        67,
+        72,
+        "ANIMAL"
+      ],
+      [
+        118,
+        127,
+        "DUREE"
+      ],
+      [
+        299,
+        307,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_puppy101",
+    "language": "en"
+  },
+  {
+    "text": "Declawing a kitten Hi there! I run a non-profit kitten rescue, and this beautiful polydactyl kitten named Porkchop came in and it looks like he has a dead claw, a claw that will not retract and he cannot feel. Essentially it is just waiting to snag something, like a dew claw on a dog except in a way worse spot. Does anybody know how much something like this would cost? He's going in for the appointment on the 23rd along with his neuter. No matter what he has to get it done but I'm wondering wh",
+    "intent": 1,
+    "urgency": "LOW",
+    "entities": [],
+    "source": "reddit_kittens_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "Nahla - intermittent discharge from the R eye, had for a few months, on pE eye fully open, watery dishcarge and some tear stainig, conjuntiva and 3rd eyelid normla, no pain on retroulsin, fluior negative, no dye coming through to nostrisl possible blocked tear duct. advise topical meds. RV in 1wk inb.",
+    "intent": 0,
+    "urgency": "MODERATE",
+    "entities": [
+      [
+        21,
+        30,
+        "SYMPTOM"
+      ],
+      [
+        42,
+        45,
+        "BODY_PART"
+      ],
+      [
+        51,
+        67,
+        "DUREE"
+      ],
+      [
+        75,
+        78,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "Prresented for 2nd vaccination, lepto. O reports shaking head and scratching ears. On exam ++ cerumen and bialteral OE. Moderately inflammed horizontal ear canals. Rest of exam NAD. Recheck at neutering in 1 weeks time.",
+    "intent": 0,
+    "urgency": "LOW",
+    "entities": [
+      [
+        49,
+        56,
+        "SYMPTOM"
+      ],
+      [
+        66,
+        76,
+        "SYMPTOM"
+      ],
+      [
+        152,
+        155,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "pull digit V claw on L FL and limping, bled initially but then stopped. sensitive around nail bed, no detachements/fractures. mild swelling present. Adv rest NSAID and reassess next week, if better then vaccinate.",
+    "intent": 3,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        13,
+        17,
+        "BODY_PART"
+      ],
+      [
+        30,
+        37,
+        "SYMPTOM"
+      ],
+      [
+        89,
+        93,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "In for vaccination. O has no concerns. Heart and lungs normal on ausc. Normal abdo and LN palpation. Eyes, ears and oral exam normal. DUDE normally. Vaccination given.",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        39,
+        44,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "Owner reports no concerns. defecating, urinating, drinking, eating no c/s/d/v. currently on allergy injections. owner says that she has recently started itching again, but keen to withold until see Gavinn in two weeks.  CE bright, alert and responsive hyperpigemned ventrum, but rest of skin fine,rest of clinical exam normal, possible slightly overweight.  vaccinated with dhp, l4 and kc.",
+    "intent": 3,
+    "urgency": "LOW",
+    "entities": [
+      [
+        153,
+        160,
+        "SYMPTOM"
+      ],
+      [
+        287,
+        291,
+        "BODY_PART"
+      ],
+      [
+        345,
+        355,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "My father said that when my dog dies, I’ll probably die too My dog has IBD and regularly has flare ups. I take him to the vet all the time to manage his disease, from routine care to emergency trips. Yesterday he got into a bag of pocky and threw up. I let him chill for a bit but a few hours ago I noticed he had watery diarrhea leaking from his bum which means he needs to go to the ER. I asked my",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        28,
+        31,
+        "ANIMAL"
+      ],
+      [
+        63,
+        66,
+        "ANIMAL"
+      ],
+      [
+        321,
+        329,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_dogs",
+    "language": "en"
+  },
+  {
+    "text": "Brought my 4.5 month old golden to the vet and they want me to pre-authorize almost $1000 worth of exams, is this normal? Hi all, thanks in advance for any advice from this awesome community. My puppy started having diarrhea on Saturday. We have been trying to switch him off of the food the breeder gave us (Pedigree, so I want him off it ASAP) and did a long car ride so I was chalking it up to one of those two things. We switched to chicken, rice, and pumpkin for a few days and he’s been getti",
+    "intent": 1,
+    "urgency": "MODERATE",
+    "entities": [],
+    "source": "reddit_askvet_askadvice",
+    "language": "en"
+  },
+  {
+    "text": "V & D. Has been gradually improving regarding vestibular syndrome but started with V 2 days ago. Now has D. Reasonably bright. Appetite prob a bit reduced, thirst normal. D sounds small-bowel type. Other dog has also had an episode of vomiting. T 38.8. Mms pink, CRT <2s. No skin tent. HR 124/min, peripheral pulses fine. NAD abdo.",
+    "intent": 0,
+    "urgency": "HIGH",
+    "entities": [
+      [
+        85,
+        95,
+        "DUREE"
+      ],
+      [
+        186,
+        191,
+        "BODY_PART"
+      ],
+      [
+        204,
+        207,
+        "ANIMAL"
+      ],
+      [
+        235,
+        243,
+        "SYMPTOM"
+      ],
+      [
+        275,
+        279,
+        "BODY_PART"
+      ]
+    ],
+    "source": "peteval_savsnet",
+    "language": "en"
+  },
+  {
+    "text": "please help, not sure if something poisonous bit my cat, not sure if urgent, pic attached it's 10pm here and although i'm in a city, no urgent cat clinics are open on weekends. i know this bc two weeks ago, i noticed a black spot on his white bridge of his nose and had tp take a long lunch break from work in order to call 25+ vet offices. NO ONE is accepting new patients (we are new to this city.)",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        52,
+        55,
+        "ANIMAL"
+      ],
+      [
+        143,
+        146,
+        "ANIMAL"
+      ],
+      [
+        257,
+        261,
+        "BODY_PART"
+      ]
+    ],
+    "source": "reddit_cats",
+    "language": "en"
+  },
+  {
+    "text": "[help] boxer/pit has been having seizures since the beginning of the year hello, my 10 year old pitbox started having seizures around january 25 of this year. she has had about 1 seizure each month that last less than a minute. in march, she had 2 within a few hours of each other and a few days ago she had one that lasted 2 minutes. they also usually occur between the 15-28 of the month, so we are",
+    "intent": 2,
+    "urgency": "CRITICAL",
+    "entities": [
+      [
+        179,
+        186,
+        "SYMPTOM"
+      ]
+    ],
+    "source": "reddit_dogs",
+    "language": "en"
+  }
+]
