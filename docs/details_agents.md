@@ -4,7 +4,6 @@
 > Cette documentation couvre l'architecture complète du système multi-agents DoctoAgent,
 > incluant le pipeline NLP, les 6 agents LLM, l'orchestrateur LangGraph, et tous les outils.
 
----
 
 ## 📐 Architecture Globale
 

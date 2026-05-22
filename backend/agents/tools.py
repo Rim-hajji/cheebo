@@ -894,6 +894,218 @@ def get_breed_specific_risks(breed: str) -> str:
 
 
 # ──────────────────────────────────────────────────────────────────
+# OUTIL NUTRITION
+# ──────────────────────────────────────────────────────────────────
+
+@tool
+def get_nutrition_advice(species: str, condition: str) -> str:
+    """
+    Retourne les recommandations nutritionnelles pour une espèce et une condition médicale.
+
+    species   : 'dog', 'cat', 'rabbit', 'bird', 'hamster', 'guinea_pig'
+    condition : 'vomissement', 'diarrhée', 'insuffisance_renale', 'diabete',
+                'obesite', 'hepatite', 'convalescence', 'intoxication', 'normal'
+    """
+    NUTRITION_DB = {
+        "dog": {
+            "vomissement": {
+                "phase_aigue": "Jeûne strict 12-24h (eau seule ou cubes de glace pour les petits chiens).",
+                "reprise_alimentaire": [
+                    "Riz blanc cuit + poulet bouilli sans sel ni épices (ratio 3:1)",
+                    "Petites portions toutes les 3-4h pendant 2-3 jours",
+                    "Réintroduction progressive de la nourriture habituelle sur 3-5 jours",
+                ],
+                "a_eviter": ["Graisses", "Produits laitiers", "Épices", "Croquettes non trempées en phase aiguë"],
+                "hydratation": "Eau fraîche disponible en permanence. Si refus, bouillon de poulet maison sans sel.",
+                "conseil_pro": "Vomissements > 3 fois/jour ou sang → jeûne + vétérinaire urgent.",
+            },
+            "diarrhée": {
+                "phase_aigue": "Réduire les portions de 50%, proposer de l'eau fréquemment.",
+                "reprise_alimentaire": [
+                    "Riz blanc + carotte cuite (pectine naturelle anti-diarrhéique)",
+                    "Yaourt nature sans sucre (probiotiques naturels)",
+                    "Repas fractionnés en petites quantités",
+                ],
+                "a_eviter": ["Graisses", "Fibres insolubles en excès", "Lactose", "Changements alimentaires brusques"],
+                "hydratation": "Critique — diarrhée = risque déshydratation. Eau + électrolytes si persistance.",
+                "conseil_pro": "Diarrhée > 48h, sang dans les selles ou chiot → vétérinaire.",
+            },
+            "insuffisance_renale": {
+                "principes": [
+                    "Réduction des protéines (qualité > quantité — viandes nobles uniquement)",
+                    "Restriction du phosphore (éviter abats, produits laitiers, légumineuses)",
+                    "Hydratation maximale (alimentation humide préférable aux croquettes sèches)",
+                    "Sodium réduit (pas d'aliments industriels riches en sel)",
+                ],
+                "aliments_recommandes": ["Riz blanc", "Blanc de poulet cuit", "Patate douce", "Courge"],
+                "a_eviter": ["Viandes rouges en excès", "Abats", "Fromage", "Aliments transformés"],
+                "conseil_pro": "Alimentation IRC prescrite et surveillée par vétérinaire. Croquettes thérapeutiques recommandées (Hill's k/d, Royal Canin Renal).",
+            },
+            "diabete": {
+                "principes": [
+                    "Repas à heures strictement fixes (régularité glycémique)",
+                    "Fibres solubles élevées (stabilisent la glycémie)",
+                    "Protéines de qualité modérées",
+                    "Glucides complexes à index glycémique bas",
+                ],
+                "aliments_recommandes": ["Haricots verts cuits", "Brocoli", "Poulet", "Sardines à l'eau"],
+                "a_eviter": ["Sucres simples", "Pain blanc", "Riz blanc en excès", "Friandises sucrées"],
+                "conseil_pro": "Alimentation strictement contrôlée par vétérinaire — insulinothérapie associée.",
+            },
+            "obesite": {
+                "principes": [
+                    "Réduction calorique progressive (ne jamais jeûner brutalement)",
+                    "Maintien des protéines (préserver la masse musculaire)",
+                    "Fibres élevées (sensation de satiété)",
+                    "2 repas/jour minimum",
+                ],
+                "aliments_recommandes": ["Légumes verts cuits (haricots, courgette)", "Poulet sans peau", "Croquettes vétérinaires 'light'"],
+                "a_eviter": ["Friandises", "Restes de table", "Aliments à haute densité énergétique"],
+                "conseil_pro": "Objectif : perte de 1-2% du poids/semaine sous contrôle vétérinaire.",
+            },
+            "convalescence": {
+                "principes": [
+                    "Alimentation hautement digestible et appétente",
+                    "4-6 petits repas/jour",
+                    "Protéines élevées pour la cicatrisation",
+                    "Servir légèrement tiédi pour stimuler l'appétit",
+                ],
+                "aliments_recommandes": ["Poulet bouilli", "Riz blanc", "Patée vétérinaire de convalescence (Hill's a/d, Royal Canin Recovery)", "Bouillon de viande maison sans sel"],
+                "a_eviter": ["Aliments difficiles à digérer", "Changements alimentaires brusques"],
+                "conseil_pro": "Patées de convalescence vétérinaires disponibles en clinique.",
+            },
+            "intoxication": {
+                "phase_aigue": "NE RIEN DONNER PAR VOIE ORALE sans instruction vétérinaire — ne pas faire vomir.",
+                "reprise_alimentaire": ["Reprise uniquement sur instruction vétérinaire après traitement"],
+                "a_eviter": ["Lait", "Eau salée", "Charbon actif sans prescription", "Faire vomir sans avis vétérinaire"],
+                "hydratation": "Réhydratation IV en clinique si nécessaire — ne pas forcer à boire.",
+                "conseil_pro": "Intoxication → urgence vétérinaire immédiate. Conserver l'emballage ou la plante responsable.",
+            },
+            "normal": {
+                "adulte": "Croquettes premium complètes adaptées à la taille et l'âge — 2 repas/jour.",
+                "portions": "Suivre les indications du fabricant selon le poids — peser les croquettes.",
+                "complements_utiles": ["Oméga-3 (huile de poisson) — pelage et articulations", "Probiotiques — santé digestive"],
+                "a_eviter": ["Restes de table réguliers", "Aliments humains assaisonnés", "Friandises > 10% des calories quotidiennes"],
+            },
+        },
+        "cat": {
+            "vomissement": {
+                "phase_aigue": "Retirer la nourriture 2-4h maximum — ne jamais jeûner > 24h (risque lipidose hépatique).",
+                "reprise_alimentaire": [
+                    "Poulet bouilli sans sel en très petites quantités",
+                    "Patée facile à digérer en portions réduites (4-6 fois/jour)",
+                    "Fontaine à eau pour encourager l'hydratation",
+                ],
+                "a_eviter": ["Jeûne > 24h", "Lait (intolérance lactose fréquente)", "Poissons trop gras"],
+                "conseil_pro": "Anorexie > 24-48h chez le chat → risque lipidose hépatique → urgence vétérinaire.",
+            },
+            "insuffisance_renale": {
+                "principes": [
+                    "Hydratation maximale (patée > croquettes — 75% d'eau)",
+                    "Protéines réduites mais de HAUTE qualité (carnivore strict)",
+                    "Phosphore très limité",
+                    "Supplémenter en potassium si hypokaliémie",
+                ],
+                "aliments_recommandes": ["Patées thérapeutiques rénales (Hill's k/d, Royal Canin Renal)", "Eau plate ou filtrée"],
+                "a_eviter": ["Croquettes sèches comme seule alimentation", "Phosphore élevé", "Poissons en excès"],
+                "conseil_pro": "Alimentation rénale obligatoire — ne jamais forcer un chat anorexique (lipidose).",
+            },
+            "diarrhée": {
+                "phase_aigue": "Patée facile à digérer en petites quantités. Eau fraîche disponible.",
+                "reprise_alimentaire": [
+                    "Poulet bouilli sans sel",
+                    "Riz blanc + poulet (ratio 3:1)",
+                    "Probiotiques vétérinaires",
+                ],
+                "a_eviter": ["Lait", "Poissons gras", "Changements alimentaires brusques"],
+                "conseil_pro": "Diarrhée > 24h chez le chaton ou chat âgé → vétérinaire.",
+            },
+            "normal": {
+                "adulte": "Alimentation mixte (patée + croquettes de qualité) — carnivore strict.",
+                "frequence": "Accès libre ou 2-3 repas/jour.",
+                "hydratation": "Fontaine à eau recommandée (les chats boivent plus si l'eau est en mouvement).",
+                "a_eviter": ["Régime végétarien", "Aliments humains assaisonnés", "Poissons > 3 fois/semaine (carence thiamine)"],
+            },
+        },
+        "rabbit": {
+            "normal": {
+                "base": "Foin illimité (80% de la ration) — indispensable au transit et à l'usure dentaire.",
+                "legumes_quotidiens": ["Feuilles de pissenlit", "Persil frais", "Coriandre", "Laitue romaine", "Basilic"],
+                "a_limiter": ["Carottes (riches en sucres — max 1-2 cm/jour)", "Fruits (récompense occasionnelle)"],
+                "a_eviter": ["Laitue iceberg", "Chou en excès", "Aliments traités", "Graines grasses", "Légumineuses"],
+                "pellets": "Max 1-2 cuillères à soupe/kg/jour — complément, pas base de l'alimentation.",
+            },
+            "diarrhée": {
+                "urgence": "La diarrhée chez le lapin est une urgence vétérinaire — peut être mortelle en quelques heures.",
+                "a_faire": ["Foin illimité (seul aliment autorisé)", "Eau fraîche disponible", "Vétérinaire dans les heures qui suivent"],
+                "a_eviter": ["Tout végétal frais pendant 48h minimum", "Croquettes", "Fruits"],
+            },
+            "stase_digestive": {
+                "urgence": "Urgence vitale — transit stoppé peut tuer le lapin en 12-24h.",
+                "a_faire": ["Foin uniquement", "Eau fraîche", "Activité physique douce (promenades en liberté)", "Vétérinaire urgent"],
+                "a_eviter": ["Tout changement alimentaire", "Végétaux riches en sucres", "Croquettes"],
+            },
+            "convalescence": {
+                "principes": ["Foin illimité en priorité", "Syringe feeding si anorexie (Critical Care Oxbow)", "Légumes frais appétents progressivement"],
+                "conseil_pro": "Anorexie > 12h chez le lapin → vétérinaire (risque stase digestive).",
+            },
+        },
+        "guinea_pig": {
+            "normal": {
+                "base": "Foin illimité (70-80%) + légumes riches en vitamine C quotidiens (cobaye ne synthétise pas la vit C).",
+                "sources_vit_c": ["Poivron rouge (source la plus riche)", "Persil", "Brocoli", "Fraise", "Kiwi"],
+                "portions": "1 tasse de légumes frais/jour.",
+                "a_eviter": ["Pomme de terre crue (solanine)", "Rhubarbe", "Oignon", "Avocat", "Chou en excès"],
+            },
+            "diarrhée": {
+                "urgence": "Urgence vétérinaire — déshydratation rapide chez le cobaye.",
+                "a_faire": ["Foin uniquement", "Eau fraîche", "Vétérinaire"],
+                "a_eviter": ["Fruits et légumes aqueux pendant 48h"],
+            },
+        },
+        "bird": {
+            "normal": {
+                "base": "Granulés vétérinaires (70%) + fruits et légumes frais (25%) + graines (5% — récompenses seulement).",
+                "aliments_surs": ["Pomme sans pépins", "Carotte", "Brocoli", "Épinards", "Mangue"],
+                "a_eviter": ["Avocat (fatal)", "Chocolat", "Sel", "Pépins de pomme (cyanure)", "Oignon, ail"],
+                "conseil": "Les régimes à base de graines uniquement causent des carences graves.",
+            },
+        },
+        "hamster": {
+            "normal": {
+                "base": "Mélange de graines de qualité + légumes frais (petit volume) + protéines animales occasionnelles.",
+                "legumes_surs": ["Carotte (petite quantité)", "Brocoli", "Concombre", "Poivron"],
+                "a_eviter": ["Agrumes (acidité)", "Oignon, ail", "Chocolat", "Amandes amères", "Tomate (feuilles)"],
+                "hydratation": "Biberon d'eau fraîche renouvelé quotidiennement.",
+            },
+        },
+    }
+
+    key_species = species.lower().strip()
+    key_condition = (
+        condition.lower().strip()
+        .replace(" ", "_")
+        .replace("é", "e").replace("è", "e").replace("ê", "e")
+        .replace("â", "a").replace("ô", "o").replace("û", "u")
+        .replace("ï", "i").replace("ç", "c")
+    )
+
+    species_data = NUTRITION_DB.get(key_species)
+    if not species_data:
+        return json.dumps({
+            "erreur": f"Espèce '{species}' non reconnue.",
+            "especes_disponibles": list(NUTRITION_DB.keys()),
+        }, ensure_ascii=False)
+
+    condition_data = species_data.get(key_condition) or species_data.get("normal", {})
+    return json.dumps({
+        "espece"          : species,
+        "condition"       : condition,
+        "recommandations" : condition_data,
+    }, ensure_ascii=False, indent=2)
+
+
+# ──────────────────────────────────────────────────────────────────
 # EXPORTS (groupes par agent)
 # ──────────────────────────────────────────────────────────────────
 
@@ -924,3 +1136,9 @@ EMERGENCY_TOOLS  = [
 RESPONSE_TOOLS = [
     find_partner_vets, get_first_aid_steps, get_toxic_foods, web_search_vet,
 ]
+
+# NutritionAgent : conseils nutritionnels + aliments toxiques + vulnérabilités espèce
+NUTRITION_TOOLS = [get_nutrition_advice, get_toxic_foods, get_species_vulnerabilities]
+
+# ReportAgent : aucun outil — synthèse pure depuis le contexte agrégé
+REPORT_TOOLS = []

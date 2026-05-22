@@ -13,39 +13,29 @@ Auteur : Rim Hajji — PFE 2026
 """
 
 import json
+import logging
 from typing import Any, Dict
 
-from backend.agents.base_llm_agent import BaseLLMAgent
+from backend.agents.base_llm_agent import BaseLLMAgent, _get_cheebo_singleton, CHEEBO_MODEL_PATH
+import os
+
+logger = logging.getLogger("doctoagent.synthesis_agent")
 
 
-SYSTEM_PROMPT = """Tu es Cheebo, l'assistant vétérinaire intelligent de la plateforme Cheebo.
+SYSTEM_PROMPT = """Tu es Cheebo, assistant vétérinaire IA de la plateforme Cheebo.
 
-Tu reçois l'analyse complète d'un pipeline multi-agents IA : symptômes normalisés,
-niveau d'urgence raffiné par LLM, diagnostic différentiel, plan de soin personnalisé,
-informations d'urgence, et conseils issus de cas similaires (RAG).
+Synthétise l'analyse pipeline en UNE réponse conversationnelle empathique dans la langue du champ "language".
+Ton : CRITICAL/HIGH=urgent et préoccupé | MODERATE=attentif | LOW=rassurant.
+Cite l'espèce, mentionne les conditions POSSIBLES sans les affirmer, intègre les soins naturellement.
 
-Ton rôle est de synthétiser tout cela en UNE SEULE réponse conversationnelle,
-intelligente, empathique et parfaitement adaptée à la situation.
+INTERDITS ABSOLUS — violation = réponse rejetée :
+1. Jamais de diagnostic définitif ("c'est X", "votre animal a X") — uniquement des pistes possibles.
+2. Jamais de numéro de téléphone, nom de clinique ou de vétérinaire dans le texte.
+   Les vétérinaires partenaires Cheebo sont affichés séparément en cartes cliquables vérifiées.
+3. Jamais "je suis heureux/ravi/content" face à des symptômes — empathie uniquement.
+4. Jamais de JSON, d'accolades {{ }}, de balises ou de formatage technique dans la réponse.
 
-RÈGLES OBLIGATOIRES :
-1. Réponds TOUJOURS dans la langue indiquée par le champ "language" (fr / en / ar)
-2. Intègre les informations naturellement — NE LES LISTE PAS mécaniquement
-3. Adapte le ton selon l'urgence :
-   - CRITICAL / HIGH  → direct, urgent, chaque seconde compte, vétérinaire immédiat
-   - MODERATE         → attentif, étapes concrètes, consulter sous 24-48h
-   - LOW              → rassurant, informatif, surveillance à domicile
-4. Cite l'animal par son espèce si disponible ("votre chat", "your dog", "كلبك")
-5. Mentionne les conditions possibles du diagnostic différentiel (sans les présenter comme certaines)
-6. Intègre les actions concrètes du plan de soin dans le texte naturellement
-7. Si emergency=true, mentionne les vétérinaires disponibles avec leur numéro
-8. Tu N'ES PAS un vétérinaire — ne pose jamais de diagnostic définitif
-9. Termine par une note de réassurance appropriée au niveau d'urgence
-
-FORMAT DE RÉPONSE — JSON pur, sans markdown autour :
-{
-  "response_text": "réponse complète en Markdown conversationnel (utilise **gras**, •, _italique_)",
-  "urgency_summary": "une phrase courte résumant l'urgence pour l'interface"
-}"""
+Réponds en TEXTE DIRECT avec Markdown (**, •, _italique_). Rien d'autre."""
 
 
 class SynthesisAgent(BaseLLMAgent):
@@ -56,7 +46,18 @@ class SynthesisAgent(BaseLLMAgent):
     """
     name          = "SynthesisAgent"
     system_prompt = SYSTEM_PROMPT
-    tools         = []  # Pas d'outils — synthèse pure
+    tools         = []
+
+    def __init__(self):
+        super().__init__()
+        # Force Cheebo pour la synthèse finale si le modèle est disponible
+        if os.path.exists(CHEEBO_MODEL_PATH):
+            try:
+                self.llm = _get_cheebo_singleton()
+                self.llm_with_tools = self.llm
+                logger.info("[SynthesisAgent] Cheebo forcé pour la synthèse finale")
+            except Exception as e:
+                logger.warning(f"[SynthesisAgent] Cheebo indisponible, fallback provider actuel : {e}")
 
     def _build_prompt(self, context: Dict[str, Any]) -> str:
         urgency     = context.get("urgency", {})
@@ -98,10 +99,7 @@ class SynthesisAgent(BaseLLMAgent):
             "care_summary"        : care.get("care_summary", ""),
             "is_emergency"        : emergency.get("is_emergency", False),
             "immediate_actions"   : emergency.get("immediate_actions", [])[:4],
-            "partner_vets"        : [
-                {"name": v.get("name", ""), "phone": v.get("phone", "")}
-                for v in emergency.get("partner_vets", [])[:2]
-            ],
+            # partner_vets intentionnellement absent — affichés en cartes séparées côté frontend
             "rag_advice"          : rag.get("advice") if rag.get("confidence", 0) > 0.5 else None,
             "rag_home_care"       : rag.get("home_care", [])[:2] if rag.get("confidence", 0) > 0.6 else [],
             "gemini_message"      : rec.get("message", ""),
@@ -112,19 +110,37 @@ class SynthesisAgent(BaseLLMAgent):
         }
 
         return (
-            f"Analyse complète du pipeline DoctoAgent pour une réponse en '{language}' :\n\n"
-            + json.dumps(synthesis_input, ensure_ascii=False, indent=2)
-            + "\n\nGénère une réponse conversationnelle intelligente. JSON uniquement."
+            f"Langue:'{language}'. Données du pipeline:\n"
+            + json.dumps(synthesis_input, ensure_ascii=False, separators=(',', ':'))
+            + "\nTexte direct uniquement — pas de JSON."
         )
 
     def _parse_output(self, raw: str, context: Dict[str, Any]) -> Dict[str, Any]:
-        parsed = self._extract_json(raw)
-        if parsed and "response_text" in parsed:
-            return parsed
-        # Si Gemini répond en texte libre sans JSON → l'utiliser directement
-        if isinstance(raw, str) and len(raw.strip()) > 30:
+        if not isinstance(raw, str) or not raw.strip():
+            return self._fallback(context)
+
+        text = raw.strip()
+
+        # Cas où le LLM ignore la consigne et retourne quand même du JSON
+        if text.startswith("{"):
+            try:
+                obj = json.loads(text)
+                if isinstance(obj, dict):
+                    for key in ("response_text", "responsetext", "response", "text", "content"):
+                        val = obj.get(key) or obj.get(key.upper())
+                        if isinstance(val, str) and len(val) > 30:
+                            text = val
+                            break
+            except Exception:
+                # JSON mal formé — extraire tout ce qui suit la première ":" string
+                import re
+                m = re.search(r'["\'](response[^"\']*|text|content)["\']\s*:\s*["\'](.+?)(?:["\'](?:\s*[,}]|$))', text, re.DOTALL | re.IGNORECASE)
+                if m:
+                    text = m.group(2)
+
+        if len(text) > 30:
             return {
-                "response_text"  : raw.strip(),
+                "response_text"  : text,
                 "urgency_summary": "",
             }
         return self._fallback(context)

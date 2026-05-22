@@ -43,33 +43,57 @@ class _HistoryScreenState extends State<HistoryScreen>
   }
 
   Future<void> _loadHistory() async {
-    final data = await ApiService.getHistory();
-    if (mounted) {
-      setState(() {
-        _history = data;
-        _filtered = data;
-        _isLoading = false;
-      });
-      _listController.forward();
+    try {
+      // Essayer de charger depuis MongoDB d'abord
+      final dbData = await ApiService.getAnalysisHistory(limit: 100);
+      
+      if (mounted) {
+        setState(() {
+          _history = dbData;
+          _applyFilterInternal(_filter);  // Appliquer le filtre courant
+          _isLoading = false;
+        });
+        _listController.forward();
+      }
+    } catch (e) {
+      debugPrint('Erreur chargement historique: $e');
+      // Fallback : charger depuis SharedPreferences si la BD n'est pas disponible
+      try {
+        final localData = await ApiService.getHistory();
+        if (mounted) {
+          setState(() {
+            _history = localData;
+            _applyFilterInternal(_filter);  // Appliquer le filtre courant
+            _isLoading = false;
+          });
+          _listController.forward();
+        }
+      } catch (_) {
+        if (mounted) {
+          setState(() => _isLoading = false);
+        }
+      }
+    }
+  }
+
+  void _applyFilterInternal(String f) {
+    if (f == 'TOUT') {
+      _filtered = _history;
+    } else if (f == 'URGENCE') {
+      _filtered = _history
+          .where((h) => ['CRITICAL', 'HIGH'].contains(h['urgency_label'] ?? 'LOW'))
+          .toList();
+    } else {
+      _filtered = _history
+          .where((h) => ['LOW', 'MODERATE'].contains(h['urgency_label'] ?? 'LOW'))
+          .toList();
     }
   }
 
   void _applyFilter(String f) {
     setState(() {
       _filter = f;
-      if (f == 'TOUT') {
-        _filtered = _history;
-      } else if (f == 'URGENCE') {
-        _filtered = _history
-            .where(
-                (h) => ['CRITICAL', 'HIGH'].contains(h['urgency_label']))
-            .toList();
-      } else {
-        _filtered = _history
-            .where(
-                (h) => ['LOW', 'MODERATE'].contains(h['urgency_label']))
-            .toList();
-      }
+      _applyFilterInternal(f);
     });
   }
 
@@ -357,7 +381,7 @@ class _HistoryScreenState extends State<HistoryScreen>
     }
 
     return ListView.builder(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      padding: const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 70),
       itemCount: _filtered.length,
       itemBuilder: (context, index) {
         final item = _filtered[index];
@@ -521,6 +545,15 @@ class _HistoryScreenState extends State<HistoryScreen>
         );
       },
     );
+  }
+
+  IconData _getUrgencyIcon(String level) {
+    return switch(level) {
+      'CRITICAL' => Icons.emergency_rounded,
+      'HIGH' => Icons.priority_high_rounded,
+      'MODERATE' => Icons.warning_amber_rounded,
+      _ => Icons.check_circle_rounded,
+    };
   }
 }
 

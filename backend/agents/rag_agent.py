@@ -1,24 +1,23 @@
 """
-Agent RAG avec Sentence-BERT — DoctoAgent
-==========================================
-Utilise les embeddings sémantiques pour une recherche
-multilingue dans la base de connaissances vétérinaire.
+Agent RAG avec ChromaDB — DoctoAgent
+======================================
+Recherche sémantique multilingue dans la base de connaissances
+vétérinaire via ChromaDB (vecteurs persistants, index HNSW).
 
-Modèle : paraphrase-multilingual-MiniLM-L12-v2
+Modèle d'embedding : paraphrase-multilingual-MiniLM-L12-v2
   - 50+ langues (EN, FR, AR inclus)
-  - Taille : 470 MB
-  - Recherche sémantique (pas juste mots-clés)
+  - Persistance sur disque — pas de recalcul au redémarrage
 
 Référence : Reimers & Gurevych (2019)
 """
 
 import json
 import logging
-import numpy as np
 from pathlib import Path
 from typing import List, Dict, Any, Optional
-from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
+
+import chromadb
+from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
 from pydantic import BaseModel
 
 logging.basicConfig(
@@ -30,9 +29,10 @@ logger = logging.getLogger(__name__)
 # ──────────────────────────────────────────────────────────────────
 # CONSTANTES
 # ──────────────────────────────────────────────────────────────────
-MODEL_NAME               = "paraphrase-multilingual-MiniLM-L12-v2"
-HIGH_CONFIDENCE_THRESHOLD = 0.45   # Match sémantique fort
-LOW_CONFIDENCE_THRESHOLD  = 0.45   # Match sémantique faible
+MODEL_NAME                = "paraphrase-multilingual-MiniLM-L12-v2"
+COLLECTION_NAME           = "vet_advice"
+HIGH_CONFIDENCE_THRESHOLD = 0.65   # Similarité cosinus forte
+LOW_CONFIDENCE_THRESHOLD  = 0.45   # Similarité cosinus faible (avertissement)
 
 LOW_CONFIDENCE_WARNING = (
     "\n\n⚠️ Note : Les conseils ci-dessus sont basés sur une correspondance "
@@ -98,84 +98,105 @@ class AdviceResult(BaseModel):
 
 
 # ──────────────────────────────────────────────────────────────────
-# AGENT RAG SÉMANTIQUE
+# AGENT RAG SÉMANTIQUE — ChromaDB
 # ──────────────────────────────────────────────────────────────────
 class SemanticRAGAgent:
     """
-    Agent RAG utilisant Sentence-BERT pour la recherche sémantique.
+    Agent RAG utilisant ChromaDB pour la recherche sémantique persistante.
+    Les embeddings sont calculés une seule fois et sauvegardés sur disque.
     Supporte nativement EN, FR, AR et 47 autres langues.
     """
 
     def __init__(self, kb_path: Optional[str] = None):
-        self.kb            = []
-        self.model         = None
-        self.kb_embeddings = None
-        self.kb_texts      = []
+        self.kb = []
 
-        # Chemin KB
+        base_dir = Path(__file__).resolve().parent.parent
         if kb_path is None:
-            base_dir = Path(__file__).resolve().parent.parent
-            kb_path  = base_dir / "data" / "vet_advice_kb.json"
+            kb_path = base_dir / "data" / "vet_advice_kb.json"
         self.kb_path = Path(kb_path)
 
+        self._chroma_dir = base_dir / "data" / "chroma_db"
+        self._ef = SentenceTransformerEmbeddingFunction(model_name=MODEL_NAME)
+        self._client, self._collection = self._init_chroma()
+
         self._load_kb()
-        self._load_model()
-        self._build_embeddings()
+        self._populate_collection()
+
+    def _init_chroma(self):
+        """Initialise ChromaDB — recrée le répertoire si la base est corrompue."""
+        import shutil
+        for attempt in range(2):
+            try:
+                self._chroma_dir.mkdir(parents=True, exist_ok=True)
+                client = chromadb.PersistentClient(path=str(self._chroma_dir))
+                collection = client.get_or_create_collection(
+                    name               = COLLECTION_NAME,
+                    embedding_function = self._ef,
+                    metadata           = {"hnsw:space": "cosine"},
+                )
+                collection.count()  # force DB access to detect corruption early
+                return client, collection
+            except Exception as exc:
+                if attempt == 0:
+                    logger.warning(f"[RAGAgent] ChromaDB corrompue — réinitialisation ({exc})")
+                    try:
+                        shutil.rmtree(str(self._chroma_dir), ignore_errors=True)
+                    except Exception:
+                        pass
+                else:
+                    logger.error(f"[RAGAgent] ChromaDB irrécupérable : {exc}")
+                    raise
 
     def _load_kb(self):
-        """Charge la base de connaissances."""
         try:
             with open(self.kb_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             self.kb = data.get('scenarios', [])
-            logger.info("KB chargée : " + str(len(self.kb)) + " scénarios")
+            logger.info(f"KB chargée : {len(self.kb)} scénarios")
         except Exception as e:
-            logger.error("Erreur chargement KB : " + str(e))
+            logger.error(f"Erreur chargement KB : {e}")
             self.kb = []
 
-    def _load_model(self):
-        """Charge le modèle Sentence-BERT multilingue."""
-        try:
-            logger.info("Chargement Sentence-BERT multilingue...")
-            self.model = SentenceTransformer(MODEL_NAME)
-            logger.info("Sentence-BERT chargé : " + MODEL_NAME)
-        except Exception as e:
-            logger.error("Erreur chargement Sentence-BERT : " + str(e))
-            self.model = None
-
-    def _build_embeddings(self):
-        """
-        Encode tous les scénarios de la KB en vecteurs sémantiques.
-        Ces vecteurs représentent le SENS de chaque scénario.
-        """
-        if not self.kb or self.model is None:
+    def _populate_collection(self):
+        """Peuple ChromaDB — repopule automatiquement si la KB a grandi."""
+        if not self.kb:
             return
+        current_count = self._collection.count()
+        if current_count >= len(self.kb):
+            logger.info(f"Collection ChromaDB à jour ({current_count} docs) — skip encodage.")
+            return
+        if current_count > 0:
+            logger.info(f"KB mise à jour ({current_count} → {len(self.kb)} docs) — repopulation ChromaDB.")
+            self._client.delete_collection(COLLECTION_NAME)
+            self._collection = self._client.get_or_create_collection(
+                name               = COLLECTION_NAME,
+                embedding_function = self._ef,
+                metadata           = {"hnsw:space": "cosine"},
+            )
 
-        # Construire un texte représentatif pour chaque scénario
-        # Combinaison de titre + symptômes + mots-clés
-        self.kb_texts = []
+        ids, documents, metadatas = [], [], []
         for scenario in self.kb:
-            text = " ".join([
+            doc = " ".join([
                 scenario.get('title_fr', ''),
                 scenario.get('title_en', ''),
                 " ".join(scenario.get('trigger_symptoms', [])),
                 " ".join(scenario.get('trigger_keywords', [])),
                 " ".join(scenario.get('species', [])),
-                scenario.get('advice', '')[:100],  # Premier 100 chars du conseil
+                scenario.get('advice', '')[:100],
             ])
-            self.kb_texts.append(text)
+            ids.append(scenario.get('id', f"sc_{len(ids)}"))
+            documents.append(doc)
+            metadatas.append({
+                "urgency"     : scenario.get('urgency', 'LOW'),
+                "species"     : ",".join(scenario.get('species', [])),
+                "is_emergency": str(scenario.get('urgency', 'LOW') in ['HIGH', 'CRITICAL']),
+            })
 
-        # Encoder en vecteurs sémantiques
-        logger.info("Encodage de " + str(len(self.kb_texts)) + " scénarios...")
-        self.kb_embeddings = self.model.encode(
-            self.kb_texts,
-            show_progress_bar = False,
-            convert_to_numpy  = True,
-        )
-        logger.info("Embeddings construits : shape " + str(self.kb_embeddings.shape))
+        logger.info(f"Encodage et indexation de {len(ids)} scénarios dans ChromaDB...")
+        self._collection.add(ids=ids, documents=documents, metadatas=metadatas)
+        logger.info("Collection ChromaDB peuplée et persistée sur disque.")
 
     def _build_fallback(self) -> AdviceResult:
-        """Retourne un résultat générique quand aucun match."""
         return AdviceResult(
             scenario_id     = FALLBACK['id'],
             title           = FALLBACK['title'],
@@ -193,41 +214,38 @@ class SemanticRAGAgent:
         )
 
     def search(self, query: str, species: Optional[str] = None,
-               top_k: int = 1) -> AdviceResult:
+               top_k: int = 5) -> AdviceResult:
         """
-        Cherche le scénario le plus pertinent sémantiquement.
+        Cherche le scénario le plus pertinent via ChromaDB (HNSW cosinus).
 
-        Args:
-            query   : Texte de la requête (n'importe quelle langue)
-            species : Espèce optionnelle pour filtrer
-            top_k   : Nombre de résultats (1 par défaut)
-
-        Returns:
-            AdviceResult le plus pertinent
+        ChromaDB retourne des distances cosinus [0, 2].
+        Similarité = 1 - distance  (1.0 = identique, 0.0 = opposé).
         """
-        if not self.kb or self.model is None or self.kb_embeddings is None:
-            logger.warning("RAG non disponible → fallback")
+        if self._collection.count() == 0:
+            logger.warning("Collection ChromaDB vide → fallback")
             return self._build_fallback()
 
-        # Encoder la requête avec Sentence-BERT
-        query_embedding = self.model.encode(
-            [query],
-            show_progress_bar = False,
-            convert_to_numpy  = True,
+        n = min(top_k, self._collection.count())
+        results = self._collection.query(
+            query_texts = [query],
+            n_results   = n,
+            include     = ["metadatas", "distances", "documents"],
         )
 
-        # Calculer similarité cosinus entre requête et tous les scénarios
-        similarities = cosine_similarity(query_embedding, self.kb_embeddings)[0]
+        ids       = results["ids"][0]
+        distances = results["distances"][0]
+        metas     = results["metadatas"][0]
 
-        # Trier par score décroissant
-        ranked_indices = np.argsort(similarities)[::-1]
+        # Construire un index rapide id→scenario
+        kb_index = {s.get('id', ''): s for s in self.kb}
 
-        # Trouver le meilleur match (avec filtre espèce si fourni)
-        for idx in ranked_indices:
-            score    = float(similarities[idx])
-            scenario = self.kb[idx]
+        for chroma_id, distance, meta in zip(ids, distances, metas):
+            similarity = 1.0 - distance   # cosinus : distance = 1 - sim
+            scenario   = kb_index.get(chroma_id)
+            if scenario is None:
+                continue
 
-            # Filtrer par espèce si fournie
+            # Filtre espèce
             if species:
                 species_list = [s.lower() for s in scenario.get('species', [])]
                 if species.lower() not in species_list:
@@ -239,25 +257,19 @@ class SemanticRAGAgent:
                 continue
 
             # Seuil minimum
-            if score < LOW_CONFIDENCE_THRESHOLD:
-                logger.info("Score trop faible : " + str(round(score, 2)) + " → fallback")
+            if similarity < LOW_CONFIDENCE_THRESHOLD:
+                logger.info(f"Score trop faible : {round(similarity, 2)} → fallback")
                 return self._build_fallback()
 
-            # Qualité du match
-            if score >= HIGH_CONFIDENCE_THRESHOLD:
-                match_quality = "high"
-                advice = scenario.get('advice', '')
-            else:
-                match_quality = "low"
-                advice = scenario.get('advice', '') + LOW_CONFIDENCE_WARNING
+            match_quality = "high" if similarity >= HIGH_CONFIDENCE_THRESHOLD else "low"
+            advice = scenario.get('advice', '')
+            if match_quality == "low":
+                advice += LOW_CONFIDENCE_WARNING
 
-            logger.info(
-                "Match trouvé : " + scenario.get('id', '') +
-                " (score=" + str(round(score, 2)) + ", qualité=" + match_quality + ")"
-            )
+            logger.info(f"Match ChromaDB : {chroma_id} (sim={round(similarity, 2)}, qualité={match_quality})")
 
             return AdviceResult(
-                scenario_id     = scenario.get('id', ''),
+                scenario_id     = chroma_id,
                 title           = scenario.get('title_fr', scenario.get('title_en', '')),
                 advice          = advice,
                 home_care       = scenario.get('home_care', []),
@@ -265,7 +277,7 @@ class SemanticRAGAgent:
                 when_to_consult = scenario.get('when_to_consult', ''),
                 preparation     = scenario.get('preparation_for_vet', []),
                 urgency         = scenario.get('urgency', 'LOW'),
-                confidence      = score,
+                confidence      = similarity,
                 source          = scenario.get('source', ''),
                 is_emergency    = scenario.get('urgency', 'LOW') in ['HIGH', 'CRITICAL'],
                 is_fallback     = False,
@@ -319,57 +331,14 @@ class SemanticRAGAgent:
 # ──────────────────────────────────────────────────────────────────
 # CONTEXT RAG AGENT (Agentic RAG)
 # ──────────────────────────────────────────────────────────────────
-_CONTEXT_RAG_PROMPT = """Tu es l'agent de récupération de connaissances de DoctoAgent.
+_CONTEXT_RAG_PROMPT = """Agent KB de DoctoAgent. Récupère les données vétérinaires pour les symptômes détectés.
 
-TON RÔLE :
-Récupérer TOUTES les données pertinentes de la base de connaissances vétérinaire
-pour les symptômes détectés. Les autres agents utiliseront ces données directement
-sans avoir besoin d'appeler la KB eux-mêmes.
+Par symptôme : get_possible_causes + get_symptom_info + get_red_flags + get_home_care + get_evolution_timeline
+Par espèce : get_species_vulnerabilities
+Si HIGH/CRITICAL : get_first_aid_steps | Si intoxication : get_toxic_foods
 
-PROCESSUS :
-1. Pour chaque symptôme normalisé, appelle :
-   - get_possible_causes(symptôme)     → causes fréquemment associées
-   - get_symptom_info(symptôme)        → infos complètes
-   - get_red_flags(symptôme)           → signes d'alarme
-   - get_home_care(symptôme)           → conseils maison
-   - get_evolution_timeline(symptôme)  → évolution attendue
-2. Pour l'espèce détectée, appelle :
-   - get_species_vulnerabilities(espèce) → vulnérabilités spécifiques
-3. Si urgence HIGH/CRITICAL, appelle :
-   - get_first_aid_steps(type_urgence) → premiers secours
-4. Si intoxication suspectée, appelle :
-   - get_toxic_foods(espèce)           → aliments toxiques
-
-OUTILS DISPONIBLES :
-- get_possible_causes(symptom_key)
-- get_symptom_info(symptom_key)
-- get_red_flags(symptom_key)
-- get_home_care(symptom_key)
-- get_evolution_timeline(symptom_key)
-- get_first_aid_steps(emergency_type)
-- get_species_vulnerabilities(species)
-- get_vaccination_schedule(species, age_months)
-- get_breed_specific_risks(breed)
-- get_toxic_foods(species)
-
-IMPORTANT : Réponds UNIQUEMENT avec un JSON valide :
-{
-  "symptoms_data": {
-    "<symptôme>": {
-      "causes": [...],
-      "red_flags": [...],
-      "home_care": [...],
-      "timeline": {},
-      "info": {}
-    }
-  },
-  "species_info": {
-    "vulnerabilities": [...],
-    "vaccination": {}
-  },
-  "first_aid": {},
-  "breed_risks": {}
-}"""
+JSON uniquement :
+{"symptoms_data":{"<sym>":{"causes":[],"red_flags":[],"home_care":[],"timeline":{},"info":{}}},"species_info":{"vulnerabilities":[],"vaccination":{}},"first_aid":{},"breed_risks":{}}"""
 
 
 class ContextRAGAgent:
@@ -389,21 +358,83 @@ class ContextRAGAgent:
             system_prompt = _CONTEXT_RAG_PROMPT
             tools         = RAG_CONTEXT_TOOLS
 
-            def _build_prompt(self, context):
-                import json
-                symptom_ctx = context.get("_symptom_context", {})
-                urgency_ctx = context.get("_urgency_context", {})
+            def _build_prompt(self, ctx):
+                symptom_ctx = ctx.get("_symptom_context", {})
+                urgency_ctx = ctx.get("_urgency_context", {})
                 return (
-                    f"Récupère les données KB pour :\n"
-                    f"- Animal    : {symptom_ctx.get('animal', 'inconnu')}\n"
-                    f"- Symptômes : {symptom_ctx.get('symptoms_normalized', [])}\n"
-                    f"- Urgence   : {urgency_ctx.get('refined_level', 'LOW')}\n"
-                    f"- Red flags : {urgency_ctx.get('red_flags_found', [])}\n\n"
-                    f"Appelle les outils KB pour CHAQUE symptôme, puis retourne le JSON."
+                    f"Symptômes:{symptom_ctx.get('symptoms_normalized',[])} | "
+                    f"Animal:{symptom_ctx.get('animal','?')} | "
+                    f"Urgence:{urgency_ctx.get('refined_level','LOW')}\n"
+                    f"Appelle les outils KB pour chaque symptôme puis retourne le JSON."
                 )
 
-            def _fallback(self, context, error=""):
-                return {"symptoms_data": {}, "species_info": {}, "first_aid": {}, "breed_risks": {}, "status": "fallback"}
+            def run(self, ctx):
+                # Reset du cache et des données collectées avant chaque run
+                self._call_cache:    set  = set()
+                self._collected: dict = {
+                    "symptoms_data": {},
+                    "species_info" : {},
+                    "first_aid"    : {},
+                    "toxic_foods"  : {},
+                    "breed_risks"  : {},
+                }
+                result = super().run(ctx)
+                # Si le JSON final est tronqué/invalide (fallback),
+                # utiliser les données collectées pendant l'exécution des outils
+                if (not result or result.get("status") == "fallback") \
+                        and self._collected.get("symptoms_data"):
+                    logger.info("[ContextRAGAgent] JSON tronqué → données tool calls utilisées")
+                    return self._collected
+                return result
+
+            def _execute_tool_calls(self, tool_calls: list):
+                from langchain_core.messages import ToolMessage
+                results = []
+                for tc in tool_calls:
+                    name = tc.get("name", "")
+                    args = tc.get("args", {})
+                    key  = (name, str(sorted(args.items())))
+                    if key in self._call_cache:
+                        results.append(ToolMessage(
+                            content=f"[CACHE] '{name}' déjà appelé.",
+                            tool_call_id=tc.get("id", name),
+                        ))
+                        continue
+                    self._call_cache.add(key)
+                    tool_results = super()._execute_tool_calls([tc])
+                    # Collecter le résultat dans la structure Python directement
+                    if tool_results:
+                        content = tool_results[0].content
+                        sym = args.get("symptom_key", "")
+                        sd  = self._collected["symptoms_data"]
+                        if name == "get_possible_causes" and sym:
+                            sd.setdefault(sym, {})["causes"]    = content
+                        elif name == "get_symptom_info" and sym:
+                            sd.setdefault(sym, {})["info"]      = content
+                        elif name == "get_red_flags" and sym:
+                            sd.setdefault(sym, {})["red_flags"] = content
+                        elif name == "get_home_care" and sym:
+                            sd.setdefault(sym, {})["home_care"] = content
+                        elif name == "get_evolution_timeline" and sym:
+                            sd.setdefault(sym, {})["timeline"]  = content
+                        elif name == "get_species_vulnerabilities":
+                            self._collected["species_info"]["vulnerabilities"] = content
+                        elif name == "get_first_aid_steps":
+                            etype = args.get("emergency_type", "general")
+                            self._collected["first_aid"][etype] = content
+                        elif name == "get_toxic_foods":
+                            self._collected["toxic_foods"] = content
+                    results.extend(tool_results)
+                return results
+
+            def _parse_output(self, raw, ctx):
+                # Préférer les données collectées (pas de risque de troncature)
+                if self._collected.get("symptoms_data"):
+                    return self._collected
+                return super()._parse_output(raw, ctx)
+
+            def _fallback(self, ctx, error=""):
+                return {"symptoms_data": {}, "species_info": {}, "first_aid": {}, "breed_risks": {}}
 
         self._agent = _Inner()
 
@@ -420,6 +451,8 @@ if __name__ == "__main__":
     print("=" * 65)
     print("TEST RAG SÉMANTIQUE — Sentence-BERT Multilingue")
     print("=" * 65)
+
+    rag_agent = SemanticRAGAgent()
 
     tests = [
         # Anglais standard

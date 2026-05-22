@@ -11,6 +11,7 @@ pydantic>=2.4.0
 # --- Database ---
 motor>=3.3.0
 pymongo>=4.6.0
+redis>=5.0.0
 
 # --- Multi-Agents (LangGraph) ---
 langgraph>=0.2.0
@@ -45,6 +46,10 @@ tqdm>=4.66.0
 requests>=2.31.0
 beautifulsoup4>=4.12.0
 python-dotenv>=1.0.0
+
+# --- Analyse vidéo ---
+imageio-ffmpeg>=0.4.9        # télécharge ffmpeg auto — extraction frames vidéo
+opencv-python-headless>=4.8.0  # fallback si ffmpeg indisponible
 
 # ============================================================
 # APRES l'installation, télécharger les modèles spaCy :

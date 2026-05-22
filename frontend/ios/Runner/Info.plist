@@ -66,5 +66,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Cheebo a besoin d'accès au microphone pour la reconnaissance vocale.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Cheebo a besoin d'accès à la reconnaissance vocale pour transcrire vos symptômes.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Cheebo utilise votre position pour afficher les vétérinaires partenaires proches de vous.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Cheebo a besoin d'accès à vos photos et vidéos pour analyser l'état de votre animal.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Cheebo a besoin d'accès à la caméra pour photographier votre animal.</string>
 </dict>
 </plist>

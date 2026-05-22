@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../services/api_service.dart';
 import 'chat_screen.dart';
 
@@ -179,7 +180,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                 slivers: [
                   _buildAppBar(),
                   SliverPadding(
-                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 32),
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 70),
                     sliver: SliverFadeTransition(
                       opacity: _fadeAnim,
                       sliver: SliverList(
@@ -255,7 +256,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        const Text('🐾', style: TextStyle(fontSize: 14)),
+                        const Icon(Icons.pets, size: 14, color: _kAccent),
                         const SizedBox(width: 4),
                         Text('$_total analyses',
                             style: const TextStyle(color: _kAccent, fontSize: 12, fontWeight: FontWeight.w600)),
@@ -333,17 +334,17 @@ class _DashboardScreenState extends State<DashboardScreen>
   Widget _buildStatsRow() {
     return Row(
       children: [
-        _statCard('📊', 'Analyses', '$_total', _kPrimary),
+        _statCard(Icons.bar_chart, 'Analyses', '$_total', _kPrimary),
         const SizedBox(width: 12),
-        _statCard('🔴', 'Dernière\nurgence', _lastUrgency,
+        _statCard(Icons.priority_high_rounded, 'Dernière\nurgence', _lastUrgency,
             _urgencyColors[_lastUrgency] ?? _kMuted),
         const SizedBox(width: 12),
-        _statCard('📈', 'Score\nmoyen', '${_avgScore.toStringAsFixed(1)}/10', _kAccent),
+        _statCard(Icons.trending_up, 'Score\nmoyen', '${_avgScore.toStringAsFixed(1)}/10', _kAccent),
       ],
     );
   }
 
-  Widget _statCard(String emoji, String label, String value, Color accent) {
+  Widget _statCard(IconData icon, String label, String value, Color accent) {
     return Expanded(
       child: ClipRRect(
         borderRadius: BorderRadius.circular(16),
@@ -359,7 +360,7 @@ class _DashboardScreenState extends State<DashboardScreen>
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(emoji, style: const TextStyle(fontSize: 20)),
+                Icon(icon, size: 20, color: accent),
                 const SizedBox(height: 8),
                 Text(value,
                     style: TextStyle(color: accent, fontSize: 16,
@@ -480,7 +481,7 @@ class _DashboardScreenState extends State<DashboardScreen>
   Widget _buildUrgencyBars() {
     final dist   = _dist;
     final labels = ['LOW', 'MODERATE', 'HIGH', 'CRITICAL'];
-    final emojis = ['🟢', '🟡', '🟠', '🔴'];
+    final icons  = [Icons.check_circle_rounded, Icons.warning_rounded, Icons.warning_amber_rounded, Icons.error_rounded];
     final names  = ['Bénin', 'Modéré', 'Élevé', 'Critique'];
     final maxVal = dist.values.fold<int>(1, (a, b) => b > a ? b : a);
 
@@ -501,7 +502,7 @@ class _DashboardScreenState extends State<DashboardScreen>
             padding: EdgeInsets.only(bottom: i < 3 ? 14 : 0),
             child: Row(
               children: [
-                Text(emojis[i], style: const TextStyle(fontSize: 14)),
+                Icon(icons[i], size: 16, color: _urgencyColors[labels[i]]),
                 const SizedBox(width: 8),
                 SizedBox(width: 52,
                     child: Text(names[i],
@@ -547,7 +548,7 @@ class _DashboardScreenState extends State<DashboardScreen>
               colors: [Color(0xFF7B56E2), Color(0xFF4B2DB0)],
               begin: Alignment.topLeft, end: Alignment.bottomRight,
             ),
-            emoji: '🐾',
+            icon: Icons.pets,
             title: 'Consulter Cheebo',
             subtitle: 'Décrire des symptômes',
             onTap: () => Navigator.push(
@@ -564,7 +565,7 @@ class _DashboardScreenState extends State<DashboardScreen>
               colors: [Color(0xFF7B1A1A), Color(0xFF4A0E0E)],
               begin: Alignment.topLeft, end: Alignment.bottomRight,
             ),
-            emoji: '🚨',
+            icon: Icons.emergency_rounded,
             title: 'Urgence',
             subtitle: 'Vétérinaires 24/7',
             onTap: () => _showEmergencyVets(context),
@@ -576,7 +577,7 @@ class _DashboardScreenState extends State<DashboardScreen>
 
   Widget _actionCard({
     required Gradient gradient,
-    required String emoji,
+    required IconData icon,
     required String title,
     required String subtitle,
     required VoidCallback onTap,
@@ -598,7 +599,7 @@ class _DashboardScreenState extends State<DashboardScreen>
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(emoji, style: const TextStyle(fontSize: 28)),
+            Icon(icon, size: 28, color: Colors.white),
             const SizedBox(height: 10),
             Text(title, style: const TextStyle(
                 color: Colors.white, fontSize: 13, fontWeight: FontWeight.w700)),
@@ -630,6 +631,26 @@ class _DashboardScreenState extends State<DashboardScreen>
         child: Text(msg, style: const TextStyle(color: _kMuted, fontSize: 13)),
       ),
     );
+  }
+
+  IconData _getUrgencyIcon(String level) {
+    return switch(level) {
+      'CRITICAL' => Icons.emergency_rounded,
+      'HIGH' => Icons.priority_high_rounded,
+      'MODERATE' => Icons.warning_amber_rounded,
+      _ => Icons.check_circle_rounded,
+    };
+  }
+
+  Future<void> _makePhoneCall(String phoneNumber) async {
+    final Uri launchUri = Uri(scheme: 'tel', path: phoneNumber);
+    if (await canLaunchUrl(launchUri)) {
+      await launchUrl(launchUri);
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Impossible de passer l\'appel')),
+      );
+    }
   }
 }
 
@@ -692,7 +713,7 @@ class _EmergencyVetsSheetState extends State<_EmergencyVetsSheet> {
                 child: _vetTileWidget(
                   v['name'] as String? ?? '',
                   v['phone'] as String? ?? '',
-                  isEmergency ? '🚨 ${specs.isEmpty ? "Urgences" : specs}' : specs,
+                  specs.isEmpty ? (isEmergency ? "Urgences" : '') : specs,
                   isEmergency,
                 ),
               );
@@ -714,6 +735,16 @@ class _EmergencyVetsSheetState extends State<_EmergencyVetsSheet> {
       ),
       child: Row(
         children: [
+          if (isEmergency)
+            Container(
+              margin: const EdgeInsets.only(right: 8),
+              padding: const EdgeInsets.all(4),
+              decoration: BoxDecoration(
+                color: Colors.red.withOpacity(0.15),
+                borderRadius: BorderRadius.circular(6),
+              ),
+              child: const Icon(Icons.emergency_rounded, size: 16, color: Colors.redAccent),
+            ),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -721,26 +752,45 @@ class _EmergencyVetsSheetState extends State<_EmergencyVetsSheet> {
                 Text(name, style: const TextStyle(
                     color: Colors.white, fontSize: 13, fontWeight: FontWeight.w600)),
                 const SizedBox(height: 3),
-                Text(tag, style: TextStyle(
-                    color: isEmergency ? Colors.redAccent : _kMuted, fontSize: 11),
-                    maxLines: 1, overflow: TextOverflow.ellipsis),
+                if (tag.isNotEmpty)
+                  Text(tag, style: TextStyle(
+                      color: isEmergency ? Colors.redAccent : _kMuted, fontSize: 11),
+                      maxLines: 1, overflow: TextOverflow.ellipsis),
               ],
             ),
           ),
           const SizedBox(width: 8),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
-            decoration: BoxDecoration(
-              gradient: const LinearGradient(colors: [_kAccent, _kPrimary]),
-              borderRadius: BorderRadius.circular(10),
+          GestureDetector(
+            onTap: () {
+              if (phone.isNotEmpty) {
+                _makePhoneCall(phone);
+              }
+            },
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(colors: [_kAccent, _kPrimary]),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Text(phone,
+                  style: const TextStyle(color: Colors.white, fontSize: 10,
+                      fontWeight: FontWeight.w700)),
             ),
-            child: Text(phone,
-                style: const TextStyle(color: Colors.white, fontSize: 10,
-                    fontWeight: FontWeight.w700)),
           ),
         ],
       ),
     );
+  }
+
+  Future<void> _makePhoneCall(String phoneNumber) async {
+    final Uri launchUri = Uri(scheme: 'tel', path: phoneNumber);
+    if (await canLaunchUrl(launchUri)) {
+      await launchUrl(launchUri);
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Impossible de passer l\'appel')),
+      );
+    }
   }
 }
 

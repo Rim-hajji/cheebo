@@ -81,6 +81,7 @@ class ValidationAgent(BaseLLMAgent):
     name          = "ValidationAgent"
     system_prompt = SYSTEM_PROMPT
     tools         = VALIDATION_TOOLS
+    use_llm       = False   # Groq hallucine "audit_quality" → toujours 400. Fallback KB direct.
 
     def _build_prompt(self, context: Dict[str, Any]) -> str:
         symptom_ctx    = context.get("_symptom_context", {})

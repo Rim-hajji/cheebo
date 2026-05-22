@@ -1,0 +1,487 @@
+\chapter{Sprint 1 : Développement du noyau intelligent}
+\section*{Introduction}
+
+Ce chapitre présente le premier sprint du projet DoctoAgent, consacré à la mise en place du noyau intelligent du système. Il aborde principalement le développement du module de traitement automatique du langage basé sur VetBERT, l'intégration des modèles d'intelligence artificielle ainsi que la conception du pipeline collaboratif composé de plusieurs agents intelligents. Une vue d'ensemble du backlog, des besoins fonctionnels, des diagrammes conceptuels et des interfaces réalisées est également présentée dans cette section.
+
+% ─────────────────────────────────────────────────────────────────
+\section{Description du sprint 1}
+% ─────────────────────────────────────────────────────────────────
+
+Ce premier sprint a pour objectif de poser les fondations techniques du projet à travers la configuration de l'environnement de développement et l'implémentation des principaux composants du système. L'accent a été mis sur le développement du module d'analyse des requêtes, la mise en place de l'interface de communication avec les modèles d'intelligence artificielle ainsi que l'intégration des mécanismes de recherche d'informations, de prédiction, de recommandation et de validation des réponses.
+
+\subsection{Backlog du sprint 1}
+
+Le Sprint 1 vise à construire le cœur intelligent de DoctoAgent en livrant les composants suivants :
+
+\begin{table}[H]
+\centering
+\caption{Backlog du Sprint 1}
+\label{tab:backlog-sprint1}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|c|p{6.5cm}|p{6.5cm}|c|}
+\hline
+\textbf{ID} & \textbf{User Story} & \textbf{Description de la tâche} & \textbf{Priorité} \\
+\hline
+1.1 & En tant que propriétaire d'animal, je veux disposer d'une interface de chat afin de décrire facilement les symptômes de mon animal. & Concevoir une interface de chat conviviale permettant la saisie des symptômes. & Must \\
+\hline
+1.2 & En tant que développeur, je veux entraîner un modèle de détection d'intention afin de classer les requêtes des utilisateurs. & Fine-tuner VetBERT sur la tâche d'Intent Classification (4 classes). & Must \\
+\hline
+1.3 & En tant que développeur, je veux extraire les entités importantes (symptômes, animal, durée) afin de structurer la requête utilisateur. & Fine-tuner VetBERT sur la tâche de NER (9 labels BIO) avec seqeval. & Must \\
+\hline
+1.4 & En tant que développeur, je veux classifier automatiquement le niveau d'urgence afin d'orienter le traitement du pipeline. & Fine-tuner VetBERT sur la tâche d'Urgency Detection (LOW / MODERATE / HIGH / CRITICAL). & Must \\
+\hline
+1.5 & En tant que développeur, je veux intégrer un agent RAG afin d'enrichir l'analyse avec des connaissances vétérinaires fiables. & Mettre en place ChromaDB, les embeddings et la recherche par similarité. & Must \\
+\hline
+1.6 & En tant que développeur, je veux prédire les causes potentielles à partir des symptômes et du contexte RAG. & Implémenter l'agent Prédiction basé sur un LLM avec prompt spécialisé. & Must \\
+\hline
+1.7 & En tant que développeur, je veux générer des recommandations adaptées au niveau d'urgence détecté. & Implémenter l'agent Recommandation avec logique différenciée LOW / MODERATE / HIGH / CRITICAL. & Must \\
+\hline
+1.8 & En tant que développeur, je veux valider la cohérence médicale et éthique des résultats avant diffusion. & Implémenter l'agent Validation avec règles de cohérence et vérification éthique. & Must \\
+\hline
+1.9 & En tant que développeur, je veux orchestrer la collaboration entre les agents afin de produire une réponse fiable et cohérente. & Développer l'orchestrateur central coordonnant le pipeline multi-agent via LangGraph. & Must \\
+\hline
+1.10 & En tant que développeur, je veux exposer le pipeline via une API REST afin de le rendre accessible à l'application mobile. & Développer l'API FastAPI avec les endpoints \texttt{/analyze} et validation Pydantic. & Must \\
+\hline
+\end{tabular}
+\end{table}
+
+% ─────────────────────────────────────────────────────────────────
+\section{Conception du Sprint 1}
+% ─────────────────────────────────────────────────────────────────
+
+La conception du Sprint 1 repose sur une architecture modulaire organisée autour de deux composants principaux : le module NLP basé sur VetBERT et le pipeline multi-agent orchestré par LangGraph.
+
+\subsection{Architecture générale du pipeline}
+
+Le pipeline DoctoAgent suit un flux de traitement linéaire en sept étapes. Chaque requête utilisateur est d'abord analysée par le module NLP, qui produit une représentation structurée (intention, niveau d'urgence, entités nommées). Cette représentation est ensuite transmise à l'orchestrateur qui active séquentiellement les agents spécialisés.
+
+\begin{table}[H]
+\centering
+\caption{Composants du pipeline DoctoAgent — Sprint 1}
+\label{tab:pipeline-components}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|c|l|p{9cm}|}
+\hline
+\textbf{Étape} & \textbf{Composant} & \textbf{Rôle} \\
+\hline
+1 & Module NLP (VetBERT)     & Détection d'intention, niveau d'urgence, extraction d'entités \\
+\hline
+2 & Agent RAG (Contexte)     & Récupération de connaissances vétérinaires depuis la base KB \\
+\hline
+3 & Agent Prédiction         & Identification des causes et associations médicales possibles \\
+\hline
+4 & Agent Validation         & Vérification de la cohérence médicale et éthique \\
+\hline
+5 & Agent RAG (Sémantique)   & Recherche sémantique dans ChromaDB par similarité cosinus \\
+\hline
+6 & Agent Recommandation     & Génération du plan de soins adapté au niveau d'urgence \\
+\hline
+7 & Agent Synthèse           & Formulation de la réponse conversationnelle finale \\
+\hline
+\end{tabular}
+\end{table}
+
+% ─────────────────────────────────────────────────────────────────
+\section{Réalisation du Sprint 1}
+% ─────────────────────────────────────────────────────────────────
+
+\subsection{Module NLP — VetBERT}
+
+\subsubsection{Dataset et préparation des données}
+
+La constitution d'un dataset de qualité représente une étape fondamentale dans le développement du module NLP de DoctoAgent. En l'absence de corpus vétérinaires annotés en langue française ou arabe, nous avons adopté une stratégie de collecte multi-sources en langue anglaise. Le dataset final comprend \textbf{1\,794 enregistrements} répartis en train/val/test (1\,435 / 179 / 180), couvrant à la fois les tâches d'Intent Classification, d'Urgency Detection et de NER.
+
+\paragraph{Sources de données}
+
+Le dataset a été constitué à partir de \textbf{quatre sources} complémentaires :
+
+\begin{itemize}
+    \item \textbf{PetEval / SAVSNET} (339 enregistrements, 18.9\%) : Dossiers cliniques vétérinaires réels issus du corpus SAVSNET (\textit{Small Animal Veterinary Surveillance Network}), filtrés et annotés pour les tâches du projet. Il s'agit de la source la plus riche en terminologie médicale vétérinaire authentique.
+
+    \item \textbf{Reddit} (1\,173 enregistrements, 65.4\%) : Publications extraites de \textbf{13 subreddits} vétérinaires via l'API Reddit (PRAW), en filtrant les messages décrivant des symptômes d'animaux de compagnie :
+    \begin{itemize}
+        \item \textit{r/AskVet, r/dogs, r/cats, r/dogadvice, r/catadvice}
+        \item \textit{r/pets, r/petadvice, r/puppy101, r/kittens}
+        \item \textit{r/rabbits, r/hamsters, r/guineapigs, r/parrots}
+    \end{itemize}
+
+    \item \textbf{Kaggle} (273 enregistrements, 15.2\%) : Trois datasets publics d'analyse médicale animale :
+    \begin{itemize}
+        \item \texttt{kaggle\_pet\_symptoms} — descriptions de symptômes courants
+        \item \texttt{kaggle\_animal\_condition} — états de santé d'animaux
+        \item \texttt{kaggle\_animal\_disease} — maladies et pathologies animales
+    \end{itemize}
+
+    \item \textbf{Annotation manuelle} (9 enregistrements, 0.5\%) : Exemples créés manuellement pour couvrir des cas spécifiques de la classe \texttt{ask\_advice} non représentés dans les autres sources.
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\caption{Répartition du dataset DoctoAgent par source}
+\label{tab:dataset-sources}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Source} & \textbf{Enregistrements} & \textbf{Proportion} \\
+\hline
+PetEval / SAVSNET         & 339   & 18.9\% \\
+Reddit (13 subreddits)    & 1\,173 & 65.4\% \\
+Kaggle (3 datasets)       & 273   & 15.2\% \\
+Annotation manuelle       & 9     &  0.5\% \\
+\hline
+\textbf{Total}            & \textbf{1\,794} & \textbf{100\%} \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Distribution des classes}
+
+\begin{table}[H]
+\centering
+\caption{Distribution des classes — Intent et Urgency (dataset complet)}
+\label{tab:class-dist}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c||l|c|c|}
+\hline
+\textbf{Intent} & \textbf{N} & \textbf{\%} &
+\textbf{Urgency} & \textbf{N} & \textbf{\%} \\
+\hline
+describe\_symptom & 600 & 33.4\% & LOW      & 775 & 43.2\% \\
+ask\_advice       & 600 & 33.4\% & CRITICAL & 499 & 27.8\% \\
+emergency         & 413 & 23.0\% & MODERATE & 276 & 15.4\% \\
+follow\_up        & 181 & 10.1\% & HIGH     & 244 & 13.6\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Augmentation de données}
+
+Pour corriger le déséquilibre de la classe \texttt{follow\_up} (10.1\% seulement), des techniques d'augmentation ont été appliquées \textbf{uniquement sur la portion d'entraînement} afin d'éviter toute fuite de données (\textit{data leakage}) : substitution de synonymes vétérinaires, paraphrase syntaxique et sur-échantillonnage des classes minoritaires. Le dataset augmenté comprend 2\,100 enregistrements équilibrés, utilisés exclusivement à l'entraînement.
+
+\paragraph{Prétraitement des données}
+
+Chaque enregistrement du dataset a été soumis aux étapes de prétraitement suivantes :
+
+\begin{enumerate}
+    \item \textbf{Nettoyage} : Suppression des caractères spéciaux, normalisation des espaces et correction partielle des fautes d'orthographe courantes.
+
+    \item \textbf{Tokenisation} : Découpage du texte en tokens via le tokenizer WordPiece de VetBERT (vocabulaire de 28\,996 tokens).
+
+    \item \textbf{Troncature} : Les séquences dépassant 64 tokens (urgency/intent) ou 128 tokens (NER) sont tronquées.
+
+    \item \textbf{Équilibrage} : Des poids de classes (\textit{class weights}) calculés via scikit-learn ont été appliqués pour corriger le déséquilibre entre classes.
+\end{enumerate}
+
+% ─────────────────────────────────────────────────────────────────
+\subsubsection{Architecture VetBERT}
+
+\paragraph{Présentation générale}
+
+VetBERT \cite{hur2020vetbert} est un modèle de langage contextuel basé sur l'architecture Transformer \cite{vaswani2017attention}, spécialisé dans le domaine vétérinaire. Il a été développé par Hur et al. (2020) dans le cadre du workshop BioNLP à ACL 2020.
+
+Contrairement aux modèles BERT généralistes entraînés sur Wikipedia et Books Corpus, VetBERT a été initialisé depuis Bio+Clinical BERT et pré-entraîné sur plus de 15 millions de dossiers cliniques vétérinaires issus du corpus VetCompass Australia, représentant plus de 1,3 milliard de tokens de texte médical vétérinaire.
+
+\paragraph{Architecture Transformer}
+
+VetBERT repose sur l'architecture BERT-Base qui comprend :
+
+\begin{table}[H]
+\centering
+\caption{Paramètres architecturaux de VetBERT}
+\label{tab:vetbert-arch}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Paramètre} & \textbf{Valeur} \\
+\hline
+Nombre de couches Transformer & 12 \\
+Nombre de têtes d'attention   & 12 \\
+Dimension cachée              & 768 \\
+Dimension intermédiaire (FFN) & 3 072 \\
+Taille du vocabulaire         & 28 996 tokens \\
+Nombre total de paramètres    & 110 millions \\
+Longueur maximale de séquence & 512 tokens \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Mécanisme d'auto-attention}
+
+Le composant fondamental de VetBERT est le mécanisme d'auto-attention (Self-Attention) \cite{vaswani2017attention}, qui permet à chaque token de la séquence d'accéder directement à tous les autres tokens :
+
+\begin{equation}
+\text{Attention}(Q, K, V) = \text{softmax}
+\left(\frac{QK^T}{\sqrt{d_k}}\right) V
+\end{equation}
+
+où $Q$, $K$ et $V$ représentent respectivement les matrices Query, Key et Value, et $d_k = 64$ la dimension par tête d'attention ($768/12$). Ce mécanisme permet à VetBERT de capturer les dépendances contextuelles bidirectionnelles : par exemple, associer le token \textit{blood} aux tokens \textit{dog} et \textit{vomiting} pour inférer une urgence médicale critique, même en l'absence de mots-clés explicites.
+
+\paragraph{Pré-entraînement}
+
+Lors du pré-entraînement, VetBERT utilise la tâche de Masked Language Model (MLM) : 15\% des tokens sont masqués aléatoirement et le modèle doit les prédire à partir du contexte bidirectionnel. Les hyperparamètres de pré-entraînement rapportés par Hur et al. sont les suivants : batch size = 32, longueur maximale = 512, learning rate = $5 \times 10^{-5}$, dup factor = 5, MLM probability = 0.15.
+
+% ─────────────────────────────────────────────────────────────────
+\subsubsection{Fine-tuning — Intent Classification}
+
+\paragraph{Définition de la tâche}
+
+La classification d'intention (Intent Classification) consiste à identifier le type de requête formulée par le propriétaire d'animal. Nous définissons quatre classes d'intention :
+
+\begin{itemize}
+    \item \textbf{describe\_symptom} : Description de symptômes observés chez l'animal.
+    \item \textbf{ask\_advice} : Demande de conseil ou d'information générale.
+    \item \textbf{emergency} : Situation d'urgence nécessitant une intervention immédiate.
+    \item \textbf{follow\_up} : Suivi d'une consultation ou évolution d'un symptôme.
+\end{itemize}
+
+\paragraph{Architecture de fine-tuning}
+
+Une couche de classification linéaire $\text{Linear}(768 \rightarrow 4)$ suivie d'une activation Softmax est ajoutée au-dessus du token [CLS] de VetBERT :
+
+\begin{equation}
+\hat{y} = \text{Softmax}(W \cdot h_{[\text{CLS}]} + b)
+\end{equation}
+
+où $h_{[\text{CLS}]} \in \mathbb{R}^{768}$ est la représentation contextuelle du token [CLS] et $W \in \mathbb{R}^{4 \times 768}$ la matrice de classification apprise pendant le fine-tuning.
+
+\paragraph{Hyperparamètres}
+
+\begin{table}[H]
+\centering
+\caption{Hyperparamètres — Intent Classification}
+\label{tab:intent-hp}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Hyperparamètre} & \textbf{Valeur} \\
+\hline
+Optimiseur            & AdamW \\
+Learning rate         & $2 \times 10^{-5}$ \\
+Batch size            & 16 \\
+Epochs                & 5 \\
+Max length            & 64 tokens \\
+Weight decay          & 0.01 \\
+Warmup steps          & 100 \\
+Métrique de sélection & F1 macro \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Résultats}
+
+\begin{table}[H]
+\centering
+\caption{Résultats — Intent Classification (jeu de test, n=180)}
+\label{tab:intent-results}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Classe} & \textbf{Précision} & \textbf{Rappel} &
+\textbf{F1} & \textbf{Support} \\
+\hline
+describe\_symptom & 0.97 & 0.48 & 0.65 & 66 \\
+ask\_advice       & 0.94 & 0.98 & 0.96 & 61 \\
+emergency         & 0.67 & 0.91 & 0.77 & 35 \\
+follow\_up        & 0.46 & 0.89 & 0.60 & 18 \\
+\hline
+\textbf{Macro avg} & \textbf{0.76} & \textbf{0.82} &
+\textbf{0.75} & 180 \\
+\hline
+\textbf{Accuracy} & \multicolumn{4}{c|}{\textbf{78\%}} \\
+\hline
+\end{tabular}
+\end{table}
+
+La classe \texttt{describe\_symptom} présente un rappel faible (0.48), principalement en raison de sa proximité sémantique avec \texttt{emergency} (15 cas confondus) et \texttt{follow\_up} (17 cas confondus). Ce phénomène est inhérent à la tâche : ces classes partagent des structures linguistiques similaires dans le domaine vétérinaire. En revanche, \texttt{ask\_advice} atteint un F1 de 0.96, confirmant la capacité du modèle à distinguer les demandes de conseil.
+
+% ─────────────────────────────────────────────────────────────────
+\subsubsection{Fine-tuning — Urgency Detection}
+
+\paragraph{Définition de la tâche}
+
+La détection d'urgence consiste à évaluer automatiquement le niveau de gravité médicale de la situation décrite. Quatre niveaux sont définis :
+
+\begin{itemize}
+    \item \textbf{LOW} : Situation bénigne, surveillance à domicile suffisante.
+    \item \textbf{MODERATE} : Consultation recommandée sous 24--48 heures.
+    \item \textbf{HIGH} : Consultation urgente requise dans les heures suivantes.
+    \item \textbf{CRITICAL} : Urgence vitale, consultation immédiate indispensable.
+\end{itemize}
+
+\paragraph{Architecture de fine-tuning}
+
+Identique à la tâche d'Intent Classification, une couche linéaire $\text{Linear}(768 \rightarrow 4)$ est ajoutée au-dessus du token [CLS] de VetBERT, produisant une distribution de probabilité sur les quatre niveaux d'urgence.
+
+\paragraph{Mécanismes de sécurité}
+
+En complément du modèle VetBERT, deux mécanismes de sécurité médicale ont été implémentés dans le pipeline :
+
+\begin{enumerate}
+    \item \textbf{Override critique} : Si un mot-clé d'urgence absolue est détecté (\textit{poison}, \textit{convulsion}, \textit{collapse}, \textit{bleeding}), le niveau d'urgence est automatiquement porté à CRITICAL, indépendamment de la prédiction du modèle.
+
+    \item \textbf{Anti-surcorrection} : Un mécanisme complémentaire empêche les surcorrections abusives en vérifiant la cohérence entre les symptômes détectés et le niveau d'urgence attribué.
+\end{enumerate}
+
+\paragraph{Hyperparamètres}
+
+\begin{table}[H]
+\centering
+\caption{Hyperparamètres — Urgency Detection}
+\label{tab:urgency-hp}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Hyperparamètre} & \textbf{Valeur} \\
+\hline
+Optimiseur            & AdamW \\
+Learning rate         & $2 \times 10^{-5}$ \\
+Batch size            & 16 \\
+Epochs                & 5 \\
+Max length            & 64 tokens \\
+Weight decay          & 0.01 \\
+Warmup steps          & 100 \\
+Métrique de sélection & F1 macro \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Résultats}
+
+\begin{table}[H]
+\centering
+\caption{Résultats — Urgency Detection (jeu de test, n=180)}
+\label{tab:urgency-results}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Classe} & \textbf{Précision} & \textbf{Rappel} &
+\textbf{F1} & \textbf{Support} \\
+\hline
+LOW      & 0.95 & 0.89 & 0.92 & 79 \\
+MODERATE & 0.78 & 0.85 & 0.81 & 33 \\
+HIGH     & 0.87 & 0.87 & 0.87 & 23 \\
+CRITICAL & 0.91 & 0.96 & 0.93 & 45 \\
+\hline
+\textbf{Macro avg} & \textbf{0.88} & \textbf{0.89} &
+\textbf{0.88} & 180 \\
+\hline
+\textbf{Accuracy} & \multicolumn{4}{c|}{\textbf{89\%}} \\
+\hline
+\end{tabular}
+\end{table}
+
+Un résultat particulièrement important pour la sécurité médicale est l'absence de cas CRITICAL classés LOW dans la matrice de confusion, garantissant qu'aucune urgence vitale n'est sous-estimée par le système.
+
+% ─────────────────────────────────────────────────────────────────
+\subsubsection{Fine-tuning — NER}
+
+\paragraph{Définition de la tâche}
+
+La Reconnaissance d'Entités Nommées (NER) consiste à identifier et classifier les entités médicales vétérinaires dans le texte. Nous utilisons le format BIO (Beginning-Inside-Outside) avec 9 labels :
+
+\begin{table}[H]
+\centering
+\caption{Labels BIO — NER DoctoAgent}
+\label{tab:ner-labels}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Label} & \textbf{Entité} & \textbf{Exemple} \\
+\hline
+B-ANIMAL     & Début d'un animal           & \textit{dog} \\
+I-ANIMAL     & Suite d'un animal           & \textit{retriever} \\
+B-SYMPTOM    & Début d'un symptôme         & \textit{vomiting} \\
+I-SYMPTOM    & Suite d'un symptôme         & \textit{blood} \\
+B-BODY\_PART & Début d'une partie du corps & \textit{paw} \\
+I-BODY\_PART & Suite d'une partie du corps & \textit{left} \\
+B-DUREE      & Début d'une durée           & \textit{since} \\
+I-DUREE      & Suite d'une durée           & \textit{morning} \\
+O            & Hors entité                 & \textit{is, my, a} \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Architecture de fine-tuning}
+
+Pour la tâche de classification de tokens, une couche linéaire $\text{Linear}(768 \rightarrow 9)$ est appliquée à chaque représentation contextuelle de token produite par VetBERT, contrairement aux tâches de classification de séquence qui n'utilisent que le token [CLS].
+
+\paragraph{Gestion du déséquilibre de classes}
+
+Le label O représente environ 92\% des tokens, créant un déséquilibre important. Pour y remédier, des poids de classes différenciés ont été appliqués lors de l'entraînement :
+
+\begin{equation}
+\mathcal{L} = -\sum_{i} w_i \cdot y_i \cdot \log(\hat{y}_i)
+\end{equation}
+
+avec $w_O = 0.1$, $w_{B\text{-}*} = 3.0$ et $w_{I\text{-}*} = 2.0$.
+
+\paragraph{Hyperparamètres}
+
+\begin{table}[H]
+\centering
+\caption{Hyperparamètres — NER Token Classification}
+\label{tab:ner-hp}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Hyperparamètre} & \textbf{Valeur} \\
+\hline
+Optimiseur            & AdamW \\
+Learning rate         & $2 \times 10^{-5}$ \\
+Batch size            & 16 \\
+Epochs                & 10 \\
+Max length            & 128 tokens \\
+Weight decay          & 0.01 \\
+Format des labels     & BIO (9 classes) \\
+Métrique de sélection & F1 seqeval (entités) \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Résultats}
+
+\begin{table}[H]
+\centering
+\caption{Résultats NER — VetBERT Token Classification (240 séquences)}
+\label{tab:ner-results}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Entité} & \textbf{Précision} &
+\textbf{Rappel} & \textbf{F1} & \textbf{Support} \\
+\hline
+ANIMAL     & 0.93 & 0.97 & 0.95 & 186 \\
+SYMPTOM    & 0.80 & 0.95 & 0.87 & 359 \\
+BODY\_PART & 0.75 & 0.98 & 0.85 & 226 \\
+DUREE      & 0.41 & 0.96 & 0.58 &  24 \\
+\hline
+\textbf{Micro avg} & \textbf{0.79} & \textbf{0.96} & \textbf{0.87} & 795 \\
+\hline
+\textbf{Macro avg} & \textbf{0.72} & \textbf{0.97} & \textbf{0.81} & 795 \\
+\hline
+\end{tabular}
+\end{table}
+
+Les entités ANIMAL (F1=0.95) et SYMPTOM (F1=0.87) présentent les meilleures performances, ce qui est primordial pour le pipeline DoctoAgent. La classe DUREE affiche une précision faible (0.41) due à une sur-détection de tokens neutres, phénomène inhérent aux modèles BIO sur des classes peu représentées (24 entités dans le jeu de test). Ce comportement reste acceptable dans le contexte du pipeline, les entités extraites étant ensuite recontextualisées par le module de raisonnement LLM.
+
+% ─────────────────────────────────────────────────────────────────
+\subsubsection{Évaluation globale des modèles}
+
+\begin{table}[H]
+\centering
+\caption{Récapitulatif des performances — Sprint 1}
+\label{tab:eval-global}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|l|c|c|}
+\hline
+\textbf{Modèle} & \textbf{Architecture} &
+\textbf{F1 Macro} & \textbf{Accuracy} \\
+\hline
+Intent Classification & VetBERT fine-tuné           & 0.75 & 78\% \\
+Urgency Detection     & VetBERT fine-tuné           & 0.88 & 89\% \\
+NER                   & VetBERT Token Classification & 0.81 & ---  \\
+\hline
+\end{tabular}
+\end{table}
+
+Les résultats obtenus sont cohérents avec l'état de l'art pour des modèles fine-tunés sur des datasets de taille limitée (1\,794 enregistrements) sans GPU dédié. La performance de l'Urgency Detection (F1=0.88, Accuracy=89\%) est particulièrement satisfaisante pour un contexte médical, où la détection des urgences critiques est prioritaire. Le NER atteint un Micro F1 de 0.87, reflétant une extraction fiable pour les entités ANIMAL et SYMPTOM, les deux catégories les plus critiques pour le raisonnement clinique.

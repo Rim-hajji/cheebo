@@ -17,7 +17,7 @@ class SettingsScreen extends StatelessWidget {
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: ListView(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 70),
         children: [
           _buildSection('Application', [
             _buildTile(Icons.notifications_rounded, 'Notifications', 'Gérer les alertes'),

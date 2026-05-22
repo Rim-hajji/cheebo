@@ -52,7 +52,7 @@ class _EmergencyScreenState extends State<EmergencyScreen> with SingleTickerProv
       backgroundColor: const Color(0xFF0E0B18),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(24),
+          padding: const EdgeInsets.only(left: 24, right: 24, top: 24, bottom: 70),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [

@@ -1,9 +1,13 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'screens/chat_screen.dart';
 import 'screens/dashboard_screen.dart';
 import 'screens/history_screen.dart';
-import 'screens/profile_screen.dart';
+import 'screens/medications_screen.dart';
+import 'screens/articles_screen.dart';
+import 'services/notification_ws_service.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -67,7 +71,47 @@ class CheeboMainShell extends StatefulWidget {
 class _CheeboMainShellState extends State<CheeboMainShell> {
   int _currentIndex = 0;
 
+  // ── Notifications WebSocket ─────────────────────────────────────
+  final NotificationWsService _notifService = NotificationWsService();
+  StreamSubscription<Map<String, dynamic>>? _notifSub;
+  Map<String, dynamic>? _activeNotif;
+  Timer? _notifTimer;
+
+  @override
+  void initState() {
+    super.initState();
+    _notifService.connect();
+    _notifSub = _notifService.stream.listen(_handleNotification);
+  }
+
+  @override
+  void dispose() {
+    _notifSub?.cancel();
+    _notifService.dispose();
+    _notifTimer?.cancel();
+    super.dispose();
+  }
+
+  void _handleNotification(Map<String, dynamic> msg) {
+    if (!mounted) return;
+    final type = msg['type'] as String?;
+    if (type == 'medication_reminder' || type == 'emergency_alert') {
+      setState(() => _activeNotif = msg);
+      _notifTimer?.cancel();
+      // Fermeture automatique après 6 secondes
+      _notifTimer = Timer(const Duration(seconds: 6), () {
+        if (mounted) setState(() => _activeNotif = null);
+      });
+    }
+  }
+
+  void _dismissNotif() {
+    _notifTimer?.cancel();
+    setState(() => _activeNotif = null);
+  }
+
   void goToChat() => setState(() => _currentIndex = 1);
+  void goToMedications() => setState(() => _currentIndex = 3);
 
   @override
   Widget build(BuildContext context) {
@@ -75,11 +119,28 @@ class _CheeboMainShellState extends State<CheeboMainShell> {
       const DashboardScreen(),
       const ChatScreen(),
       const HistoryScreen(),
-      const ProfileScreen(),
+      const MedicationsScreen(),
+      const ArticlesScreen(),
     ];
 
     return Scaffold(
-      body: IndexedStack(index: _currentIndex, children: screens),
+      body: Stack(
+        children: [
+          IndexedStack(index: _currentIndex, children: screens),
+          // ── Bannière notification ───────────────────────────────
+          if (_activeNotif != null)
+            _NotificationBanner(
+              notification: _activeNotif!,
+              onDismiss: _dismissNotif,
+              onTap: () {
+                _dismissNotif();
+                final type = _activeNotif?['type'];
+                if (type == 'emergency_alert') goToChat();
+                if (type == 'medication_reminder') goToMedications();
+              },
+            ),
+        ],
+      ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           color: const Color(0xFF1A1232),
@@ -115,11 +176,121 @@ class _CheeboMainShellState extends State<CheeboMainShell> {
               label: 'Historique',
             ),
             BottomNavigationBarItem(
-              icon: Padding(padding: EdgeInsets.only(bottom: 3), child: Icon(Icons.pets_rounded, size: 22)),
-              activeIcon: Padding(padding: EdgeInsets.only(bottom: 3), child: Icon(Icons.pets_rounded, size: 24)),
-              label: 'Mon Animal',
+              icon: Padding(padding: EdgeInsets.only(bottom: 3), child: Icon(Icons.medication_rounded, size: 22)),
+              activeIcon: Padding(padding: EdgeInsets.only(bottom: 3), child: Icon(Icons.medication_rounded, size: 24)),
+              label: 'Pilulier',
+            ),
+            BottomNavigationBarItem(
+              icon: Padding(padding: EdgeInsets.only(bottom: 3), child: Icon(Icons.article_rounded, size: 22)),
+              activeIcon: Padding(padding: EdgeInsets.only(bottom: 3), child: Icon(Icons.article_rounded, size: 24)),
+              label: 'Articles',
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+// ── Bannière notification ─────────────────────────────────────────────
+
+class _NotificationBanner extends StatefulWidget {
+  final Map<String, dynamic> notification;
+  final VoidCallback onDismiss;
+  final VoidCallback onTap;
+
+  const _NotificationBanner({
+    required this.notification,
+    required this.onDismiss,
+    required this.onTap,
+  });
+
+  @override
+  State<_NotificationBanner> createState() => _NotificationBannerState();
+}
+
+class _NotificationBannerState extends State<_NotificationBanner>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _anim;
+  late Animation<Offset> _slide;
+
+  @override
+  void initState() {
+    super.initState();
+    _anim = AnimationController(vsync: this, duration: const Duration(milliseconds: 350));
+    _slide = Tween<Offset>(begin: const Offset(0, -1), end: Offset.zero)
+        .animate(CurvedAnimation(parent: _anim, curve: Curves.easeOutCubic));
+    _anim.forward();
+  }
+
+  @override
+  void dispose() {
+    _anim.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final type      = widget.notification['type'] as String? ?? '';
+    final isEmerg   = type == 'emergency_alert';
+    final message   = widget.notification['message'] as String? ?? '';
+    final topPad    = MediaQuery.of(context).padding.top;
+
+    final Color bgColor     = isEmerg ? const Color(0xFF2A1000) : const Color(0xFF1A1232);
+    final Color borderColor = isEmerg ? const Color(0xFFFF9500) : const Color(0xFF7B56E2);
+    final Color iconBg      = isEmerg ? const Color(0xFFFF9500) : const Color(0xFF7B56E2);
+    final IconData icon     = isEmerg ? Icons.emergency_rounded : Icons.medication_rounded;
+
+    return Positioned(
+      top: 0,
+      left: 0,
+      right: 0,
+      child: SlideTransition(
+        position: _slide,
+        child: GestureDetector(
+          onTap: widget.onTap,
+          child: Container(
+            margin: EdgeInsets.fromLTRB(12, topPad + 8, 12, 0),
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+            decoration: BoxDecoration(
+              color: bgColor,
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: borderColor, width: 1.5),
+              boxShadow: [
+                BoxShadow(
+                  color: borderColor.withOpacity(0.25),
+                  blurRadius: 16,
+                  offset: const Offset(0, 4),
+                ),
+              ],
+            ),
+            child: Row(
+              children: [
+                Container(
+                  width: 36, height: 36,
+                  decoration: BoxDecoration(shape: BoxShape.circle, color: iconBg),
+                  child: Icon(icon, color: Colors.white, size: 18),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    message,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                      height: 1.4,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                GestureDetector(
+                  onTap: widget.onDismiss,
+                  child: const Icon(Icons.close_rounded, color: Color(0xFF8B7AB0), size: 18),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );

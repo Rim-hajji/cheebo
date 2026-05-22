@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Command py -ErrorAction SilentlyContinue)",
+      "Bash(cat \"/c/Users/nesrin/AppData/Local/Temp/claude/c--Users-nesrin-Desktop-module-docto-agent/99955365-3dea-40d1-9e48-73457d69e006/tasks/b0w81au62.output\" 2>/dev/null)",
+      "Read(//c/Users/nesrin/AppData/Local/Temp/claude/c--Users-nesrin-Desktop-module-docto-agent/99955365-3dea-40d1-9e48-73457d69e006/tasks/**)"
+    ]
+  }
+}

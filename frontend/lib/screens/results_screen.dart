@@ -31,7 +31,7 @@ class ResultsScreen extends StatelessWidget {
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.only(left: 20, right: 20, top: 20, bottom: 70),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -284,5 +284,14 @@ class ResultsScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  IconData _getUrgencyIcon(String level) {
+    return switch(level) {
+      'CRITICAL' => Icons.emergency_rounded,
+      'HIGH' => Icons.priority_high_rounded,
+      'MODERATE' => Icons.warning_amber_rounded,
+      _ => Icons.check_circle_rounded,
+    };
   }
 }

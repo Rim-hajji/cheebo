@@ -18,76 +18,19 @@ from typing import Any, Dict
 from backend.agents.base_llm_agent import BaseLLMAgent
 from backend.agents.tools import PREDICTION_TOOLS  # inclut web_search_vet + search_wikipedia_vet
 
-SYSTEM_PROMPT = """Tu es un assistant d'orientation vétérinaire pour DoctoAgent.
+SYSTEM_PROMPT = """Agent d'orientation vétérinaire DoctoAgent. Conseils préventifs uniquement — jamais de diagnostic.
 
-⚠️ RÈGLE ABSOLUE :
-DoctoAgent ne pose PAS de diagnostic médical.
-Tu fournis des CONSEILS PRÉVENTIFS et tu ORIENTES vers le vétérinaire.
-Un vétérinaire seul peut poser un diagnostic après examen clinique.
+Utilise KB_CONTEXT directement. Appelle web_search_vet/search_wikipedia_vet seulement si un symptôme est absent du KB.
+Délai selon urgence : LOW=2-3j | MODERATE=24-48h | HIGH=aujourd'hui | CRITICAL=immédiat
 
-TON RÔLE :
-Analyser les symptômes décrits et identifier les conditions auxquelles
-ils sont fréquemment associés — uniquement pour aider le propriétaire à :
-  1. Comprendre la gravité potentielle de la situation
-  2. Savoir QUAND consulter un vétérinaire (maintenant, sous 24h, sous 48h…)
-  3. Savoir QUOI surveiller à domicile en attendant
-
-PROCESSUS À SUIVRE :
-1. Les données KB sont DÉJÀ disponibles dans le champ KB_CONTEXT du prompt — utilise-les directement
-2. Si un symptôme est absent du KB_CONTEXT :
-   → appelle web_search_vet("symptôme espèce signes associés")
-   → ou appelle search_wikipedia_vet(condition_possible)
-3. Croise les associations pour identifier la préoccupation principale
-4. Détermine un délai de surveillance avant consultation vétérinaire
-
-FORMULATIONS CORRECTES (à utiliser) :
-✅ "Ces symptômes sont fréquemment associés à..."
-✅ "Si ces signes persistent plus de [X], consultez un vétérinaire"
-✅ "À surveiller : si vous observez [signe], consultez immédiatement"
-✅ "Ces signes méritent l'attention d'un vétérinaire pour confirmer"
-
-FORMULATIONS INTERDITES (à ne jamais utiliser) :
-❌ "Votre animal a [maladie]"
-❌ "Le diagnostic est..."
-❌ "Il souffre de..."
-❌ "C'est certainement..."
-
-DÉLAIS DE SURVEILLANCE à proposer selon l'urgence :
-- LOW      : surveiller 2-3 jours, consulter si ça persiste
-- MODERATE : consulter sous 24-48h si pas d'amélioration
-- HIGH     : consultation aujourd'hui
-- CRITICAL : urgence immédiate, ne pas attendre
-
-OUTILS DISPONIBLES (uniquement pour les symptômes absents du KB_CONTEXT) :
-- web_search_vet(query)        : recherche DuckDuckGo vétérinaire
-- search_wikipedia_vet(topic)  : recherche Wikipedia vétérinaire
-
-IMPORTANT : Réponds UNIQUEMENT avec un objet JSON valide :
-{
-  "possible_associations": [
-    {
-      "condition": "nom de la condition fréquemment associée",
-      "frequency": "HIGH | MEDIUM | LOW",
-      "source_symptoms": ["symptôme1", "symptôme2"],
-      "requires_vet": true/false,
-      "urgency_hint": "LOW | MODERATE | HIGH | CRITICAL",
-      "watch_for": "signe qui doit déclencher une consultation immédiate"
-    }
-  ],
-  "main_concern": "préoccupation principale à surveiller",
-  "watch_delay": "délai de surveillance avant consultation (ex: 48h, immédiat)",
-  "symptoms_analyzed": ["symptôme1", ...],
-  "kb_coverage": 0.0-1.0,
-  "vet_consultation_needed": true/false,
-  "confidence": 0.0-1.0,
-  "orientation_summary": "conseil de surveillance en 1-2 phrases, langage propriétaire"
-}"""
+JSON de sortie uniquement :
+{"possible_associations":[{"condition":"","frequency":"HIGH|MEDIUM|LOW","source_symptoms":[],"requires_vet":true,"urgency_hint":"LOW|MODERATE|HIGH|CRITICAL","watch_for":""}],"main_concern":"","watch_delay":"","symptoms_analyzed":[],"kb_coverage":0.0,"vet_consultation_needed":true,"confidence":0.0,"orientation_summary":""}"""
 
 
 class PredictionAgent(BaseLLMAgent):
     name          = "PredictionAgent"
     system_prompt = SYSTEM_PROMPT
-    tools         = PREDICTION_TOOLS
+    tools         = []       # KB déjà dans _kb_context — aucun outil nécessaire
 
     def _build_prompt(self, context: Dict[str, Any]) -> str:
         symptom_ctx = context.get("_symptom_context", {})
@@ -95,22 +38,43 @@ class PredictionAgent(BaseLLMAgent):
         kb_context  = context.get("_kb_context", {})
         normalized  = symptom_ctx.get("symptoms_normalized", [])
 
-        return f"""Analyse les symptômes suivants et oriente le propriétaire :
+        # Extraire uniquement causes + red_flags par symptôme (évite le dump complet)
+        # _collected stocke les retours d'outils en strings JSON → parser avant slicing
+        def _kb_list(val, n):
+            if isinstance(val, list):
+                return val[:n]
+            if isinstance(val, str) and not val.startswith(("Aucun", "Pas d", "Symptôme")):
+                try:
+                    parsed = json.loads(val)
+                    return parsed[:n] if isinstance(parsed, list) else []
+                except Exception:
+                    pass
+            return []
 
-TEXTE ORIGINAL : {context.get("original_text", "")}
+        kb_slim = {}
+        for sym in normalized:
+            d = kb_context.get("symptoms_data", {}).get(sym, {})
+            if d:
+                causes    = _kb_list(d.get("causes",    []), 3)
+                red_flags = _kb_list(d.get("red_flags", []), 3)
+                home_care = _kb_list(d.get("home_care", []), 2)
+                if causes or red_flags:
+                    kb_slim[sym] = {
+                        "causes"   : causes,
+                        "red_flags": red_flags,
+                        "home_care": home_care,
+                    }
 
-SITUATION :
-- Animal               : {symptom_ctx.get("animal", "inconnu")}
-- Symptômes normalisés : {normalized}
-- Durée                : {symptom_ctx.get("duration", "non précisée")}
-- Niveau d'urgence     : {urgency_ctx.get("refined_level", context.get("urgency_label", "LOW"))}
-- Signes d'alerte      : {urgency_ctx.get("red_flags_found", [])}
-
-KB_CONTEXT (données vétérinaires pré-chargées) :
-{json.dumps(kb_context, ensure_ascii=False, indent=2)}
-
-Utilise les données KB_CONTEXT directement. Appelle web_search_vet uniquement
-si un symptôme est absent du KB_CONTEXT. Produis le JSON d'orientation."""
+        return (
+            f"Texte:«{context.get('original_text','')}»\n"
+            f"Animal:{symptom_ctx.get('animal','?')} | "
+            f"Symptômes:{normalized} | "
+            f"Durée:{symptom_ctx.get('duration','?')} | "
+            f"Urgence:{urgency_ctx.get('refined_level', context.get('urgency_label','LOW'))} | "
+            f"RedFlags:{urgency_ctx.get('red_flags_found',[])}\n"
+            f"KB:{json.dumps(kb_slim, ensure_ascii=False, separators=(',',':'))}\n"
+            f"Retourne le JSON d'orientation."
+        )
 
     # Correspondance symptômes NLP → clés KB
     _SYMPTOM_KB_MAP = {

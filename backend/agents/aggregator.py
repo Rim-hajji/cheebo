@@ -247,6 +247,25 @@ class Aggregator:
             "is_fallback"    : ctx.get("is_fallback", True),
         }
 
+    def _build_nutrition(self, ctx: Dict) -> Dict:
+        if not ctx:
+            return {}
+        plan = ctx.get("nutrition_plan", {})
+        return {
+            "phase_immediate"         : plan.get("phase_immediate", ""),
+            "alimentation_recommandee": plan.get("alimentation_recommandee", []),
+            "alimentation_interdite"  : plan.get("alimentation_interdite", []),
+            "hydratation"             : plan.get("hydratation", ""),
+            "supplements"             : plan.get("supplements", []),
+            "frequence_repas"         : plan.get("frequence_repas", ""),
+            "aliments_toxiques_urgents": ctx.get("aliments_toxiques_urgents", []),
+            "regime_therapeutique"    : ctx.get("regime_therapeutique"),
+            "conseil_dietetique"      : ctx.get("conseil_dietetique", ""),
+            "quand_reprendre_normal"  : ctx.get("quand_reprendre_normal", ""),
+            "necessite_suivi_vet"     : ctx.get("necessite_suivi_vet", False),
+            "confidence"              : ctx.get("confidence", 0.0),
+        }
+
     def _build_recommendation(self, ctx: Dict) -> Dict:
         if not ctx:
             return {}

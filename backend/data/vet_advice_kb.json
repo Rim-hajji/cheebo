@@ -1235,13 +1235,589 @@
         "Mentionner tout traitement récent (antibiotiques, corticoïdes)"
       ],
       "source": "ISCAID — International Society Companion Animal Infectious Diseases"
+    },
+    {
+      "id": "hairball_cat",
+      "title_fr": "Boule de poils (trichobézoard)",
+      "title_en": "Hairball (trichobezoar)",
+      "trigger_symptoms": ["vomiting", "retching", "hairball"],
+      "trigger_keywords": ["hairball", "boule de poils", "trichobézoard", "crachat poils", "كرة شعر"],
+      "species": ["cat", "rabbit"],
+      "urgency": "LOW",
+      "advice": "Les boules de poils sont fréquentes chez les chats à poils longs et les lapins. Le chat régurgite généralement les poils sans signe de douleur. Chez le lapin, l'ingestion de poils peut provoquer une stase digestive — plus grave.",
+      "home_care": [
+        "Brossage quotidien pour réduire les poils ingérés",
+        "Pâte anti-hairball à base de malt (pharmacie vétérinaire) 2-3x/semaine",
+        "Herbe à chat ou herbe à lapin facilite l'élimination",
+        "Alimentation riche en fibres peut aider le transit",
+        "Chez le lapin : foin illimité obligatoire"
+      ],
+      "watch_for": [
+        "Tentatives répétées de régurgiter sans succès (obstruction possible)",
+        "Abdomen distendu ou douloureux",
+        "Refus de manger depuis plus de 24h (lapin : 12h)",
+        "Léthargie ou prostration",
+        "Absence de selles depuis plus de 24h"
+      ],
+      "when_to_consult": "Si le chat tente de régurgiter sans y parvenir, ou si l'abdomen semble douloureux. Chez le lapin, tout arrêt du transit est une urgence — consultez dans les 6-12h.",
+      "preparation_for_vet": [
+        "Décrire la fréquence des tentatives de régurgitation",
+        "Indiquer la date du dernier repas normal",
+        "Noter si des selles ont été produites récemment",
+        "Préciser si l'animal est à poils longs et la fréquence du brossage"
+      ],
+      "source": "AAFP Cat Friendly Practice Guidelines"
+    },
+    {
+      "id": "foreign_body_ingestion",
+      "title_fr": "Ingestion de corps étranger",
+      "title_en": "Foreign body ingestion",
+      "trigger_symptoms": ["vomiting", "lethargy", "loss of appetite"],
+      "trigger_keywords": ["corps étranger", "avalé", "ingéré", "a mangé", "swallowed", "ate something", "أكل شيئا غريبا"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "HIGH",
+      "advice": "L'ingestion d'un corps étranger (jouet, os, chaussette, fil, pièce) peut provoquer une obstruction gastro-intestinale potentiellement fatale. Ne jamais tenter de faire vomir l'animal soi-même — certains objets peuvent aggraver les blessures à la remontée.",
+      "home_care": [
+        "NE PAS faire vomir sans avis vétérinaire",
+        "Ne rien donner à manger ni à boire",
+        "Garder l'animal calme et au repos",
+        "Si fil ou aiguille : NE PAS tirer — urgence chirurgicale"
+      ],
+      "watch_for": [
+        "Vomissements répétés (surtout alimentaires, puis bilieux)",
+        "Abdomen tendu ou douloureux à la palpation",
+        "Incapacité à déféquer ou selles en ruban",
+        "Léthargie progressive",
+        "Salivation excessive ou difficultés à avaler (obstruction œsophagienne)"
+      ],
+      "when_to_consult": "Dès que vous suspectez une ingestion, même si l'animal semble bien — des objets pointus, linéaires (fil, ficelle) ou toxiques nécessitent une consultation urgente. Dans tous les cas sous 4h.",
+      "preparation_for_vet": [
+        "Décrire l'objet ingéré (matière, taille, forme)",
+        "Estimer l'heure d'ingestion",
+        "Photographier un objet similaire si possible",
+        "Lister les symptômes observés depuis l'ingestion"
+      ],
+      "source": "Veterinary Emergency Critical Care"
+    },
+    {
+      "id": "cat_flutd",
+      "title_fr": "FLUTD / Cystite idiopathique féline",
+      "title_en": "Feline Lower Urinary Tract Disease (FLUTD)",
+      "trigger_symptoms": ["straining to urinate", "blood in urine", "frequent urination"],
+      "trigger_keywords": ["FLUTD", "cystite féline", "urines difficiles chat", "blood urine cat", "chat urine sang", "blockage cat", "obstruction chat", "المثانة القطط"],
+      "species": ["cat"],
+      "urgency": "HIGH",
+      "advice": "Le FLUTD regroupe plusieurs affections urinaires chez le chat. La cystite idiopathique (stress) est la plus fréquente. Chez le chat mâle, une obstruction urétrale est une URGENCE VITALE — peut être fatale en quelques heures. La distinction entre cystite simple et obstruction est critique.",
+      "home_care": [
+        "Augmenter les apports en eau (fontaine, nourriture humide)",
+        "Réduire le stress (cachettes, griffoirs, jeu quotidien)",
+        "Plusieurs litières propres dans des endroits calmes",
+        "Alimentation urinary si prescrite par le vétérinaire",
+        "Ne jamais restreindre l'accès à la litière"
+      ],
+      "watch_for": [
+        "Chat mâle qui pousse sans produire d'urine → OBSTRUCTION — URGENCE VITALE",
+        "Cris de douleur lors des tentatives d'uriner",
+        "Abdomen tendu et douloureux",
+        "Sang abondant dans les urines ou urines entièrement rouges",
+        "Léchage excessif de la zone génitale avec prostration",
+        "Vomissements associés aux signes urinaires (atteinte rénale)"
+      ],
+      "when_to_consult": "IMMÉDIATEMENT si chat mâle qui ne produit pas d'urine — risque de mort en moins de 24-48h. Sous 24h pour tout signe urinaire chez le chat.",
+      "preparation_for_vet": [
+        "Indiquer si l'animal produit de l'urine ou non — information critique",
+        "Décrire la fréquence et les volumes produits",
+        "Préciser si du sang est visible dans l'urine",
+        "Mentionner tout événement stressant récent (déménagement, nouveau chat)"
+      ],
+      "source": "AAFP Cat Friendly Practice — Urinary Guidelines"
+    },
+    {
+      "id": "rabbit_gi_stasis",
+      "title_fr": "Stase digestive du lapin",
+      "title_en": "Rabbit GI stasis",
+      "trigger_symptoms": ["not eating", "no stool", "lethargy"],
+      "trigger_keywords": ["lapin mange pas", "lapin selles", "stase digestive", "GI stasis", "rabbit not eating", "rabbit no poop", "أرنب لا يأكل"],
+      "species": ["rabbit"],
+      "urgency": "CRITICAL",
+      "advice": "La stase digestive est l'une des urgences vétérinaires les plus fréquentes chez le lapin. Le transit s'arrête complètement, causant des douleurs intenses et une accumulation de gaz. Sans traitement rapide, elle peut être fatale en 24-48 heures.",
+      "home_care": [
+        "URGENCE : ne pas attendre pour consulter si le lapin ne mange pas depuis plus de 6-8h",
+        "Proposer du foin (Timothy) en grande quantité — stimule le transit",
+        "Légères massages de l'abdomen circulaires et doux",
+        "Encourager le mouvement (lapin hors de la cage pour bouger)",
+        "Assurer une température ambiante confortable (18-24°C)",
+        "Ne pas administrer de médicaments sans avis vétérinaire"
+      ],
+      "watch_for": [
+        "Absence totale de selles depuis plus de 6-8 heures",
+        "Abdomen distendu ou claquant (gaz)",
+        "Position de douleur : dos voûté, dents grinçantes",
+        "Refus total de nourriture y compris les friandises préférées",
+        "Léthargie extrême ou collapsus"
+      ],
+      "when_to_consult": "URGENCE — Si le lapin n'a pas produit de selles depuis 6-8 heures et refuse de manger, consultez IMMÉDIATEMENT. Le pronostic s'aggrave très vite.",
+      "preparation_for_vet": [
+        "Indiquer l'heure du dernier repas normal et des dernières selles",
+        "Décrire l'aspect de l'abdomen (gonflé, dur)",
+        "Préciser si le lapin a accès à du foin illimité habituellement",
+        "Mentionner tout changement alimentaire ou stress récent"
+      ],
+      "source": "House Rabbit Society — GI Stasis Guidelines"
+    },
+    {
+      "id": "diabetes_suspected",
+      "title_fr": "Diabète suspecté",
+      "title_en": "Suspected diabetes mellitus",
+      "trigger_symptoms": ["excessive thirst", "frequent urination", "weight loss", "lethargy"],
+      "trigger_keywords": ["diabète", "diabetes", "boit beaucoup", "maigrit", "urine souvent", "السكري"],
+      "species": ["dog", "cat"],
+      "urgency": "MODERATE",
+      "advice": "Le diabète sucré est diagnostiqué par analyse sanguine et urinaire. Les signes classiques (PU/PD : polyurie/polydipsie + amaigrissement + appétit augmenté ou diminué) doivent déclencher une consultation rapidement. Un diabète non traité peut mener à une acidocétose diabétique, urgence vitale.",
+      "home_care": [
+        "Maintenir un horaire alimentaire régulier (repas fixes, même quantité)",
+        "Ne pas modifier l'alimentation sans avis vétérinaire",
+        "Surveiller la quantité d'eau bue quotidiennement",
+        "Peser l'animal régulièrement (balance de salle de bain)",
+        "Ne jamais arrêter l'insuline prescrite sans avis vétérinaire"
+      ],
+      "watch_for": [
+        "Vomissements et léthargie soudains → acidocétose diabétique (URGENCE)",
+        "Démarche chancelante ou faiblesse des membres arrière (neuropathie)",
+        "Perte de poids rapide malgré un bon appétit",
+        "Odeur sucrée ou fruitée dans l'haleine",
+        "Yeux troubles ou cataracte (chez le chien diabétique)"
+      ],
+      "when_to_consult": "Sous 48-72h pour les premiers signes. IMMÉDIATEMENT si vomissements + prostration + odeur fruitée de l'haleine.",
+      "preparation_for_vet": [
+        "Noter la quantité d'eau bue par jour (mesurer le bol)",
+        "Peser l'animal et comparer au poids habituel",
+        "Lister l'alimentation actuelle (type, marque, quantité)",
+        "Apporter un échantillon d'urine fraîche si possible"
+      ],
+      "source": "ACVIM Consensus Statement on Diabetes Mellitus"
+    },
+    {
+      "id": "ringworm_fungal",
+      "title_fr": "Teigne (dermatophytose)",
+      "title_en": "Ringworm (fungal infection)",
+      "trigger_symptoms": ["hair loss", "skin lesion", "itching"],
+      "trigger_keywords": ["teigne", "ringworm", "perte poils ronde", "plaque chauve", "champignon peau", "داء الحلقة"],
+      "species": ["cat", "dog", "rabbit", "guinea pig"],
+      "urgency": "MODERATE",
+      "advice": "La teigne est une infection fongique (Microsporum canis, Trichophyton) très contagieuse — transmissible à l'homme (zoonose). Elle se manifeste par des plaques rondes, alopéciques, parfois croûteuses. Le diagnostic nécessite une lampe de Wood et/ou culture fongique.",
+      "home_care": [
+        "Isoler l'animal des autres animaux et limiter le contact humain",
+        "Porter des gants lors des soins",
+        "Laver les mains soigneusement après tout contact",
+        "Laver la literie et les accessoires à 60°C",
+        "Désinfecter les surfaces avec un antifongique (eau de javel diluée 1:10)",
+        "Ne pas appliquer de crèmes antifongiques humaines sans avis"
+      ],
+      "watch_for": [
+        "Extension des lésions à d'autres parties du corps",
+        "Apparition de lésions similaires chez les humains du foyer",
+        "Surinfection bactérienne (lésions rouges, purulentes)",
+        "Atteinte des ongles ou des griffes"
+      ],
+      "when_to_consult": "Sous 48h — un traitement antifongique prescrit est nécessaire. Les animaux immunodéprimés ou les chatons/chiots doivent être vus rapidement.",
+      "preparation_for_vet": [
+        "Photographier les lésions (taille, forme, localisation)",
+        "Préciser depuis quand les lésions sont apparues",
+        "Mentionner si d'autres animaux ou humains sont affectés",
+        "Indiquer les contacts récents avec d'autres animaux"
+      ],
+      "source": "ESCCAP European Guidelines — Ectoparasites & Dermatophytes"
+    },
+    {
+      "id": "bite_wound",
+      "title_fr": "Plaie par morsure",
+      "title_en": "Bite wound",
+      "trigger_symptoms": ["wound", "bite", "abscess"],
+      "trigger_keywords": ["morsure", "mordu", "plaie", "bite wound", "abcès", "abscess", "جرح عضة"],
+      "species": ["cat", "dog", "rabbit"],
+      "urgency": "HIGH",
+      "advice": "Les plaies par morsure sont souvent plus graves qu'elles ne semblent — la bouche des animaux contient des bactéries pathogènes (Pasteurella, Staphylocoques). Chez le chat, les abcès sous-cutanés se forment rapidement (48-72h) après morsure. Une vaccination antirabique à jour est importante.",
+      "home_care": [
+        "Nettoyer la plaie à l'eau claire puis à la Bétadine diluée (1 volume Bétadine + 9 volumes eau)",
+        "NE PAS suturer soi-même — les plaies par morsure doivent rester ouvertes pour drainer",
+        "Ne pas appliquer de poudre ou spray antibiotique sans avis",
+        "Surveiller l'apparition d'un gonflement (abcès)",
+        "Empêcher l'animal de lécher la plaie (collerette si nécessaire)"
+      ],
+      "watch_for": [
+        "Gonflement chaud et douloureux (abcès en formation)",
+        "Fièvre, léthargie, perte d'appétit",
+        "Écoulement purulent (pus) de la plaie",
+        "Difficultés à marcher si morsure sur un membre",
+        "Plaie profonde au cou ou à l'abdomen"
+      ],
+      "when_to_consult": "Sous 12-24h pour toute plaie par morsure visible, même petite. IMMÉDIATEMENT si abdomen, cou, yeux, ou signes d'infection généralisée.",
+      "preparation_for_vet": [
+        "Décrire la taille et la profondeur de la plaie",
+        "Identifier l'animal agresseur si possible",
+        "Vérifier le statut vaccinal (rage, typhus) de votre animal",
+        "Indiquer l'heure de la morsure"
+      ],
+      "source": "Veterinary Emergency Critical Care — Wound Management"
+    },
+    {
+      "id": "post_vaccine_reaction",
+      "title_fr": "Réaction post-vaccinale",
+      "title_en": "Post-vaccine reaction",
+      "trigger_symptoms": ["lethargy", "swelling", "vomiting"],
+      "trigger_keywords": ["vaccin", "vaccine", "réaction vaccin", "après vaccin", "gonflement vaccin", "تفاعل تطعيم"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "MODERATE",
+      "advice": "Des réactions légères après vaccination (légère fièvre, fatigue, douleur au site d'injection) sont normales et passagères (24-48h). Les réactions anaphylactiques sévères sont rares mais nécessitent une intervention immédiate dans les 30 minutes suivant la vaccination.",
+      "home_care": [
+        "Repos et calme dans les 24h suivant la vaccination",
+        "Surveiller l'animal de près pendant les 30-60 minutes suivant le retour de la clinique",
+        "Un léger gonflement au site d'injection est normal et résorbe en quelques jours",
+        "Ne pas masser le site d'injection",
+        "Repas léger le soir de la vaccination"
+      ],
+      "watch_for": [
+        "Gonflement du museau, du visage ou de la gorge (anaphylaxie) — URGENCE",
+        "Urticaire (plaques rouges, gonflées sur tout le corps)",
+        "Vomissements ou diarrhée dans l'heure suivant la vaccination",
+        "Difficultés respiratoires (anaphylaxie) — URGENCE VITALE",
+        "Gonflement persistant au site d'injection après 3 semaines (chat : sarcomes vaccinaux rares)"
+      ],
+      "when_to_consult": "IMMÉDIATEMENT si signes d'anaphylaxie (gonflement du visage, urticaire, difficultés respiratoires). Sous 24h si fièvre élevée, léthargie marquée ou vomissements persistants.",
+      "preparation_for_vet": [
+        "Apporter le carnet de vaccination avec le nom et lot du vaccin administré",
+        "Préciser l'heure exacte de la vaccination",
+        "Décrire les signes et leur heure d'apparition",
+        "Mentionner si l'animal a déjà eu des réactions vaccinales"
+      ],
+      "source": "WSAVA Vaccination Guidelines 2022"
+    },
+    {
+      "id": "obesity_concern",
+      "title_fr": "Surpoids / Obésité",
+      "title_en": "Overweight / Obesity",
+      "trigger_symptoms": ["weight gain", "obesity", "overweight"],
+      "trigger_keywords": ["obèse", "surpoids", "trop gros", "grossit", "overweight", "obese", "السمنة"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "LOW",
+      "advice": "L'obésité est le problème nutritionnel le plus fréquent chez les animaux de compagnie et réduit significativement leur espérance de vie. Elle favorise le diabète, les arthropathies, les maladies cardiaques et respiratoires. Une perte de poids progressive (1-2% par semaine max) est recommandée.",
+      "home_care": [
+        "Mesurer précisément les rations (peser les croquettes — ne pas se fier au verre)",
+        "Éliminer friandises et restes de table",
+        "Fractionner en 2-3 petits repas plutôt qu'un seul",
+        "Augmenter progressivement l'activité physique (marche, jeux)",
+        "Alimentation light ou prescription diet selon les recommandations",
+        "Peser l'animal toutes les 2 semaines"
+      ],
+      "watch_for": [
+        "Essoufflement à l'effort ou au repos",
+        "Difficultés à se lever ou à se coucher",
+        "Boiteries liées à la surcharge articulaire",
+        "Abdomen très distendu chez le chat (lipidose hépatique si jeûne brutal)"
+      ],
+      "when_to_consult": "Consultation programmée recommandée pour établir un plan alimentaire adapté. IMPORTANT : ne jamais mettre un chat obèse à la diète brutalement — risque de lipidose hépatique.",
+      "preparation_for_vet": [
+        "Peser l'animal juste avant la consultation",
+        "Lister tous les aliments donnés (croquettes, pâtées, friandises, restes)",
+        "Préciser le niveau d'activité physique actuel",
+        "Indiquer si l'animal est castré/stérilisé"
+      ],
+      "source": "WSAVA Nutritional Assessment Guidelines"
+    },
+    {
+      "id": "intestinal_parasites",
+      "title_fr": "Parasites intestinaux (vers)",
+      "title_en": "Intestinal parasites (worms)",
+      "trigger_symptoms": ["diarrhea", "weight loss", "worms in stool"],
+      "trigger_keywords": ["vers", "parasites", "vermifuge", "worms", "roundworm", "tapeworm", "ténia", "selles vers", "ديدان"],
+      "species": ["dog", "cat", "rabbit", "hamster"],
+      "urgency": "LOW",
+      "advice": "Les parasites intestinaux (ascaris, ténia, ankylostomes, trichures) sont fréquents surtout chez les jeunes animaux et ceux vivant à l'extérieur. Certains sont transmissibles à l'homme (zoonoses). Une vermifugation régulière est la meilleure prévention.",
+      "home_care": [
+        "Ramasser les selles immédiatement pour éviter la recontamination",
+        "Laver les mains après manipulation",
+        "Ne pas laisser l'animal manger des proies (oiseaux, rongeurs) ou des déjections",
+        "Vermifugation régulière selon le programme vétérinaire (2-4x/an selon le risque)",
+        "Contrôle des puces (vecteurs du ténia)"
+      ],
+      "watch_for": [
+        "Diarrhée chronique avec mucus ou sang",
+        "Amaigrissement malgré un bon appétit",
+        "Ballonnement abdominal chez les chiots/chatons (« ventre de poire »)",
+        "Toux (larves d'ascaris en migration pulmonaire)",
+        "Vers visibles dans les selles ou autour de l'anus (segments de ténia)"
+      ],
+      "when_to_consult": "Sous 48-72h si parasites visibles, amaigrissement, ou diarrhée persistante. Les chiots/chatons très infestés peuvent se décompenser rapidement.",
+      "preparation_for_vet": [
+        "Apporter un échantillon de selles fraîches dans un pot propre hermétique",
+        "Photographier les parasites visibles",
+        "Mentionner le dernier traitement vermifuge (date et produit)",
+        "Préciser si l'animal sort et chasse"
+      ],
+      "source": "ESCCAP European Guidelines — Endoparasites"
+    },
+    {
+      "id": "anxiety_stress",
+      "title_fr": "Anxiété / Stress",
+      "title_en": "Anxiety and stress",
+      "trigger_symptoms": ["anxiety", "hiding", "excessive grooming", "aggression"],
+      "trigger_keywords": ["anxieux", "stressé", "angoisse", "anxiety", "stress", "se cache", "hiding", "القلق"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "LOW",
+      "advice": "Le stress chronique affecte le système immunitaire et peut déclencher ou aggraver des maladies physiques (FLUTD chez le chat, troubles digestifs, dermatites). Identifier et éliminer la source de stress est prioritaire. Une consultation comportementale vétérinaire peut aider.",
+      "home_care": [
+        "Identifier et réduire les sources de stress (nouveaux animaux, déménagement, routine changée)",
+        "Créer des zones refuges inaccessibles aux autres animaux",
+        "Diffuseur de phéromones synthétiques (Feliway pour chat, Adaptil pour chien)",
+        "Maintenir des routines régulières (repas, promenades, jeux)",
+        "Enrichissement environnemental (griffoirs, jeux interactifs, cachettes)",
+        "Ne jamais punir un comportement lié au stress"
+      ],
+      "watch_for": [
+        "Agressivité soudaine inhabituelle (peut signaler douleur sous-jacente)",
+        "Toilettage excessif jusqu'aux plaies (overgrooming)",
+        "Refus de manger plusieurs jours",
+        "Élimination en dehors de la litière (chat)",
+        "Automutilation"
+      ],
+      "when_to_consult": "Sous 1-2 semaines si les comportements persistent malgré les mesures. Rapidement si agressivité soudaine, automutilation, ou refus alimentaire prolongé.",
+      "preparation_for_vet": [
+        "Décrire les comportements observés et leur fréquence",
+        "Identifier les événements déclencheurs potentiels",
+        "Préciser depuis quand ces comportements ont commencé",
+        "Mentionner tout changement récent dans l'environnement"
+      ],
+      "source": "AVSAB Animal Behavior Guidelines"
+    },
+    {
+      "id": "urinary_incontinence",
+      "title_fr": "Incontinence urinaire",
+      "title_en": "Urinary incontinence",
+      "trigger_symptoms": ["urinary incontinence", "leaking urine"],
+      "trigger_keywords": ["incontinence", "fuites urinaires", "urine partout", "mouille son panier", "urinary leaking", "التبول اللاإرادي"],
+      "species": ["dog", "cat"],
+      "urgency": "MODERATE",
+      "advice": "L'incontinence urinaire est fréquente chez les chiennes stérilisées (insuffisance du sphincter uréthral hormono-dépendant). Chez le chat ou les mâles, elle évoque souvent une cause neurologique ou obstructive. Un traitement médical efficace existe pour la plupart des cas.",
+      "home_care": [
+        "Protections imperméables sur le panier/couchage",
+        "Nettoyage doux et régulier de la zone génitale pour éviter les dermatites",
+        "Sorties plus fréquentes pour le chien (toutes les 3-4h)",
+        "Ne pas restreindre l'accès à l'eau",
+        "Ne pas gronder l'animal — il ne contrôle pas les fuites"
+      ],
+      "watch_for": [
+        "Incontinence soudaine chez un animal auparavant propre (neurologigue probable)",
+        "Paralysie ou faiblesse des membres arrière associée",
+        "Sang dans les urines",
+        "Difficultés à uriner en plus des fuites"
+      ],
+      "when_to_consult": "Sous 48-72h pour évaluation. IMMÉDIATEMENT si incontinence d'installation brutale avec faiblesse des membres (urgence neurologique).",
+      "preparation_for_vet": [
+        "Décrire quand les fuites surviennent (sommeil, effort, en permanence)",
+        "Indiquer l'âge, le sexe et si l'animal est stérilisé",
+        "Préciser depuis quand c'est apparu",
+        "Mentionner tout traitement récent (corticoïdes, diurétiques)"
+      ],
+      "source": "ACVIM — Urinary Incontinence in Dogs and Cats"
+    },
+    {
+      "id": "gastroenteritis",
+      "title_fr": "Gastro-entérite aiguë",
+      "title_en": "Acute gastroenteritis",
+      "trigger_symptoms": ["vomiting", "diarrhea", "lethargy"],
+      "trigger_keywords": ["gastro", "gastroentérite", "vomit diarrhée", "vomit diarrhea", "gastroenteritis", "التهاب المعدة والأمعاء"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "MODERATE",
+      "advice": "La gastro-entérite associe vomissements et diarrhée. Les pertes liquidiennes peuvent entraîner une déshydratation rapide, surtout chez les jeunes animaux. La cause peut être alimentaire, infectieuse (virale, bactérienne) ou parasitaire. Une évaluation vétérinaire est recommandée si les symptômes durent plus de 24h.",
+      "home_care": [
+        "Jeûne hydrique court : maximum 4-6h pour un adulte, ne jamais priver un chiot/chaton/lapin",
+        "Reprise avec de l'eau en petites quantités puis régime fade (riz + poulet bouilli)",
+        "Solution de réhydratation orale vétérinaire si disponible",
+        "Repos complet",
+        "Pas de médicaments humains (Immodium/lopéramide toxique pour chats)"
+      ],
+      "watch_for": [
+        "Signes de déshydratation (gencives sèches, pli de peau qui ne revient pas)",
+        "Présence de sang dans les vomissements ou les selles",
+        "Aggravation après 24h de jeûne",
+        "Douleurs abdominales intenses",
+        "Prostration et incapacité à se lever"
+      ],
+      "when_to_consult": "Si symptômes persistent plus de 24h, si l'animal est très jeune ou âgé, ou si présence de sang. Immédiatement si prostration ou déshydratation sévère.",
+      "preparation_for_vet": [
+        "Décrire la fréquence des vomissements et des diarrhées",
+        "Indiquer la couleur et la consistance",
+        "Lister ce que l'animal a mangé dans les 48h",
+        "Préciser si d'autres animaux du foyer sont affectés"
+      ],
+      "source": "Merck Veterinary Manual — Gastrointestinal Disorders"
+    },
+    {
+      "id": "mange_sarcoptic",
+      "title_fr": "Gale sarcoptique",
+      "title_en": "Sarcoptic mange",
+      "trigger_symptoms": ["intense itching", "hair loss", "skin crusts"],
+      "trigger_keywords": ["gale", "mange", "démangeaisons intenses", "croûtes peau", "sarcopte", "الجرب"],
+      "species": ["dog", "cat"],
+      "urgency": "MODERATE",
+      "advice": "La gale sarcoptique est causée par l'acarien Sarcoptes scabiei. Elle provoque des démangeaisons intenses et est hautement contagieuse (autres animaux ET humains). Elle est traitable mais nécessite un traitement antiparasitaire prescrit par le vétérinaire. Contagion humaine possible (gale du chien).",
+      "home_care": [
+        "Isoler l'animal des autres animaux",
+        "Porter des gants lors des soins",
+        "Laver la literie à 60°C",
+        "Passer l'aspirateur et désinfecter l'environnement",
+        "Ne pas utiliser de produits anti-puces comme traitement — inefficace"
+      ],
+      "watch_for": [
+        "Extension rapide des lésions (bords des oreilles, coudes, genoux, ventre)",
+        "Surinfection bactérienne (croûtes épaisses, odeur)",
+        "Apparition de démangeaisons chez les humains du foyer",
+        "Anorexie et amaigrissement liés au prurit intense"
+      ],
+      "when_to_consult": "Dans les 48h — un traitement spécifique (sélamectine, ivermectine ou isoxazolines) est nécessaire. Sans traitement, la gale s'aggrave rapidement.",
+      "preparation_for_vet": [
+        "Photographier les zones atteintes",
+        "Indiquer si d'autres animaux ou humains présentent des démangeaisons",
+        "Préciser les antiparasitaires utilisés récemment",
+        "Mentionner les contacts avec d'autres animaux (refuge, chenil)"
+      ],
+      "source": "ESCCAP European Guidelines — Ectoparasiticides"
+    },
+    {
+      "id": "epistaxis",
+      "title_fr": "Saignement nasal (épistaxis)",
+      "title_en": "Nosebleed (epistaxis)",
+      "trigger_symptoms": ["nosebleed", "blood from nose"],
+      "trigger_keywords": ["saignement nasal", "sang nez", "épistaxis", "nosebleed", "blood from nose", "نزيف أنفي"],
+      "species": ["dog", "cat", "rabbit"],
+      "urgency": "HIGH",
+      "advice": "Le saignement nasal chez l'animal peut avoir de nombreuses causes : traumatisme, corps étranger, infection nasale, hypertension, trouble de coagulation, ou tumeur nasale. Un saignement persistant ou abondant est une urgence.",
+      "home_care": [
+        "Gardez l'animal calme et immobile — l'agitation augmente le saignement",
+        "Appliquez une compresse froide sur le nez (JAMAIS d'objets dans les narines)",
+        "Inclinez légèrement la tête vers le bas pour éviter l'ingestion de sang",
+        "Ne jamais pencher la tête en arrière",
+        "Ne pas administrer d'aspirine ou d'anti-inflammatoires — aggravent le saignement"
+      ],
+      "watch_for": [
+        "Saignement abondant ou qui ne s'arrête pas après 10-15 minutes",
+        "Saignement des deux narines simultanément",
+        "Saignement gencives ou sang dans les urines (trouble de coagulation)",
+        "Gonflement de la face ou déformation du museau (tumeur nasale)",
+        "Saisies ou troubles neurologiques associés"
+      ],
+      "when_to_consult": "Si le saignement dure plus de 10 minutes ou est abondant — consultez dans les 2-4h. IMMÉDIATEMENT si saignement multisite (gencives, urines) — suspicion trouble de coagulation.",
+      "preparation_for_vet": [
+        "Estimer la quantité de sang perdue",
+        "Indiquer si le saignement vient d'une ou deux narines",
+        "Mentionner tout traumatisme récent ou exposition à des rodenticides",
+        "Préciser si l'animal prend des médicaments anticoagulants"
+      ],
+      "source": "Veterinary Emergency Critical Care — Epistaxis"
+    },
+    {
+      "id": "elderly_cat_irc",
+      "title_fr": "Chat âgé — Insuffisance rénale chronique",
+      "title_en": "Senior cat — Chronic kidney disease (CKD)",
+      "trigger_symptoms": ["weight loss", "drinking more", "vomiting", "lethargy"],
+      "trigger_keywords": ["chat âgé", "rein chat", "IRC", "CKD", "insuffisance rénale", "kidney disease cat", "vieux chat", "قطة كبيرة مصابة بالكلى"],
+      "species": ["cat"],
+      "urgency": "MODERATE",
+      "advice": "L'insuffisance rénale chronique touche environ 30-40% des chats de plus de 10 ans. Les signes sont progressifs : amaigrissement, polydipsie, vomissements intermittents, poil terne. Un diagnostic précoce permet de ralentir la progression avec une alimentation rénale adaptée et un suivi régulier.",
+      "home_care": [
+        "Alimentation rénale vétérinaire (basse en phosphore et en protéines) si diagnostiquée",
+        "Eau fraîche disponible en permanence — fontaine recommandée",
+        "Alimentation humide pour augmenter les apports hydriques",
+        "Peser le chat hebdomadairement",
+        "Brossage doux et soins de confort",
+        "Ne jamais donner d'AINS (anti-inflammatoires non stéroïdiens) — néphrotoxiques"
+      ],
+      "watch_for": [
+        "Vomissements fréquents avec amaigrissement accéléré (décompensation)",
+        "Halitose uréique (odeur d'urine dans l'haleine)",
+        "Ulcères buccaux (signe d'urémie avancée)",
+        "Prostration ou désorientation",
+        "Hypertension artérielle (signes oculaires : pupilles dilatées fixes, cécité soudaine)"
+      ],
+      "when_to_consult": "Consultation régulière tous les 3-6 mois pour suivi biologique si IRC diagnostiquée. Urgence si vomissements intenses, abattement marqué ou symptômes neurologiques.",
+      "preparation_for_vet": [
+        "Apporter les derniers bilans sanguins (créatinine, urée, phosphore, SDMA)",
+        "Noter la consommation d'eau et alimentaire depuis 48h",
+        "Peser le chat juste avant la consultation",
+        "Lister tous les médicaments actuels"
+      ],
+      "source": "IRIS — International Renal Interest Society CKD Guidelines"
+    },
+    {
+      "id": "nail_broken",
+      "title_fr": "Griffe cassée ou arrachée",
+      "title_en": "Broken or torn nail",
+      "trigger_symptoms": ["broken nail", "bleeding nail", "limping"],
+      "trigger_keywords": ["griffe cassée", "griffe arrachée", "ongle cassé", "nail broken", "broken nail", "ظفر مكسور"],
+      "species": ["dog", "cat"],
+      "urgency": "MODERATE",
+      "advice": "Une griffe partiellement ou totalement arrachée est douloureuse et peut saigner abondamment. Le risque principal est l'infection. Une griffe qui pend doit être retirée proprement pour éviter les déchirures tissulaires supplémentaires.",
+      "home_care": [
+        "Comprimer avec une compresse propre pendant 5-10 minutes pour arrêter le saignement",
+        "Poudre hémostatique (farine de maïs ou produit vétérinaire) si disponible",
+        "Ne pas tenter de retirer une griffe partiellement cassée soi-même",
+        "Empêcher l'animal de lécher (risque de surinfection)",
+        "Rincer doucement à l'eau claire si la plaie est sale"
+      ],
+      "watch_for": [
+        "Saignement qui ne s'arrête pas après 15 minutes",
+        "Gonflement, chaleur ou écoulement (infection)",
+        "Boiterie persistante plusieurs jours",
+        "L'animal se lèche la patte de façon compulsive"
+      ],
+      "when_to_consult": "Sous 24h si la griffe est partiellement arrachée (retrait nécessaire sous sédation légère). Immédiatement si le saignement ne s'arrête pas.",
+      "preparation_for_vet": [
+        "Indiquer quelle griffe est atteinte (avant/arrière, gauche/droite)",
+        "Décrire si la griffe est partiellement ou totalement arrachée",
+        "Estimer la durée et l'abondance du saignement",
+        "Mentionner si l'animal présente des troubles de la coagulation connus"
+      ],
+      "source": "Veterinary Emergency Critical Care — Minor Trauma"
+    },
+    {
+      "id": "cat_hiding_sick",
+      "title_fr": "Chat qui se cache (comportement de maladie)",
+      "title_en": "Cat hiding — illness behavior",
+      "trigger_symptoms": ["hiding", "lethargy", "behavior change"],
+      "trigger_keywords": ["chat se cache", "cat hiding", "plus sociable", "comportement changé", "withdrawn", "القطة تختبئ"],
+      "species": ["cat"],
+      "urgency": "MODERATE",
+      "advice": "Un chat qui se cache soudainement est un signal d'alarme important. Les chats dissimulent naturellement leur douleur et leur maladie — ce comportement peut indiquer une affection sérieuse. Il ne faut pas normaliser un changement comportemental brusque.",
+      "home_care": [
+        "Observer discrètement sans forcer le contact",
+        "Vérifier la litière (urines, selles présentes ?)",
+        "Proposer de la nourriture favorite à proximité de la cachette",
+        "Assurer calme et sérénité dans l'environnement",
+        "Prendre note de la fréquence des sorties pour manger et boire"
+      ],
+      "watch_for": [
+        "Absence de manger ou de boire depuis plus de 24h",
+        "Absence d'uriner depuis plus de 24h",
+        "Difficultés respiratoires ou bouche ouverte",
+        "Gencives pâles ou bleues",
+        "Le chat crie ou gémit quand on le touche (douleur)"
+      ],
+      "when_to_consult": "Si le comportement de retrait dure plus de 24h sans amélioration, ou immédiatement si l'animal ne mange ni ne boit, ou si des signes physiques anormaux sont observés.",
+      "preparation_for_vet": [
+        "Décrire depuis quand le chat se cache et dans quel contexte",
+        "Indiquer la dernière fois que l'animal a mangé, bu et uriné normalement",
+        "Mentionner tout événement récent (visiteurs, déménagement, nouveau animal)",
+        "Préciser l'âge et l'état de santé habituel du chat"
+      ],
+      "source": "AAFP Cat Friendly Practice — Behavior Guidelines"
     }
   ],
   "metadata": {
-    "version": "4.0",
+    "version": "5.0",
     "type": "advice_scenarios",
     "purpose": "DoctoAgent provides ADVICE only, not medical diagnosis. All cases are routed to a veterinarian when needed.",
-    "total_scenarios": 40,
+    "total_scenarios": 57,
     "languages": ["fr", "en", "ar"],
     "species_covered": ["dog", "cat", "rabbit", "bird", "hamster", "guinea pig", "parrot", "ferret", "turtle"],
     "urgency_levels": ["LOW", "MODERATE", "HIGH", "CRITICAL"],
@@ -1257,8 +1833,11 @@
       "ESCCAP European Guidelines",
       "ACVIM Neurology Guidelines",
       "ACVO Ophthalmic Guidelines",
-      "ISCAID Infectious Disease Guidelines"
+      "ISCAID Infectious Disease Guidelines",
+      "IRIS CKD Staging Guidelines",
+      "AVSAB Animal Behavior Guidelines",
+      "ACVIM Consensus — Diabetes Mellitus"
     ],
-    "last_updated": "2026-05-05"
+    "last_updated": "2026-05-11"
   }
 }

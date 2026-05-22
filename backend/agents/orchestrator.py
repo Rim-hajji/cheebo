@@ -5,20 +5,22 @@ Coordonne le pipeline multi-agents via un LangGraph StateGraph.
 Chaque nœud est un vrai agent LLM (Gemini + outils) qui raisonne,
 appelle des outils, et prend une décision autonome.
 
-Flux du graphe (linéaire — plus de routing conditionnel) :
+Flux du graphe (linéaire) :
   START
     ↓
   [context_rag_node]      ← ContextRAGAgent    : fetch toutes les données KB en une passe
     ↓
   [prediction_node]       ← PredictionAgent    : orientation + associations symptômes
     ↓
-  [rag_node]              ← SemanticRAGAgent   : recherche sémantique Sentence-BERT
+  [validation_node]       ← ValidationAgent   : audit qualité + cohérence médicale
+    ↓
+  [rag_node]              ← SemanticRAGAgent   : recherche sémantique ChromaDB (HNSW cosinus)
     ↓
   [recommendation_node]   ← RecommendationAgent: care + emergency + recommandation (unifié)
     ↓
   [aggregate_node]        ← Aggregator         : fusionne tous les contextes
     ↓
-  [synthesis_node]        ← SynthesisAgent     : réponse conversationnelle finale
+  [synthesis_node]        ← SynthesisAgent     : réponse conversationnelle finale (Gemini)
     ↓
   END
 
@@ -33,10 +35,12 @@ from typing_extensions import TypedDict
 from langgraph.graph import END, START, StateGraph
 
 from backend.agents.aggregator            import Aggregator
+from backend.agents.base_llm_agent        import reset_quota_breaker
 from backend.agents.prediction_agent      import PredictionAgent
 from backend.agents.rag_agent             import ContextRAGAgent, SemanticRAGAgent
 from backend.agents.recommendation_agent  import RecommendationAgent
 from backend.agents.synthesis_agent       import SynthesisAgent
+from backend.agents.validation_agent      import ValidationAgent
 from backend.agents.tools                 import init_kb
 
 logger = logging.getLogger("doctoagent.orchestrator")
@@ -100,6 +104,23 @@ _URGENCY_LABELS = {
 _URGENCY_SCORES = {"LOW": 1, "MODERATE": 4, "HIGH": 7, "CRITICAL": 10}
 
 
+def _normalize_symptom_to_kb(s: str) -> str:
+    """Mappe un symptôme NLP vers une clé KB : exact → accent → préfixe."""
+    import unicodedata
+    s_lower = s.lower().strip(".,;:!?()[] ")
+    if s_lower in _SYMPTOM_KB_MAP:
+        return _SYMPTOM_KB_MAP[s_lower]
+    # Tolérance aux accents (fièvre → fievre, etc.)
+    s_norm = unicodedata.normalize("NFD", s_lower).encode("ascii", "ignore").decode("ascii")
+    if s_norm in _SYMPTOM_KB_MAP:
+        return _SYMPTOM_KB_MAP[s_norm]
+    # Préfixe : "vomitting" commence par "vomit" → vomissement
+    for key, val in _SYMPTOM_KB_MAP.items():
+        if len(key) >= 4 and s_lower.startswith(key):
+            return val
+    return s_lower
+
+
 def _preprocess_nlp(nlp_dict: Dict[str, Any]) -> Dict[str, Any]:
     """
     Remplace SymptomAgent + UrgencyAgent.
@@ -108,10 +129,10 @@ def _preprocess_nlp(nlp_dict: Dict[str, Any]) -> Dict[str, Any]:
     """
     entities = nlp_dict.get("entities", [])
 
-    # Normalisation des symptômes (NLP entity → clé KB)
-    symptoms_raw        = [e.get("text", "") for e in entities if e.get("label") == "SYMPTOM"]
+    # Normalisation des symptômes (NLP entity → clé KB) avec tolérance typos
+    symptoms_raw        = [e.get("text", "").strip(".,;:!?()[]") for e in entities if e.get("label") == "SYMPTOM"]
     symptoms_normalized = list(dict.fromkeys(
-        _SYMPTOM_KB_MAP.get(s.lower(), s) for s in symptoms_raw
+        _normalize_symptom_to_kb(s) for s in symptoms_raw if s
     ))
     animal   = next((e.get("normalized", e.get("text", "")) for e in entities if e.get("label") == "ANIMAL"), "inconnu")
     duration = next((e.get("text", "") for e in entities if e.get("label") == "DURATION"), None)
@@ -195,7 +216,7 @@ def make_context_rag_node(agent: ContextRAGAgent):
             "kb_context"  : result,
             "agent_timings": {
                 **state.get("agent_timings", {}),
-                "ContextRAGAgent": state.get("agent_timings", {}).get("ContextRAGAgent", 0),
+                "ContextRAGAgent": result.get("_processing_ms", 0),
             },
         }
     return context_rag_node
@@ -219,10 +240,30 @@ def make_prediction_node(agent: PredictionAgent):
 
 
 
+def make_validation_node(agent: ValidationAgent):
+    def validation_node(state: DoctoAgentState) -> Dict:
+        """Audite la cohérence du pipeline après Prediction."""
+        nlp_dict = dict(state["nlp_dict"])
+        result   = agent.run(nlp_dict)
+
+        nlp_dict["_validation_context"] = result
+        return {
+            "nlp_dict"          : nlp_dict,
+            "validation_context": result,
+            "agent_timings"     : {
+                **state.get("agent_timings", {}),
+                "ValidationAgent": result.get("_processing_ms", 0),
+            },
+        }
+    return validation_node
+
+
 def make_recommendation_node(agent: RecommendationAgent):
     def recommendation_node(state: DoctoAgentState) -> Dict:
         nlp_dict = dict(state["nlp_dict"])
         result   = agent.run(nlp_dict)
+
+        nlp_dict["_recommendation_context"] = result
 
         # Extraire les sous-contextes pour la compatibilité avec l'aggregator
         emergency_ctx = {
@@ -331,28 +372,31 @@ class Orchestrator:
         # Instancier les agents
         self._context_rag_agent    = ContextRAGAgent()       # Agentic RAG — fetch KB centralisé
         self._prediction_agent     = PredictionAgent()       # Orientation + associations
-        self._rag_agent            = SemanticRAGAgent()      # Sentence-BERT semantic search
+        self._validation_agent     = ValidationAgent()       # Audit qualité + cohérence
+        self._rag_agent            = SemanticRAGAgent()      # ChromaDB semantic search
         self._recommendation_agent = RecommendationAgent()   # Care + Emergency + Recommendation
-        self._synthesis_agent      = SynthesisAgent()
+        self._synthesis_agent      = SynthesisAgent()        # Réponse conversationnelle
         self._aggregator           = Aggregator()
 
         self._graph = self._build_graph()
-        logger.info("Graphe LangGraph compilé — 3 agents LLM : ContextRAG → Prediction → Recommendation.")
+        logger.info("Graphe LangGraph compilé — ContextRAG → Prediction → Validation → SemanticRAG → Recommendation → Aggregate → Synthesis.")
 
     def _build_graph(self):
         graph = StateGraph(DoctoAgentState)
 
         graph.add_node("context_rag_node",    make_context_rag_node(self._context_rag_agent))
         graph.add_node("prediction_node",     make_prediction_node(self._prediction_agent))
+        graph.add_node("validation_node",     make_validation_node(self._validation_agent))
         graph.add_node("rag_node",            make_rag_node(self._rag_agent))
         graph.add_node("recommendation_node", make_recommendation_node(self._recommendation_agent))
         graph.add_node("aggregate_node",      make_aggregate_node(self._aggregator))
         graph.add_node("synthesis_node",      make_synthesis_node(self._synthesis_agent))
 
-        # Flux linéaire — plus de routing conditionnel
+        # Flux linéaire
         graph.add_edge(START,                 "context_rag_node")
         graph.add_edge("context_rag_node",    "prediction_node")
-        graph.add_edge("prediction_node",     "rag_node")
+        graph.add_edge("prediction_node",     "validation_node")
+        graph.add_edge("validation_node",     "rag_node")
         graph.add_edge("rag_node",            "recommendation_node")
         graph.add_edge("recommendation_node", "aggregate_node")
         graph.add_edge("aggregate_node",      "synthesis_node")
@@ -362,6 +406,7 @@ class Orchestrator:
 
     # ─────────────────────────────────────────
     def handle(self, nlp_result: Any) -> Dict[str, Any]:
+        reset_quota_breaker()   # TPM reset chaque requête — évite faux circuit-breaker permanent
         nlp_dict = self._to_dict(nlp_result)
 
         # Prétraitement direct — remplace SymptomAgent + UrgencyAgent

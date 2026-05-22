@@ -25,65 +25,15 @@ SAFETY_WARNING = (
     "consultez toujours un vétérinaire."
 )
 
-SYSTEM_PROMPT = """Tu es un assistant vétérinaire expert pour DoctoAgent/Cheebo.
+SYSTEM_PROMPT = """Agent de recommandation DoctoAgent/Cheebo. Conseils préventifs uniquement — jamais de diagnostic ferme.
 
-TON RÔLE :
-Produire la réponse finale complète pour le propriétaire, adaptée au niveau d'urgence.
-Tu combines : plan de soin, alerte urgence (si nécessaire), et message de recommandation.
+LOW/MODERATE → utilise KB_CONTEXT, ⛔ aucun outil.
+HIGH → find_partner_vets(emergency_only=False) + actions immédiates.
+CRITICAL → find_partner_vets(emergency_only=True) + get_first_aid_steps() si pertinent.
+Diet : vomissements/diarrhée → diète 12h puis riz+poulet. HIGH/CRITICAL → rien sans avis vétérinaire.
 
-RÈGLE ABSOLUE :
-DoctoAgent ne pose PAS de diagnostic. Utilise toujours :
-✅ "Ces symptômes sont fréquemment associés à..."
-✅ "Consultez un vétérinaire si..."
-❌ Jamais : "Votre animal a [maladie]" ou "Le diagnostic est..."
-
-ADAPTATION SELON L'URGENCE :
-- LOW      : message rassurant, conseils depuis KB_CONTEXT. ⛔ AUCUN outil à appeler.
-- MODERATE : surveillance active, conseils KB_CONTEXT, préparer la consultation. ⛔ AUCUN outil à appeler.
-- HIGH     : appelle find_partner_vets(emergency_only=False) + actions immédiates.
-- CRITICAL : appelle find_partner_vets(emergency_only=True) + get_first_aid_steps() si intoxication/convulsion/choc.
-
-⛔ RÈGLE STRICTE : si urgence_level = LOW ou MODERATE → N'appelle AUCUN outil. Utilise UNIQUEMENT KB_CONTEXT.
-✅ RÈGLE : si urgence_level = HIGH ou CRITICAL → appelle les outils d'urgence ci-dessous.
-
-OUTILS (HIGH/CRITICAL uniquement) :
-- find_partner_vets(emergency_only)     : vétérinaires partenaires Cheebo
-- get_first_aid_steps(emergency_type)   : intoxication, convulsion, coup_de_chaleur, hemorragie, choc, fracture
-- get_toxic_foods(species)              : si intoxication alimentaire suspectée
-- web_search_vet(query)                 : si substance toxique spécifique non documentée
-
-CONSEILS ALIMENTAIRES :
-- Vomissements/diarrhée : diète 12h puis riz blanc + poulet bouilli sans sel
-- HIGH/CRITICAL         : ne rien donner sans avis vétérinaire
-
-IMPORTANT : Réponds UNIQUEMENT avec un objet JSON valide :
-{
-  "is_emergency"    : true/false,
-  "urgency_level"   : "LOW | MODERATE | HIGH | CRITICAL",
-  "alert_message"   : "message d'alerte urgent ou null si LOW/MODERATE",
-  "immediate_actions": ["action urgente 1", ...],
-  "partner_vets"    : [{"id":"...","name":"...","phone":"...","address":"...","specialties":[...],"emergency":true}],
-  "should_redirect" : true/false,
-  "care_plan"       : {
-    "immediate_actions": ["action prioritaire 1", ...],
-    "home_care_steps"  : ["conseil pratique 1", ...],
-    "monitoring_signs" : ["signe à surveiller 1", ...],
-    "when_to_consult"  : "quand consulter un vétérinaire",
-    "diet_advice"      : "conseil alimentaire ou null",
-    "timeline"         : [{"timeframe": "24h", "description": "ce qui peut se passer"}],
-    "symptoms_covered" : ["symptôme1", ...]
-  },
-  "care_summary"    : "résumé du plan de soin en 1-2 phrases",
-  "kb_symptoms_found": ["symptômes trouvés dans KB"],
-  "message"         : "message empathique principal pour le propriétaire (2-3 phrases)",
-  "actions"         : ["action concrète 1", "action 2", ...],
-  "warnings"        : ["avertissement 1", ...],
-  "next_steps"      : "prochaines étapes concrètes",
-  "should_consult"  : true/false,
-  "severity"        : "LOW | MODERATE | HIGH | CRITICAL",
-  "safety_warning"  : "avertissement de sécurité standard",
-  "confidence"      : 0.0-1.0
-}"""
+JSON uniquement :
+{"is_emergency":false,"urgency_level":"","alert_message":null,"immediate_actions":[],"partner_vets":[],"should_redirect":false,"care_plan":{"immediate_actions":[],"home_care_steps":[],"monitoring_signs":[],"when_to_consult":"","diet_advice":null,"timeline":[],"symptoms_covered":[]},"care_summary":"","kb_symptoms_found":[],"message":"","actions":[],"warnings":[],"next_steps":"","should_consult":true,"severity":"","safety_warning":"","confidence":0.0}"""
 
 
 class RecommendationAgent(BaseLLMAgent):
@@ -91,37 +41,86 @@ class RecommendationAgent(BaseLLMAgent):
     system_prompt = SYSTEM_PROMPT
     tools         = RESPONSE_TOOLS
 
+    def run(self, context: Dict[str, Any]) -> Dict[str, Any]:
+        """Pour LOW/MODERATE : désactive les outils (KB suffit, évite les appels inutiles)."""
+        urgency = (
+            context.get("_urgency_context", {}).get("refined_level")
+            or context.get("urgency_label", "LOW")
+        )
+        if urgency in ("LOW", "MODERATE"):
+            saved_llm_with_tools = self.llm_with_tools
+            saved_tools_map      = self.tools_map
+            self.llm_with_tools  = self.llm
+            self.tools_map       = {}
+            result = super().run(context)
+            self.llm_with_tools  = saved_llm_with_tools
+            self.tools_map       = saved_tools_map
+            return result
+        return super().run(context)
+
     def _build_prompt(self, context: Dict[str, Any]) -> str:
         symptom_ctx   = context.get("_symptom_context", {})
         urgency_ctx   = context.get("_urgency_context", {})
         kb_context    = context.get("_kb_context", {})
         prediction    = context.get("_prediction_context", {})
         urgency_level = urgency_ctx.get("refined_level", context.get("urgency_label", "LOW"))
+        normalized    = symptom_ctx.get("symptoms_normalized", [])
 
-        return f"""Génère la réponse finale pour la situation suivante :
+        # Extraire uniquement les champs utiles du KB (home_care, red_flags, timeline)
+        # _collected stocke les retours d'outils en strings JSON → parser avant slicing
+        def _kb_list(val, n):
+            if isinstance(val, list):
+                return val[:n]
+            if isinstance(val, str) and not val.startswith(("Aucun", "Pas d", "Symptôme")):
+                try:
+                    parsed = json.loads(val)
+                    return parsed[:n] if isinstance(parsed, list) else []
+                except Exception:
+                    pass
+            return []
 
-TEXTE ORIGINAL : "{context.get("original_text", "")}"
-INTENTION NLP  : {context.get("intent", "")}
+        def _kb_dict(val):
+            if isinstance(val, dict):
+                return val
+            if isinstance(val, str):
+                try:
+                    parsed = json.loads(val)
+                    return parsed if isinstance(parsed, dict) else {}
+                except Exception:
+                    pass
+            return {}
 
-PATIENT :
-- Animal     : {symptom_ctx.get("animal", "inconnu")}
-- Symptômes  : {symptom_ctx.get("symptoms_normalized", [])}
-- Durée      : {symptom_ctx.get("duration", "non précisée")}
-- Urgence    : {urgency_level}
-- Red flags  : {urgency_ctx.get("red_flags_found", [])}
+        kb_slim = {}
+        for sym in normalized:
+            d = kb_context.get("symptoms_data", {}).get(sym, {})
+            if d:
+                home_care = _kb_list(d.get("home_care", []), 4)
+                red_flags = _kb_list(d.get("red_flags", []), 3)
+                timeline  = _kb_dict(d.get("timeline", {}))
+                if home_care or red_flags:
+                    kb_slim[sym] = {
+                        "home_care": home_care,
+                        "red_flags": red_flags,
+                        "timeline" : timeline,
+                    }
 
-ORIENTATION (PredictionAgent) :
-- Préoccupation principale : {prediction.get("main_concern", "non disponible")}
-- Délai surveillance       : {prediction.get("watch_delay", "48h")}
-- Associations             : {json.dumps(prediction.get("possible_associations", [])[:2], ensure_ascii=False)}
+        assoc_slim = [
+            {"condition": a.get("condition"), "urgency_hint": a.get("urgency_hint")}
+            for a in prediction.get("possible_associations", [])[:2]
+            if isinstance(a, dict)
+        ]
 
-KB_CONTEXT (home_care, timeline, red_flags pré-chargés) :
-{json.dumps(kb_context, ensure_ascii=False, indent=2)}
-
-INSTRUCTIONS :
-- Si urgence LOW/MODERATE : utilise KB_CONTEXT directement, aucun outil
-- Si urgence HIGH/CRITICAL : appelle find_partner_vets() et get_first_aid_steps() si pertinent
-- Génère le JSON complet."""
+        return (
+            f"Texte:«{context.get('original_text','')}»\n"
+            f"Animal:{symptom_ctx.get('animal','?')} | "
+            f"Symptômes:{normalized} | "
+            f"Durée:{symptom_ctx.get('duration','?')} | "
+            f"Urgence:{urgency_level} | "
+            f"RedFlags:{urgency_ctx.get('red_flags_found',[])}\n"
+            f"Associations:{json.dumps(assoc_slim, ensure_ascii=False, separators=(',',':'))}\n"
+            f"KB:{json.dumps(kb_slim, ensure_ascii=False, separators=(',',':'))}\n"
+            f"Retourne le JSON complet."
+        )
 
     # Correspondance symptôme → clé KB (pour le fallback)
     _SYMPTOM_KB_MAP = {
